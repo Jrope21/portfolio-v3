@@ -1,0 +1,12 @@
+
+.social-icons__module {
+    display: flex;
+
+    li {
+        margin-right: 11px;
+
+        &:last-of-type {
+            margin: 0;
+        }
+    }
+}

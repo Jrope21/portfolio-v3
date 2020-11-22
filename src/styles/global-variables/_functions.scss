@@ -1,0 +1,66 @@
+// ********************************************************
+// ********************************************************
+// **
+// **  utility functions
+// **
+// ********************************************************
+// ********************************************************
+
+
+
+$base-font-size: 16px;
+
+@function px-to-rem($target, $context: $base-font-size) { // example: px-to-rem(16px)
+    @return ($target / $context) * 1rem;
+}
+
+@function strip-unit($number) {
+    @if type-of($number)=='number'and not unitless($number) {
+        @return $number / ($number * 0 + 1);
+    }
+
+    @return $number;
+}
+
+@function breakpoint($key) {
+    @if map-has-key($grid_breakpoints, $key) { // example: breakpoint(sm)
+        @return map-get($grid_breakpoints, $key);
+    }
+
+    @warn "Unknown `#{$key}` in $grid_breakpoints.";
+    @return null;
+}
+
+@function color($color) { // example: colors('consulting_ehs', primary)
+    @if map-has-key($colors, $color) {
+        @return map-get($colors, $color)
+    }
+
+    @warn "Unknown `#{$key}` in $colors.";
+    @return null;
+}
+
+@function moduleSpacer($key) { // example: colors('consulting_ehs', primary)
+    @if map-has-key($module_spacer, $key) { // example: breakpoint(sm)
+        @return map-get($module_spacer, $key);
+    }
+
+    @warn "Unknown `#{$key}` in $module_spacer.";
+    @return null;
+}
+
+@function moduleSpacerLarge($key) { // example: colors('consulting_ehs', primary)
+    @if map-has-key($module_spacer_large, $key) { // example: breakpoint(sm)
+        @return map-get($module_spacer_large, $key);
+    }
+
+    @warn "Unknown `#{$key}` in $module_spacer_large.";
+    @return null;
+}
+
+@function map-deep-get($map, $keys...) {
+    @each $key in $keys {
+        $map: map-get($map, $key);
+    }
+    @return $map;
+}

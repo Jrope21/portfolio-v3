@@ -1,0 +1,117 @@
+// ********************************************************
+// ********************************************************
+// **
+// **  Config -- all global variables are here
+// **
+// ********************************************************
+// ********************************************************
+
+
+
+// ********************************************************
+// ********************************************************
+// **
+// **  grid
+// **
+// ********************************************************
+// ********************************************************
+
+
+// Use the breakpoint function to access these
+// Ex: min-width: breakpoint(sm)
+
+// primary breakpoints: sm, md, lg
+// utility breakpoints: xs, xl
+$grid_breakpoints: (
+    xs: 350px, // mainly for iphone 5 / iphone xs
+    sm: 640px, 
+    md: 1000px, 
+    lg: 1280px, 
+    xl: 1500px
+);
+
+
+:export { // - exported to be used as javascript variables
+    breakpointXs: strip-unit(breakpoint(xs));
+    breakpointSm: strip-unit(breakpoint(sm));
+    breakpointMd: strip-unit(breakpoint(md));
+    breakpointLg: strip-unit(breakpoint(lg));
+}
+
+
+// ********************************************************
+// ********************************************************
+// **
+// **  spacers
+// **
+// ********************************************************
+// ********************************************************
+
+
+$module_spacer: (
+    xs: 25px, 
+    sm: 25px, 
+    md: 30px, 
+    lg: 30px, 
+    xl: 30px
+);
+
+$module_spacer_large: (
+    xs: 50px, 
+    sm: 50px, 
+    md: 60px, 
+    lg: 60px, 
+    xl: 60px
+);
+
+
+// ********************************************************
+// ********************************************************
+// **
+// **  fonts
+// **
+// ********************************************************
+// ********************************************************
+
+
+$font_body: 'SF Pro Display'; // this is the body font
+$font_header_alt: 'SF Pro Text';
+$font_fallbacks: -apple-system,BlinkMacSystemFont,Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+$font_base: $font_body, $font_fallbacks !default;
+
+
+// ********************************************************
+// ********************************************************
+// **
+// **  colors
+// **
+// ********************************************************
+// ********************************************************
+
+
+$colors: (
+    // ** main colors
+    primary: #D3D3D3,
+    secondary: #C0BDBD,
+
+    // ** accent colors
+    accent: #F4AE3F,
+    accent_transparent: rgba(244, 175, 63, 0.3),
+
+    // ** speciality colors
+    success: #A4E9B3,
+    error:#BA5B50,
+    page_background: #292D32,
+);
+
+
+// ********************************************************
+// ********************************************************
+// **
+// **  animations
+// **
+// ********************************************************
+// ********************************************************
+
+
+$custom_animation: cubic-bezier(0.85, 0.22, 0.12, 0.99);

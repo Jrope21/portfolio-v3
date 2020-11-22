@@ -1,0 +1,66 @@
+// ********************************************************
+// ********************************************************
+// **
+// **  theme wide styles
+// **
+// ********************************************************
+// ********************************************************
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+
+body {
+    @include webFont;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    color: color(secondary);
+    background-color: color(page_background);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+// button {
+//     border: none;
+//     outline: none;
+//     background: transparent;
+// }
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: top;
+}
+
+ul, ol {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+// fieldset {
+//     border: none;
+//     margin: 0;
+//     padding: 0;
+// }
+
+// label {
+//     display: block;
+// }
+
+// textarea,
+// input.text,
+// input[type="text"],
+// input[type="button"],
+// input[type="submit"],
+// .input-checkbox {
+//     appearance: none;
+//     -webkit-appearance: none;
+//     border-radius: 0;
+// }

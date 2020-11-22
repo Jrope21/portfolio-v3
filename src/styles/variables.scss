@@ -1,0 +1,17 @@
+// ********************************************************
+// ********************************************************
+// **
+// **  README 
+// **
+// **  1. This file contains all of my SASS variables (breakpoints, utilities, etc..)
+// **  2. No CSS should be placed in here (prevents duplicates in compile)
+// **
+// ********************************************************
+// ********************************************************
+
+
+
+@import './global-variables/functions';
+@import './global-variables/config';
+@import './global-variables/mixins';
+

@@ -1,0 +1,10 @@
+
+
+.container {
+    @include paddingLR(15px);
+    @include marginCenter();
+    max-width: 1280px;
+    @media (min-width: breakpoint(xs)) {
+        @include paddingLR(25px);
+    }
+}
