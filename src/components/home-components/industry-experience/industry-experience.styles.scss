@@ -1,0 +1,38 @@
+
+.industry-experience__module {
+    display: flex;
+    margin-top: 60px;
+
+    .title-sections {
+        margin-top: -130px;
+    }
+
+    .left {
+        position: relative;
+        width: 110px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            display: block;
+            height: 200px;
+            width: 3px;
+            background: color(accent);
+        }
+    }
+
+    .right {
+
+    }
+
+    .experience-title-filters {
+
+    }
+
+    .title-filter {
+        font-weight: 700;
+    }
+    
+}

@@ -1,0 +1,18 @@
+
+.numbered-section-title__module {
+    position: relative;
+    width: 100px;
+
+    img {
+        width: 84px;
+    }
+
+    .title {
+        position: absolute;
+        right: 0;
+        bottom: 40px;
+        width: 90px;
+        font-size: px-to-rem(16px);
+        font-weight: 500;
+    }
+}
