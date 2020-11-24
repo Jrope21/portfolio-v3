@@ -19,6 +19,11 @@ body {
     background-color: color(page_background);
 }
 
+a {
+    color: color(secondary);
+    text-decoration: none;
+}
+
 * {
     box-sizing: border-box;
 }
