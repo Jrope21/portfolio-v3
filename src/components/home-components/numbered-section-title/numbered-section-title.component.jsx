@@ -7,7 +7,7 @@ export default function NumberedSectionTitle({title, sectionNumber, className}) 
     return (
         <div className={`numbered-section-title__module${className ? ` ${className}` : ''}`}>
             <img src={One} alt="A number indicating the website section"/>
-            <h1 className="title">{title}</h1>
+            <h2 className="title">{title}</h2>
         </div>
     )
 }

@@ -24,7 +24,25 @@ export default function IndustryExperience() {
                 this is a test
             </div>
             <div className="right">
-
+                {experienceData.map(experience => (
+                    <div className="job-listing">
+                        <p className="job-location"></p>
+                        <h3 className="job-title"></h3>
+                        <p className="job-links"></p>
+                        <ul className="job-description-bullets">
+                            {experience.jobDescriptionBullets.map(({ text, links }) => (
+                                <li>
+                                    {text}
+                                    {links && 
+                                        <div className="description-bullet-links">
+                                            {links}
+                                        </div>
+                                    }
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                ))}
             </div>
         </section>
     )
