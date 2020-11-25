@@ -33,33 +33,33 @@ export const experienceData = [
         endYear: '2020',
         location: 'Dallas, Texas',
         title: 'Front End Developer at Imaginuity',
-        links: ``,
+        links: `<a href="https://www.imaginuity.com" rel="noopener" target="_blank">imaginuity.com</a>`,
         key: `fakhjdsfase`,
         jobDescriptionBullets: [
             {
-                text: `Revamped the design with a bolder color palette / layout`,
+                text: `Developed the entire Front End for multiple high traffic, 99% up time websites`,
                 links: `stallionoilfield.com, uptexas.org`
             },
             {
-                text: `Created the landing page and multiple sections utilizing WordPress (DiviBuilder)`,
+                text: `Made web enhancements and landing page’s for multiple businesses`,
                 links: `webuyuglyhouses.com, homevestors.com, advancial.org, etc...`
             },
             {
-                text: `Performed website updates and executed content audits`,
+                text: `Maintained 10 React based themes responsible for over 100 established malls`,
                 links: `visithalcyon.com, liberty-center.com, windwardcity.com, etc...`
             },
             {
-                text: `Adjusted the website for SEO and created marketable advertisements`,
+                text: `Designed and integrated page templates utilizing a CMS (WordPress / Kentico)`,
                 links: ``
             },
         ]
     },
     {
         name: 'Creative Revolt',
-        startYear: '2020',
-        endYear: '',
-        location: 'Denton, Texas',
-        title: 'Front End Developer at Sally Beauty',
+        startYear: '2017',
+        endYear: '2018',
+        location: 'Carrollton, Texas',
+        title: 'Freelance Web Development and Marketing at Creative Revolt',
         links: `<a href="https://www.creativerevolt.com" rel="noopener" target="_blank">creativerevolt.com</a>`,
         key: `fakhjhgjds`,
         jobDescriptionBullets: [

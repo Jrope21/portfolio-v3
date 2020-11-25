@@ -28,11 +28,10 @@ export default function Header() {
     useEffect(() => {
         // TODO -- need to turn this into a hook
         
-        
         function setFixedMobileNavOnScroll(scrollPos) {
-            console.log(scrollPos, isMobileNavFixed)
-            if(scrollPos > 30 && !isMobileNavFixed) return setIsMobileNavFixed(true);
-            if(isMobileNavFixed && scrollPos < 30) setIsMobileNavFixed(false)
+            const changeScrollAt = 130;
+            if(scrollPos > changeScrollAt && !isMobileNavFixed) return setIsMobileNavFixed(true);
+            if(scrollPos < changeScrollAt) setIsMobileNavFixed(false)
         }
 
         throttleScrollEvent(setFixedMobileNavOnScroll, 50);

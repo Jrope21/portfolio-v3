@@ -1,35 +1,44 @@
 
 .industry-experience__module {
-    display: flex;
-    align-items: flex-start;
-    margin-top: 60px;
-
+    // display: flex;
+    // align-items: flex-start;
+    // margin-top: 60px;
+    margin-top: -70px;
+    margin-bottom: 130px;
     .title-sections {
-        margin-top: -130px;
-        margin-bottom: 130px;
+        // margin-top: -130px;
+        // margin-bottom: 130px;
     }
 
     .left {
         position: relative;
-        width: 110px;
+        // width: 110px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        width: 100%;
+        padding-bottom: 25px;
 
-        &::before {
+        &::after {
             content: '';
             position: absolute;
             right: 0;
-            top: 0;
+            // top: 0;
+            bottom: 0;
             display: block;
-            margin-top: 10px;
+            margin-top: 20px;
             // height: 300px;
-            height: calc(100%);
-            width: 3px;
+            // height: calc(100%);
+            width: 100%;
+            // width: 3px;
+            height: 3px;
             background: color(accent);
         }
     }
 
     .right {
-        margin-top: 50px;
-        margin-left: 18px;
+        margin-top: 5px;
+        // margin-left: 18px;
     }
 
     .experience-title-filters {
@@ -47,8 +56,11 @@
 
     .title-filter {
         display: flex;
-        // align-items: center;
-        justify-content: space-between;
+        align-items: center;
+        justify-content: flex-end;
+        
+        overflow: hidden;
+        // justify-content: space-between;
         font-weight: 700;
         margin-top: 20px;
         // word-break: break-all;
@@ -57,22 +69,42 @@
             margin-bottom: 0px;
         }
 
-        &::after {
-            content: '';
-            display: inline-block;
-            min-width: 15px;
-            height: 3px;
-            margin-top: 8px;
-            margin-left: 5px;
-            background: color(secondary);
+        .text-animate {
+            display: flex;
+            align-items: center;
+            transform: translateX(32px);
+            transition: .45s $custom_animation transform, .25s $custom_animation color;
+
+            &::after {
+                content: '';
+                display: inline-block;
+                // min-width: 15px;
+                width: 27px;
+                height: 3px;
+                // margin-top: 5px;
+                margin-left: 5px;
+                background-color: color(accent);
+                // background: color(secondary);
+
+            }
         }
+
+        
 
         &.active {
             // word-break: break-all;
 
+            .text-animate {
+                color: color(accent);
+                transform: translate(0);
+
+                // &::after {
+                //     background-color: color(accent);
+                // }
+            }
             &::after {
-                background-color: color(accent);
-                min-width: 27px;
+                // background-color: color(accent);
+                // min-width: 27px;
             }
         }
     }
@@ -85,28 +117,42 @@
     .job-location {
         font-weight: 300;
         margin-top: 0;
-        margin-bottom: 10px;
+        margin-bottom: 6px;
     }
 
     .job-dates {
         font-family: $font_header_alt;
-        margin-bottom: 3px;
+        margin-bottom: 6px;
         margin-top: 0;
         font-size: px-to-rem(30px);
-        font-weight: 700;
+        font-weight: 800;
+        overflow: hidden;
+
+        .text-displacement {
+            display: block;
+            // margin-bottom: -5px;
+            transform: translateY(13px);
+        }
     }
 
     .job-title {
         color: color(accent);
         margin-top: 0;
-        margin-bottom: 6px;
+        margin-bottom: 10px;
         // margin-bottom: 10px;
     }
 
     .job-links {    
+        display: flex;
         font-style: italic;
-        margin-top: 0;
+        margin-top: -4px;
         margin-bottom: 10px;
+
+        > img {
+            // margin-top: -4px;
+            width: 14px;
+            margin-left: 10px;
+        }
 
         &, a {
             color: color(accent);

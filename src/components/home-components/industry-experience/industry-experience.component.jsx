@@ -4,6 +4,7 @@ import './industry-experience.styles.scss'
 import NumberedSectionTitle from '@home-components/numbered-section-title/numbered-section-title.component'
 import { experienceData } from './_data'
 
+import LinkIcon from '@images/commons/link_icon.svg'
 
 export default function IndustryExperience() {
 
@@ -27,7 +28,9 @@ export default function IndustryExperience() {
                             className={`title-filter ${activeExperienceListing === key ? 'active' : ''}`} 
                             key={key + 'filters'}
                         >
-                            {name}
+                            <span className="text-animate">
+                                {name}
+                            </span>         
                         </li>
                     ))}
                 </ul>
@@ -45,7 +48,9 @@ export default function IndustryExperience() {
                             </p>
                             <p className="job-dates">
                                 <span className="sr-only">The dates I spent working at {experience.name}: </span>
-                                {experience.startYear} {experience.endYear}
+                                <span className="text-displacement">
+                                    {experience.startYear} &nbsp;{experience.endYear}
+                                </span>
                             </p>
                         </div>
                         <h3 className="job-title">{experience.title}</h3>
@@ -55,6 +60,7 @@ export default function IndustryExperience() {
                                 <div 
                                     dangerouslySetInnerHTML={{ __html: experience.links }}
                                 />
+                                <img src={LinkIcon} alt="Icon indicating a link"/>
                             </p>
                         }        
                         <ul className="job-description-bullets">
