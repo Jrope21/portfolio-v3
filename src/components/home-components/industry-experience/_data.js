@@ -6,7 +6,7 @@ export const experienceData = [
         endYear: '',
         location: 'Denton, Texas',
         title: 'Front End Developer at Sally Beauty',
-        links: ``,
+        links: `<a href="https://www.sallybeauty.com" rel="noopener" target="_blank">sallybeauty.com</a>`,
         key: `fakhjds`,
         jobDescriptionBullets: [
             {
