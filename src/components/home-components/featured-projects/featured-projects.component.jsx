@@ -45,6 +45,14 @@ export default function FeaturedProjects() {
                 ))}
             </div>
 
+            <a className="view-all-button" role="button" href="">
+                Use archive for the full list of projects I’ve worked on.
+                <JrPointer 
+                    altColor={true}
+                    size={'small'}
+                />
+            </a>
+
         </section>
     )
 }

@@ -16,6 +16,8 @@ $card_border: 3px solid rgba(color(secondary), .7);
         justify-content: flex-end;
     }
 
+    
+
     .project-title, .project-title a {
         // margin-left: 5px;
         font-size: px-to-rem(16px);
@@ -63,6 +65,9 @@ $card_border: 3px solid rgba(color(secondary), .7);
     }
 
     .project-details-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         position: absolute;
         bottom: 28px;
         left: 0;
@@ -73,5 +78,26 @@ $card_border: 3px solid rgba(color(secondary), .7);
         font-weight: 500;
         font-style: italic;
         color: color(secondary);
+
+        .detail-btn-pointer {
+            margin-left: 8px;
+        }
+    }
+
+    &:nth-of-type(2n) {
+        
+        .project-bottom-section {
+            flex-direction: row-reverse;
+            justify-content: flex-start;
+        }
+
+        .project-skills li {
+            border-left: none;
+            border-right: $card_border;
+        }
+
+        .project-year-container {
+            border-left: none;
+        }
     }
 }
