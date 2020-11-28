@@ -4,6 +4,7 @@ import './featured-projects.styles.scss'
 import JrPointer from '@common-components/jr-pointer/jr-pointer.component'
 import NumberedSectionTitle from '@home-components/numbered-section-title/numbered-section-title.component'
 import FeaturedProjectCard from './featured-project-card/featured-project-card.component'
+import TextTitleCta from '@home-components/text-title-cta/text-title-cta.component'
 
 import { projectsData } from './_data'
 
@@ -16,21 +17,11 @@ export default function FeaturedProjects() {
                     title="Projects I've Worked On" 
                     sectionNumber={'2'} 
                 />
-                <div className="text-title-cta">
-                    <div className="top">
-                        <span className="large-text-title">A</span>
-                        <p className="sub-title">Use archive for the full list of projects I've worked on.</p>
-                        {/* TODO -- turn into svg & sperate react component */}
-                        <JrPointer
-                            className="featured-title-pointer"
-                        />
-                        {/* <span className="pointer">
-                            <span className="middle-line"></span>
-                        </span> */}
-                    </div>
-
-                    <span className="bottom large-text-title">RCHIVE</span>
-                </div>
+                <TextTitleCta 
+                    title={'Archive'}
+                    description={`Use archive for the full list of projects I've worked on.`}
+                    urlPath={'/archive'}
+                />
             </div>
             
             <div className="projects-container">
