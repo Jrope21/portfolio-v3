@@ -58,27 +58,42 @@ export default function Header() {
                 <ul className={`navigation`}>
                     <li>
                         <div className="nav-item-outer-wrapper">
-                            <Link to="/#top-of-page">Home</Link>
+                            <Link 
+                                to="/#top-of-page"
+                                onClick={closeNav}
+                            >Home</Link>
                         </div>
                     </li>
                     <li>
                         <div className="nav-item-outer-wrapper active">
-                            <Link to="/#section-number-1">Experience</Link>
+                            <Link 
+                                to="/#section-number-1"
+                                onClick={closeNav}
+                            >Experience</Link>
                         </div>
                     </li>
                     <li>
                         <div className="nav-item-outer-wrapper">
-                            <Link to="/#section-number-2">Projects</Link>
+                            <Link 
+                                to="/#section-number-2"
+                                onClick={closeNav}
+                            >Projects</Link>
                         </div>
                     </li>
                     <li>
                         <div className="nav-item-outer-wrapper">
-                            <Link to="/#section-number-3">About</Link>
+                            <Link 
+                                to="/#section-number-3"
+                                onClick={closeNav}
+                            >About</Link>
                         </div>
                     </li>
                     <li>
                         <div className="nav-item-outer-wrapper">
-                            <Link to="/#section-number-4">Contact</Link>
+                            <Link 
+                                to="/#section-number-4"
+                                onClick={closeNav}
+                            >Contact</Link>
                         </div>
                     </li>
                 </ul>
