@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import './header.styles.scss'
 
+import { Link } from "gatsby"
+
 let scrollPos;
 function throttleScrollEvent(callback, wait){ // throttle a scroll event function by specified wait time && only if the browser is ready for repaint
     let scrolling = false;
@@ -24,6 +26,10 @@ function throttleScrollEvent(callback, wait){ // throttle a scroll event functio
 export default function Header() {
 
     const [isMobileNavFixed, setIsMobileNavFixed] = useState(false);
+    const [isMobileNavOpen, setIsMobileNavOpen] = useState(true);
+
+    const openNav = () => setIsMobileNavOpen(true);
+    const closeNav = () => setIsMobileNavOpen(false);
 
     useEffect(() => {
         // TODO -- need to turn this into a hook
@@ -39,27 +45,41 @@ export default function Header() {
     }, [])
 
     return (
-        <header className={`header__module ${isMobileNavFixed ? 'mobile-nav-fixed' : ''}`}>
+        <header className={`header__module ${isMobileNavFixed ? 'mobile-nav-fixed' : ''} ${isMobileNavOpen ? 'mobile-nav-open' : ''}`}>
             <nav>
-                <button className="mobile-menu-btn">
+                <button 
+                    className="mobile-menu-btn"
+                    onClick={openNav}
+                >
                     Menu
-                    <span className="active-section">Home</span>
+                    <span className={`active-section`}>Home</span>
                 </button>
-                <ul className="navigation">
+                <div className="mobile-overlay" onClick={closeNav} />
+                <ul className={`navigation`}>
                     <li>
-                        <a href="">Home</a>
+                        <div className="nav-item-outer-wrapper">
+                            <Link to="/#top-of-page">Home</Link>
+                        </div>
                     </li>
                     <li>
-                        <a href="">Experience</a>
+                        <div className="nav-item-outer-wrapper active">
+                            <Link to="/#section-number-1">Experience</Link>
+                        </div>
                     </li>
                     <li>
-                        <a href="">Projects</a>
+                        <div className="nav-item-outer-wrapper">
+                            <Link to="/#section-number-2">Projects</Link>
+                        </div>
                     </li>
                     <li>
-                        <a href="">About</a>
+                        <div className="nav-item-outer-wrapper">
+                            <Link to="/#section-number-3">About</Link>
+                        </div>
                     </li>
                     <li>
-                        <a href="">Contact</a>
+                        <div className="nav-item-outer-wrapper">
+                            <Link to="/#section-number-4">Contact</Link>
+                        </div>
                     </li>
                 </ul>
             </nav>

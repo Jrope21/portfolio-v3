@@ -16,7 +16,10 @@ const numberIcons = {
 
 export default function NumberedSectionTitle({title, sectionNumber = "1", className}) {
     return (
-        <div className={`numbered-section-title__module${className ? ` ${className}` : ''}`}>
+        <div 
+            id={`section-number-${sectionNumber}`}
+            className={`numbered-section-title__module${className ? ` ${className}` : ''}`}
+        >
             <img src={numberIcons[sectionNumber]} alt="A number indicating the website section"/>
             <h2 
                 className="title"
