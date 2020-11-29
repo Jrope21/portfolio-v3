@@ -1,0 +1,15 @@
+
+.footer__module {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 25px;
+
+    .copyright {
+        font-size: px-to-rem(14px);
+        font-weight: 300;
+        font-style: italic;
+        margin: 12px 0 0 0;
+    }
+}

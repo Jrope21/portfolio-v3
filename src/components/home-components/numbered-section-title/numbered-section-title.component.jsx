@@ -18,7 +18,10 @@ export default function NumberedSectionTitle({title, sectionNumber = "1", classN
     return (
         <div className={`numbered-section-title__module${className ? ` ${className}` : ''}`}>
             <img src={numberIcons[sectionNumber]} alt="A number indicating the website section"/>
-            <h2 className="title">{title}</h2>
+            <h2 
+                className="title"
+                dangerouslySetInnerHTML={{ __html: title }}
+            />
         </div>
     )
 }

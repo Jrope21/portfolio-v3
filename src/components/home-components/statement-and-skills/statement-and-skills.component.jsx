@@ -14,7 +14,7 @@ export default function StatementAndSkills() {
 
                 <NumberedSectionTitle
                     className="title-sections"
-                    title="Statement & Skills" 
+                    title="Statement<br/> & Skills" 
                     sectionNumber="3" 
                 />
 

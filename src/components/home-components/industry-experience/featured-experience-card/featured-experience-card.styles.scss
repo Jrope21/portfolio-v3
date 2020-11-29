@@ -1,0 +1,90 @@
+
+.featured-experience-card__module {
+    display: none;
+    font-size: px-to-rem(14px);
+
+    &.active {
+        display: block;
+    }
+
+    .location-and-dates-container {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .job-location {
+        font-weight: 300;
+        margin-top: 0;
+        margin-bottom: 6px;
+    }
+
+    .job-dates {
+        font-family: $font_header_alt;
+        margin-bottom: 6px;
+        margin-top: 0;
+        font-size: px-to-rem(30px);
+        font-weight: 800;
+        overflow: hidden;
+
+        .text-displacement {
+            display: block;
+            transform: translateY(13px);
+        }
+    }
+
+    .job-title {
+        color: color(accent);
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+    .job-links {    
+        display: flex;
+        font-style: italic;
+        margin-top: -4px;
+        margin-bottom: 10px;
+
+        > img {
+            width: 14px;
+            margin-left: 10px;
+        }
+
+        &, a {
+            color: color(accent);
+        }
+    }
+
+    .job-description-bullets {
+
+        > li {
+            position: relative;
+            margin-top: 0;
+            margin-bottom: 10px;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: -8px;
+                top: 6px;
+                display: block;
+                width: 3px;
+                height: 3px;
+                border-radius: 50%;
+                background: color(secondary);
+            }
+        }
+
+        .description-bullet-links {
+            font-weight: 300;
+            font-style: italic;
+            margin-top: 5px;
+            margin-left: 5px;
+        }
+    }
+}
+
+  
