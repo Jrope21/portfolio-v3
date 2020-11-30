@@ -1,31 +1,18 @@
 import React, { createContext, useState } from "react"
-// import { useStaticQuery, graphql } from "gatsby"
 
+const INITIAL_STATE = {
+  activeMenuItem: "Home",
+}
 
-export const GlobalSettingsContext = createContext()
+export const GlobalContext = createContext(INITIAL_STATE)
 
-export default function GlobalSettingsProvider({ children }) {
-  // const settingsData = useStaticQuery(
-  //   graphql`
-  //     query {
-  //       wpgraphql {
-  //         globalSettings {
-  //           globalSettings {
-  //             emergencyPhoneNumber
-  //           }
-  //         }
-  //       }
-  //     }
-  //   `
-  // )
+export default function GlobalProvider({ children }) {
 
-  const [globalSettings, setGlobalSettings] = useState(
-    'settingsData.wpgraphql.globalSettings.globalSettings'
-  )
+  const [globalContextData, setGlobalContextData] = useState(INITIAL_STATE)
 
   return (
-    <GlobalSettingsContext.Provider value={[globalSettings, setGlobalSettings]}>
+    <GlobalContext.Provider value={[globalContextData, setGlobalContextData]}>
       {children}
-    </GlobalSettingsContext.Provider>
+    </GlobalContext.Provider>
   )
 }

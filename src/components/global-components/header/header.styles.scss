@@ -68,6 +68,8 @@
             font-weight: 500;
             color: rgba(color(secondary), .7);
             text-transform: lowercase;
+            transition: .35s $custom_animation;
+            text-align: center;
         }
 
         .nav-item-outer-wrapper.active {

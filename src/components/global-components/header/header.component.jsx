@@ -1,29 +1,16 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 import './header.styles.scss'
 
 import { Link } from "gatsby"
 
-let scrollPos;
-function throttleScrollEvent(callback, wait){ // throttle a scroll event function by specified wait time && only if the browser is ready for repaint
-    let scrolling = false;
-    
-    window.addEventListener('scroll', () => {
-        scrolling = true;
-    })
+import { useScrollPosition } from "@hooks/useScrollPosition"
+import { GlobalContext } from '@global-components/global.context'
 
-    setInterval( function() {
-        if ( scrolling ) {
-        window.requestAnimationFrame(function() {
-            scrollPos = window.pageYOffset;
-            scrolling = false;
-            callback(scrollPos);
-        })
-        }
-    }, wait );
-    
-}
 
 export default function Header() {
+
+    const [globalContextData] = useContext(GlobalContext)
+    const { activeMenuItem } = globalContextData;
 
     const [isMobileNavFixed, setIsMobileNavFixed] = useState(false);
     const [isMobileNavOpen, setIsMobileNavOpen] = useState(true);
@@ -31,17 +18,12 @@ export default function Header() {
     const openNav = () => setIsMobileNavOpen(true);
     const closeNav = () => setIsMobileNavOpen(false);
 
-    useEffect(() => {
-        // TODO -- need to turn this into a hook
+    useScrollPosition(({ prevPos, currPos }) => {
+        const changeScrollAt = 130;
+        const currentScrollY = Math.abs(currPos.y);
         
-        function setFixedMobileNavOnScroll(scrollPos) {
-            const changeScrollAt = 130;
-            if(scrollPos > changeScrollAt && !isMobileNavFixed) return setIsMobileNavFixed(true);
-            if(scrollPos < changeScrollAt) setIsMobileNavFixed(false)
-        }
-
-        throttleScrollEvent(setFixedMobileNavOnScroll, 50);
-
+        if(currentScrollY > changeScrollAt && !isMobileNavFixed) return setIsMobileNavFixed(true);
+        if(currentScrollY < changeScrollAt) setIsMobileNavFixed(false)
     }, [])
 
     return (
@@ -52,12 +34,12 @@ export default function Header() {
                     onClick={openNav}
                 >
                     Menu
-                    <span className={`active-section`}>Home</span>
+                    <span className={`active-section`}>{activeMenuItem}</span>
                 </button>
                 <div className="mobile-overlay" onClick={closeNav} />
                 <ul className={`navigation`}>
                     <li>
-                        <div className="nav-item-outer-wrapper">
+                        <div className={`nav-item-outer-wrapper ${activeMenuItem === 'Home' ? 'active' : ''}`}>
                             <Link 
                                 to="/#top-of-page"
                                 onClick={closeNav}
@@ -65,7 +47,7 @@ export default function Header() {
                         </div>
                     </li>
                     <li>
-                        <div className="nav-item-outer-wrapper active">
+                        <div className={`nav-item-outer-wrapper ${activeMenuItem === 'Experience' ? 'active' : ''}`}>
                             <Link 
                                 to="/#section-number-1"
                                 onClick={closeNav}
@@ -73,7 +55,7 @@ export default function Header() {
                         </div>
                     </li>
                     <li>
-                        <div className="nav-item-outer-wrapper">
+                        <div className={`nav-item-outer-wrapper ${activeMenuItem === 'Projects' ? 'active' : ''}`}>
                             <Link 
                                 to="/#section-number-2"
                                 onClick={closeNav}
@@ -81,7 +63,7 @@ export default function Header() {
                         </div>
                     </li>
                     <li>
-                        <div className="nav-item-outer-wrapper">
+                        <div className={`nav-item-outer-wrapper ${activeMenuItem === 'About' ? 'active' : ''}`}>
                             <Link 
                                 to="/#section-number-3"
                                 onClick={closeNav}
@@ -89,7 +71,7 @@ export default function Header() {
                         </div>
                     </li>
                     <li>
-                        <div className="nav-item-outer-wrapper">
+                        <div className={`nav-item-outer-wrapper ${activeMenuItem === 'Contact' ? 'active' : ''}`}>
                             <Link 
                                 to="/#section-number-4"
                                 onClick={closeNav}

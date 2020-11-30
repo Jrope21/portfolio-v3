@@ -1,15 +1,18 @@
 
-import React from "react"
+import React, { useContext } from "react"
 import '../../styles/global.scss';
 
 
 import Header from "./header/header.component"
-import GlobalSettingsProvider from "./global.context"
+import GlobalProvider, { GlobalContext } from "./global.context"
 import Footer from "./footer/footer.component"
 
 export default function Layout({ children }) {
+
+  const [globalContextData, setGlobalContextData] = useContext(GlobalContext)
+
   return (
-    <GlobalSettingsProvider>
+    <GlobalProvider>
       <span 
         id={'top-of-page'}
         style={{ height: '0px', lineHeight: '0px' }}
@@ -17,6 +20,6 @@ export default function Layout({ children }) {
       <Header />
         {children}
       <Footer />
-    </GlobalSettingsProvider>
+    </GlobalProvider>
   )
 }
