@@ -4,12 +4,15 @@ import './contact.styles.scss'
 import NumberedSectionTitle from '@home-components/numbered-section-title/numbered-section-title.component'
 import TextTitleCta from '@home-components/text-title-cta/text-title-cta.component'
 
-export default function Contact() {
+const Contact = React.forwardRef(({ sectionRef }) => {
 
     const [isSubmitting, setIsSubmitting] = useState(false);
 
     return (
-        <section className="contact__module container">
+        <section 
+            ref={sectionRef}
+            className="contact__module container"
+        >
             <div className="titles-container">
                 <NumberedSectionTitle
                     className="section-titles"
@@ -64,4 +67,6 @@ export default function Contact() {
             </form>
         </section>
     )
-}
+});
+
+export default Contact;

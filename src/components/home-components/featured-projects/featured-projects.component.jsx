@@ -8,9 +8,12 @@ import TextTitleCta from '@home-components/text-title-cta/text-title-cta.compone
 
 import { projectsData } from './_data'
 
-export default function FeaturedProjects() {
+const FeaturedProjects = React.forwardRef(({ sectionRef }) => {
     return (
-        <section className="featured-projects__module container">
+        <section 
+            ref={sectionRef}
+            className="featured-projects__module container"
+        >
             <div className="titles-container">
                 <NumberedSectionTitle 
                     className="section-titles"
@@ -46,4 +49,6 @@ export default function FeaturedProjects() {
 
         </section>
     )
-}
+});
+
+export default FeaturedProjects

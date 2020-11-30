@@ -6,12 +6,16 @@ import { experienceData } from './_data'
 
 import FeaturedExperienceCard from './featured-experience-card/featured-experience-card.component'
 
-export default function IndustryExperience() {
+
+const IndustryExperience = React.forwardRef(({ sectionRef }) => {
 
     const [activeExperienceListing, setActiveExperienceListing] = useState(experienceData[0].key)
 
     return (
-        <section className="industry-experience__module container">
+        <section 
+            ref={sectionRef}
+            className="industry-experience__module container"
+        >
             <div className="left">
                 <NumberedSectionTitle 
                     className="title-sections"
@@ -52,4 +56,6 @@ export default function IndustryExperience() {
             </div>
         </section>
     )
-}
+});
+
+export default IndustryExperience

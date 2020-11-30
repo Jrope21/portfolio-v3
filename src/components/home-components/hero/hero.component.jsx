@@ -8,9 +8,9 @@ import SocialIcons from '@common-components/social-icons/social-icons.component'
 import HeroImageMobile from '@images/home/portfolio_hero_mobile.jpg'
 import HeroImageDesktop from '@images/home/portfolio_hero_desktop.jpg'
 
-export default function Hero() {
+const Hero = React.forwardRef(({ sectionRef }) => {
     return (
-        <section className="hero__module">
+        <section className="hero__module" ref={sectionRef}>
             <picture className="hero-image">
                 <source 
                     srcSet={HeroImageDesktop}
@@ -40,4 +40,6 @@ export default function Hero() {
             </div>
         </section>
     )
-}
+});
+
+export default Hero;

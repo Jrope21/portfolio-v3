@@ -7,9 +7,12 @@ import HeroImageDesktop from '@images/home/about-me-desktop-img.jpg'
 import HeroImageMobile from '@images/home/about-me-mobile-img.jpg'
 import NumberedSectionTitle from '@home-components/numbered-section-title/numbered-section-title.component'
 
-export default function StatementAndSkills() {
+const StatementAndSkills = React.forwardRef(({ sectionRef }) => {
     return (
-        <section className="statement-and-skills__module container">
+        <section 
+            ref={sectionRef}
+            className="statement-and-skills__module container"
+        >
             <div className="top-container">
 
                 <NumberedSectionTitle
@@ -59,4 +62,6 @@ export default function StatementAndSkills() {
 
         </section>
     )
-}
+});
+
+export default StatementAndSkills;
