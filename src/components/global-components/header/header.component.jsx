@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from 'react'
+import React, { useEffect, useState, useContext, useRef } from 'react'
 import './header.styles.scss'
 
 import { Link } from "gatsby"
@@ -6,11 +6,15 @@ import { Link } from "gatsby"
 import { useScrollPosition } from "@hooks/useScrollPosition"
 import { GlobalContext } from '@global-components/global.context'
 
+const menuItems = ['Home', 'Experience', 'Projects', 'About', 'Contact'];
 
 export default function Header() {
 
     const [globalContextData] = useContext(GlobalContext)
     const { activeMenuItem } = globalContextData;
+
+    // const [mobileNavWidth, setMobileNavWidth]
+    // const activeMobileMenuText = useRef(null);
 
     const [isMobileNavFixed, setIsMobileNavFixed] = useState(false);
     const [isMobileNavOpen, setIsMobileNavOpen] = useState(true);
@@ -26,15 +30,32 @@ export default function Header() {
         if(currentScrollY < changeScrollAt) setIsMobileNavFixed(false)
     }, [])
 
+    // useEffect(() => {
+    //     active
+    // }, [activeMenuItem])
+
     return (
         <header className={`header__module ${isMobileNavFixed ? 'mobile-nav-fixed' : ''} ${isMobileNavOpen ? 'mobile-nav-open' : ''}`}>
             <nav>
                 <button 
-                    className="mobile-menu-btn"
+                    // ref={mobileNavButton}
+                    className={`mobile-menu-btn ${activeMenuItem}`}
                     onClick={openNav}
                 >
-                    Menu
-                    <span className={`active-section`}>{activeMenuItem}</span>
+                    <div className="inner-wrapper">
+                        Menu
+                        <span aria-hidden="true" className="line-seperator" />
+                        {/* {menuItems.map(menuItem => (
+                            <span 
+                                className={`mobile-menu-breadcrumb ${menuItem === activeMenuItem ? 'active-section' : ''}`}
+                            >{activeMenuItem}</span>
+                        ))} */}
+                        <span 
+                            // ref={activeMobileMenuText}
+                            className={`mobile-menu-breadcrumb`}
+                        >{activeMenuItem}</span>
+                    </div>
+                    
                 </button>
                 <div className="mobile-overlay" onClick={closeNav} />
                 <ul className={`navigation`}>

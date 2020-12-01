@@ -28,7 +28,7 @@
         box-shadow: 18px 18px 20px #24262B, -18px -18px 20px #30343A;
         border-radius: 20px;
         transform: translateX(-110%);
-        transition: .35s $custom_animation transform;
+        transition: .2s $custom_animation transform;
 
         @media (min-width: breakpoint(xs)) {
             top: 100px;
@@ -68,7 +68,8 @@
             font-weight: 500;
             color: rgba(color(secondary), .7);
             text-transform: lowercase;
-            transition: .35s $custom_animation;
+            // add transition on tablet
+            // transition: .35s $custom_animation;
             text-align: center;
         }
 
@@ -97,8 +98,6 @@
     }
 
     .mobile-menu-btn {
-        display: flex;
-        flex-direction: column;
         position: relative;
         left: -10px;
         background-color: color(background_alt);
@@ -108,20 +107,57 @@
         color: color(primary);
         transform: translateX(0);
         text-transform: uppercase;
-        transition: .2s $custom_animation transform;
+        transition: .15s $custom_animation transform .125s, .1s ease-in-out max-width, .1s ease-in-out min-width;
 
-        .active-section {
+        .inner-wrapper {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        // animating width changes with max-width / min-width;
+        // TODO -- maybe animate with JS if this becomes hard to maintain?
+        &.Home {
+            min-width: 105px;
+            max-width: 115px;
+        }
+
+        &.Experience {
+            min-width: 153px;
+            max-width: 163px;
+        }
+
+        &.Projects {
+            min-width: 138px;
+            max-width: 148px;
+        }
+
+        &.About {
+            min-width: 113px;
+            max-width: 123px;
+        }
+
+        &.Contact {
+            min-width: 133px;
+            max-width: 143px;
+        }
+
+        .line-seperator {
+            display: block;
+            height: 3px;
+            width: 300px;
+            max-width: 100vw;
+            background-color: color(secondary);
+            opacity: .7;
+            margin: 5px 0 6px 0;
+        }
+
+        .mobile-menu-breadcrumb {
             color: color(accent_transparent);
-
-            &::before {
-                content: '';
-                display: block;
-                height: 3px;
-                width: 100%;
-                background-color: color(secondary);
-                opacity: .7;
-                margin: 5px 0 6px 0;
-            }
+            // text-align: left;
         }
     }
 
@@ -129,10 +165,12 @@
 
         .mobile-menu-btn {
             transform: translateX(-100%);
+            transition-delay: 0s;
         }
 
         .navigation {
             transform: translate(0);
+            transition-delay: .1s;
         }  
 
         .mobile-overlay {
