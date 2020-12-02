@@ -7,4 +7,8 @@
     @media (min-width: breakpoint(xs)) {
         @include paddingLR(25px);
     }
+
+    @media (min-width: breakpoint(sm)) {
+        padding-left: 112px;
+    }
 }

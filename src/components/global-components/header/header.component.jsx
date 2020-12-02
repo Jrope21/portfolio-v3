@@ -43,20 +43,6 @@ export default function Header() {
                     </div>
                     
                 </button>
-
-                {/* <button 
-                    className={`mobile-menu-btn scrollable ${activeMenuItem}`}
-                    onClick={openNav}
-                >
-                    <div className="inner-wrapper">
-                        Menu
-                        <span aria-hidden="true" className="line-seperator" />
-                        <span 
-                            className={`mobile-menu-breadcrumb`}
-                        >{activeMenuItem}</span>
-                    </div>
-                    
-                </button> */}
                 <div className="mobile-overlay" onClick={closeNav} />
                 <ul className={`navigation`}>
                     {menuItems.map(menuItem => (

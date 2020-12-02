@@ -33,6 +33,10 @@
         @media (min-width: breakpoint(xs)) {
             top: 100px;
         }
+
+        @media (min-width: breakpoint(sm)) {
+            transform: translateX(0);
+        }
         
         li { 
             display: table;
@@ -71,6 +75,10 @@
             // add transition on tablet
             // transition: .35s $custom_animation;
             text-align: center;
+
+            @media (min-width: breakpoint(sm)) {
+                transition: .35s $custom_animation;
+            }
         }
 
         .nav-item-outer-wrapper.active {
@@ -98,6 +106,7 @@
     }
 
     .mobile-menu-btn {
+        
         position: relative;
         left: -10px;
         background-color: color(background_alt);
@@ -109,12 +118,9 @@
         text-transform: uppercase;
         transition: .15s $custom_animation transform .125s, .1s ease-in-out max-width, .1s ease-in-out min-width;
 
-        // &.scrollable {
-        //     top: 10px;
-        //     position: fixed;
-        //     transform: translateX(-100%);
-        //     transition: .15s $custom_animation transform .125s, .1s ease-in-out max-width, .1s ease-in-out min-width;
-        // }
+        @media (min-width: breakpoint(sm)) {
+            display: none;
+        }
 
         .inner-wrapper {
             position: relative;

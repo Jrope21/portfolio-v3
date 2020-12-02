@@ -6,6 +6,7 @@ import styles from '@styles/variables.scss';
 import SocialIcons from '@common-components/social-icons/social-icons.component';
 
 import HeroImageMobile from '@images/home/portfolio_hero_mobile.jpg'
+import HeroImageTablet from '@images/home/portfolio_hero_tablet.jpg'
 import HeroImageDesktop from '@images/home/portfolio_hero_desktop.jpg'
 
 const Hero = React.forwardRef(({ sectionRef }) => {
@@ -23,8 +24,8 @@ const Hero = React.forwardRef(({ sectionRef }) => {
         >
             <picture className="hero-image">
                 <source 
-                    srcSet={HeroImageDesktop}
-                    media={`min-width: ${styles.breakpointSm}`} 
+                    srcSet={HeroImageTablet}
+                    media={`(min-width: ${styles.breakpointSm}px)`} 
                 />
                 <img src={HeroImageMobile} alt="A Front End Developer typing on a laptop"/>
             </picture>

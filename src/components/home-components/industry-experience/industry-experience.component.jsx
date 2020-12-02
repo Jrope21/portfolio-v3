@@ -23,24 +23,44 @@ const IndustryExperience = React.forwardRef(({ sectionRef }) => {
                     sectionNumber="1" 
                     sectionName="experience"
                 />
-                <ul className="experience-title-filters">
-                    {experienceData.map(({ key, name }) => (
+                <div className="mobile-line-seperator" />
+                <ul className="experience-content-list-container">
+                    {experienceData.map((experience) => (
                         <li 
-                            onClick={() => {
-                                setActiveExperienceListing(key)
-                                console.log(activeExperienceListing)
-                            }}
-                            className={`title-filter ${activeExperienceListing === key ? 'active' : ''}`} 
-                            key={key + 'filters'}
+                            className="experience-content"
+                            key={experience.key + 'filters'}
                         >
-                            <span className="text-animate">
-                                {name}
-                            </span>         
+                            <div 
+                                onClick={() => {
+                                    setActiveExperienceListing(experience.key)
+                                    console.log(activeExperienceListing)
+                                }}
+                                className={`title-filter ${activeExperienceListing === experience.key ? 'active' : ''}`}
+                            >
+                                <span className="title-text-animate">
+                                    {experience.name}
+                                </span> 
+                            </div>
+                             
+                            <div className="featured-experience-card">
+                                <FeaturedExperienceCard 
+                                    // key={experience.key}
+                                    isVisible={activeExperienceListing === experience.key}
+                                    name={experience.name}
+                                    location={experience.location}
+                                    startYear={experience.startYear}
+                                    endYear={experience.endYear}
+                                    title={experience.title}
+                                    links={experience.links}
+                                    jobDescriptionBullets={experience.jobDescriptionBullets}
+                                />
+                            </div>
+                           
                         </li>
                     ))}
                 </ul>
             </div>
-            <div className="right">
+            {/* <div className="right">
                 {experienceData.map(experience => (
                     <FeaturedExperienceCard 
                         key={experience.key}
@@ -54,7 +74,7 @@ const IndustryExperience = React.forwardRef(({ sectionRef }) => {
                         jobDescriptionBullets={experience.jobDescriptionBullets}
                     />
                 ))}
-            </div>
+            </div> */}
         </section>
     )
 });

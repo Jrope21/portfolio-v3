@@ -4,11 +4,13 @@
     width: 100px;
     overflow: hidden;
     min-width: 90px;
-    // margin-left: -10px;
-    // margin-left: -20px;
 
     @media (min-width: breakpoint(xs)) {
         margin-left: 0;
+    }
+
+    @media (min-width: breakpoint(sm)) {
+        width: 170px
     }
 
     img {
@@ -18,6 +20,14 @@
         @media (min-width: breakpoint(xs)) {
             margin-left: 0;
         }
+
+        @media (min-width: breakpoint(sm)) {
+           width: 115px; 
+        }
+
+        @media (min-width: breakpoint(md)) {
+            width: 135px; 
+         }
     }
 
     .title {
@@ -27,5 +37,15 @@
         width: 91px;
         font-size: px-to-rem(16px);
         font-weight: 500;
+
+        @media (min-width: breakpoint(sm)) {
+            font-size: px-to-rem(22px);
+            width: 150px;
+            bottom: 20px;
+        }
+
+        @media (min-width: breakpoint(md)) {
+            font-size: px-to-rem(25px);
+        }
     }
 }

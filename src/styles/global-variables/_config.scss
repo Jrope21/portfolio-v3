@@ -24,10 +24,10 @@
 // utility breakpoints: xs, xl
 $grid_breakpoints: (
     xs: 365px, // mainly for iphone 5 / iphone xs / smaller android phones
-    sm: 640px, 
-    md: 1000px, 
-    lg: 1280px, 
-    xl: 1500px
+    sm: 640px, // small tablet
+    md: 780px, // regular tablet
+    lg: 1280px, // small desktop
+    xl: 1500px // regular desktop
 );
 
 
