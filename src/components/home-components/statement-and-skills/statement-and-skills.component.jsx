@@ -19,6 +19,7 @@ const StatementAndSkills = React.forwardRef(({ sectionRef }) => {
                     className="title-sections"
                     title="Statement<br/> & Skills" 
                     sectionNumber="3" 
+                    sectionName="about"
                 />
 
                 <p className="statement">

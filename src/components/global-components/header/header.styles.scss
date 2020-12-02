@@ -94,7 +94,7 @@
         opacity: 0;
         background-color: rgba(color(page_background), .8);
         visibility: hidden;
-        transition: .25s ease opacity, .25s visibility;
+        transition: .15s ease opacity, .15s visibility;
     }
 
     .mobile-menu-btn {
@@ -109,6 +109,13 @@
         text-transform: uppercase;
         transition: .15s $custom_animation transform .125s, .1s ease-in-out max-width, .1s ease-in-out min-width;
 
+        // &.scrollable {
+        //     top: 10px;
+        //     position: fixed;
+        //     transform: translateX(-100%);
+        //     transition: .15s $custom_animation transform .125s, .1s ease-in-out max-width, .1s ease-in-out min-width;
+        // }
+
         .inner-wrapper {
             position: relative;
             display: flex;
@@ -118,7 +125,7 @@
             width: 100%;
         }
 
-        // animating width changes with max-width / min-width;
+        // animating width / content changes with max-width / min-width;
         // TODO -- maybe animate with JS if this becomes hard to maintain?
         &.Home {
             min-width: 105px;
@@ -157,9 +164,21 @@
 
         .mobile-menu-breadcrumb {
             color: color(accent_transparent);
-            // text-align: left;
         }
     }
+
+    // &.mobile-nav-fixed .mobile-menu-btn {
+    //     &.not-scrollable {
+    //         transform: translateX(-100%);
+    //         transition-delay: .55s;
+    //     }
+        
+
+    //     &.scrollable {
+    //         transform: translateX(0);
+    //     }
+        
+    // }
 
     &.mobile-nav-open {
 
@@ -176,6 +195,7 @@
         .mobile-overlay {
             opacity: 1;
             visibility: visible;
+            transition-delay: .1s;
         }
     }
 }

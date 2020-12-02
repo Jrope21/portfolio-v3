@@ -21,6 +21,7 @@ const IndustryExperience = React.forwardRef(({ sectionRef }) => {
                     className="title-sections"
                     title="My Industry Experience" 
                     sectionNumber="1" 
+                    sectionName="experience"
                 />
                 <ul className="experience-title-filters">
                     {experienceData.map(({ key, name }) => (

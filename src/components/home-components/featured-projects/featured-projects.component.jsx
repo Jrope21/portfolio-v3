@@ -19,6 +19,7 @@ const FeaturedProjects = React.forwardRef(({ sectionRef }) => {
                     className="section-titles"
                     title="Projects I've Worked On" 
                     sectionNumber={'2'} 
+                    sectionName="projects"
                 />
                 <TextTitleCta 
                     title={'Archive'}

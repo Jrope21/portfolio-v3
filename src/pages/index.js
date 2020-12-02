@@ -42,6 +42,10 @@ export default function Home() {
 
   return (
     <main className="home__template">
+      <span 
+        id={'home'}
+        style={{ height: '0px', lineHeight: '0px' }}
+      />
       <Hero sectionRef={sectionRefs.current[0]} />
       <IndustryExperience sectionRef={sectionRefs.current[1]} />
       <FeaturedProjects sectionRef={sectionRefs.current[2]} />

@@ -4,8 +4,8 @@ import './jr-pointer.styles.scss'
 export default function JrPointer({ 
     size = 'standard', // sizes include: small, standard
     altColor = false, 
-    className, 
-    ...otherProps }) {
+    className 
+}) {
     return (
         <span 
             className={`jr-pointer__module ${size} ${className ? className : ''}${altColor ? ` alt-color` : ''}`}

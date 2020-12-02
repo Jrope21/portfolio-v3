@@ -18,6 +18,7 @@ const Contact = React.forwardRef(({ sectionRef }) => {
                     className="section-titles"
                     title="Get In Touch<br /> With Me" 
                     sectionNumber={'4'} 
+                    sectionName="contact"
                 />
                 <TextTitleCta 
                     title={'Connect'}

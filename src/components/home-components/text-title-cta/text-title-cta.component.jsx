@@ -10,6 +10,22 @@ export default function TextTitleCta({
     altColors = false,
 }) {
 
+    if(title && urlPath) return (
+        <div 
+            className={`text-title-cta__module ${altColors ? 'alt-colors' : ''} ${urlPath ? 'has-arrow' : ''}`}
+        >
+            <div className="top">
+                <span className="large-text-title">{title[0]}</span>
+                <p className="sub-title">{description}</p>
+                <JrPointer
+                    className="featured-title-pointer"
+                />
+            </div>
+
+            <span className="bottom large-text-title">{title.slice(1)}</span>
+        </div>
+    )
+
 
     if(title) return (
         <div 
@@ -18,11 +34,6 @@ export default function TextTitleCta({
             <div className="top">
                 <span className="large-text-title">{title[0]}</span>
                 <p className="sub-title">{description}</p>
-                {urlPath &&
-                    <JrPointer
-                        className="featured-title-pointer"
-                    />
-                }
             </div>
 
             <span className="bottom large-text-title">{title.slice(1)}</span>

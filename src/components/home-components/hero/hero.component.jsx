@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './hero.styles.scss'
 
 import styles from '@styles/variables.scss';
@@ -9,8 +9,18 @@ import HeroImageMobile from '@images/home/portfolio_hero_mobile.jpg'
 import HeroImageDesktop from '@images/home/portfolio_hero_desktop.jpg'
 
 const Hero = React.forwardRef(({ sectionRef }) => {
+
+    const [isMounted, setIsMounted] = useState(false);
+
+    useEffect(() => {
+        setIsMounted(true);
+    }, [])
+
     return (
-        <section className="hero__module" ref={sectionRef}>
+        <section 
+            className={`hero__module ${isMounted ? 'mounted' : ''}`} 
+            ref={sectionRef}
+        >
             <picture className="hero-image">
                 <source 
                     srcSet={HeroImageDesktop}
