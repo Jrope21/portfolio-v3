@@ -54,6 +54,11 @@
         @media (min-width: breakpoint(sm)) {
             padding-top: 75px;
             padding-bottom: 5px;
+            margin-right: 50px;
+        }
+
+        @media (min-width: breakpoint(md)) {
+            margin-right: 80px;
         }
 
         &::after {
@@ -75,6 +80,10 @@
             margin-bottom: 8px;
             font-size: px-to-rem(14px);
             font-weight: 300;
+
+            @media (min-width: breakpoint(md)) {
+                font-size: px-to-rem(16px);
+            }
 
             &::after {
                 content: '';
