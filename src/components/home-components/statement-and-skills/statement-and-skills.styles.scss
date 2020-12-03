@@ -2,16 +2,34 @@
 .statement-and-skills__module {
     display: flex;
     flex-direction: column;
+    
 
     .top-container {
         display: flex;
         align-items: flex-start;
+        margin-bottom: 12px;
+
+        @media (min-width: breakpoint(sm)) {
+            align-items: flex-end;
+        }
     }
 
     .statement {
         flex: 1;
         margin-top: 50px;
+        margin-bottom: 0;
         font-size: px-to-rem(14px);
+        
+
+        @media (min-width: breakpoint(sm)) {
+            padding-bottom: 10px;
+            max-width: 380px;
+        }
+
+        @media (min-width: breakpoint(md)) {
+            font-size: px-to-rem(16px);
+            max-width: 450px;
+        }
     }
 
     .hero-image {
@@ -32,6 +50,11 @@
         padding-top: 25px;
         margin-right: 28px;
         margin-top: -255px;
+
+        @media (min-width: breakpoint(sm)) {
+            padding-top: 75px;
+            padding-bottom: 5px;
+        }
 
         &::after {
             content: ''; 

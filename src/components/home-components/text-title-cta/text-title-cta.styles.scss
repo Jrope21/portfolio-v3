@@ -18,6 +18,17 @@
         font-weight: 900;
         color: color(primary);
         text-transform: uppercase;
+
+        @media (min-width: breakpoint(sm)) {
+            font-size: px-to-rem(65px);
+            line-height: 60px;
+            letter-spacing: 5px;
+        }
+
+        @media (min-width: breakpoint(md)) {
+            font-size: px-to-rem(80px);
+            line-height: 70px;
+        }
     }
 
     .sub-title {
@@ -28,6 +39,23 @@
 
         @media (min-width: breakpoint(xs)) {
             margin: 0 4px 0 8px;
+            // width: 180px;
+        }
+
+        @media (min-width: breakpoint(md)) {
+            font-size: px-to-rem(16px);
+            margin-bottom: 4px;
+            width: auto;
+            margin-left: 10px;
+        }
+    }
+
+    .featured-title-pointer {
+        margin-bottom: 12px;
+        margin-right: 4px;
+
+        @media (min-width: breakpoint(sm)) {
+            margin-right: 10px;
         }
     }
 
@@ -38,6 +66,17 @@
     &.has-arrow {
         .sub-title {
             width: 130px;
+
+            @media (min-width: breakpoint(sm)) {
+                width: 190px;
+                margin-left: 2px;
+                margin-bottom: 4px;
+            }
+
+            @media (min-width: breakpoint(md)) {
+                width: 210px;
+                margin-left: -12px;
+            }
         }
     }
 

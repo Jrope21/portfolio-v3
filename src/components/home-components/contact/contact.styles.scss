@@ -8,11 +8,23 @@
         align-items: flex-end;
         justify-content: space-between;
         margin-bottom: 25px;
+
+        @media (min-width: breakpoint(sm)) {
+            max-width: 520px;
+        }
+
+        @media (min-width: breakpoint(md)) {
+            max-width: 580px;
+        }
     }
 
     .section-titles {
         position: relative;
         top: -35px;
+
+        @media (min-width: breakpoint(sm)) {
+            top: 0;
+        }
     }
 
     .contact-form {

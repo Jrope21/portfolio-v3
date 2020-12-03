@@ -31,7 +31,7 @@ const StatementAndSkills = React.forwardRef(({ sectionRef }) => {
             <picture className="hero-image">
                 <source 
                     srcSet={HeroImageDesktop}
-                    media={`min-width: ${styles.breakpointSm}`} 
+                    media={`(min-width: ${styles.breakpointSm}px)`} 
                 />
                 <img src={HeroImageMobile} alt="Joshua Roper, a Senior Front End Developer"/>
             </picture>

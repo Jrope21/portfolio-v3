@@ -41,7 +41,9 @@ const FeaturedProjects = React.forwardRef(({ sectionRef }) => {
             </div>
 
             <a className="view-all-button" role="button" href="">
-                Use archive for the full list of projects I’ve worked on.
+                <span className="text">
+                    Use archive for the full list of projects I’ve worked on.
+                </span>
                 <JrPointer 
                     altColor={true}
                     size={'small'}

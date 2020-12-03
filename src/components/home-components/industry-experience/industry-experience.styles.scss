@@ -75,12 +75,14 @@
         overflow: hidden;
         font-weight: 700;
         margin-top: 20px;
+        cursor: pointer;
 
         @media (min-width: breakpoint(sm)) {
             position: relative;
             top: 0 !important;
-            width: 150px;
+            width: 180px;
             margin-top: 30px;
+            margin-left: -28px;
         }
       
 
@@ -93,6 +95,13 @@
             align-items: center;
             transform: translateX(32px);
             transition: .45s $custom_animation transform, .25s $custom_animation color;
+            
+            @media (min-width: breakpoint(sm)) {
+                // transform: translateX(7px);
+                // width: 120%;
+                
+                transform: translateX(14px);
+            }
 
             &::after {
                 content: '';
@@ -101,6 +110,12 @@
                 height: 3px;
                 margin-left: 5px;
                 background-color: color(accent);
+                // color: color(primary);
+                @media (min-width: breakpoint(sm)) {
+                    // width: px;
+                    margin-left: 8px;
+                    background-color: color(secondary);
+                }
             }
         }
 
@@ -109,7 +124,13 @@
             .title-text-animate {
                 color: color(accent);
                 transform: translate(0);
+
+                &::after {
+                    background-color: color(accent);
+                }
             }
+
+
         }
     }
 
@@ -121,8 +142,11 @@
     }
 
     .experience-content {
-        position: relative;
 
+        @media (min-width: breakpoint(sm)) {
+            position: relative;
+        }
+        
         @media (min-width: breakpoint(sm)) {
             // display: flex;
             width: 100%;
@@ -141,9 +165,9 @@
 
         @media (min-width: breakpoint(sm)) {
             position: absolute;
-            top: -62px;
+            top: -40px;
             right: 0;
-            width: calc(100% - 160px);
+            width: calc(100% - 170px);
         }
     }
 }

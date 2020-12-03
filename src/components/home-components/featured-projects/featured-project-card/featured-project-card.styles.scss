@@ -3,9 +3,34 @@ $card_border: 3px solid rgba(color(secondary), .7);
 
 .featured-project-card__module {
 
+    @media (min-width: breakpoint(sm)) {
+        display: flex;
+    }
+
+    &:nth-of-type(2n) {
+        @media (min-width: breakpoint(sm)) {
+            flex-direction: row-reverse;
+        }
+    }
+
     .project-top-section {
         padding: 0 10px;
         border-top: $card_border;
+
+        @media (min-width: breakpoint(sm)) {
+            // display: flex;
+            // flex-direction: column;
+            // justify-content: center;
+            padding-right: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            min-height: 180px;
+        }
+
+        @media (min-width: breakpoint(md)) {
+            // padding-top: 30px;
+            // padding-bottom: 30px;
+        }
     }
 
     .project-bottom-section {
@@ -16,8 +41,6 @@ $card_border: 3px solid rgba(color(secondary), .7);
         justify-content: flex-end;
     }
 
-    
-
     .project-title, .project-title a {
         // margin-left: 5px;
         font-size: px-to-rem(16px);
@@ -25,14 +48,33 @@ $card_border: 3px solid rgba(color(secondary), .7);
         color: color(accent);
         margin: 10px 0 6px 5px;
 
+        @media (min-width: breakpoint(md)) {
+            font-size: px-to-rem(22px);
+            margin-left: 2px;
+        }
+
+        a {
+            @media (min-width: breakpoint(md)) {
+               display: flex;
+            }
+        }
+
         img {
             margin-left: 10px;
+            
+            @media (min-width: breakpoint(md)) {
+                width: 18px;
+            }
         }
     }
 
     .project-description {
         font-size: px-to-rem(14px);
         margin: 6px 0 12px 0;
+
+        @media (min-width: breakpoint(md)) {
+            font-size: px-to-rem(16px);
+        }
     }
 
     .project-year-container {
