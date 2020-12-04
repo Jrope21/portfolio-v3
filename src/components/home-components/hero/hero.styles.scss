@@ -69,10 +69,12 @@
 
         @media (min-width: breakpoint(sm)) {
             font-size: px-to-rem(70px);
+            margin-bottom: -6px;
         }
 
         @media (min-width: breakpoint(md)) {
             font-size: px-to-rem(90px);
+            margin-bottom: -8px;
         }
 
         &::after {
@@ -102,6 +104,7 @@
             font-size: px-to-rem(18px);
             border-bottom: 3px solid rgba(color(primary), .7);
             padding-left: 5px;
+            padding-bottom: 5px;
         }
 
         @media (min-width: breakpoint(md)) {
@@ -140,6 +143,11 @@
                 border-left: 3px solid rgba(color(primary), .7);
                 border-right: none;
                 font-size: px-to-rem(14px);
+            }
+
+            @media (min-width: breakpoint(md)) {
+              
+                font-size: px-to-rem(16px);
             }
 
 

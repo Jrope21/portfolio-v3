@@ -3,6 +3,11 @@
     margin-top: -55px;
     margin-bottom: 40px;
 
+    @media (min-width: breakpoint(md)) {
+        margin-top: -75px;
+        margin-bottom: 55px;
+    }
+
     .titles-container {
         display: flex;
         align-items: flex-end;
@@ -35,6 +40,7 @@
         display: flex;
         flex-direction: column;
         margin-bottom: 25px;
+        
 
         &:last-of-type {
             margin-bottom: 0;
@@ -63,12 +69,19 @@
         background-color: color(primary);
         color: color(tertiary);
         font-weight: 300;
+        
+
+        @media (min-width: breakpoint(sm)) {
+            width: 75%;
+            max-width: 412px;
+        }
     }
 
     .contact-textarea {
         color: color(primary);
         background: rgba(color(accent), .09);
         font-weight: 500;
+        resize: none;
 
         &::-webkit-input-placeholder,
         &:-moz-placeholder,

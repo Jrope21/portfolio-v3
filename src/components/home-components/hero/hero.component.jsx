@@ -32,7 +32,7 @@ const Hero = React.forwardRef(({ sectionRef }) => {
             <div className="container">
                 <div className="text-cta">
                     <span className="title">Joshua</span>
-                    <h1 className="sub-title cta-sizing">Joshua Roper, Front End Developer based in Dallas.</h1>
+                    <h1 className="sub-title cta-sizing">Joshua Roper, front end developer based in Dallas.</h1>
                     <div className="text-cta-bottom-content cta-sizing">
                         
                         <div className="row-one">

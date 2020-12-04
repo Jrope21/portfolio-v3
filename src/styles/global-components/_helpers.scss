@@ -21,3 +21,9 @@
 }
 
 
+.mobile-no-scroll {
+
+    @media (max-width: breakpoint(sm)) {
+        overflow: hidden;
+    }
+}

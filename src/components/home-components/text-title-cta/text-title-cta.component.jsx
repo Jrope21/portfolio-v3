@@ -2,6 +2,7 @@ import React from 'react'
 import './text-title-cta.styles.scss'
 
 import JrPointer from '@common-components/jr-pointer/jr-pointer.component'
+import { Link } from 'gatsby'
 
 export default function TextTitleCta({
     title = '',
@@ -11,7 +12,8 @@ export default function TextTitleCta({
 }) {
 
     if(title && urlPath) return (
-        <div 
+        <Link 
+            to="/"
             className={`text-title-cta__module ${altColors ? 'alt-colors' : ''} ${urlPath ? 'has-arrow' : ''}`}
         >
             <div className="top">
@@ -23,7 +25,7 @@ export default function TextTitleCta({
             </div>
 
             <span className="bottom large-text-title">{title.slice(1)}</span>
-        </div>
+        </Link>
     )
 
 

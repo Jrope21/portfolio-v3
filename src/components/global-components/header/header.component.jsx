@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 import './header.styles.scss'
 
 import { Link } from "gatsby"
@@ -26,6 +26,15 @@ export default function Header() {
         if(currentScrollY > changeScrollAt && !isMobileNavFixed) return setIsMobileNavFixed(true);
         if(currentScrollY < changeScrollAt) setIsMobileNavFixed(false)
     }, [])
+
+    useEffect(() => {
+        if(isMobileNavOpen) document.body.classList.add('mobile-no-scroll');
+        else document.body.classList.remove('mobile-no-scroll');
+
+        return (()=> {
+            document.body.classList.remove('mobile-no-scroll');
+        })
+    }, [isMobileNavOpen])
 
     return (
         <header className={`header__module ${isMobileNavFixed ? 'mobile-nav-fixed' : ''} ${isMobileNavOpen ? 'mobile-nav-open' : ''}`}>

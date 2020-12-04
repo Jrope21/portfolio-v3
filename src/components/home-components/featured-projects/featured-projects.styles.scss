@@ -3,6 +3,11 @@
     margin-top: 60px;
     margin-bottom: 60px;
 
+    @media (min-width: breakpoint(sm)) {
+        margin-top: 80px;
+        margin-bottom: 80px;
+    }
+
     .titles-container {
         display: flex;
         align-items: flex-end;

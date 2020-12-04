@@ -1,12 +1,15 @@
 
 a:hover .jr-pointer__module {
-    transform: translateX(10px);
+    transform: translateX(10px);   
+    color: color(accent) 
 }
 
  .jr-pointer__module {
     position: relative;
     width: 24px;
     height: 24px;
+    transform: translateX(0px);
+    transition: .3s transform;
 
     @media (min-width: breakpoint(sm)) {
         width: 28px;

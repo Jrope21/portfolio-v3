@@ -10,5 +10,10 @@
 
     @media (min-width: breakpoint(sm)) {
         padding-left: 112px;
+        max-width: 735px;
+    }
+
+    @media (min-width: breakpoint(md)) {
+        max-width: 850px;
     }
 }
