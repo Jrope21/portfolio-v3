@@ -23,10 +23,15 @@ const Hero = React.forwardRef(({ sectionRef }) => {
             ref={sectionRef}
         >
             <picture className="hero-image">
+            <source 
+                    srcSet={HeroImageDesktop}
+                    media={`(min-width: ${styles.breakpointLg}px)`} 
+                />
                 <source 
                     srcSet={HeroImageTablet}
                     media={`(min-width: ${styles.breakpointSm}px)`} 
                 />
+                
                 <img src={HeroImageMobile} alt="A Front End Developer typing on a laptop"/>
             </picture>
             <div className="container">
