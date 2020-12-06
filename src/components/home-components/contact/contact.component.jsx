@@ -11,7 +11,7 @@ const Contact = React.forwardRef(({ sectionRef }) => {
     return (
         <section 
             ref={sectionRef}
-            className="contact__module container"
+            className="contact__module"
         >
             <div className="titles-container">
                 <NumberedSectionTitle

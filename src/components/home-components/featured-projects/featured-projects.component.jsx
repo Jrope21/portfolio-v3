@@ -12,7 +12,7 @@ const FeaturedProjects = React.forwardRef(({ sectionRef }) => {
     return (
         <section 
             ref={sectionRef}
-            className="featured-projects__module container"
+            className="featured-projects__module"
         >
             <div className="titles-container">
                 <NumberedSectionTitle 
@@ -49,6 +49,7 @@ const FeaturedProjects = React.forwardRef(({ sectionRef }) => {
                     size={'small'}
                 />
             </a>
+         
 
         </section>
     )

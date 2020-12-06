@@ -11,8 +11,12 @@ const StatementAndSkills = React.forwardRef(({ sectionRef }) => {
     return (
         <section 
             ref={sectionRef}
-            className="statement-and-skills__module container"
+            className="statement-and-skills__module"
         >
+
+            <div className="relative">
+
+         
             <div className="top-container">
 
                 <NumberedSectionTitle
@@ -35,6 +39,7 @@ const StatementAndSkills = React.forwardRef(({ sectionRef }) => {
                 />
                 <img src={HeroImageMobile} alt="Joshua Roper, a Senior Front End Developer"/>
             </picture>
+            </div>
 
             <ul className="skills">
                 <li>React | Redux</li>

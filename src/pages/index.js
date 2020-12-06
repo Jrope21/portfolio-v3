@@ -41,7 +41,7 @@ export default function Home() {
   }, [])
 
   return (
-    <main className="home__template">
+    <main className="home__template container">
       <span 
         id={'home'}
         style={{ height: '0px', lineHeight: '0px' }}

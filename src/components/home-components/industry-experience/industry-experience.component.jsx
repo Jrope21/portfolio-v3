@@ -14,7 +14,7 @@ const IndustryExperience = React.forwardRef(({ sectionRef }) => {
     return (
         <section 
             ref={sectionRef}
-            className="industry-experience__module container"
+            className="industry-experience__module"
         >
             <div className="left">
                 <NumberedSectionTitle 
