@@ -12,6 +12,10 @@
          margin-top: -165px;
      }
 
+    //  @media (min-width: breakpoint(lg)) {
+    //      margin-bottom: 170px;
+    //  }
+
     .left {
         position: relative;
         display: flex;
@@ -63,6 +67,12 @@
             bottom: 0;
             width: 3px;
             height: 272px;
+            z-index: 1;
+        }
+
+        @media (min-width: breakpoint(lg)) {
+            height: 650px;
+            left: 200px;
         }
     }
 
@@ -90,6 +100,11 @@
             width: 190px;
             margin-top: 30px;
             margin-left: -28px;
+        }
+
+        @media (min-width: breakpoint(lg)) {
+            width: 200px;
+            margin-left: 0;
         }
       
 
@@ -175,6 +190,10 @@
             top: -40px;
             right: 0;
             width: calc(100% - 170px);
+        }
+
+        @media (min-width: breakpoint(lg)) {
+            width: calc(100% - 260px);
         }
     }
 }

@@ -27,7 +27,7 @@ const StatementAndSkills = React.forwardRef(({ sectionRef }) => {
                 />
 
                 <p className="statement">
-                    Hi there! I’m Josh, a Dallas-based front end developer with a knack for programming and design. My passion comes from being a part of a solution that brings each aspect of the customer journey together across both development and design processes. I focus on creating production-ready applications with my knowledge of the user experience, and writing scalable, clean code.
+                    Hi there! I’m Josh, a Dallas-based <strong>front end developer</strong> with a knack for programming and design. My <strong>passion</strong> comes from being a part of a solution that brings each aspect of the customer journey together across both <strong>development and design</strong> processes. I focus on creating <strong>production-ready applications</strong> with my knowledge of the user experience, and writing scalable, <strong>clean code.</strong>
                 </p>
 
             </div>
