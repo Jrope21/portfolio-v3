@@ -1,7 +1,7 @@
 
 .project-text__module {
     position: relative;
-    z-index: 0;
+    // z-index: 0;
     margin-top: 30px;
 
     @media (min-width: breakpoint(xs)) {
@@ -9,15 +9,16 @@
     }
 
     .project-title {
-        font-size: px-to-rem(40px);
-        line-height: 42px;
+        font-size: px-to-rem(38px);
+        line-height: 40px;
         font-weight: 900;
-        margin: 0 0 .5rem 0;
+        margin: 0 0 .35rem 0;
         word-spacing: 9999999px; 
 
         @media (min-width: breakpoint(xs)) {
             font-size: px-to-rem(47px);
             line-height: 49px;
+            margin: 0 0 .5rem 0;
         }
 
         &::after {
@@ -43,7 +44,7 @@
     .project-link {
         display: flex;
         align-items: center;
-        font-size: px-to-rem(18px);
+        font-size: px-to-rem(16px);
         font-weight: 300;
         font-style: italic;
         color: color(accent);
@@ -54,8 +55,12 @@
 
         img {
             margin-left: 10px;
-            width: 14px;
+            width: 12px;
             height: auto;
+
+            @media (min-width: breakpoint(xs)) {
+                width: 14px;
+            }
         }
     }
 
@@ -68,10 +73,11 @@
         .design-element-line {
             content: '';
             position: absolute;
+            z-index: -1;
             // left: 115px;
             left: 35%;
             top: 200px;
-            height: 100%;
+            height: calc(100% + 200px);
             width: 3px;
             background-color: color(accent);
         }
@@ -84,7 +90,7 @@
 
     .project-description {
         position: relative;
-        z-index: 1;
+        // z-index: 1;
         background-color: color(page_background);
         padding: 10px 0;
         margin: 0;

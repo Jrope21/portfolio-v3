@@ -1,5 +1,9 @@
 import React from 'react'
+
+import ProjectDetailCarousel from '../components/project-detail-components/project-detail-carousel/project-detail-carousel.component'
 import ProjectText from '../components/project-detail-components/project-text/project-text.component'
+
+import Img1 from '@images/project-detail/uptexas/1.jpg'
 
 export default function ProjectDetailTemplate() {
     return (
@@ -26,6 +30,31 @@ export default function ProjectDetailTemplate() {
                     'SEO',
                     'Kentico',
                     'Adobe Suite'
+                ]}
+            />
+
+            <ProjectDetailCarousel 
+                images={[
+                    {
+                        src: Img1,
+                        alt: 'uptexas stuff'
+                    },
+                    {
+                        src: Img1,
+                        alt: 'uptexas stufffdsa'
+                    },
+                    {
+                        src: Img1,
+                        alt: 'uptexas stufffshgtr'
+                    },
+                    {
+                        src: Img1,
+                        alt: 'uptexas stuffbdxew'
+                    },
+                    {
+                        src: Img1,
+                        alt: 'uptexas stuff132hg'
+                    },
                 ]}
             />
         </main>

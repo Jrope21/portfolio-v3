@@ -16,7 +16,7 @@ export default function ProjectText({
         <section className="project-text__module">
             <h1 className="project-title">{title}</h1> 
             <div className="link-and-year-container">
-                <a href={url} rel="noopener" target="_blank" className="project-link">
+                <a href={url} rel="noopener noreferrer" target="_blank" className="project-link">
                     {linkText}
                     <img src={LinkIcon} alt={`Icon that links to ${title}`} />
                 </a>

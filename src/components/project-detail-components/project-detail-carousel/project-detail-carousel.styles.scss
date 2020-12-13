@@ -1,0 +1,75 @@
+
+.project-detail-carousel__module {
+    padding-top: 45px;
+    padding-bottom: 45px;
+
+    .carousel-image-container {
+        position: relative;
+        width: 100%;
+        height: 180px;
+        display: none;
+
+        &.active {
+            display: block;
+        }
+
+        > img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .carousel-controls-container {
+        display: flex;
+        justify-content: flex-end;
+        margin: 12px 0;
+    }
+
+    .carousel-control-button-container {
+        position: relative;
+        display: inline-block;
+        margin-left: 15px;
+        padding: 0;
+        border: 2px solid color(accent);
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    .carousel-control-button {
+        border: 0;
+        background: transparent;
+        display: block;
+        outline: none;
+        line-height: 0;
+        font-size: 0;
+        color: transparent;
+        padding: 6px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: -1px;
+            left: -1px;  
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            font-size: 6px;
+            line-height: 20px;
+            text-align: center;
+            color: #000;
+            opacity: .25;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            transition: opacity .3s ease;
+        }
+
+        &.active::before {
+            color: #000;
+            opacity: .75;
+            background-color: color(accent);
+        }
+    }
+
+    
+}
