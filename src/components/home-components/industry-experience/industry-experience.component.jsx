@@ -40,6 +40,7 @@ const IndustryExperience = React.forwardRef(({ sectionRef }) => {
                                 <span className="title-text-animate">
                                     {experience.name}
                                 </span> 
+                                <span className="lg-animation-line"></span>
                             </div>
                              
                             <div className="featured-experience-card">

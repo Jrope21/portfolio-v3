@@ -41,7 +41,10 @@ const Hero = React.forwardRef(({ sectionRef }) => {
                     <div className="text-cta-bottom-content cta-sizing">
                         
                         <div className="row-one">
-                            <SocialIcons className="social-icons" />
+                            <SocialIcons 
+                                iconClassName="social-icon"
+                                className="social-icons" 
+                            />
                             <div className="skill">
                                 Javascript (ES8)
                             </div>

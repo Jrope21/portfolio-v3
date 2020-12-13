@@ -49,6 +49,7 @@ module.exports = {
           "@global-components": "src/components/global-components",
           "@archive-components": "src/components/archive-components",
           "@project-detail-components": "src/components/project-detail-components",
+          "@templates": 'src/templates',
           "@config": 'src/components/_config.js',
           "@hooks": "src/hooks",
           "@styles": "src/styles",

@@ -53,6 +53,10 @@ $card_border: 3px solid rgba(color(secondary), .7);
             margin-left: 2px;
         }
 
+        @media (min-width: breakpoint(xl)) {
+            font-size: px-to-rem(23px);
+        }
+
         a {
             @media (min-width: breakpoint(md)) {
                display: flex;
@@ -71,9 +75,15 @@ $card_border: 3px solid rgba(color(secondary), .7);
     .project-description {
         font-size: px-to-rem(14px);
         margin: 6px 0 12px 0;
+        font-weight: 300;
 
         @media (min-width: breakpoint(md)) {
             font-size: px-to-rem(16px);
+            margin-left: 6px;
+        }
+
+        @media (min-width: breakpoint(xl)) {
+            font-size: px-to-rem(18px);
         }
     }
 
@@ -140,6 +150,10 @@ $card_border: 3px solid rgba(color(secondary), .7);
 
         .project-year-container {
             border-left: none;
+
+            @media (min-width: breakpoint(sm)) {
+                border-right: $card_border;
+            }
         }
     }
 }

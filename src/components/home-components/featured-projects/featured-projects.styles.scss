@@ -15,6 +15,10 @@
         margin-bottom: 110px;
     }
 
+    @media (min-width: breakpoint(xl)) {
+        padding-left: 210px;
+    }
+
     .titles-container {
         display: flex;
         align-items: flex-end;
@@ -27,6 +31,15 @@
 
         @media (min-width: breakpoint(md)) {
             max-width: 550px;
+        }
+
+        @media (min-width: breakpoint(lg)) {
+            margin-left: 25px;
+        }
+
+        @media (min-width: breakpoint(xl)) {
+            margin-left: 50px;
+            margin-bottom: 50px;
         }
     }
 
@@ -41,6 +54,11 @@
         @media (min-width: breakpoint(lg)) {
             position: absolute;
             left: 0;
+            top: -35px;
+        }
+
+        @media (min-width: breakpoint(xl)) {
+            top: -50px;
         }
     }
 

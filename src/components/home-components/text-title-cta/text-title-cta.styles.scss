@@ -1,5 +1,6 @@
 
 .text-title-cta__module {
+    position: relative;
     font-family: $font_header_alt;
 
     .top {
@@ -29,6 +30,18 @@
             font-size: px-to-rem(80px);
             line-height: 70px;
         }
+
+        @media (min-width: breakpoint(lg)) {
+            font-size: px-to-rem(105px);
+            letter-spacing: 8px;
+            line-height: 90px;
+        }
+
+        @media (min-width: breakpoint(xl)) {
+            font-size: px-to-rem(122px);
+            letter-spacing: 8px;
+            line-height: 110px;
+        }
     }
 
     .sub-title {
@@ -57,6 +70,13 @@
         @media (min-width: breakpoint(sm)) {
             margin-right: 10px;
         }
+
+        @media (min-width: breakpoint(lg)) {
+            position: relative;
+            left: -20px;
+            margin-bottom: 20px;
+            // margin-kef
+        }
     }
 
     &:not(.has-arrow) .sub-title {
@@ -76,6 +96,25 @@
             @media (min-width: breakpoint(md)) {
                 width: 210px;
                 margin-left: -12px;
+            }
+
+            @media (min-width: breakpoint(lg)) {
+                width: 260px;
+            }
+
+            @media (min-width: breakpoint(xl)) {
+                width: auto;
+                margin-left: 8px;
+            }
+        }
+
+        .featured-title-pointer {
+
+            @media (min-width: breakpoint(xl)) {
+                position: absolute;
+                left: unset;
+                right: 0;
+                top: 40px;
             }
         }
     }

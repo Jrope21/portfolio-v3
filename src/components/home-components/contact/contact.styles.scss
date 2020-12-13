@@ -13,6 +13,12 @@
         padding-left: 200px;
     }
 
+    @media (min-width: breakpoint(xl)) {
+        padding-left: 210px;
+        margin-top: -125px;
+        margin-bottom: 70px;
+    }
+
     .titles-container {
         display: flex;
         align-items: flex-end;
@@ -25,6 +31,10 @@
 
         @media (min-width: breakpoint(md)) {
             max-width: 580px;
+        }
+
+        @media (min-width: breakpoint(xl)) {
+            margin-bottom: 35px;
         }
     }
 
@@ -39,12 +49,24 @@
         @media (min-width: breakpoint(lg)) {
             position: absolute;
             left: 0;
-            top: 50px;
+            top: 60px;
+        }
+
+        @media (min-width: breakpoint(xl)) {
+            top: 100px;
         }
     }
 
     .contact-form {
         padding: 0 10px;
+
+        @media (min-width: breakpoint(sm)) {
+            padding: 0 0 0 10px;
+        }
+
+        @media (min-width: breakpoint(lg)) {
+            padding: 0;
+        }
     }
 
     .contact-label {
@@ -52,6 +74,9 @@
         flex-direction: column;
         margin-bottom: 25px;
         
+        @media (min-width: breakpoint(xl)) {
+            margin-bottom: 30px;
+        }
 
         &:last-of-type {
             margin-bottom: 0;
@@ -71,6 +96,10 @@
         padding: 8px 10px;
         border: none;
 
+        @media (min-width: breakpoint(xl)) {
+            font-size: px-to-rem(18px);
+        }
+
         &:active, &:focus {
             outline: none;
         }
@@ -85,6 +114,10 @@
         @media (min-width: breakpoint(sm)) {
             width: 75%;
             max-width: 412px;
+        }
+
+        @media (min-width: breakpoint(xl)) {
+            max-width: 490px;
         }
 
         // @media (min-width: breakpoint(lg)) {

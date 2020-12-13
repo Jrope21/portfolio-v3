@@ -7,6 +7,10 @@
         font-size: px-to-rem(16px);
     }
 
+    @media (min-width: breakpoint(xl)) {
+        font-size: px-to-rem(18px);
+    }
+
     &.active {
         display: block;
     }
@@ -43,11 +47,24 @@
 
         @media (min-width: breakpoint(md)) {
             margin-left: 80px;
+            font-size: px-to-rem(35px);
+        }
+
+        @media (min-width: breakpoint(xl)) {
+            font-size: px-to-rem(42px);
         }
 
         .text-displacement {
             display: block;
             transform: translateY(13px);
+
+            @media (min-width: breakpoint(md)) {
+                transform: translateY(17px);
+            }
+
+            @media (min-width: breakpoint(xl)) {
+                transform: translateY(18px);
+            }
         }
     }
 
