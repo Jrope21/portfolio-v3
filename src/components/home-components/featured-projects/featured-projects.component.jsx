@@ -4,7 +4,7 @@ import './featured-projects.styles.scss'
 import JrPointer from '@common-components/jr-pointer/jr-pointer.component'
 import NumberedSectionTitle from '@home-components/numbered-section-title/numbered-section-title.component'
 import FeaturedProjectCard from './featured-project-card/featured-project-card.component'
-import TextTitleCta from '@home-components/text-title-cta/text-title-cta.component'
+import SplitTextCta from '@common-components/split-text-cta/split-text-cta.component'
 
 import { projectsData } from './_data'
 
@@ -21,7 +21,7 @@ const FeaturedProjects = React.forwardRef(({ sectionRef }) => {
                     sectionNumber={'2'} 
                     sectionName="projects"
                 />
-                <TextTitleCta 
+                <SplitTextCta 
                     title={'Archive'}
                     description={`Use archive for the full list of projects I've worked on.`}
                     urlPath={'/archive'}

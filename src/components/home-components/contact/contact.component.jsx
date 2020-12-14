@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './contact.styles.scss'
 
 import NumberedSectionTitle from '@home-components/numbered-section-title/numbered-section-title.component'
-import TextTitleCta from '@home-components/text-title-cta/text-title-cta.component'
+import SplitTextCta from '@common-components/split-text-cta/split-text-cta.component'
 
 const Contact = React.forwardRef(({ sectionRef }) => {
 
@@ -20,7 +20,7 @@ const Contact = React.forwardRef(({ sectionRef }) => {
                     sectionNumber={'4'} 
                     sectionName="contact"
                 />
-                <TextTitleCta 
+                <SplitTextCta 
                     title={'Connect'}
                     description={'Send me an email, let’s get connected!'}
                     altColors={true}
