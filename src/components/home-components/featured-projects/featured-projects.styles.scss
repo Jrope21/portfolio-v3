@@ -64,23 +64,23 @@
 
    
 
-    .view-all-button {
-        display: flex;
-        align-items: flex-end;
-        padding: 1rem;
-        margin-top: 25px;
-        font-size: px-to-rem(16px);
-        font-weight: 700;
-        color: color(page_background);
-        background: color(primary);
+    // .view-all-button {
+    //     display: flex;
+    //     align-items: flex-end;
+    //     padding: 1rem;
+    //     margin-top: 25px;
+    //     font-size: px-to-rem(16px);
+    //     font-weight: 700;
+    //     color: color(page_background);
+    //     background: color(primary);
 
-        @media (min-width: breakpoint(sm)) {
-            margin-top: 0px;
-            padding: 10px 1rem;
-        }
+    //     @media (min-width: breakpoint(sm)) {
+    //         margin-top: 0px;
+    //         padding: 10px 1rem;
+    //     }
 
-        .text {
-            margin-right: 10px;
-        }
-    }
+    //     .text {
+    //         margin-right: 10px;
+    //     }
+    // }
 }

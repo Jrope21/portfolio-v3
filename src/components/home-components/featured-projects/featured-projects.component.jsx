@@ -1,10 +1,10 @@
 import React from 'react'
 import './featured-projects.styles.scss'
 
-import JrPointer from '@common-components/jr-pointer/jr-pointer.component'
 import NumberedSectionTitle from '@home-components/numbered-section-title/numbered-section-title.component'
 import FeaturedProjectCard from './featured-project-card/featured-project-card.component'
 import SplitTextCta from '@common-components/split-text-cta/split-text-cta.component'
+import JrButton from '@common-components/jr-button/jr-button.component'
 
 import { projectsData } from './_data'
 
@@ -40,7 +40,13 @@ const FeaturedProjects = React.forwardRef(({ sectionRef }) => {
                 ))}
             </div>
 
-            <a className="view-all-button" role="button" href="">
+            <JrButton 
+                urlPath={'/project-detail'}
+                text={'Use archive for the full list of projects I’ve worked on.'}
+            />
+                
+
+            {/* <a className="view-all-button" role="button" href="">
                 <span className="text">
                     Use archive for the full list of projects I’ve worked on.
                 </span>
@@ -48,7 +54,7 @@ const FeaturedProjects = React.forwardRef(({ sectionRef }) => {
                     altColor={true}
                     size={'small'}
                 />
-            </a>
+            </a> */}
          
 
         </section>
