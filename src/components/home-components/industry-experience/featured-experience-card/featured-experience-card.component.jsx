@@ -2,6 +2,7 @@ import React from 'react'
 import './featured-experience-card.styles.scss'
 
 import LinkIcon from '@images/commons/link_icon.svg'
+import TextDisplacement from '@common-components/text-displacement/text-displacement.component'
 
 export default function FeaturedExperienceCard({
     key,
@@ -24,12 +25,11 @@ export default function FeaturedExperienceCard({
                     <span className="sr-only">{name} is located at </span>
                     {location}
                 </p>
-                <p className="job-dates">
-                    <span className="sr-only">The dates I spent working at {name}: </span>
-                    <span className="text-displacement">
-                        {startYear} &nbsp;{endYear}
-                    </span>
-                </p>
+                <TextDisplacement 
+                    text={`${startYear} &nbsp;${endYear}`}
+                    textClassName=""
+                    containerClassName="job-dates-container"
+                />
             </div>
             <h3 className="job-title">{title}</h3>
             {links && 

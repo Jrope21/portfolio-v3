@@ -22,7 +22,6 @@
         @media (min-width: breakpoint(sm)) {
             flex-direction: row;
             align-items: flex-end;
-            // justify-content: space-between;
         }
     }
 
@@ -32,40 +31,18 @@
         margin-bottom: 6px;
     }
 
-    .job-dates {
-        font-family: $font_header_alt;
-        margin-bottom: 6px;
-        margin-top: 0;
-        font-size: px-to-rem(30px);
-        font-weight: 800;
-        overflow: hidden;
+    .job-dates-container {
+        margin-top: 10px;
+        margin-bottom: -4px;
 
         @media (min-width: breakpoint(sm)) {
             margin-left: 60px;
-            margin-bottom: 8px;
         }
 
         @media (min-width: breakpoint(md)) {
             margin-left: 80px;
-            font-size: px-to-rem(35px);
         }
 
-        @media (min-width: breakpoint(xl)) {
-            font-size: px-to-rem(42px);
-        }
-
-        .text-displacement {
-            display: block;
-            transform: translateY(13px);
-
-            @media (min-width: breakpoint(md)) {
-                transform: translateY(17px);
-            }
-
-            @media (min-width: breakpoint(xl)) {
-                transform: translateY(18px);
-            }
-        }
     }
 
     .job-title {
@@ -81,7 +58,6 @@
         font-weight: 300;
         margin-top: -4px;
         margin-bottom: 10px;
-        // margin-left: 5px;
 
         @media (min-width: breakpoint(sm)) {
             margin-left: 5px;
@@ -108,7 +84,6 @@
             position: relative;
             margin-top: 0;
             margin-bottom: 10px;
-            // margin-left: 12px;
 
             @media (min-width: breakpoint(sm)) {
                 margin-left: 12px;

@@ -10,6 +10,7 @@ export default function ProjectDetailTemplate() {
         <main className="project-detail__template container">
             <ProjectText 
                 title={'University Park'}
+                year={'2019'}
                 url={'https://www.uptexas.org'}
                 linkText={'uptexas.org'}
                 description={`

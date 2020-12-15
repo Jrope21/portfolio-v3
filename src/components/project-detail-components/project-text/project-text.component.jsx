@@ -2,7 +2,8 @@ import React from 'react'
 import './project-text.styles.scss'
 
 import LinkIcon from '@images/commons/link_icon.svg'
-import SkillsList from '../../common-components/skills-list/skills-list.component'
+import SkillsList from '@common-components/skills-list/skills-list.component'
+import TextDisplacement from '@common-components/text-displacement/text-displacement.component'
 
 export default function ProjectText({
     title,
@@ -20,11 +21,16 @@ export default function ProjectText({
                     {linkText}
                     <img src={LinkIcon} alt={`Icon that links to ${title}`} />
                 </a>
-                <div className="year">
+                <TextDisplacement 
+                    text={year}
+                    textClassName="text-displacement-year-text"
+                    containerClassName="text-displacement-year-container"
+                />
+                {/* <div className="year">
                     <span className="text-displacement">
                         {year}
                     </span>  
-                </div>
+                </div> */}
             </div>
 
             <div className="description-and-skills-container">

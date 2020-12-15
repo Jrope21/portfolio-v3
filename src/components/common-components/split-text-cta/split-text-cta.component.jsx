@@ -6,10 +6,12 @@ import { Link } from 'gatsby'
 
 export default function TextTitleCta({
     title = '',
+    numberOfTitleLettersOnTop = 1,
     description,
     urlPath,
     altColors = false,
     isProjectLink = false,
+    deactivateLink = false,
     year
 }) {
 
@@ -34,7 +36,7 @@ export default function TextTitleCta({
                                 {year}
                             </span>
                         </div>
-                        <p className="project-details">Project Details</p>
+                        <p className="project-details">{description}</p>
                     </div>
                 }
                 
