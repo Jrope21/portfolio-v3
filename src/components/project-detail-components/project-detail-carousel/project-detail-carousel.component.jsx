@@ -17,38 +17,42 @@ export default function ProjectDetailCarousel({ images }) {
 
     if (images) return (
         <section className="project-detail-carousel__module">
-            {images.map(({ src, alt }, i) => (
-                <div className={`carousel-image-container ${i === activeIndex ? 'active' : ''}`}>
-                    <CarouselArrowBtn 
-                        direction="left"
-                        onClick={viewPrevSlide}
-                    />
-                    <img 
-                        src={src} 
-                        alt={alt} 
-                        key={'project-detail-carousel' + alt + i} 
-                    />
-                    <CarouselArrowBtn 
-                        direction="right"
-                        onClick={viewNextSlide}
-                    />
-                </div> 
-            ))}
-            <ol className="carousel-controls-container">
-                {images.map(({ alt },  i) => (
-                    <li 
-                        className={`carousel-control-button-container`}
-                        key={'project-detail-carousel-controls' + alt + i}
-                        onClick={() => setActiveIndex(i)}
-                    >
-                        <button className={`carousel-control-button ${i === activeIndex ? 'active' : ''}`}>
-                            <span className="sr-only">
-                                Click to view the image corresponding with this position: {i + 1}
-                            </span>
-                        </button>
-                    </li>
+            <div className="project-detail-carousel-inner-container">
+
+       
+                {images.map(({ src, alt }, i) => (
+                    <div className={`carousel-image-container ${i === activeIndex ? 'active' : ''}`}>
+                        <CarouselArrowBtn 
+                            direction="left"
+                            onClick={viewPrevSlide}
+                        />
+                        <img 
+                            src={src} 
+                            alt={alt} 
+                            key={'project-detail-carousel' + alt + i} 
+                        />
+                        <CarouselArrowBtn 
+                            direction="right"
+                            onClick={viewNextSlide}
+                        />
+                    </div> 
                 ))}
-            </ol>
+                <ol className="carousel-controls-container">
+                    {images.map(({ alt },  i) => (
+                        <li 
+                            className={`carousel-control-button-container`}
+                            key={'project-detail-carousel-controls' + alt + i}
+                            onClick={() => setActiveIndex(i)}
+                        >
+                            <button className={`carousel-control-button ${i === activeIndex ? 'active' : ''}`}>
+                                <span className="sr-only">
+                                    Click to view the image corresponding with this position: {i + 1}
+                                </span>
+                            </button>
+                        </li>
+                    ))}
+                </ol>
+            </div>
         </section>
     )
     return null;

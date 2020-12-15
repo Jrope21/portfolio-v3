@@ -1,16 +1,33 @@
 
 .project-detail-carousel__module {
+    position: relative;
+    z-index: 0;
     padding-top: 45px;
     padding-bottom: 45px;
 
-    .carousel-image-container {
+    .project-detail-carousel-inner-container {
         position: relative;
+    }
+
+    .carousel-image-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
         width: 100%;
         height: 180px;
-        display: none;
+        transform: translateX(-20px);
+        transition: .5s;
+        visibility: hidden;
 
         &.active {
-            display: block;
+            z-index: 1;
+            position: relative;
+            opacity: 1;
+            transform: translateX(0px);
+            // left: -20px;
+            transition-delay: .25s;
+            visibility: visible;
         }
 
         > img {
