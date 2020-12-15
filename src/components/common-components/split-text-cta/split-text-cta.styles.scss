@@ -125,4 +125,37 @@
             color: color(accent);
         }
     }
+
+    &.is-project-link {
+        max-width: 223px;
+        margin-bottom: 35px;
+
+        .year-and-text-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            text-align: right;
+            width: auto;
+            padding: 2px 15px 2px 5px;
+        }
+
+        .text-displacement-year-container {
+            margin-bottom: -5px;
+        }
+
+        .large-text-title {
+            font-size: px-to-rem(47px);
+            line-height: 40px;
+            word-break: break-all;
+        }
+
+        .sub-title {
+            color: color(accent);
+            margin: 0;
+        }
+
+        .featured-title-pointer {
+            margin-right: 0;
+        }
+    }
 }

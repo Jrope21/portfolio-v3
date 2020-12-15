@@ -117,4 +117,32 @@ a:hover .jr-pointer__module {
             right: -3px;
         }
     }
+
+    &.medium {
+        width: 22px;
+        height: 22px;
+
+        .middle-line, &::before, &::after {
+            height: 3px;
+        }
+
+        &::before, &::after {
+            content: '';  
+            width: 14px;       
+        }  
+
+        &::before {
+            top: 5px;
+            right: -4px;
+        }
+
+        .middle-line {
+            width: 19px;
+        }
+
+        &::after {
+            bottom: 5px;
+            right: -4px;
+        }
+    }
 }

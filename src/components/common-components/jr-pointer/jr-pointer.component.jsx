@@ -2,7 +2,7 @@ import React from 'react'
 import './jr-pointer.styles.scss'
 
 export default function JrPointer({ 
-    size = 'standard', // sizes include: small, standard
+    size = 'standard', // sizes include: small, medium, standard
     altColor = false, 
     className 
 }) {

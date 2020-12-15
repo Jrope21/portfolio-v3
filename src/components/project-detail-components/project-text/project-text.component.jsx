@@ -26,11 +26,6 @@ export default function ProjectText({
                     textClassName="text-displacement-year-text"
                     containerClassName="text-displacement-year-container"
                 />
-                {/* <div className="year">
-                    <span className="text-displacement">
-                        {year}
-                    </span>  
-                </div> */}
             </div>
 
             <div className="description-and-skills-container">

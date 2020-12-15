@@ -1,7 +1,8 @@
 import React from 'react'
 
-import ProjectDetailCarousel from '../components/project-detail-components/project-detail-carousel/project-detail-carousel.component'
-import ProjectText from '../components/project-detail-components/project-text/project-text.component'
+import ProjectDetailCarousel from '@project-detail-components/project-detail-carousel/project-detail-carousel.component'
+import ProjectText from '@project-detail-components/project-text/project-text.component'
+import ProjectDetailFeaturedProjects from '@project-detail-components/project-detail-featured-projects/project-detail-featured-projects.component'
 
 import Img1 from '@images/project-detail/uptexas/1.jpg'
 
@@ -58,13 +59,10 @@ export default function ProjectDetailTemplate() {
                     },
                 ]}
             />
+
+            <ProjectDetailFeaturedProjects
+            
+            />
         </main>
     )
 }
-
-// title,
-//     year,
-//     url,
-//     linkText,
-//     description,
-//     skills = []

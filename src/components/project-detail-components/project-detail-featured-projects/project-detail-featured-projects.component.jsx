@@ -1,15 +1,16 @@
 import React from 'react'
-import './featured-projects.styles.scss'
+import './project-detail-featured-projects.styles.scss'
 
 import NumberedSectionTitle from '@home-components/numbered-section-title/numbered-section-title.component'
 import SplitTextCta from '@common-components/split-text-cta/split-text-cta.component'
 import JrButton from '@common-components/jr-button/jr-button.component'
 
-const FeaturedProjects = ({ sectionRef, projects }) => {
+import { featuredProjects } from './_data'
+
+const ProjectDetailFeaturedProjects = () => {
     return (
         <section 
-            ref={sectionRef}
-            className="featured-projects__module"
+            className="project-detail-featured-projects__module"
         >
             <NumberedSectionTitle 
                 className="section-titles"
@@ -19,14 +20,15 @@ const FeaturedProjects = ({ sectionRef, projects }) => {
             />
             
             <div className="projects-container">
-                {projects.map(project => (
+                {featuredProjects.map(project => (
                     <SplitTextCta 
-                         title={projects.title}
-                         numberOfTitleLettersOnTop={project[numberOfTitleLettersOnTop] ? project[numberOfTitleLettersOnTop] : 1}
-                         year={projects.year}
-                         urlPath={project.path}
-                         isProjectLink={true}     
-                         isProjectLinkActive={true}
+                         title={project.title}
+                         description={'Project Details'}
+                         numberOfTitleLettersOnTop={project.numberOfTitleLettersOnTop}
+                         year={project.year}
+                         urlPath={project.urlPath}
+                         isProjectLink={true}
+                         deactivateLink={false}
                      />
                 ))}
             </div>
@@ -40,4 +42,4 @@ const FeaturedProjects = ({ sectionRef, projects }) => {
     )
 };
 
-export default FeaturedProjects
+export default ProjectDetailFeaturedProjects;

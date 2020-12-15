@@ -1,8 +1,10 @@
 import React from 'react'
 import './split-text-cta.styles.scss'
 
-import JrPointer from '@common-components/jr-pointer/jr-pointer.component'
 import { Link } from 'gatsby'
+
+import JrPointer from '@common-components/jr-pointer/jr-pointer.component'
+import TextDisplacement from '@common-components/text-displacement/text-displacement.component'
 
 export default function TextTitleCta({
     title = '',
@@ -31,18 +33,21 @@ export default function TextTitleCta({
                     <p className="sub-title">{description}</p>
                 :
                     <div className="year-and-text-container">
-                        <div className="year">
-                            <span className="text-displacement">
-                                {year}
-                            </span>
-                        </div>
-                        <p className="project-details">{description}</p>
+                         <TextDisplacement 
+                            text={year}
+                            textClassName="text-displacement-year-text"
+                            containerClassName="text-displacement-year-container"
+                        />
+                        <p className="sub-title">{description}</p>
                     </div>
                 }
                 
-                <JrPointer
-                    className="featured-title-pointer"
-                />
+                {!deactivateLink && 
+                    <JrPointer
+                        className="featured-title-pointer"
+                        size={isProjectLink ? 'medium' : 'standard'}
+                    />
+                }
             </div>
 
             <span className="bottom large-text-title">{title.slice(1)}</span>

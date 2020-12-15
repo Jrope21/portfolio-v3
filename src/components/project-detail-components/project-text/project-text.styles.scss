@@ -73,7 +73,7 @@
         }
     }
 
-    .text-displacement-year-container {
+    .text-displacement-year-text {
 
         // ALERT -- using max-width NOT min-width here
         @media (max-width: breakpoint(xs)) {
@@ -92,11 +92,15 @@
             position: absolute;
             z-index: -1;
             // left: 115px;
-            left: 35%;
+            left: 25%;
             top: 200px;
-            height: calc(100% + 200px);
+            height: calc(100% + 160px);
             width: 3px;
             background-color: color(accent);
+            
+            @media (min-width: breakpoint(xs)) {
+                left: 35%;
+            }
         }
     }
 
