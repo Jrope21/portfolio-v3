@@ -28,7 +28,7 @@ export default function TextTitleCta({
             `}
         >
             <div className="top">
-                <span className="large-text-title">{title[0]}</span>
+                <span className="large-text-title">{title.slice(0, numberOfTitleLettersOnTop)}</span>
                 {!isProjectLink ? 
                     <p className="sub-title">{description}</p>
                 :
@@ -50,7 +50,7 @@ export default function TextTitleCta({
                 }
             </div>
 
-            <span className="bottom large-text-title">{title.slice(1)}</span>
+            <span className="bottom large-text-title">{title.slice(numberOfTitleLettersOnTop)}</span>
         </Link>
     )
 
@@ -60,11 +60,11 @@ export default function TextTitleCta({
             className={`split-text-cta__module ${altColors ? 'alt-colors' : ''} ${urlPath ? 'has-arrow' : ''}`}
         >
             <div className="top">
-                <span className="large-text-title">{title[0]}</span>
+                <span className="large-text-title">{title.slice(0, numberOfTitleLettersOnTop)}</span>
                 <p className="sub-title">{description}</p>
             </div>
 
-            <span className="bottom large-text-title">{title.slice(1)}</span>
+            <span className="bottom large-text-title">{title.slice(numberOfTitleLettersOnTop)}</span>
         </div>
     )
     return null;

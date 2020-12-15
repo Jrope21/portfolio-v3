@@ -127,8 +127,15 @@
     }
 
     &.is-project-link {
+        display: block;
         max-width: 223px;
         margin-bottom: 35px;
+
+        .top {
+            justify-content: flex-end;
+        }
+
+
 
         .year-and-text-container {
             display: flex;
@@ -147,11 +154,18 @@
             font-size: px-to-rem(47px);
             line-height: 40px;
             word-break: break-all;
+            flex: 1;
+
+            &.bottom {
+                line-height: 48px;
+                margin-top: .25rem;
+            }
         }
 
         .sub-title {
             color: color(accent);
             margin: 0;
+            width: auto;
         }
 
         .featured-title-pointer {
