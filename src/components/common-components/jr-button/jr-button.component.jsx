@@ -9,12 +9,13 @@ export default function JrButton({
     urlPath,
     text,
     hasArrow = true,
+    className = '',
     ...otherProps
 }) {
 
     if (urlPath && text) return (
         <Link 
-            className="jr-button__module"
+            className={`jr-button__module ${className}`}
             to={urlPath}
             {...otherProps}
         >

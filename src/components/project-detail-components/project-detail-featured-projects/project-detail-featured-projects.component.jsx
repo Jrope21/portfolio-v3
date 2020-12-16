@@ -21,15 +21,17 @@ const ProjectDetailFeaturedProjects = () => {
             
             <div className="projects-container">
                 {featuredProjects.map(project => (
-                    <SplitTextCta 
-                         title={project.title}
-                         description={'Project Details'}
-                         numberOfTitleLettersOnTop={project.numberOfTitleLettersOnTop}
-                         year={project.year}
-                         urlPath={project.urlPath}
-                         isProjectLink={true}
-                         deactivateLink={false}
-                     />
+                    <div className="project-wrapper">
+                         <SplitTextCta 
+                            title={project.title}
+                            description={'Project Details'}
+                            numberOfTitleLettersOnTop={project.numberOfTitleLettersOnTop}
+                            year={project.year}
+                            urlPath={project.urlPath}
+                            isProjectLink={true}
+                            deactivateLink={false}
+                        />
+                    </div>             
                 ))}
             </div>
 
