@@ -150,6 +150,10 @@
             margin-bottom: -5px;
         }
 
+        .text-displacement-year-text {
+            font-size: px-to-rem(30px);
+        }
+
         .large-text-title {
             font-size: px-to-rem(47px);
             line-height: 40px;
@@ -167,10 +171,13 @@
             color: color(accent);
             margin: 0;
             width: auto;
+            font-size: px-to-rem(14px);
         }
 
         .featured-title-pointer {
             margin-right: 0;
+            position: static;
+            margin-bottom: 10px;
         }
     }
 }

@@ -36,6 +36,7 @@ const ProjectDetailFeaturedProjects = () => {
             </div>
 
             <JrButton 
+                className={'view-all-btn'}
                 urlPath={'/project-detail'}
                 text={'Use archive for the full list of projects I’ve worked on.'}
             />

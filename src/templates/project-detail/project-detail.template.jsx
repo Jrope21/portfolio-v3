@@ -8,7 +8,7 @@ import Img1 from '@images/project-detail/uptexas/1.jpg'
 
 export default function ProjectDetailTemplate() {
     return (
-        <main className="project-detail__template container">
+        <main className="project-detail__template project-detail-container">
             <ProjectText 
                 title={'University Park'}
                 year={'2019'}

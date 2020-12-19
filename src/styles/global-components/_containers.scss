@@ -22,4 +22,28 @@
     }
 }
 
+.project-detail-container {
+    @include paddingLR(15px);
+    @include marginCenter();
+    max-width: 1280px;
+    @media (min-width: breakpoint(xs)) {
+        @include paddingLR(20px);
+    }
+
+    @media (min-width: breakpoint(sm)) {
+        padding-left: 112px;
+        // padding-right: 40px;
+        max-width: 735px;
+    }
+
+    @media (min-width: breakpoint(md)) {
+        max-width: 875px;
+    }
+
+    @media (min-width: breakpoint(lg)) {
+        @include paddingLR(112px);
+        max-width: 1300px;
+    }
+}
+
 // .container

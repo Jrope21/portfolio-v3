@@ -1,22 +1,101 @@
 
 .project-detail-featured-projects__module {
+    position: relative;
     // display: flex;
     // flex-wrap: wrap;
+
+    @media (min-width: breakpoint(sm)) {
+        margin-bottom: 30px;
+    }
+
+    @media (min-width: breakpoint(md)) {
+        margin-bottom: 45px;
+    }
+
+    @media (min-width: breakpoint(lg)) {
+        margin-bottom: 60px;
+    }
+
+    @media (min-width: breakpoint(xl)) {
+        margin-bottom: 75px;
+    }
+
+
+    &::before {
+        content: '';
+        display: none;
+        position: absolute;
+        z-index: -1;
+        left: 185px;
+        top: -75px;
+        height: calc(100% + 50px);
+        width: 3px;
+        background-color: color(accent);
+
+        @media (min-width: breakpoint(lg)) {
+            display: block;
+            // height: calc(100% + 250px);
+        }
+
+        @media (min-width: breakpoint(xl)) {
+            left: 200px;
+        }
+    }
 
     .projects-container {
         // display: flex;
         // flex-wrap: wrap;
+        display: flex;
+        flex-direction: column;
         margin-top: -30px;
         padding-left: 80px;
 
        @media (min-width: breakpoint(xs)) {
            margin-top: -75px;
            padding-left: 120px;
-        padding-left: 36%;
+            padding-left: 36%;
+       }
+
+       @media (min-width: breakpoint(sm)) {
+            flex-direction: row;
+           flex-wrap: wrap;
+           padding-left: 163px;
+       }
+
+       @media (min-width: breakpoint(md)) {
+           padding-left: 188px;
+       }
+
+       @media (min-width: breakpoint(lg)) {
+           margin-top: -280px;
        }
     }
 
     .project-wrapper {
 
+        @media (min-width: breakpoint(sm)) {
+            padding: 0 40px;
+            // padding: 0 8%;
+        }
+
+        @media (min-width: breakpoint(xl)) {
+            
+            padding: 0 70px;
+        }
+    }
+
+    .view-all-btn {
+
+        @media (min-width: breakpoint(md)) {
+            margin-left: 150px;
+        }
+
+        @media (min-width: breakpoint(lg)) {
+            margin-left: 210px;
+        }
+
+        @media (min-width: breakpoint(xl)) {
+            margin-left: 240px;
+        }
     }
 }
