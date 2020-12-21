@@ -7,23 +7,26 @@ export const experienceData = [
         location: 'Denton, Texas',
         title: 'Front End Developer at Sally Beauty',
         links: `<a href="https://www.sallybeauty.com" rel="noopener" target="_blank">sallybeauty.com</a>`,
-        key: `fakhjds`,
         jobDescriptionBullets: [
             {
                 text: `Revamped the design with a bolder color palette / layout`,
-                links: ``
+                links: ``,
+                key: 'sdfa'
             },
             {
                 text: `Created the landing page and multiple sections utilizing WordPress (DiviBuilder)`,
-                links: ``
+                links: ``,
+                key: 'fsafdsdfa'
             },
             {
                 text: `Performed website updates and executed content audits`,
-                links: ``
+                links: ``,
+                key: 'sdfdsfa'
             },
             {
                 text: `Adjusted the website for SEO and created marketable advertisements`,
-                links: ``
+                links: ``,
+                key: 'adssdfa'
             },
         ]
     },
@@ -38,19 +41,23 @@ export const experienceData = [
         jobDescriptionBullets: [
             {
                 text: `Developed the entire Front End for multiple high traffic, 99% up time websites`,
-                links: `stallionoilfield.com, uptexas.org`
+                links: `stallionoilfield.com, uptexas.org`,
+                key: 'sdf634a'
             },
             {
                 text: `Made web enhancements and landing page’s for multiple businesses`,
-                links: `webuyuglyhouses.com, homevestors.com, advancial.org, etc...`
+                links: `webuyuglyhouses.com, homevestors.com, advancial.org, etc...`,
+                key: 's24dfa'
             },
             {
                 text: `Maintained 10 React based themes responsible for over 100 established malls`,
-                links: `visithalcyon.com, liberty-center.com, windwardcity.com, etc...`
+                links: `visithalcyon.com, liberty-center.com, windwardcity.com, etc...`,
+                key: '23453sdfa'
             },
             {
                 text: `Designed and integrated page templates utilizing a CMS (WordPress / Kentico)`,
-                links: ``
+                links: ``,
+                key: 'sd9768364fa'
             },
         ]
     },
@@ -65,19 +72,23 @@ export const experienceData = [
         jobDescriptionBullets: [
             {
                 text: `Revamped the design with a bolder color palette / layout`,
-                links: ``
+                links: ``,
+                key: 'sdfaytri'
             },
             {
                 text: `Created the landing page and multiple sections utilizing WordPress (DiviBuilder)`,
-                links: ``
+                links: ``,
+                key: 'sdf236tyerdfa'
             },
             {
                 text: `Performed website updates and executed content audits`,
-                links: ``
+                links: ``,
+                key: 'sdf52jgjgbbdfva'
             },
             {
                 text: `Adjusted the website for SEO and created marketable advertisements`,
-                links: ``
+                links: ``,
+                key: 'sd523657546523fa'
             },
         ]
     },

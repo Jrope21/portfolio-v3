@@ -32,6 +32,7 @@ const FeaturedProjects = React.forwardRef(({ sectionRef }) => {
                 {projectsData.map(project => (
                     <FeaturedProjectCard 
                         key={project.key}
+                        keyId={project.key}
                         name={project.name}
                         description={project.description}
                         year={project.year}
@@ -45,16 +46,6 @@ const FeaturedProjects = React.forwardRef(({ sectionRef }) => {
                 text={'Use archive for the full list of projects I’ve worked on.'}
             />
                 
-
-            {/* <a className="view-all-button" role="button" href="">
-                <span className="text">
-                    Use archive for the full list of projects I’ve worked on.
-                </span>
-                <JrPointer 
-                    altColor={true}
-                    size={'small'}
-                />
-            </a> */}
          
 
         </section>

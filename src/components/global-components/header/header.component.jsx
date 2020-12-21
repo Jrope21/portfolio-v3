@@ -54,8 +54,8 @@ export default function Header() {
                 </button>
                 <div className="mobile-overlay" onClick={closeNav} />
                 <ul className={`navigation`}>
-                    {menuItems.map(menuItem => (
-                        <li>
+                    {menuItems.map((menuItem, i) => (
+                        <li key={menuItem + i + 'nav-link'}>
                             <div className={`nav-item-outer-wrapper ${activeMenuItem === menuItem ? 'active' : ''}`}>
                                 <Link 
                                     to={`/#${menuItem.toLowerCase()}`}

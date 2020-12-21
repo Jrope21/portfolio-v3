@@ -73,7 +73,8 @@
 
     .title-filter {
         position: absolute;
-        top: 95px;
+        // top: 95px;
+        top: -135px;
         right: 0;
         display: flex;
         align-items: center;
@@ -158,33 +159,26 @@
             
         }
 
-        &.active {
-
-            .title-text-animate {
-                color: color(accent);
-                transform: translate(0);
-
-                &::after {
-                    background-color: color(accent);
-                }
-            }
-
-            .lg-animation-line::before {
-                background-color: color(accent);
-                transform: translateX(0);
-            }
-
-        }
+        
     }
 
+ 
+
     .experience-content-list-container {
+        position: relative;
         width: 100%;
         @media (min-width: breakpoint(sm)) {
+            // position: static;
             margin-top: 50px;
         }
     }
 
     .experience-content {
+        position: absolute;
+        top: 0;
+        right: 0;
+        // width: 100%;
+        
 
         @media (min-width: breakpoint(sm)) {
             position: relative;
@@ -195,15 +189,45 @@
         }
 
         &:nth-of-type(2n) .title-filter {
-            top: 130px;
+            // top: 130px;
+            top: -100px;
         }
 
         &:nth-of-type(3n) .title-filter {
-            top: 165px;
+            // top: 165px;
+            top: -65px;
+        }
+
+        &.active {
+            position: static;
+
+            @media (min-width: breakpoint(sm)) {
+                position: relative;
+            }
+
+            .title-filter {
+           
+
+                .title-text-animate {
+                    color: color(accent);
+                    transform: translate(0);
+        
+                    &::after {
+                        background-color: color(accent);
+                    }
+                }
+        
+                .lg-animation-line::before {
+                    background-color: color(accent);
+                    transform: translateX(0);
+                }
+        
+            }
         }
     }
 
     .featured-experience-card {
+        position: relative;
 
         @media (min-width: breakpoint(sm)) {
             position: absolute;

@@ -1,6 +1,9 @@
 
 .featured-experience-card__module {
-    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
     font-size: px-to-rem(14px);
 
     @media (min-width: breakpoint(md)) {
@@ -12,7 +15,8 @@
     }
 
     &.active {
-        display: block;
+        position: static;
+        visibility: visible;
     }
 
     .location-and-dates-container {

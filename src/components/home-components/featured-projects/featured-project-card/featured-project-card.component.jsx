@@ -9,7 +9,7 @@ export default function FeaturedProjectCard({
    description,
    year,
    skills,
-   key,
+   keyId,
    url,
    altLayout,
     ...otherProps
@@ -17,7 +17,6 @@ export default function FeaturedProjectCard({
     return (
         <div 
             className={`featured-project-card__module${altLayout ? ' alternate-layout' : ''}`} 
-            key={key} 
             {...otherProps}
         >
             <div className="project-top-section">
@@ -36,8 +35,8 @@ export default function FeaturedProjectCard({
                     </span>              
                 </div>
                 <ul className="project-skills">
-                    {skills.map(skill => (
-                        <li key={key + skill}>
+                    {skills.map((skill, i) => (
+                        <li key={keyId + skill + i + 'project-card-skills'}>
                             {skill}
                         </li>
                     ))}
