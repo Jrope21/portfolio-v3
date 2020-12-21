@@ -29,33 +29,33 @@
     }  
 
     &::before {
-            content: '';
-            display: none;
-            position: absolute;
-            z-index: -1;
-            left: 160px;
-            top: -75px;
-            height: calc(100% + 200px);
-            width: 3px;
-            background-color: color(accent);
+        content: '';
+        display: none;
+        position: absolute;
+        z-index: -1;
+        left: 160px;
+        top: -75px;
+        height: calc(100% + 200px);
+        width: 3px;
+        background-color: color(accent);
 
-            @media (min-width: breakpoint(sm)) {
-                display: block;
-            }
+        @media (min-width: breakpoint(sm)) {
+            display: block;
+        }
 
-            @media (min-width: breakpoint(md)) {
-                left: 185px;
-                height: calc(100% + 250px);
-            }
+        @media (min-width: breakpoint(md)) {
+            left: 185px;
+            height: calc(100% + 250px);
+        }
 
-            @media (min-width: breakpoint(lg)) {
-                top: -100px;
-            }
+        @media (min-width: breakpoint(lg)) {
+            top: -100px;
+        }
 
-            @media (min-width: breakpoint(xl)) {
-                left: 200px;
-                top: -160px;
-            }
+        @media (min-width: breakpoint(xl)) {
+            left: 200px;
+            top: -160px;
+        }
      }
 
     .project-detail-carousel-inner-container {

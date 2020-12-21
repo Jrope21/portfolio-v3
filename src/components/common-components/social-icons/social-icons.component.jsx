@@ -3,9 +3,9 @@ import './social-icons.styles.scss'
 
 import LinkedInIcon from '@images/socials/linked-in-icon.svg'
 
-export default function SocialIcons({ className, iconClassName }) {
+export default function SocialIcons({ className, iconClassName, ...otherProps }) {
     return (
-        <ul className={`social-icons__module${className ? ` ${className}` : ''}`}>
+        <ul className={`social-icons__module${className ? ` ${className}` : ''}`} {...otherProps}>
             <li>
                 <img 
                     className={iconClassName}

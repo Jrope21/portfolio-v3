@@ -19,8 +19,9 @@ const Hero = React.forwardRef(({ sectionRef }) => {
 
     return (
         <section 
-            className={`hero__module ${isMounted ? 'mounted' : ''}`} 
+            className={`hero__module ${isMounted ? 'activate-animations' : ''}`} 
             ref={sectionRef}
+            
         >
             <picture className="hero-image">
             <source 
@@ -35,24 +36,53 @@ const Hero = React.forwardRef(({ sectionRef }) => {
                 <img src={HeroImageMobile} alt="A Front End Developer typing on a laptop"/>
             </picture>
             <div className="container">
-                <div className="text-cta">
-                    <span className="title">Joshua</span>
-                    <h1 className="sub-title cta-sizing">Joshua Roper, front end developer based in Dallas.</h1>
+                <div className="text-cta" 
+                    
+                >
+                    <span 
+                        style={{ transitionDelay: `250ms` }}
+                        className="title fade-up" 
+                    >Joshua</span>
+
+                    <h1 
+                        style={{ transitionDelay: `350ms` }} 
+                        className="sub-title fade-up cta-sizing"
+                    >Joshua Roper, front end developer based in Dallas.</h1>
+
                     <div className="text-cta-bottom-content cta-sizing">
                         
-                        <div className="row-one">
+                        <div 
+                            style={{ transitionDelay: `250ms` }} 
+                            className="row-one fade-up"
+                        >
                             <SocialIcons 
+                                style={{ transitionDelay: `350ms` }} 
                                 iconClassName="social-icon"
-                                className="social-icons" 
+                                className="social-icons fade-up" 
                             />
-                            <div className="skill">
+                            <div 
+                                style={{ transitionDelay: `550ms` }} 
+                                className="skill fade-up"
+                            >
                                 Javascript (ES8)
                             </div>
                         </div>
-                        <div className="row-two">
-                            <div className="skill larger-mobile">Node Js</div>
-                            <div className="skill">React</div>
-                            <div className="skill">Svelte</div>
+                        <div 
+                            style={{ transitionDelay: `450ms` }} 
+                            className="row-two fade-up"
+                        >
+                            <div 
+                                style={{ transitionDelay: `650ms` }} 
+                                className="skill larger-mobile fade-up"
+                            >Node Js</div>
+                            <div 
+                                style={{ transitionDelay: `750ms` }} 
+                                className="skill fade-up"
+                            >React</div>
+                            <div  
+                                style={{ transitionDelay: `850ms` }} 
+                                className="skill fade-up"
+                            >Svelte</div>
                         </div>
                     </div>
                 </div>

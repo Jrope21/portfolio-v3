@@ -12,6 +12,10 @@ const StatementAndSkills = React.forwardRef(({ sectionRef }) => {
         <section 
             ref={sectionRef}
             className="statement-and-skills__module"
+            data-sal="slide-up"
+                    data-sal-delay="100"
+                    data-sal-easing="ease"
+                    data-sal-duration="500"
         >
 
             <div className="relative">

@@ -34,9 +34,9 @@
             top: 100px;
         }
 
-        @media (min-width: breakpoint(sm)) {
-            transform: translateX(0);
-        }
+        // @media (min-width: breakpoint(sm)) {
+        //     transform: translateX(0);
+        // }
         
         li { 
             display: table;
@@ -77,7 +77,7 @@
             text-align: center;
 
             @media (min-width: breakpoint(sm)) {
-                transition: .35s $custom_animation;
+                // transition: .35s $custom_animation;
             }
         }
 
@@ -116,10 +116,11 @@
         transform: translateX(0);
         text-transform: uppercase;
         transition: .15s $custom_animation transform .125s, .1s ease-in-out max-width, .1s ease-in-out min-width;
+        cursor: pointer;
 
-        @media (min-width: breakpoint(sm)) {
-            display: none;
-        }
+        // @media (min-width: breakpoint(sm)) {
+        //     display: none;
+        // }
 
         .inner-wrapper {
             position: relative;

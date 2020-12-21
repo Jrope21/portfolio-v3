@@ -9,7 +9,7 @@
     }
 
     @media (min-width: breakpoint(sm)) {
-        padding-left: 112px;
+        // padding-left: 112px;
         max-width: 735px;
     }
 
@@ -18,9 +18,31 @@
     }
 
     @media (min-width: breakpoint(lg)) {
+        padding-left: 112px;
         max-width: 1280px;
     }
 }
+
+// .container {
+//     @include paddingLR(15px);
+
+//     @media (min-width: breakpoint(xs)) {
+//         @include paddingLR(20px);
+//     }
+    
+//     @media (min-width: breakpoint(sm)) {
+//         padding-left: 112px;
+//     }
+
+//     @media (min-width: breakpoint(md)) {
+//         margin-left: 4%;
+//         margin-right: 4%;
+//     }
+
+//     @media (min-width: breakpoint(lg)) {
+//         // margin-left: ;
+//     }
+// }
 
 .project-detail-container {
     @include paddingLR(15px);
