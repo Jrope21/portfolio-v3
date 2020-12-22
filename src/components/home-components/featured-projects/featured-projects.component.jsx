@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import './featured-projects.styles.scss'
 
 import NumberedSectionTitle from '@home-components/numbered-section-title/numbered-section-title.component'
@@ -9,10 +9,15 @@ import JrButton from '@common-components/jr-button/jr-button.component'
 import { projectsData } from './_data'
 
 const FeaturedProjects = React.forwardRef(({ sectionRef }) => {
+    const [isMounted, setIsMounted] = useState(false);
+
+    useEffect(() => {
+        setIsMounted(true);
+    }, [])
     return (
         <section 
             ref={sectionRef}
-            className="featured-projects__module"
+            className={`featured-projects__module ${isMounted ? 'activate-animations__mount' : ''}`}
         >
             <div className="titles-container">
                 <NumberedSectionTitle 

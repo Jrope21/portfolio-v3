@@ -14,9 +14,16 @@ const numberIcons = {
     "4": Four
 }
 
-export default function NumberedSectionTitle({title, sectionName = "Home", sectionNumber = "1", className}) {
+export default function NumberedSectionTitle({
+    title, 
+    sectionName = "Home", 
+    sectionNumber = "1", 
+    className,
+    ...otherProps
+}) {
     return (
         <div 
+            {...otherProps}
             id={`${sectionName}`}
             className={`numbered-section-title__module${className ? ` ${className}` : ''}`}
         >

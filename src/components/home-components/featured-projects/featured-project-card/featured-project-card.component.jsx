@@ -14,9 +14,10 @@ export default function FeaturedProjectCard({
    altLayout,
     ...otherProps
 }) {
+    
     return (
         <div 
-            className={`featured-project-card__module${altLayout ? ' alternate-layout' : ''}`} 
+            className={`featured-project-card__module fade-up__mount${altLayout ? ' alternate-layout' : ''}`} 
             {...otherProps}
         >
             <div className="project-top-section">

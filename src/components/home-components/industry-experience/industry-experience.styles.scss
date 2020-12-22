@@ -29,6 +29,7 @@
         flex-direction: column;
         width: 100%;
         padding-bottom: 25px;
+        // overflow: hidden;
 
         @media (min-width: breakpoint(sm)) {
             flex-direction: column;
@@ -177,7 +178,7 @@
         position: absolute;
         top: 0;
         right: 0;
-        // width: 100%;
+        width: 100%;
         
 
         @media (min-width: breakpoint(sm)) {
