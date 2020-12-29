@@ -7,7 +7,7 @@ import HeroImageDesktop from '@images/home/about-me-desktop-img.jpg'
 import HeroImageMobile from '@images/home/about-me-mobile-img.jpg'
 import NumberedSectionTitle from '@home-components/numbered-section-title/numbered-section-title.component'
 
-const StatementAndSkills = React.forwardRef(({ sectionRef }) => {
+const StatementAndSkills = React.forwardRef(({ sectionRef, activateAnimations = false }) => {
     return (
         <section 
             ref={sectionRef}

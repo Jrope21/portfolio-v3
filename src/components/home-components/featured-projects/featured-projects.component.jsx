@@ -8,33 +8,32 @@ import JrButton from '@common-components/jr-button/jr-button.component'
 
 import { projectsData } from './_data'
 
-const FeaturedProjects = React.forwardRef(({ sectionRef }) => {
-    const [isMounted, setIsMounted] = useState(false);
+const FeaturedProjects = React.forwardRef(({ sectionRef, activateAnimations = false }) => {
 
-    useEffect(() => {
-        setIsMounted(true);
-    }, [])
     return (
         <section 
             ref={sectionRef}
-            className={`featured-projects__module ${isMounted ? 'activate-animations__mount' : ''}`}
+            className={`featured-projects__module ${activateAnimations ? 'activate-animations__mount' : ''}`}
         >
             <div className="titles-container">
                 <NumberedSectionTitle 
-                    className="section-titles"
+                    className="section-titles fade-up__mount"
                     title="Projects I've Worked On" 
                     sectionNumber={'2'} 
                     sectionName="projects"
+                    style={{ transitionDelay: `100ms` }}
                 />
                 <SplitTextCta 
                     title={'Archive'}
                     description={`Use archive for the full list of projects I've worked on.`}
                     urlPath={'/archive'}
+                    className="fade-up__mount"
+                    style={{ transitionDelay: `250ms` }}
                 />
             </div>
             
             <div className="projects-container">
-                {projectsData.map(project => (
+                {projectsData.map((project, i) => (
                     <FeaturedProjectCard 
                         key={project.key}
                         keyId={project.key}
@@ -42,13 +41,16 @@ const FeaturedProjects = React.forwardRef(({ sectionRef }) => {
                         description={project.description}
                         year={project.year}
                         skills={project.skills}
+                        style={{ transitionDelay: `${400 + i * 100}ms` }}
                     />
                 ))}
             </div>
 
             <JrButton 
+                className="fade-up__mount"
                 urlPath={'/project-detail'}
                 text={'Use archive for the full list of projects I’ve worked on.'}
+                style={{ transitionDelay: `1000ms` }}
             />
                 
          

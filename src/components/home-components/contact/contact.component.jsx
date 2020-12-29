@@ -4,7 +4,7 @@ import './contact.styles.scss'
 import NumberedSectionTitle from '@home-components/numbered-section-title/numbered-section-title.component'
 import SplitTextCta from '@common-components/split-text-cta/split-text-cta.component'
 
-const Contact = React.forwardRef(({ sectionRef }) => {
+const Contact = React.forwardRef(({ sectionRef, activateAnimations = false }) => {
 
     const [isSubmitting, setIsSubmitting] = useState(false);
 

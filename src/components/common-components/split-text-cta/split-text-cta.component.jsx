@@ -14,7 +14,9 @@ export default function TextTitleCta({
     altColors = false,
     isProjectLink = false,
     deactivateLink = false,
-    year
+    year,
+    className = '',
+    ...otherProps
 }) {
 
     if(title && urlPath) return (
@@ -25,7 +27,9 @@ export default function TextTitleCta({
                 ${altColors ? 'alt-colors' : ''} 
                 ${urlPath ? 'has-arrow' : ''}
                 ${isProjectLink ? 'is-project-link' : ''}
+                ${className}
             `}
+            {...otherProps}
         >
             <div className="top">
                 <span className="large-text-title">{title.slice(0, numberOfTitleLettersOnTop)}</span>

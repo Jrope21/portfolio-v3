@@ -9,7 +9,7 @@ import HeroImageMobile from '@images/home/portfolio_hero_mobile.jpg'
 import HeroImageTablet from '@images/home/portfolio_hero_tablet.jpg'
 import HeroImageDesktop from '@images/home/portfolio_hero_desktop.jpg'
 
-const Hero = React.forwardRef(({ sectionRef }) => {
+const Hero = React.forwardRef(({ sectionRef, activateAnimations = false }) => {
 
     const [isMounted, setIsMounted] = useState(false);
 
@@ -19,7 +19,7 @@ const Hero = React.forwardRef(({ sectionRef }) => {
 
     return (
         <section 
-            className={`hero__module ${isMounted ? 'activate-animations__mount' : ''}`} 
+            className={`hero__module ${activateAnimations ? 'activate-animations__mount' : ''}`} 
             ref={sectionRef}
             
         >

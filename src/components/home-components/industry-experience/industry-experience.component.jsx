@@ -6,7 +6,7 @@ import FeaturedExperienceCard from './featured-experience-card/featured-experien
 
 import { experienceData } from './_data'
 
-const IndustryExperience = React.forwardRef(({ sectionRef }) => {
+const IndustryExperience = React.forwardRef(({ sectionRef, activateAnimations = false }) => {
 
     const [isMounted, setIsMounted] = useState(false);
     const [activeExperienceListing, setActiveExperienceListing] = useState(experienceData[0].key)
@@ -18,7 +18,7 @@ const IndustryExperience = React.forwardRef(({ sectionRef }) => {
     return (
         <section 
             ref={sectionRef}
-            className={`industry-experience__module ${isMounted ? 'activate-animations__mount' : ''}`}
+            className={`industry-experience__module ${activateAnimations ? 'activate-animations__mount' : ''}`}
         >
             <div className="left">
                 <NumberedSectionTitle 
