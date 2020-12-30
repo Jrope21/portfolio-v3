@@ -18,6 +18,7 @@
     "gatsby-plugin-alias-imports": "^1.0.5",
     "gatsby-plugin-react-helmet": "^3.3.14",
     "gatsby-plugin-sass": "^2.3.17",
+    "gatsby-plugin-scroll-reveal": "0.0.7",
     "gatsby-plugin-sitemap": "^2.4.17",
     "node-sass": "^4.14.1",
     "react": "^16.12.0",

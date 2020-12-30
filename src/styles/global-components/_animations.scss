@@ -27,8 +27,11 @@
 }
 
 
+.activate-animations__mount, .sal-animate, .activate-animations__scoped {
+    
+}
 
-.activate-animations__mount.fade-up__mount, .activate-animations__mount .fade-up__mount, .activate-animations__scoped .fade-up__scoped {
+.sal-animate.fade-up__mount, .sal-animate .fade-up__mount, .activate-animations__mount.fade-up__mount, .activate-animations__mount .fade-up__mount, .activate-animations__scoped .fade-up__scoped {
   opacity: 1;
   transform: translateY(0px);
   transition: opacity 450ms $custom_easing, transform 450ms $custom_easing;
