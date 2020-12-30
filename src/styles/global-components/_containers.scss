@@ -21,6 +21,13 @@
         padding-left: 112px;
         max-width: 1280px;
     }
+
+    @media (min-width: breakpoint(xxl)) {
+        // padding-left: 112px;
+        max-width: 1400px;
+    }
+
+    // @media()
 }
 
 // .container {

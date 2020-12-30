@@ -15,6 +15,11 @@
         padding: 10px 1rem;
     }
 
+
+    @media (min-width: breakpoint(xxl)) {
+        font-size: px-to-rem(18px);
+    }
+
     .text {
         margin-right: 10px;
     }

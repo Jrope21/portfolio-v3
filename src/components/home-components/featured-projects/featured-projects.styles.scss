@@ -17,6 +17,13 @@
 
     @media (min-width: breakpoint(xl)) {
         padding-left: 210px;
+        margin-bottom: 130px;
+    }
+
+    @media (min-width: breakpoint(xxl)) {
+        // padding-left: 210px;
+        padding-left: 220px;
+        margin-bottom: 150px;
     }
 
     .titles-container {

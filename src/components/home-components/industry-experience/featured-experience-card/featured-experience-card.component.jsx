@@ -16,6 +16,7 @@ export default function FeaturedExperienceCard({
 }) {
     return (
         <div  
+            data-sal="mount"
             className={`featured-experience-card__module ${isVisible ? 'active activate-animations__scoped' : ''}`}
         >
             <div className="location-and-dates-container">

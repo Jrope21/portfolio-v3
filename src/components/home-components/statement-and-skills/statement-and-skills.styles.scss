@@ -14,6 +14,10 @@
         padding-left: 210px;
     }
 
+    @media (min-width: breakpoint(xxl)) {
+        padding-left: 220px;
+    }
+
     .top-container {
         display: flex;
         align-items: flex-start;
@@ -38,6 +42,11 @@
 
         @media (min-width: breakpoint(xl)) {
             top: 20px;
+            left: -210px;
+        }
+
+        @media (min-width: breakpoint(xxl)) {
+            left: -220px;
         }
     }
 
@@ -74,6 +83,12 @@
             max-width: 450px;
             margin: 45px 30px;
         }
+
+        @media (min-width: breakpoint(xxl)) {
+            font-size: px-to-rem(20px);
+            max-width: 490px;
+            margin-left: 45px;
+        }
     }
 
     .hero-image {
@@ -95,6 +110,10 @@
 
         @media (min-width: breakpoint(xl)) {
             height: 615px;
+        }
+
+        @media (min-width: breakpoint(xxl)) {
+            height: 650px;
         }
 
         img {

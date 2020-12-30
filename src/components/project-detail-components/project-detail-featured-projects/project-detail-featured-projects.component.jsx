@@ -13,6 +13,9 @@ const ProjectDetailFeaturedProjects = ({ }) => {
             data-sal="mount"
             className="project-detail-featured-projects__module"
         >
+            
+            <span aria-hidden="true" className="design-element-line"></span>
+
             <NumberedSectionTitle 
                 className="section-titles fade-up__mount"
                 title="Projects I've Worked On" 

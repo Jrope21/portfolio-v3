@@ -19,6 +19,12 @@
         margin-bottom: 70px;
     }
 
+    @media (min-width: breakpoint(xl)) {
+        padding-left: 220px;
+        // margin-top: -125px;
+        // margin-bottom: 75px;
+    }
+
     .titles-container {
         display: flex;
         align-items: flex-end;
@@ -35,6 +41,10 @@
 
         @media (min-width: breakpoint(xl)) {
             margin-bottom: 35px;
+        }
+
+        @media (min-width: breakpoint(xxl)) {
+            margin-bottom: 45px;
         }
     }
 
@@ -88,6 +98,10 @@
         font-weight: 800;
         color: color(accent);
         margin-bottom: 8px;
+
+        @media (min-width: breakpoint(xxl)) {
+            font-size: px-to-rem(25px);
+        }
     }
 
     .contact-input, .contact-textarea {
@@ -98,6 +112,10 @@
 
         @media (min-width: breakpoint(xl)) {
             font-size: px-to-rem(18px);
+        }
+
+        @media (min-width: breakpoint(xxl)) {
+            font-size: px-to-rem(20px);
         }
 
         &:active, &:focus {
@@ -150,6 +168,11 @@
         color: color(tertiary);
         font-size: px-to-rem(23px);
         font-weight: 800; 
+        
+        @media (min-width: breakpoint(xxl)) {
+            font-size: px-to-rem(25px);
+            height: 40px;
+        }
     }
 
 }

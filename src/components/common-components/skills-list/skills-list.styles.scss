@@ -46,6 +46,10 @@
             font-size: px-to-rem(18px);
         }
 
+        @media (min-width: breakpoint(xxl)) {
+            font-size: px-to-rem(20px);
+        }
+
         &::after {
             content: '';
             display: inline-block;

@@ -18,8 +18,13 @@
 
      @media (min-width: breakpoint(xl)) {
          margin-top: -190px;
-        margin-bottom: 190px;
+        margin-bottom: 220px;
     }
+
+    @media (min-width: breakpoint(xxl)) {
+        margin-top: -220px;
+       margin-bottom: 240px;
+   }
 
     .left {
         position: relative;
@@ -60,9 +65,14 @@
         }
 
         @media (min-width: breakpoint(xl)) {
+            left: 210px;
             height: 680px;
         }
 
+        @media (min-width: breakpoint(xxl)) {
+            left: 220px;
+            // height: 680px;
+        }
         
     }
 
@@ -98,13 +108,21 @@
             margin-left: 0;
             overflow: visible;
         }
+
+        @media (min-width: breakpoint(xl)) {
+            width: 210px;
+        }
       
+        @media (min-width: breakpoint(xxl)) {
+            width: 220px;
+        }
 
         &:last-of-type {
             margin-bottom: 0px;
         }
 
         .title-text-animate {
+            font-size: px-to-rem(16px);
             display: flex;
             align-items: center;
             transform: translateX(32px);
@@ -117,6 +135,10 @@
             @media (min-width: breakpoint(lg)) {              
                 transform: translateX(0px);
                 padding-right: 8px;
+            }
+
+            @media (min-width: breakpoint(xxl)) {
+                font-size: px-to-rem(18px);
             }
 
             &::after {
@@ -232,17 +254,27 @@
 
         @media (min-width: breakpoint(sm)) {
             position: absolute;
-            top: -40px;
+            top: -38px;
             right: 0;
             width: calc(100% - 170px);
         }
 
+        @media (min-width: breakpoint(md)) {
+            top: -43px;
+        }
+
         @media (min-width: breakpoint(lg)) {
             width: calc(100% - 260px);
+            top: -45px;
         }
 
         @media (min-width: breakpoint(xl)) {
-            top: -56px;
+            top: -55px;
+            width: calc(100% - 270px);
+        }
+
+        @media (min-width: breakpoint(xxl)) {
+            width: calc(100% - 280px);
         }
     }
 }

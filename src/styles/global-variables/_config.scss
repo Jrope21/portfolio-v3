@@ -20,15 +20,15 @@
 // Use the breakpoint function to access these
 // Ex: min-width: breakpoint(sm)
 
-// primary breakpoints: sm, md, lg
-// utility breakpoints: xs, xl
+// primary breakpoints: sm, md, lg, xl
+// utility breakpoints: xs, xxl
 $grid_breakpoints: (
     xs: 365px, // mainly for iphone 5 / iphone xs / smaller android phones
     sm: 640px, // small tablet
     md: 760px, // regular tablet
     lg: 1000px, // small desktop
     xl: 1200px, // regular desktop
-    xxl: 1500px
+    xxl: 1500px // large desktop
 );
 
 

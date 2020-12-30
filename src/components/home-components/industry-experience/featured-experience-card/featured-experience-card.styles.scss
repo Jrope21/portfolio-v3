@@ -24,6 +24,10 @@ section:not(.sal-animate) .featured-experience-card__module .fade-up__scoped {
         font-size: px-to-rem(18px);
     }
 
+    @media (min-width: breakpoint(xxl)) {
+        font-size: px-to-rem(20px);
+    }
+
 
 
     &.active {
@@ -119,6 +123,10 @@ section:not(.sal-animate) .featured-experience-card__module .fade-up__scoped {
                 height: 3px;
                 border-radius: 50%;
                 background: color(secondary);
+
+                @media (min-width: breakpoint(xxl)) {
+                    top: 8px;
+                }
             }
         }
 

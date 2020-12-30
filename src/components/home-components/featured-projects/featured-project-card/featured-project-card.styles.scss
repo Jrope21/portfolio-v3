@@ -57,6 +57,10 @@ $card_border: 3px solid rgba(color(secondary), .7);
             font-size: px-to-rem(23px);
         }
 
+        @media (min-width: breakpoint(xxl)) {
+            font-size: px-to-rem(25px);
+        }
+
         a {
             @media (min-width: breakpoint(md)) {
                display: flex;
@@ -85,12 +89,20 @@ $card_border: 3px solid rgba(color(secondary), .7);
         @media (min-width: breakpoint(xl)) {
             font-size: px-to-rem(18px);
         }
+
+        @media (min-width: breakpoint(xxl)) {
+            font-size: px-to-rem(20px);
+        }
     }
 
     .project-year-container {
         position: relative;
         width: 40px;
         border-left: $card_border;
+
+        @media (min-width: breakpoint(xxl)) {
+            width: 50px;
+        }
     }
 
     .project-year-text {
@@ -101,6 +113,10 @@ $card_border: 3px solid rgba(color(secondary), .7);
         transform: rotate(-90deg);
         font-size: px-to-rem(16px);
         font-weight: 700;
+
+        @media (min-width: breakpoint(xxl)) {
+            font-size: px-to-rem(18px);
+        }
     }
 
     .project-skills {
@@ -108,6 +124,10 @@ $card_border: 3px solid rgba(color(secondary), .7);
         font-size: px-to-rem(16px);
         font-weight: 700;
         color: color(accent);
+
+        @media (min-width: breakpoint(xxl)) {
+            font-size: px-to-rem(18px);
+        }
 
         li {
             padding: 30px 8px;
@@ -131,9 +151,15 @@ $card_border: 3px solid rgba(color(secondary), .7);
         font-style: italic;
         color: color(secondary);
 
+        @media (min-width: breakpoint(xxl)) {
+            font-size: px-to-rem(18px);
+        }
+
         .detail-btn-pointer {
             margin-left: 8px;
         }
+
+        
     }
 
     &:nth-of-type(2n) {

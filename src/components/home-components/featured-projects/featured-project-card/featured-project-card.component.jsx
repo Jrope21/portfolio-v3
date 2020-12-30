@@ -29,7 +29,10 @@ export default function FeaturedProjectCard({
                         <img src={LinkIcon} alt={`Icon that links to ${name}`}/>
                     </a>
                 </h3>
-                <p className="project-description">{description}</p>
+                <p 
+                    className="project-description" 
+                    dangerouslySetInnerHTML={{ __html: description }} 
+                />
             </div>         
             <div className="project-bottom-section">
                 <div className="project-year-container">
