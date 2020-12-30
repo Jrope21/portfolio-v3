@@ -1,4 +1,14 @@
+// .deactivate-card-animation .featured-experience-card__module .fade-up__scoped  {
+//     opacity: .01 !important;
+//     transform: translateY(20px) !important;
+// }
 
+section:not(.sal-animate) .featured-experience-card__module .fade-up__scoped {
+    opacity: .01 !important;
+    transform: translateY(20px) !important;
+}
+
+// div:not(.sal-animate) 
 .featured-experience-card__module {
     position: absolute;
     top: 0;
@@ -13,6 +23,8 @@
     @media (min-width: breakpoint(xl)) {
         font-size: px-to-rem(18px);
     }
+
+
 
     &.active {
         position: static;

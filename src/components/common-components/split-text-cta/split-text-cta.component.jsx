@@ -61,7 +61,13 @@ export default function TextTitleCta({
 
     if(title) return (
         <div 
-            className={`split-text-cta__module ${altColors ? 'alt-colors' : ''} ${urlPath ? 'has-arrow' : ''}`}
+            className={`
+                split-text-cta__module 
+                ${altColors ? 'alt-colors' : ''} 
+                ${urlPath ? 'has-arrow' : ''}
+                ${className}
+            `}
+            {...otherProps}
         >
             <div className="top">
                 <span className="large-text-title">{title.slice(0, numberOfTitleLettersOnTop)}</span>

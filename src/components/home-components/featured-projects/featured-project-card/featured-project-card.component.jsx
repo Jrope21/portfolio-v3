@@ -3,6 +3,7 @@ import './featured-project-card.styles.scss'
 
 import LinkIcon from '@images/commons/link_icon.svg'
 import JrPointer from '@common-components/jr-pointer/jr-pointer.component'
+import { Link } from 'gatsby'
 
 export default function FeaturedProjectCard({
    name,
@@ -11,6 +12,7 @@ export default function FeaturedProjectCard({
    skills,
    keyId,
    url,
+   urlPath,
    altLayout,
     ...otherProps
 }) {
@@ -42,13 +44,13 @@ export default function FeaturedProjectCard({
                         </li>
                     ))}
                 </ul>
-                <button className="project-details-btn">
+                <Link to={urlPath} className="project-details-btn">
                     Project Details
                     <JrPointer
                         className="detail-btn-pointer"
                         size={'small'}
                     />
-                </button>
+                </Link>
             </div>
         </div>
     )

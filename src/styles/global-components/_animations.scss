@@ -21,15 +21,24 @@
 //   // transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1), transform 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
 // }
 
-.fade-up, .fade-up__mount, .fade-up__scoped {
-  opacity: .01;
-  transform: translateY(20px);
+@mixin disabledAnimations ($important: '') {
+  .fade-up, .fade-up__mount, .fade-up__scoped {
+    opacity: .01 #{$important};
+    transform: translateY(20px) #{$important};
+  }
+  
+  .slide-up, .slide-up__mount {
+    transform: translateY(100%) #{$important};
+  }
+  
 }
 
+@include disabledAnimations();
 
-.activate-animations__mount, .sal-animate, .activate-animations__scoped {
-    
+.deactivate-animations {
+  @include disabledAnimations('!important');
 }
+
 
 .sal-animate.fade-up__mount, .sal-animate .fade-up__mount, .activate-animations__mount.fade-up__mount, .activate-animations__mount .fade-up__mount, .activate-animations__scoped .fade-up__scoped {
   opacity: 1;
@@ -37,4 +46,7 @@
   transition: opacity 450ms $custom_easing, transform 450ms $custom_easing;
 }
 
-// .fade-up-slow__mount
+.sal-animate.slide-up__mount, .sal-animate .slide-up__mount, .activate-animations__mount.slide-up__mount, .activate-animations__mount .slide-up__mount, .activate-animations__scoped .slide-up__scoped {
+  transform: translateY(0);
+  transition: .3s $custom_easing transform;
+}

@@ -8,27 +8,38 @@ import { experienceData } from './_data'
 
 const IndustryExperience = React.forwardRef(({ sectionRef, activateAnimations = false }) => {
 
-    const [isMounted, setIsMounted] = useState(false);
     const [activeExperienceListing, setActiveExperienceListing] = useState(experienceData[0].key)
+    const [isCardAnimationsActive, setIsCardAnimationsActive] = useState(false);
 
     useEffect(() => {
-        setIsMounted(true);
-    }, [])
+        if(activateAnimations) setTimeout(() => {
+            setIsCardAnimationsActive(true);
+        }, 150)
+    }, [activateAnimations])
 
     return (
         <section 
+            data-sal="mount"
             ref={sectionRef}
-            className={`industry-experience__module ${activateAnimations ? 'activate-animations__mount' : ''}`}
+            className={`
+                industry-experience__module   
+            `}
         >
-            <div className="left">
+            <div className={`
+                left
+                ${activateAnimations ? '' : 'deactivate-animations'}
+                ${isCardAnimationsActive ? '' : 'deactivate-card-animation'}
+            `}>
                 <NumberedSectionTitle 
                     className="title-sections fade-up__mount"
                     title="My Industry Experience" 
                     sectionNumber="1" 
                     sectionName="experience"
-                    style={{ transitionDelay: '1100ms' }}
                 />
-                <div className="mobile-line-seperator" />
+                <div 
+                    className="mobile-line-seperator fade-up__mount" 
+                    style={{ transitionDelay: '100ms' }}
+                />
                 <ul className="experience-content-list-container">
                     {experienceData.map((experience, i) => (
                         <li 
@@ -40,7 +51,7 @@ const IndustryExperience = React.forwardRef(({ sectionRef, activateAnimations = 
                                     setActiveExperienceListing(experience.key)
                                 }}
                                 className={`title-filter fade-up__mount`}
-                                style={{ transitionDelay: `${1200 + i * 100}ms` }}
+                                style={{ transitionDelay: `${200 + i * 100}ms` }}
                             >
                                 <span className="title-text-animate">
                                     {experience.name}
@@ -48,7 +59,12 @@ const IndustryExperience = React.forwardRef(({ sectionRef, activateAnimations = 
                                 <span className="lg-animation-line"></span>
                             </div>
                              
-                            <div className={`featured-experience-card`}>
+                            <div 
+                                className={`
+                                    featured-experience-card
+                                    ${isCardAnimationsActive ? '' : 'deactivate-animations'}
+                                `}
+                            >
                                 <FeaturedExperienceCard 
                                     isVisible={activeExperienceListing === experience.key}
                                     name={experience.name}

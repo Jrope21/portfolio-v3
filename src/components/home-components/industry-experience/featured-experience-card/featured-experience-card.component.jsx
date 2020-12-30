@@ -15,7 +15,7 @@ export default function FeaturedExperienceCard({
     jobDescriptionBullets
 }) {
     return (
-        <div       
+        <div  
             className={`featured-experience-card__module ${isVisible ? 'active activate-animations__scoped' : ''}`}
         >
             <div className="location-and-dates-container">

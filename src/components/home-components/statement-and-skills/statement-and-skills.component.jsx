@@ -30,7 +30,7 @@ const StatementAndSkills = React.forwardRef(({ sectionRef, activateAnimations = 
 
                 <p 
                     className="statement fade-up__mount"
-                    style={{ transitionDelay: '100ms' }}
+                    style={{ transitionDelay: '200ms' }}
                 >
                     Hi there! I’m Josh, a Dallas-based <strong>front end developer</strong> with a knack for programming and design. My <strong>passion</strong> comes from being a part of a solution that brings each aspect of the customer journey together across both <strong>development and design</strong> processes. I focus on creating <strong>production-ready applications</strong> with my knowledge of the user experience, and writing scalable, <strong>clean code.</strong>
                 </p>
@@ -39,7 +39,7 @@ const StatementAndSkills = React.forwardRef(({ sectionRef, activateAnimations = 
 
             <picture 
                 className="hero-image fade-up__mount"
-                style={{ transitionDelay: '200ms' }}
+                style={{ transitionDelay: '100ms' }}
             >
                 <source 
                     srcSet={HeroImageDesktop}
@@ -59,51 +59,7 @@ const StatementAndSkills = React.forwardRef(({ sectionRef, activateAnimations = 
                         style={{ transitionDelay: `${450 + i * 50}ms` }}
                     >{skills}</li>
                 ))}
-                {/* <li 
-                    className="fade-up__mount"
-                    style={{ transitionDelay: '450ms' }}
-                >React | Redux</li>
-                <li 
-                    className="fade-up__mount"
-                    style={{ transitionDelay: '500ms' }}
-                >Gatsby Js | React Static</li>
-                <li 
-                    className="fade-up__mount"
-                    style={{ transitionDelay: '500ms' }}
-                >Svelte 3 | Sapper</li>
-                <li 
-                    className="fade-up__mount"
-                    style={{ transitionDelay: '500ms' }}
-                >Node Js | Express</li>
-                <li 
-                    className="fade-up__mount"
-                    style={{ transitionDelay: '500ms' }}
-                >JavaScript (ES8+)</li>
-                <li 
-                    className="fade-up__mount"
-                    style={{ transitionDelay: '500ms' }}
-                >jQuery</li>
-                <li 
-                    className="fade-up__mount"
-                    style={{ transitionDelay: '500ms' }}
-                >Asnychronus JavaScript</li>
-                <li>WebPack</li>
-                <li>Git (Version Control)</li>
-                <li>Command Line</li>
-                <li>SASS | SCSS</li>
-                <li>CSS</li>
-                <li>Foundation | Bootstrap</li>
-                <li>HTML (WCAG compliant)</li>
-                <li>HTML Emails</li>
-                <li>GitHub | BitBucket</li>
-                <li>WordPress | Kentico</li>
-                <li>Adobe Suite</li>
-                <li>Figma</li>
-                <li>SEO</li>
-                <li>Usability Testing</li>
-                <li>Agile | Waterfall</li> */}
             </ul>
-
         </section>
     )
 });

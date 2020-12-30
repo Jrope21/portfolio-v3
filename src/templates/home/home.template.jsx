@@ -18,22 +18,28 @@ const sectionNavNamesInOrder = [
 ]
 
 export default function HomeTemplate() {
+  const heroAnimationDelay = 1100;
 
   const sectionRefs = useRef([0,1,2,3,4].map(() => createRef()));
 
   const [globalContextData, setGlobalContextData] = useContext(GlobalContext);
 
-  const [allViewedSections, setAllViewedSections] = useState({})
+  // const [allViewedSections, setAllViewedSections] = useState({})
   const [isMounted, setIsMounted] = useState(false);
+  const [isHeroAnimationsDone, setIsHeroAnimitionsDone] = useState(false);
 
   useEffect(() => {
       setIsMounted(true);
+
+      setTimeout(() => {
+        setIsHeroAnimitionsDone(true)
+      }, heroAnimationDelay)
   }, [])
  
   useScrollPosition(({ prevPos, currPos }) => {
 
     const currentScrollY = Math.abs(currPos.y);
-    const updatedViewedSections = allViewedSections;
+    // const updatedViewedSections = allViewedSections;
     
     for(let i = sectionNavNamesInOrder.length - 1; i >= 0; i--) {
       const elementScrollY = sectionRefs.current[i].current.offsetTop;
@@ -43,14 +49,16 @@ export default function HomeTemplate() {
           ...globalContextData,
           activeMenuItem: sectionNavNamesInOrder[i]
         })
-        updatedViewedSections[sectionNavNamesInOrder[i]] = true;
-        setAllViewedSections(updatedViewedSections);
+        // updatedViewedSections[sectionNavNamesInOrder[i]] = true;
+        // setAllViewedSections(updatedViewedSections);
         break;
       }
     }
   }, [])
 
-  
+  const setActiveSections = () => {
+
+  }
 
   return (
     <main className="home__template">
@@ -65,19 +73,16 @@ export default function HomeTemplate() {
       <div className="container">
         <IndustryExperience 
           // activateAnimations={allViewedSections['Experience'] ? true : false}
-          activateAnimations={isMounted ? true : false}
+          activateAnimations={isHeroAnimationsDone ? true : false}
           sectionRef={sectionRefs.current[1]} 
         />
         <FeaturedProjects 
-          activateAnimations={allViewedSections['Projects'] ? true : false}
           sectionRef={sectionRefs.current[2]} 
         />
         <StatementAndSkills 
-          activateAnimations={allViewedSections['About'] ? true : false}
           sectionRef={sectionRefs.current[3]} 
         />
         <Contact 
-          activateAnimations={allViewedSections['Contact'] ? true : false}
           sectionRef={sectionRefs.current[4]} 
         />
       </div>

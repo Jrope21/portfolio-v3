@@ -8,12 +8,13 @@ import JrButton from '@common-components/jr-button/jr-button.component'
 
 import { projectsData } from './_data'
 
-const FeaturedProjects = React.forwardRef(({ sectionRef, activateAnimations = false }) => {
+const FeaturedProjects = React.forwardRef(({ sectionRef }) => {
 
     return (
         <section 
+            data-sal="mount"
             ref={sectionRef}
-            className={`featured-projects__module ${activateAnimations ? 'activate-animations__mount' : ''}`}
+            className={`featured-projects__module`}
         >
             <div className="titles-container">
                 <NumberedSectionTitle 
@@ -21,27 +22,29 @@ const FeaturedProjects = React.forwardRef(({ sectionRef, activateAnimations = fa
                     title="Projects I've Worked On" 
                     sectionNumber={'2'} 
                     sectionName="projects"
-                    style={{ transitionDelay: `100ms` }}
+                    // style={{ transitionDelay: `100ms` }}
                 />
                 <SplitTextCta 
                     title={'Archive'}
                     description={`Use archive for the full list of projects I've worked on.`}
-                    urlPath={'/archive'}
-                    className="fade-up__mount"
-                    style={{ transitionDelay: `250ms` }}
+                    className="fade-up__mount"rlPath={'/archive'}
+                    
+                    style={{ transitionDelay: `150ms` }}
                 />
             </div>
             
             <div className="projects-container">
                 {projectsData.map((project, i) => (
                     <FeaturedProjectCard 
+                        url={project.url}
+                        urlPath={project.urlPath}
                         key={project.key}
                         keyId={project.key}
                         name={project.name}
                         description={project.description}
                         year={project.year}
                         skills={project.skills}
-                        style={{ transitionDelay: `${400 + i * 100}ms` }}
+                        style={{ transitionDelay: `${300 + i * 100}ms` }}
                     />
                 ))}
             </div>
@@ -50,7 +53,7 @@ const FeaturedProjects = React.forwardRef(({ sectionRef, activateAnimations = fa
                 className="fade-up__mount"
                 urlPath={'/project-detail'}
                 text={'Use archive for the full list of projects I’ve worked on.'}
-                style={{ transitionDelay: `1000ms` }}
+                style={{ transitionDelay: `900ms` }}
             />
                 
          
