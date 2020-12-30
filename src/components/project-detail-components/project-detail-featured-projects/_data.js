@@ -5,35 +5,40 @@ export const featuredProjects = [
         numberOfTitleLettersOnTop: 2,
         description: 'Project Details',
         year: `2020`,
-        urlPath: 'projects/direpairs'
+        urlPath: 'projects/direpairs',
+        key: "direpadksljadakj"
     },
     {
         title: 'Halcyon',
         numberOfTitleLettersOnTop: 1,
         description: 'Project Details',
         year: `2019`,
-        urlPath: 'projects/halcyon'
+        urlPath: 'projects/halcyon',
+        key: "gdfdiregdpadksljadakj"
     },
     {
         title: 'Stallion',
         numberOfTitleLettersOnTop: 1,
         description: 'Project Details',
         year: `2019`,
-        urlPath: 'projects/stallion'
+        urlPath: 'projects/stallion',
+        key: "direfdsapadksljadakj"
     },
     {
         title: 'University Park',
         numberOfTitleLettersOnTop: 1,
         description: 'Project Details',
         year: `2019`,
-        urlPath: 'projects/university-park'
+        urlPath: 'projects/university-park',
+        key: "dgfdirepadksljadakj"
     },
     {
         title: 'Creative Revolt',
         numberOfTitleLettersOnTop: 1,
         description: 'Project Details',
         year: `2018`,
-        urlPath: 'projects/creative-revolt'
+        urlPath: 'projects/creative-revolt',
+        key: "fdsdfairepadsaksljadakj"
     },
 ]
 

@@ -16,33 +16,38 @@ export default function ProjectDetailCarousel({ images }) {
     )
 
     if (images) return (
-        <section className="project-detail-carousel__module">
+        <section data-sal="mount" className="project-detail-carousel__module">
+            <span className="design-element-line"></span>
             <div className="project-detail-carousel-inner-container">
-
-       
-                {images.map(({ src, alt }, i) => (
-                    <div className={`carousel-image-container ${i === activeIndex ? 'active' : ''}`}>
-                        <CarouselArrowBtn 
-                            direction="left"
-                            onClick={viewPrevSlide}
-                        />
-                        <img 
-                            src={src} 
-                            alt={alt} 
-                            key={'project-detail-carousel' + alt + i} 
-                        />
-                        <CarouselArrowBtn 
-                            direction="right"
-                            onClick={viewNextSlide}
-                        />
-                    </div> 
-                ))}
-                <ol className="carousel-controls-container">
+                <div className="fade-up__mount">
+                    {images.map(({ src, alt }, i) => (
+                        <div className={` fade-up__mount carousel-image-container ${i === activeIndex ? 'active' : ''}`}>
+                            <CarouselArrowBtn 
+                                direction="left"
+                                onClick={viewPrevSlide}
+                            />
+                            <img 
+                                src={src} 
+                                alt={alt} 
+                                key={'project-detail-carousel' + alt + i} 
+                            />
+                            <CarouselArrowBtn 
+                                direction="right"
+                                onClick={viewNextSlide}
+                            />
+                        </div> 
+                    ))}
+                </div>
+                <ol 
+                    className="carousel-controls-container "
+                    
+                >
                     {images.map(({ alt },  i) => (
                         <li 
-                            className={`carousel-control-button-container`}
+                            className={`carousel-control-button-container fade-up__mount`}
                             key={'project-detail-carousel-controls' + alt + i}
                             onClick={() => setActiveIndex(i)}
+                            style={{ transitionDelay: `${100 + i * 50}ms` }}
                         >
                             <button className={`carousel-control-button ${i === activeIndex ? 'active' : ''}`}>
                                 <span className="sr-only">

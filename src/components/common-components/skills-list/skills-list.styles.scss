@@ -3,6 +3,8 @@
     position: relative;
     // margin-left: auto;
     padding-top: 25px;
+    padding-right: 3px;
+    overflow: hidden;
 
     @media (min-width: breakpoint(sm)) {
         padding-top: 75px;
@@ -17,11 +19,15 @@
     &::after {
         content: ''; 
         position: absolute;
-        right: -3px;
+        right: 0;
         top: 0;
         width: 3px;
         height: 100%;
+        // border-right: 3px solid color(accent);
         background-color: color(accent);
+        transition: .3s $custom_easing transform;
+        transform: translateY(100%);
+        transition-delay: 300ms;
     }
 
     li {
@@ -60,6 +66,15 @@
                 margin-left: 10px;
                 width: 25px;
             }
+        }
+    }
+}
+
+.sal-animate, .activate-animations__mount {
+    .list-animate__mount {
+
+        &::after {
+            transform: translateY(0%);
         }
     }
 }

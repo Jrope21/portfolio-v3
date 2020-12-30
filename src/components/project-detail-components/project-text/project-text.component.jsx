@@ -13,25 +13,45 @@ export default function ProjectText({
     description,
     skills = []
 }) {
+
+    // const [isMounted]
+
     return (
-        <section className="project-text__module">
-            <h1 className="project-title">{title}</h1> 
-            <div className="link-and-year-container">
-                <a href={url} rel="noopener noreferrer" target="_blank" className="project-link">
+        <section data-sal="mount" className="project-text__module">
+            <h1 className="project-title fade-up__mount">{title}</h1> 
+            <div className="link-and-year-container"  >
+                <a 
+                    href={url} 
+                    rel="noopener noreferrer" 
+                    target="_blank" 
+                    className="project-link fade-up__mount"
+                    style={{ transitionDelay: `100ms` }}
+                    
+                >
                     {linkText}
                     <img src={LinkIcon} alt={`Icon that links to ${title}`} />
                 </a>
-                <TextDisplacement 
-                    text={year}
-                    textClassName="text-displacement-year-text"
-                    containerClassName="text-displacement-year-container"
-                />
+                <div 
+                    className="text-displacement-year-container fade-up__mount"
+                    style={{ transitionDelay: `200ms` }}
+                >
+                    <TextDisplacement 
+                        text={year}
+                        textClassName="text-displacement-year-text"
+                        // containerClassName="text-displacement-year-container "
+                    />
+                </div>
+            
             </div>
 
             <div className="description-and-skills-container">
-                <span className="design-element-line" />
+                <div className="design-element-line-container">
+                    <span className="design-element-line" />
+                </div>
+                
                 <div 
-                    className="project-description" 
+                    className="project-description fade-up__mount" 
+                    style={{ transitionDelay: `700ms` }}
                     dangerouslySetInnerHTML={{ __html: description }}
                 />
                 <SkillsList 

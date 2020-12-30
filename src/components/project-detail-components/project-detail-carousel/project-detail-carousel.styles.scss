@@ -4,7 +4,7 @@
     z-index: 0;
     padding-top: 45px;
     padding-bottom: 45px;
-
+    
 
     @media (min-width: breakpoint(sm)) {
         padding-left: 20px;
@@ -28,24 +28,29 @@
         padding-bottom: 125px;
     }  
 
-    &::before {
-        content: '';
-        display: none;
+    .design-element-line {
         position: absolute;
         z-index: -1;
-        left: 160px;
-        top: -75px;
-        height: calc(100% + 200px);
+        left: 25%;
+        top: 0;
+        height: 360px;
         width: 3px;
-        background-color: color(accent);
+        overflow: hidden;
+
+        @media (min-width: breakpoint(xs)) {
+            left: 35%;
+        }
 
         @media (min-width: breakpoint(sm)) {
-            display: block;
+            left: 160px;
+            top: -75px;
+            height: calc(100% + 200px);
         }
 
         @media (min-width: breakpoint(md)) {
             left: 185px;
-            height: calc(100% + 250px);
+            // height: calc(100% + 250px);
+            height: calc(100% + 180px);
         }
 
         @media (min-width: breakpoint(lg)) {
@@ -56,7 +61,32 @@
             left: 200px;
             top: -160px;
         }
-     }
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background-color: color(accent);
+            transform: translateY(100%);
+            transition: .45s $custom_easing transform;
+            transition-delay: .3s;
+
+            @media (min-width: breakpoint(sm)) {
+                transform: translateY(-100%);
+            }
+        }
+
+    }
+
+    &.sal-animate {
+
+        .design-element-line::before {
+            transform: translateY(0);
+        }
+    }
 
     .project-detail-carousel-inner-container {
         position: relative;
@@ -146,6 +176,7 @@
         font-size: 0;
         color: transparent;
         padding: 6px;
+        cursor: pointer;
 
         @media (min-width: breakpoint(lg)) {
             padding: 7px;

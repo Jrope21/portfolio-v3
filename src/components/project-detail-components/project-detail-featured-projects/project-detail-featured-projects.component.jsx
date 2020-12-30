@@ -7,21 +7,26 @@ import JrButton from '@common-components/jr-button/jr-button.component'
 
 import { featuredProjects } from './_data'
 
-const ProjectDetailFeaturedProjects = () => {
+const ProjectDetailFeaturedProjects = ({ }) => {
     return (
         <section 
+            data-sal="mount"
             className="project-detail-featured-projects__module"
         >
             <NumberedSectionTitle 
-                className="section-titles"
+                className="section-titles fade-up__mount"
                 title="Projects I've Worked On" 
                 sectionNumber={'2'} 
                 sectionName="projects"
             />
             
             <div className="projects-container">
-                {featuredProjects.map(project => (
-                    <div className="project-wrapper">
+                {featuredProjects.map((project, i) => (
+                    <div 
+                        key={project.key}
+                        className="project-wrapper fade-up__mount"
+                        style={{ transitionDelay: `${100 + i * 100}ms` }}
+                    >
                          <SplitTextCta 
                             title={project.title}
                             description={'Project Details'}
@@ -36,7 +41,8 @@ const ProjectDetailFeaturedProjects = () => {
             </div>
 
             <JrButton 
-                className={'view-all-btn'}
+                className={'view-all-btn fade-up__mount'}
+                style={{ transitionDelay: `${100 + featuredProjects.length * 100}ms` }}
                 urlPath={'/project-detail'}
                 text={'Use archive for the full list of projects I’ve worked on.'}
             />

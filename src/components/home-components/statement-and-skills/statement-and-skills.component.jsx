@@ -6,6 +6,8 @@ import styles from '@styles/variables.scss'
 import HeroImageDesktop from '@images/home/about-me-desktop-img.jpg'
 import HeroImageMobile from '@images/home/about-me-mobile-img.jpg'
 import NumberedSectionTitle from '@home-components/numbered-section-title/numbered-section-title.component'
+import SkillsList from '@common-components/skills-list/skills-list.component'
+
 import { skillsData } from './_data'
 
 const StatementAndSkills = React.forwardRef(({ sectionRef, activateAnimations = false }) => {
@@ -49,7 +51,12 @@ const StatementAndSkills = React.forwardRef(({ sectionRef, activateAnimations = 
             </picture>
             </div>
 
-            <ul 
+            <SkillsList 
+                className="skills"
+                skills={skillsData} 
+            />
+
+            {/* <ul 
                 className="skills list-animate__mount"    
             >
                 {skillsData.map((skills, i) => (
@@ -59,7 +66,7 @@ const StatementAndSkills = React.forwardRef(({ sectionRef, activateAnimations = 
                         style={{ transitionDelay: `${450 + i * 50}ms` }}
                     >{skills}</li>
                 ))}
-            </ul>
+            </ul> */}
         </section>
     )
 });
