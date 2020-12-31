@@ -10,7 +10,9 @@ import { projectsData } from './_data'
 
 const FeaturedProjects = React.forwardRef(({ sectionRef }) => {
 
-    return (
+    // const [projects, setProjects] = useState(projectsData);
+
+     return (
         <section 
             data-sal="mount"
             ref={sectionRef}
@@ -22,23 +24,22 @@ const FeaturedProjects = React.forwardRef(({ sectionRef }) => {
                     title="Projects I've Worked On" 
                     sectionNumber={'2'} 
                     sectionName="projects"
-                    // style={{ transitionDelay: `100ms` }}
                 />
                 <SplitTextCta 
                     title={'Archive'}
                     description={`Use archive for the full list of projects I've worked on.`}
-                    className="fade-up__mount"rlPath={'/archive'}
-                    
+                    className="fade-up__mount"
+                    urlPath={'/archive'}                  
                     style={{ transitionDelay: `150ms` }}
                 />
             </div>
             
             <div className="projects-container">
                 {projectsData.map((project, i) => (
-                    <FeaturedProjectCard 
+                    <FeaturedProjectCard
                         url={project.url}
                         urlPath={project.urlPath}
-                        key={project.key}
+                        key={project.key + i}
                         keyId={project.key}
                         name={project.name}
                         description={project.description}
@@ -56,8 +57,6 @@ const FeaturedProjects = React.forwardRef(({ sectionRef }) => {
                 style={{ transitionDelay: `900ms` }}
             />
                 
-         
-
         </section>
     )
 });

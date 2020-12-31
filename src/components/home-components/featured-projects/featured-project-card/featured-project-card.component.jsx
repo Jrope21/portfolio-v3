@@ -1,11 +1,13 @@
 import React from 'react'
 import './featured-project-card.styles.scss'
 
-import LinkIcon from '@images/commons/link_icon.svg'
-import JrPointer from '@common-components/jr-pointer/jr-pointer.component'
 import { Link } from 'gatsby'
 
-export default function FeaturedProjectCard({
+import JrPointer from '@common-components/jr-pointer/jr-pointer.component'
+
+import LinkIcon from '@images/commons/link_icon.svg'
+
+export default React.memo(function FeaturedProjectCard({
    name,
    description,
    year,
@@ -22,19 +24,27 @@ export default function FeaturedProjectCard({
             className={`featured-project-card__module fade-up__mount${altLayout ? ' alternate-layout' : ''}`} 
             {...otherProps}
         >
-            <div className="project-top-section">
-                <h3 className="project-title">
-                    <a href={url} rel="noopener" target="_blank">
-                        {name} 
-                        <img src={LinkIcon} alt={`Icon that links to ${name}`}/>
-                    </a>
-                </h3>
-                <p 
-                    className="project-description" 
-                    dangerouslySetInnerHTML={{ __html: description }} 
-                />
-            </div>         
+            <div>
+      
+            
+                <div id="project-top-section" className="project-top-section">
+                    <h3 className="project-title">
+                        
+                        <a href={url} rel="noopener" target="_blank">
+                            {name} 
+                            <img src={LinkIcon} alt={`Icon that links to ${name}`}/>
+                        </a>
+                    </h3>
+                    {/* BUG -- this must be hidden until scroll reveal works */}
+                    <p
+                        className="project-description" 
+                        dangerouslySetInnerHTML={{ __html: description }} 
+                    />
+                </div> 
+                     
+            </div>   
             <div className="project-bottom-section">
+            
                 <div className="project-year-container">
                     <span className="project-year-text">
                         {year}
@@ -57,4 +67,4 @@ export default function FeaturedProjectCard({
             </div>
         </div>
     )
-}
+})

@@ -10,7 +10,7 @@ export const projectsData = [
             <strong>user experience.</strong>
         `,
         year: '2020',
-        key: 'di6476refdsagfasf',
+        key: 'di6476refdjrtjysagfasf',
         skills: [
             'Gatsby',
             'Node Js',
@@ -27,7 +27,7 @@ export const projectsData = [
             React Static</strong>, and developed <strong>clean code</strong> for other advanced React components.
         `,
         year: '2019',
-        key: 'direfd5754sagfasffadsf',
+        key: 'direfd575fsg4sagfasffadsf',
         skills: [
             'Gatsby',
             'Node Js',
@@ -38,15 +38,9 @@ export const projectsData = [
         name: 'Stallion',
         url: 'https://www.stallion.com',
         urlPath: '/projects/direpairs',
-        description: `
-            As the <strong>Lead Front End Developer</strong> on a <strong>complete website rebuild</strong>
-            , I worked towards envisioning a website that would match their innovative Stallion attitude. 
-            The project was built with an <strong>emphasis</strong> on <strong>clean code</strong>, and 
-            <strong>modularity</strong>. The website includes multiple API’s, form verification, 
-            and other advanced modules.
-        `,
+        description: 'As the <strong>Lead Front End Developer</strong> on a <strong>complete website rebuild</strong>, I worked towards envisioning a website that would match their innovative Stallion attitude. The project was built with an <strong>emphasis</strong> on <strong>clean code</strong>, and <strong>modularity</strong>. The website includes multiple API’s, form verification, and other advanced modules.',
         year: '2019',
-        key: 'direfdstrh534agvsfasf',
+        key: 'direfdstrh534asgdgvsfasf',
         skills: [
             'Gatsby',
             'Node Js',
@@ -66,7 +60,7 @@ export const projectsData = [
             and several <strong>third party integrations</strong>.
         `,
         year: '2019',
-        key: 'diregfsfdsagfasffdsav',
+        key: 'diregfsfdsagfasyrtffdsav',
         skills: [
             'Gatsby',
             'Node Js',
@@ -84,7 +78,7 @@ export const projectsData = [
             created the landing page as well as multiple pages across the platform.
         `,
         year: '2018',
-        key: 'direfdsagf6435643asfkljkl',
+        key: 'direfdsagf6435643aysfkljkl',
         skills: [
             'Gatsby',
             'Node Js',
