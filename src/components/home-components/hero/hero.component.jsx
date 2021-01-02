@@ -23,7 +23,24 @@ const Hero = React.forwardRef(({ sectionRef, activateAnimations = false }) => {
             ref={sectionRef}
             
         >
-            <picture className="hero-image">
+            <div className="hero-image">
+                <img 
+                    className="hero-mobile" 
+                    src={HeroImageMobile} 
+                    alt="A Front End Developer typing on a laptop"
+                />
+                <img 
+                    className="hero-tablet" 
+                    src={HeroImageTablet} 
+                    alt="A Front End Developer typing on a laptop"
+                />
+                <img 
+                    className="hero-desktop" 
+                    src={HeroImageDesktop} 
+                    alt="A Front End Developer typing on a laptop"
+                />
+            </div>
+            {/* <picture className="hero-image">
             <source 
                     srcSet={HeroImageDesktop}
                     media={`(min-width: ${styles.breakpointLg}px)`} 
@@ -34,7 +51,7 @@ const Hero = React.forwardRef(({ sectionRef, activateAnimations = false }) => {
                 />
                 
                 <img src={HeroImageMobile} alt="A Front End Developer typing on a laptop"/>
-            </picture>
+            </picture> */}
             <div className="container">
                 <div className="text-cta" 
                     

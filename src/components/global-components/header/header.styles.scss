@@ -10,8 +10,24 @@
     }
 
     &.mobile-nav-fixed {
-        top: 10px;
-        position: fixed;
+        // top: 10px;
+        // position: fixed;
+
+        .mobile-menu-btn.scrollable {
+            position: fixed;
+            top: 10px;
+            transform: translateX(0);
+        }
+        
+        .mobile-menu-btn.stationary {
+            transform: translateX(-100%);
+        }
+    }
+
+    &.mobile-menu-swapping {
+        .mobile-menu-btn.stationary {
+            transform: translateX(-100%) !important;
+        }
     }
 
     .navigation {
@@ -115,8 +131,15 @@
         color: color(primary);
         transform: translateX(0);
         text-transform: uppercase;
-        transition: .15s $custom_animation transform .125s, .1s ease-in-out max-width, .1s ease-in-out min-width;
+        transition: .15s $custom_animation transform .125s;
         cursor: pointer;
+
+        &.scrollable {
+            position: fixed;
+            top: 10px;
+            transform: translateX(-100%);
+            transition: .15s $custom_animation transform .125s, .1s ease-in-out max-width, .1s ease-in-out min-width;
+        }
 
         // @media (min-width: breakpoint(sm)) {
         //     display: none;
@@ -133,6 +156,7 @@
 
         // animating width / content changes with max-width / min-width;
         // TODO -- maybe animate with JS if this becomes hard to maintain?
+        
         &.Home {
             min-width: 105px;
             max-width: 115px;
@@ -189,7 +213,7 @@
     &.mobile-nav-open {
 
         .mobile-menu-btn {
-            transform: translateX(-100%);
+            transform: translateX(-100%) !important;
             transition-delay: 0s;
         }
 

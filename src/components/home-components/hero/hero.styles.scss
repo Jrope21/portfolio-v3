@@ -36,12 +36,39 @@
         }
     }
 
+    .hero-mobile {
+
+        @media (min-width: breakpoint(sm)) {
+            display: none;
+        }
+    }
+
+    .hero-tablet {
+        display: none;
+
+        @media (min-width: breakpoint(sm)) {
+            display: block;
+        }
+
+        @media (min-width: breakpoint(lg)) {
+            display: none;
+        }
+    }
+
+    .hero-desktop {
+        display: none;
+
+        @media (min-width: breakpoint(lg)) {
+            display: block;
+        }
+    }
+
     .text-cta {
-        margin-top: 150px;
+        margin-top: 130px;
         margin-right: -10px;
 
         @media(min-width: breakpoint(xs)) {
-            margin-top: 200px;
+            margin-top: 180px;
         }
 
         @media (min-width: breakpoint(sm)) {
@@ -75,6 +102,7 @@
         display: block;
         margin-left: auto;
         font-size: px-to-rem(47px);
+        line-height: 47px;
         font-weight: 900;
         text-transform: uppercase;
         font-family: $font_header_alt;
@@ -84,27 +112,32 @@
 
         @media (min-width: breakpoint(sm)) {
             font-size: px-to-rem(70px);
-            margin-bottom: -6px;
+            line-height: 70px;
+            margin-bottom: -4px;
         }
 
         @media (min-width: breakpoint(md)) {
             font-size: px-to-rem(90px);
-            margin-bottom: -8px;
+            line-height: 90px;
+            margin-bottom: -6px;
         }
 
         @media (min-width: breakpoint(lg)) {
             font-size: px-to-rem(110px);
-            margin-bottom: -10px;
+            line-height: 110px;
+            margin-bottom: -8px;
         }
 
         @media (min-width: breakpoint(xl)) {
             font-size: px-to-rem(122px);
-            margin-bottom: -12px;
+            line-height: 122px;
+            margin-bottom: -10px;
         }
 
         @media (min-width: breakpoint(xxl)) {
             font-size: px-to-rem(134px);
-            margin-bottom: -14px;
+            line-height: 134px;
+            margin-bottom: -12px;
         }
 
         &::after {
@@ -117,8 +150,23 @@
             background-color: color(primary);
 
             @media (min-width: breakpoint(sm)) {
+                width: 22px;
+                height: 22px;
+            }
+
+            @media (min-width: breakpoint(md)) {
+                width: 26px;
+                height: 26px;
+            }
+
+            @media (min-width: breakpoint(md)) {
                 width: 30px;
                 height: 30px;
+            }
+
+            @media (min-width: breakpoint(xxl)) {
+                width: 34px;
+                height: 34px;
             }
         }
     }
