@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext, useRef } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 import './header.styles.scss'
 
 import { Link } from "gatsby"
@@ -12,7 +12,8 @@ export default function Header() {
     const [globalContextData] = useContext(GlobalContext)
     const { activeMenuItem } = globalContextData;
 
-    const isFirstMount = useRef(true);
+
+    const [isMounted, setIsMounted] = useState(false);
 
     const [isMobileNavFixed, setIsMobileNavFixed] = useState(false);
     const [isMobileMenuBtnSwapping, setIsMobileMenuBtnSwapping] = useState(false);
@@ -23,25 +24,23 @@ export default function Header() {
 
     useScrollPosition(({ prevPos, currPos }) => {
         const changeScrollAt = 450;
-        // const changeScrollAt = 500;
         const currentScrollY = Math.abs(currPos.y);
         
-        if(currentScrollY > changeScrollAt && !isMobileNavFixed) return setIsMobileNavFixed(true);
+        if(currentScrollY > changeScrollAt && !isMobileNavFixed) setIsMobileNavFixed(true);
         if(currentScrollY < changeScrollAt) setIsMobileNavFixed(false)
     }, [])
 
     useEffect(() => {
-        if(isMobileNavOpen) document.body.classList.add('mobile-no-scroll');
-        else document.body.classList.remove('mobile-no-scroll');
+        if(isMobileNavOpen) document.body.classList.add('body-no-scroll');
+        else document.body.classList.remove('body-no-scroll');
 
         return (()=> {
-            document.body.classList.remove('mobile-no-scroll');
+            document.body.classList.remove('body-no-scroll');
         })
     }, [isMobileNavOpen])
 
     useEffect(() => {
-        console.log('fixed hook', isFirstMount)
-        if(!isMobileNavFixed) {
+        if(!isMobileNavFixed && isMounted) {
             setIsMobileMenuBtnSwapping(true)
             setTimeout(() => {
                 setIsMobileMenuBtnSwapping(false);
@@ -49,11 +48,9 @@ export default function Header() {
         }
     }, [isMobileNavFixed])
 
-    // useEffect(() => {
-    //     console.log('first mount', isFirstMount)
-    //     isFirstMount.current = false;
-    //     console.log('second mount', isFirstMount)
-    // }, [])
+    useEffect(() => {
+        setIsMounted(true);
+    }, [])
 
     return (
         <header className={`header__module ${isMobileMenuBtnSwapping ? 'mobile-menu-swapping' : ''} ${isMobileNavFixed ? 'mobile-nav-fixed' : ''} ${isMobileNavOpen ? 'mobile-nav-open' : ''}`}>
@@ -72,33 +69,41 @@ export default function Header() {
                     
                 </button>
 
-                <button 
-                    className={`mobile-menu-btn scrollable ${activeMenuItem}`}
-                    onClick={openNav}
-                >
-                    <div className="inner-wrapper">
-                        Menu
-                        <span aria-hidden="true" className="line-seperator" />
-                        <span 
-                            className={`mobile-menu-breadcrumb`}
-                        >{activeMenuItem}</span>
-                    </div>
-                    
-                </button>
+                <div className="mobile-menu-btn-scrollable-wrapper">
+                    <button 
+                        className={`mobile-menu-btn scrollable ${activeMenuItem}`}
+                        onClick={openNav}
+                    >
+                        <div className="inner-wrapper">
+                            Menu
+                            <span aria-hidden="true" className="line-seperator" />
+                            <span 
+                                className={`mobile-menu-breadcrumb`}
+                            >{activeMenuItem}</span>
+                        </div>
+                        
+                    </button>
+                </div>
+
+               
+              
 
                 <div className="mobile-overlay" onClick={closeNav} />
-                <ul className={`navigation`}>
-                    {menuItems.map((menuItem, i) => (
-                        <li key={menuItem + i + 'nav-link'}>
-                            <div className={`nav-item-outer-wrapper ${activeMenuItem === menuItem ? 'active' : ''}`}>
-                                <Link 
-                                    to={`/#${menuItem.toLowerCase()}`}
-                                    onClick={closeNav}
-                                >{menuItem}</Link>
-                            </div>
-                        </li>
-                    ))}
-                </ul>
+                <div className="navigation-overflow-wrapper">
+                    <ul className={`navigation`}>
+                        {menuItems.map((menuItem, i) => (
+                            <li key={menuItem + i + 'nav-link'}>
+                                <div className={`nav-item-outer-wrapper ${activeMenuItem === menuItem ? 'active' : ''}`}>
+                                    <Link 
+                                        to={`/#${menuItem.toLowerCase()}`}
+                                        onClick={closeNav}
+                                    >{menuItem}</Link>
+                                </div>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+              
             </nav>
         </header>
     )

@@ -10,10 +10,14 @@ import Footer from "./footer/footer.component"
 export default function Layout({ children }) {
 
   return (
-    <GlobalProvider>
-      <Header />
-        {children}
-      <Footer />
-    </GlobalProvider>
+    <div className="page-width-container">
+      <div className="page-content-container">
+        <GlobalProvider>
+          <Header />
+            {children}
+          <Footer />
+        </GlobalProvider>
+      </div>
+    </div>
   )
 }

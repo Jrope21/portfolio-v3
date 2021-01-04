@@ -21,11 +21,8 @@
 }
 
 
-.mobile-no-scroll {
-
-    @media (max-width: breakpoint(sm)) {
-        overflow: hidden;
-    }
+.body-no-scroll {
+    overflow: hidden;
 }
 
 .relative {

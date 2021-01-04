@@ -31,6 +31,7 @@ $grid_breakpoints: (
     xxl: 1500px // large desktop
 );
 
+$page_container_max_width: 1650px;
 
 :export { // - exported to be used as javascript variables
     breakpointXs: strip-unit(breakpoint(xs));
@@ -73,6 +74,7 @@ $module_spacer_large: (
 // **
 // ********************************************************
 // ********************************************************
+
 
 $font_fallbacks: -apple-system,BlinkMacSystemFont,Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
 $font_body: 'SF Pro Display'; // this is the body font

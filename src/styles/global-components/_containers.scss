@@ -1,4 +1,14 @@
 
+.page-width-container {
+    max-width: 1650px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.page-content-container {
+    display: block;
+    position: relative;
+}
 
 .container {
     @include paddingLR(15px);

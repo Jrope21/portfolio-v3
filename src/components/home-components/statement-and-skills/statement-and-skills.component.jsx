@@ -38,8 +38,14 @@ const StatementAndSkills = React.forwardRef(({ sectionRef, activateAnimations = 
                 </p>
 
             </div>
+            <div 
+                className="hero-image fade-up__mount"
+                style={{ transitionDelay: '100ms' }}
+            >
+                <img src={HeroImageDesktop} alt="Joshua Roper, a Senior Front End Developer"/>
+            </div>
 
-            <picture 
+            {/* <picture 
                 className="hero-image fade-up__mount"
                 style={{ transitionDelay: '100ms' }}
             >
@@ -48,7 +54,7 @@ const StatementAndSkills = React.forwardRef(({ sectionRef, activateAnimations = 
                     media={`(min-width: ${styles.breakpointSm}px)`} 
                 />
                 <img src={HeroImageMobile} alt="Joshua Roper, a Senior Front End Developer"/>
-            </picture>
+            </picture> */}
             </div>
 
             <SkillsList 
