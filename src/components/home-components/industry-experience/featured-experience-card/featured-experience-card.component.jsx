@@ -21,7 +21,7 @@ export default function FeaturedExperienceCard({
         >
             <div className="location-and-dates-container">
                 <p 
-                    style={{ transitionDelay: `350ms` }} 
+                    style={{ transitionDelay: `325ms` }} 
                     className="job-location fade-up__scoped">
                     <span className="sr-only">{name} is located at </span>
                     {location}
@@ -39,12 +39,12 @@ export default function FeaturedExperienceCard({
                
             </div>
             <h3 
-                style={{ transitionDelay: `450ms` }} 
+                style={{ transitionDelay: `400ms` }} 
                 className="job-title fade-up__scoped"
             >{title}</h3>
             {links && 
                 <p 
-                    style={{ transitionDelay: `550ms` }} 
+                    style={{ transitionDelay: `475ms` }} 
                     className="job-links fade-up__scoped"
                 >
                     <span className="sr-only">Links relevant to my time at {name}: </span>
@@ -58,7 +58,7 @@ export default function FeaturedExperienceCard({
                 {jobDescriptionBullets.map(({ text, links, key }, i) => (
                     <li 
                         className="fade-up__scoped"
-                        style={{ transitionDelay: `${650 + i * 100}ms`}} 
+                        style={{ transitionDelay: `${550 + i * 75}ms`}} 
                         key={key + 'featured-experience-card-job-bullets fade-up__scoped'}
                     >
                         {text}

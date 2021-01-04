@@ -2,7 +2,7 @@ export const projectsData = [
     {
         name: 'Di Repairs',
         url: 'https://www.direpairs.com',
-        urlPath: '/projects/direpairs',
+        urlPath: '/projects/di-repairs',
         description: `
             As the only <strong>developer & designer</strong> on this freelance project. 
             I completely re-envisioned the site design & built the project from the ground up as an 
@@ -20,7 +20,7 @@ export const projectsData = [
     {
         name: 'Halcyon',
         url: 'https://www.halcyon.com',
-        urlPath: '/projects/direpairs',
+        urlPath: '/projects/halcyon',
         description: `
             I was one of the Front End Developers on the project primarily tasked with creating the movies 
             page and events directory. Across the project I worked with <strong>multiple API’s, 
@@ -37,7 +37,7 @@ export const projectsData = [
     {
         name: 'Stallion',
         url: 'https://www.stallion.com',
-        urlPath: '/projects/direpairs',
+        urlPath: '/projects/stallion',
         description: 'As the <strong>Lead Front End Developer</strong> on a <strong>complete website rebuild</strong>, I worked towards envisioning a website that would match their innovative Stallion attitude. The project was built with an <strong>emphasis</strong> on <strong>clean code</strong>, and <strong>modularity</strong>. The website includes multiple API’s, form verification, and other advanced modules.',
         year: '2019',
         key: 'direfdstrh534asgdgvsfasf',
@@ -70,7 +70,7 @@ export const projectsData = [
     {
         name: 'Creative Revolt',
         url: 'https://www.writingrevolt.com',
-        urlPath: '/projects/direpairs',
+        urlPath: '/projects/creative-revolt',
         description: `
             This was a freelance project to <strong>rework the website layout</strong> and tailor the 
             feel of the website to her personal writing style. I <strong>revamped the color palette </strong>

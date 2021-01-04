@@ -279,5 +279,10 @@
             font-size: px-to-rem(18px);
             max-width: 700px;
         }
+
+        @media (min-width: breakpoint(xxl)) {
+            font-size: px-to-rem(20px);
+            // max-width: 700px;
+        }
     }
 }

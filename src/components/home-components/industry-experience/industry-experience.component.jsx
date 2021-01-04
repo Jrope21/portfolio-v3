@@ -14,7 +14,7 @@ const IndustryExperience = React.forwardRef(({ sectionRef, activateAnimations = 
     useEffect(() => {
         if(activateAnimations) setTimeout(() => {
             setIsCardAnimationsActive(true);
-        }, 150)
+        }, 100)
     }, [activateAnimations])
 
     return (
@@ -62,8 +62,10 @@ const IndustryExperience = React.forwardRef(({ sectionRef, activateAnimations = 
                             <div 
                                 className={`
                                     featured-experience-card
+                                    fade-up__mount
                                     ${isCardAnimationsActive ? '' : 'deactivate-animations'}
                                 `}
+                                style={{ transitionDelay: `700ms` }}
                             >
                                 <FeaturedExperienceCard 
                                     isVisible={activeExperienceListing === experience.key}
