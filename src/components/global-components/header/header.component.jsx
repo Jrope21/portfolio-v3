@@ -89,8 +89,23 @@ export default function Header() {
               
 
                 <div className="mobile-overlay" onClick={closeNav} />
-                <div className="navigation-overflow-wrapper">
-                    <ul className={`navigation`}>
+                <div className="navigation-overflow-wrapper stationary">
+                    <ul className={`navigation stationary`}>
+                        {menuItems.map((menuItem, i) => (
+                            <li key={menuItem + i + 'nav-link'}>
+                                <div className={`nav-item-outer-wrapper ${activeMenuItem === menuItem ? 'active' : ''}`}>
+                                    <Link 
+                                        to={`/#${menuItem.toLowerCase()}`}
+                                        onClick={closeNav}
+                                    >{menuItem}</Link>
+                                </div>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+
+                <div className="navigation-overflow-scrollable-wrapper scrollable">
+                    <ul className={`navigation scrollable`}>
                         {menuItems.map((menuItem, i) => (
                             <li key={menuItem + i + 'nav-link'}>
                                 <div className={`nav-item-outer-wrapper ${activeMenuItem === menuItem ? 'active' : ''}`}>
