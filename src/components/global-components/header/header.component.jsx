@@ -104,7 +104,7 @@ export default function Header() {
                     </ul>
                 </div>
 
-                <div className="navigation-overflow-scrollable-wrapper scrollable">
+                <div className="navigation-overflow-wrapper scrollable">
                     <ul className={`navigation scrollable`}>
                         {menuItems.map((menuItem, i) => (
                             <li key={menuItem + i + 'nav-link'}>
@@ -112,7 +112,10 @@ export default function Header() {
                                     <Link 
                                         to={`/#${menuItem.toLowerCase()}`}
                                         onClick={closeNav}
-                                    >{menuItem}</Link>
+                                    >
+                                        <span className="number">{`0${i}.`}</span>
+                                        {menuItem}
+                                    </Link>
                                 </div>
                             </li>
                         ))}
