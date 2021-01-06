@@ -10,7 +10,7 @@ export default function TextTitleCta({
     title = '',
     numberOfTitleLettersOnTop = 1,
     description,
-    urlPath,
+    urlPath = '',
     altColors = false,
     isProjectLink = false,
     deactivateLink = false,
@@ -18,10 +18,11 @@ export default function TextTitleCta({
     className = '',
     ...otherProps
 }) {
+    console.log(urlPath)
 
     if(title && urlPath) return (
         <Link 
-            to="/"
+            to={urlPath}
             className={`
                 split-text-cta__module 
                 ${altColors ? 'alt-colors' : ''} 

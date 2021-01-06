@@ -5,7 +5,7 @@ export const featuredProjects = [
         numberOfTitleLettersOnTop: 2,
         description: 'Project Details',
         year: `2020`,
-        urlPath: 'projects/direpairs',
+        urlPath: '/projects/di-repairs',
         key: "direpadksljadakj"
     },
     {
@@ -13,7 +13,7 @@ export const featuredProjects = [
         numberOfTitleLettersOnTop: 1,
         description: 'Project Details',
         year: `2019`,
-        urlPath: 'projects/halcyon',
+        urlPath: '/projects/halcyon',
         key: "gdfdiregdpadksljadakj"
     },
     {
@@ -21,7 +21,7 @@ export const featuredProjects = [
         numberOfTitleLettersOnTop: 1,
         description: 'Project Details',
         year: `2019`,
-        urlPath: 'projects/stallion',
+        urlPath: '/projects/stallion',
         key: "direfdsapadksljadakj"
     },
     {
@@ -29,7 +29,7 @@ export const featuredProjects = [
         numberOfTitleLettersOnTop: 1,
         description: 'Project Details',
         year: `2019`,
-        urlPath: 'projects/university-park',
+        urlPath: '/projects/university-park',
         key: "dgfdirepadksljadakj"
     },
     {
@@ -37,7 +37,7 @@ export const featuredProjects = [
         numberOfTitleLettersOnTop: 1,
         description: 'Project Details',
         year: `2018`,
-        urlPath: 'projects/creative-revolt',
+        urlPath: '/projects/creative-revolt',
         key: "fdsdfairepadsaksljadakj"
     },
 ]

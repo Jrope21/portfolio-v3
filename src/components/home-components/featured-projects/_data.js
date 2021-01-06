@@ -19,7 +19,7 @@ export const projectsData = [
     },
     {
         name: 'Halcyon',
-        url: 'https://www.halcyon.com',
+        url: 'https://www.visithalcyon.com',
         urlPath: '/projects/halcyon',
         description: `
             I was one of the Front End Developers on the project primarily tasked with creating the movies 
@@ -36,7 +36,7 @@ export const projectsData = [
     },
     {
         name: 'Stallion',
-        url: 'https://www.stallion.com',
+        url: 'https://www.stallionoilfield.com',
         urlPath: '/projects/stallion',
         description: 'As the <strong>Lead Front End Developer</strong> on a <strong>complete website rebuild</strong>, I worked towards envisioning a website that would match their innovative Stallion attitude. The project was built with an <strong>emphasis</strong> on <strong>clean code</strong>, and <strong>modularity</strong>. The website includes multiple API’s, form verification, and other advanced modules.',
         year: '2019',

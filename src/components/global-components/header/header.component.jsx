@@ -93,11 +93,18 @@ export default function Header() {
                     <ul className={`navigation stationary`}>
                         {menuItems.map((menuItem, i) => (
                             <li key={menuItem + i + 'nav-link'}>
+
                                 <div className={`nav-item-outer-wrapper ${activeMenuItem === menuItem ? 'active' : ''}`}>
+
                                     <Link 
                                         to={`/#${menuItem.toLowerCase()}`}
                                         onClick={closeNav}
-                                    >{menuItem}</Link>
+                                    >
+                               
+
+                                        {menuItem}
+                                        <span className="number">{`0${i}.`}</span>
+                                    </Link>
                                 </div>
                             </li>
                         ))}

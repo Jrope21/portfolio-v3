@@ -41,6 +41,11 @@
             left: 200px;
         }
 
+        @media (min-width: breakpoint(xxl)) {
+            left: 210px;
+        }
+    
+
         &::before {
             content: '';
             position: absolute;
@@ -90,6 +95,11 @@
        @media (min-width: breakpoint(xl)) {
             padding-left: 213px;
        }
+
+       @media (min-width: breakpoint(xxl)) {
+        padding-left: 223px;
+    }
+
     }
 
     .project-wrapper {
