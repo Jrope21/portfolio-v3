@@ -29,9 +29,9 @@ export const projectsData = [
         year: '2019',
         key: 'direfd575fsg4sagfasffadsf',
         skills: [
-            'Gatsby',
+            'React Static',
             'Node Js',
-            'React'
+            'SCSS'
         ]
     },
     {
@@ -42,9 +42,9 @@ export const projectsData = [
         year: '2019',
         key: 'direfdstrh534asgdgvsfasf',
         skills: [
-            'Gatsby',
-            'Node Js',
-            'React'
+            'JavaScript',
+            'SCSS',
+            'PHP'
         ]
     },
     {
@@ -62,9 +62,9 @@ export const projectsData = [
         year: '2019',
         key: 'diregfsfdsagfasyrtffdsav',
         skills: [
-            'Gatsby',
-            'Node Js',
-            'React'
+            'JavaScript',
+            'jQuery',
+            'Kentico'
         ]
     },
     {
@@ -80,9 +80,9 @@ export const projectsData = [
         year: '2018',
         key: 'direfdsagf6435643aysfkljkl',
         skills: [
-            'Gatsby',
-            'Node Js',
-            'React'
+            'jQuery',
+            'WordPress',
+            'PHP'
         ]
     },
 ]

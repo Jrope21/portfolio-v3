@@ -1,6 +1,26 @@
 
 .carousel-arrow-btn__module {
+    position: relative;
     cursor: pointer;
+
+    .hover-text {
+        position: absolute;
+        right: 50px;
+        top: calc(50% - 8px);
+        transform: translateX(30px);
+        opacity: 0;
+        color: color(accent);
+        font-size: px-to-rem(18px);
+        transition: opacity .1s ease,transform .3s cubic-bezier(0,0,0,1);
+        transition-delay: .125s;
+    }
+
+    &:hover {
+        .hover-text {
+            transform: translateX(0px);
+            opacity: 1;
+        }
+    }
 
     &.right, &.left {
         position: absolute;
@@ -98,6 +118,7 @@
                 transform: rotate(135deg);
             }
         }
+        
 
         &:hover {
             .arrow {

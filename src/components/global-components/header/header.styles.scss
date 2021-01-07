@@ -502,7 +502,7 @@
 
         .navigation.stationary {
 
-            @media (min-width: breakpoint(xl)) {
+            @media (min-width: breakpoint(lg)) {
                 transform: translateX(-10px) !important;
                 opacity: 0;
             }
@@ -516,7 +516,7 @@
 
         .navigation.stationary {
 
-            @media (min-width: breakpoint(xl)) {
+            @media (min-width: breakpoint(lg)) {
                 transform: translateX(-10px) !important;
                 opacity: 0;
             }

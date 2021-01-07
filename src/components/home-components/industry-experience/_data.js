@@ -5,26 +5,26 @@ export const experienceData = [
         startYear: '2020',
         endYear: '',
         location: 'Denton, Texas',
-        title: 'Front End Developer at Sally Beauty',
+        title: 'Remote Front End Developer at Sally Beauty',
         links: `<a href="https://www.sallybeauty.com" rel="noopener" target="_blank">sallybeauty.com</a>`,
         jobDescriptionBullets: [
             {
-                text: `Revamped the design with a bolder color palette / layout`,
+                text: `Developed multiple front end projects for both internal & external use`,
                 links: ``,
                 key: 'sdfa'
             },
             {
-                text: `Created the landing page and multiple sections utilizing WordPress (DiviBuilder)`,
+                text: `Actively maintained & improved a myriad of extremely high-traffic websites`,
                 links: ``,
                 key: 'fsafdsdfa'
             },
             {
-                text: `Performed website updates and executed content audits`,
+                text: `Led several web initiatives that got launched into production at a global scale`,
                 links: ``,
                 key: 'sdfdsfa'
             },
             {
-                text: `Adjusted the website for SEO and created marketable advertisements`,
+                text: `Designed and integrated templates utilizing SalesForce Commerce Cloud`,
                 links: ``,
                 key: 'adssdfa'
             },

@@ -23,6 +23,7 @@ export default function ProjectDetailCarousel({ images }) {
                     {images.map(({ src, alt }, i) => (
                         <div className={` fade-up__mount carousel-image-container ${i === activeIndex ? 'active' : ''}`}>
                             <CarouselArrowBtn 
+                                // hoverText={i - 1 < 0 ? `0${images.length - 1}.` : `0${i - 1}.`}
                                 direction="left"
                                 onClick={viewPrevSlide}
                             />
@@ -32,6 +33,7 @@ export default function ProjectDetailCarousel({ images }) {
                                 key={'project-detail-carousel' + alt + i} 
                             />
                             <CarouselArrowBtn 
+                                // hoverText={i + 1 > images.length - 1 ? '01.' : `0${i + i}.`}
                                 direction="right"
                                 onClick={viewNextSlide}
                             />
