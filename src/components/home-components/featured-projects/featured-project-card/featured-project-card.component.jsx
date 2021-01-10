@@ -58,8 +58,11 @@ export default React.memo(function FeaturedProjectCard({
                     ))}
                 </ul>
                 <Link to={urlPath} className="project-details-btn">
-                    Project Details
+                    <span className="text">
+                        Project Details
+                    </span>
                     <JrPointer
+                        enableHoverAnimations={true}
                         className="detail-btn-pointer"
                         size={'small'}
                     />

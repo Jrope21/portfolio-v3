@@ -26,6 +26,7 @@ export default function JrButton({
                 <JrPointer
                     altColor={true}
                     size={'small'}
+                    enableHoverAnimations={true}
                 />
             }
         </Link>
@@ -43,6 +44,7 @@ export default function JrButton({
                 <JrPointer
                     altColor={true}
                     size={'small'}
+                    
                 />
             }
         </button>

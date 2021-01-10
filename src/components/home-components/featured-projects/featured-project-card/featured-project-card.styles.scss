@@ -162,6 +162,7 @@ $card_border: 3px solid rgba(color(secondary), .7);
         font-weight: 500;
         font-style: italic;
         color: color(secondary);
+        transition: .3s color;
 
         @media (min-width: breakpoint(xxl)) {
             font-size: px-to-rem(18px);
@@ -171,6 +172,9 @@ $card_border: 3px solid rgba(color(secondary), .7);
             margin-left: 8px;
         }
 
+        &:hover {
+            color: color(accent);
+        }
         
     }
 

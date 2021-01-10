@@ -77,7 +77,7 @@ export default function Header({ path }) {
 
                 <div className="mobile-menu-btn-scrollable-wrapper">
                     <button 
-                        className={`mobile-menu-btn scrollable ${activeMenuItem}`}
+                        className={`mobile-menu-btn scrollable ${isProjectDetailPage ? 'Projects' : activeMenuItem}`}
                         onClick={openNav}
                     >
                         <div className="inner-wrapper">
@@ -85,7 +85,9 @@ export default function Header({ path }) {
                             <span aria-hidden="true" className="line-seperator" />
                             <span 
                                 className={`mobile-menu-breadcrumb`}
-                            >{activeMenuItem}</span>
+                            >
+                                {isProjectDetailPage ? 'Projects' : activeMenuItem}
+                            </span>
                         </div>
                         
                     </button>

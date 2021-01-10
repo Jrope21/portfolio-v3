@@ -1,15 +1,11 @@
 
-a:hover .jr-pointer__module {
-    transform: translateX(10px);   
-    color: color(accent) 
-}
 
- .jr-pointer__module {
-    position: relative;
+.jr-pointer__module {
     width: 24px;
     height: 24px;
+    fill: color(secondary);
     transform: translateX(0px);
-    transition: .3s transform;
+    transition: .3s transform, .3s fill;
 
     @media (min-width: breakpoint(sm)) {
         width: 28px;
@@ -20,129 +16,178 @@ a:hover .jr-pointer__module {
         width: 32px;
         height: 32px;
     }
-    
-
-    &::before, &::after {
-        content: '';  
-        width: 16px;  
-
-        @media (min-width: breakpoint(sm)) {
-            width: 18px;
-        }
-        
-        @media (min-width: breakpoint(md)) { 
-            width: 20px;
-        }
-    }
-
-    .middle-line {
-        width: 21px;
-
-        @media (min-width: breakpoint(sm)) {
-            width: 26px;
-        }
-
-        @media (min-width: breakpoint(md)) {
-            width: 32px;
-        }
-    }
-
-    .middle-line, &::before, &::after {
-        position: absolute;
-        right: 0;  
-        height: 4px;
-        background: color(secondary);
-       
-    }
-
-    &::before {
-        top: 6px;
-        right: -4px;
-        transform: rotate(45deg);
-
-        @media (min-width: breakpoint(md)) {
-            // top: 2px;
-            top: 7px;
-            right: -2px;
-        }
-    }
-
-    .middle-line {
-        top: 50%;
-        transform: translateY(-50%);
-    }
-
-    &::after {
-        bottom: 6px;
-        right: -4px;
-        transform: rotate(-45deg);
-
-        @media (min-width: breakpoint(md)) {
-            // bottom: 2px;
-            bottom: 7px;
-            right: -2px;
-        }
-    }
 
     &.alt-color {
-        .middle-line, &::before, &::after {
-            background: color(page_background);    
-        }
+        fill: color(page_background); 
     }
 
     &.small {
         width: 16px;
         height: 16px;
-
-        .middle-line, &::before, &::after {
-            height: 2px;
-        }
-
-        &::before, &::after {
-            content: '';  
-            width: 10px;       
-        }  
-
-        &::before {
-            top: 4px;
-            right: -3px;
-        }
-
-        .middle-line {
-            width: 15px;
-        }
-
-        &::after {
-            bottom: 4px;
-            right: -3px;
-        }
     }
 
     &.medium {
-        width: 22px;
-        height: 22px;
-
-        .middle-line, &::before, &::after {
-            height: 3px;
-        }
-
-        &::before, &::after {
-            content: '';  
-            width: 14px;       
-        }  
-
-        &::before {
-            top: 5px;
-            right: -4px;
-        }
-
-        .middle-line {
-            width: 19px;
-        }
-
-        &::after {
-            bottom: 5px;
-            right: -4px;
-        }
+        width: 20px;
+        height: 20px;
     }
 }
+
+a:hover .jr-pointer__module.enable-hover-animations {
+    transform: translateX(10px); 
+
+    &:not(.alt-color) {
+        fill: color(accent)!important;
+    }  
+}
+
+
+// a:hover .jr-pointer__module {
+//     transform: translateX(10px);   
+
+//     .middle-line, &::before, &::after {
+//         background-color: color(accent) !important;   
+//     }
+// }
+
+//  .jr-pointer__module {
+//     position: relative;
+//     width: 24px;
+//     height: 24px;
+    // transform: translateX(0px);
+    // transition: .3s transform;
+
+    // @media (min-width: breakpoint(sm)) {
+    //     width: 28px;
+    //     height: 28px;
+    // }
+
+    // @media (min-width: breakpoint(md)) {
+    //     width: 32px;
+    //     height: 32px;
+    // }
+    
+
+//     &::before, &::after {
+//         content: '';  
+//         width: 16px;  
+
+//         @media (min-width: breakpoint(sm)) {
+//             width: 18px;
+//         }
+        
+//         @media (min-width: breakpoint(md)) { 
+//             width: 20px;
+//         }
+//     }
+
+//     .middle-line {
+//         width: 21px;
+
+//         @media (min-width: breakpoint(sm)) {
+//             width: 26px;
+//         }
+
+//         @media (min-width: breakpoint(md)) {
+//             width: 32px;
+//         }
+//     }
+
+//     .middle-line, &::before, &::after {
+//         position: absolute;
+//         right: 0;  
+//         height: 4px;
+//         background: color(secondary);
+       
+//     }
+
+//     &::before {
+//         top: 6px;
+//         right: -4px;
+//         transform: rotate(45deg);
+
+//         @media (min-width: breakpoint(md)) {
+//             // top: 2px;
+//             top: 7px;
+//             right: -2px;
+//         }
+//     }
+
+//     .middle-line {
+//         top: 50%;
+//         transform: translateY(-50%);
+//     }
+
+//     &::after {
+//         bottom: 6px;
+//         right: -4px;
+//         transform: rotate(-45deg);
+
+//         @media (min-width: breakpoint(md)) {
+//             // bottom: 2px;
+//             bottom: 7px;
+//             right: -2px;
+//         }
+//     }
+
+//     &.alt-color {
+//         .middle-line, &::before, &::after {
+//             background-color: color(page_background);  
+//         }
+//     }
+
+//     &.small {
+//         width: 16px;
+//         height: 16px;
+
+//         .middle-line, &::before, &::after {
+//             height: 2px;
+//         }
+
+//         &::before, &::after {
+//             content: '';  
+//             width: 10px;       
+//         }  
+
+//         &::before {
+//             top: 4px;
+//             right: -3px;
+//         }
+
+//         .middle-line {
+//             width: 15px;
+//         }
+
+//         &::after {
+//             bottom: 4px;
+//             right: -3px;
+//         }
+//     }
+
+//     &.medium {
+//         width: 22px;
+//         height: 22px;
+
+//         .middle-line, &::before, &::after {
+//             height: 3px;
+//         }
+
+//         &::before, &::after {
+//             content: '';  
+//             width: 14px;       
+//         }  
+
+//         &::before {
+//             top: 5px;
+//             right: -4px;
+//         }
+
+//         .middle-line {
+//             width: 19px;
+//         }
+
+//         &::after {
+//             bottom: 5px;
+//             right: -4px;
+//         }
+//     }
+// }

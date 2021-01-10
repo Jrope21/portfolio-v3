@@ -18,12 +18,12 @@ export default function TextTitleCta({
     className = '',
     ...otherProps
 }) {
-    console.log(urlPath)
 
     if(title && urlPath) return (
         <Link 
             to={urlPath}
             className={`
+                is-link
                 split-text-cta__module 
                 ${altColors ? 'alt-colors' : ''} 
                 ${urlPath ? 'has-arrow' : ''}
