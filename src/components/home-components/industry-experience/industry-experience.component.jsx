@@ -37,8 +37,8 @@ const IndustryExperience = React.forwardRef(({ sectionRef, activateAnimations = 
                     sectionName="experience"
                 />
                 <div 
-                    className="mobile-line-seperator fade-up__mount" 
-                    style={{ transitionDelay: '100ms' }}
+                    className="mobile-line-seperator" 
+                    // style={{ transitionDelay: '100ms' }}
                 />
                 <ul className="experience-content-list-container">
                     {experienceData.map((experience, i) => (
