@@ -3,6 +3,7 @@ import './featured-experience-card.styles.scss'
 
 import LinkIcon from '@images/commons/link_icon.svg'
 import TextDisplacement from '@common-components/text-displacement/text-displacement.component'
+import JrLink from '../../../common-components/jr-link/jr-link.component'
 
 export default function FeaturedExperienceCard({
     isVisible = false,
@@ -11,7 +12,7 @@ export default function FeaturedExperienceCard({
     startYear,
     endYear,
     title,
-    links,
+    links = [],
     jobDescriptionBullets
 }) {
     return (
@@ -48,10 +49,14 @@ export default function FeaturedExperienceCard({
                     className="job-links fade-up__scoped"
                 >
                     <span className="sr-only">Links relevant to my time at {name}: </span>
-                    <span 
+                    {/* <span 
                         dangerouslySetInnerHTML={{ __html: links }}
                     />
-                    <img src={LinkIcon} alt="Icon indicating a link"/>
+                    <img src={LinkIcon} alt="Icon indicating a link"/> */}
+                    {links.map(({ href, text }, i) => (
+                        <JrLink className="job-link" href={href} >{text}</JrLink>
+                    ))}
+                    
                 </p>
             }        
             <ul className="job-description-bullets">
@@ -65,7 +70,7 @@ export default function FeaturedExperienceCard({
                         {links && 
                             <div className="description-bullet-links">
                                 <span className="sr-only">Here's some website examples: </span>
-                                {links}
+                                <span dangerouslySetInnerHTML={{ __html: links }}/>
                             </div>
                         }
                     </li>

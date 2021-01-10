@@ -1,4 +1,6 @@
 
+
+
 export const experienceData = [
     {
         name: 'Sally Beauty',
@@ -6,7 +8,17 @@ export const experienceData = [
         endYear: '',
         location: 'Denton, Texas',
         title: 'Remote Front End Developer at Sally Beauty',
-        links: `<a href="https://www.sallybeauty.com" rel="noopener" target="_blank">sallybeauty.com</a>`,
+        links: [
+            {
+                text: 'sallybeauty.com',
+                href: 'https://www.sallybeauty.com'
+            },
+            {
+                text: 'cosmoprofbeauty.com',
+                href: 'https://www.cosmoprofbeauty.com'
+            },
+        ],
+        // `<a href="https://www.sallybeauty.com" rel="noopener" target="_blank">sallybeauty.com</a>`,
         jobDescriptionBullets: [
             {
                 text: `Developed multiple front end projects for both internal & external use`,
@@ -36,12 +48,21 @@ export const experienceData = [
         endYear: '2020',
         location: 'Dallas, Texas',
         title: 'Front End Developer at Imaginuity',
-        links: `<a href="https://www.imaginuity.com" rel="noopener" target="_blank">imaginuity.com</a>`,
+        links: [
+            {
+                text: 'imaginuity.com',
+                href: 'https://www.imaginuity.com'
+            },
+        ],
+        // links: `<a href="https://www.imaginuity.com" rel="noopener" target="_blank">imaginuity.com</a>`,
         key: `fakhjdsfase`,
         jobDescriptionBullets: [
             {
                 text: `Developed the entire Front End for multiple high traffic, 99% up time websites`,
-                links: `stallionoilfield.com, uptexas.org`,
+                links: `
+                    <a href="https://www.stallionoilfield.com" rel="noopener noreferrer" target="_blank">stallionoilfield.com</a>,
+                    <a href="https://www.uptexas.org" rel="noopener noreferrer" target="_blank">uptexas.org</a>,
+                `,
                 key: 'sdf634a'
             },
             {
@@ -67,7 +88,13 @@ export const experienceData = [
         endYear: '2018',
         location: 'Carrollton, Texas',
         title: 'Freelance Web Development and Marketing at Creative Revolt',
-        links: `<a href="https://www.creativerevolt.com" rel="noopener" target="_blank">creativerevolt.com</a>`,
+        links: [
+            {
+                text: 'creativerevolt.com',
+                href: 'https://www.writingrevolt.com'
+            },
+        ],
+        // links: `<a href="https://www.creativerevolt.com" rel="noopener" target="_blank">creativerevolt.com</a>`,
         key: `fakhjhgjds`,
         jobDescriptionBullets: [
             {
