@@ -7,7 +7,7 @@ import { useScrollPosition } from "@hooks/useScrollPosition"
 import { GlobalContext } from '@global-components/global.context'
 import { menuItems } from '@config'
 
-export default function Header() {
+export default function Header({ path }) {
 
     const [globalContextData] = useContext(GlobalContext)
     const { activeMenuItem } = globalContextData;
@@ -19,6 +19,8 @@ export default function Header() {
     const [isMobileMenuBtnSwapping, setIsMobileMenuBtnSwapping] = useState(false);
     const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
 
+    const isProjectDetailPage = path.match('projects/') ? true : false
+    
     const openNav = () => setIsMobileNavOpen(true);
     const closeNav = () => setIsMobileNavOpen(false);
 
@@ -50,13 +52,15 @@ export default function Header() {
 
     useEffect(() => {
         setIsMounted(true);
+        
     }, [])
+    
 
     return (
         <header className={`header__module ${isMobileMenuBtnSwapping ? 'mobile-menu-swapping' : ''} ${isMobileNavFixed ? 'mobile-nav-fixed' : ''} ${isMobileNavOpen ? 'mobile-nav-open' : ''}`}>
             <nav>
                 <button 
-                    className={`mobile-menu-btn stationary ${activeMenuItem}`}
+                    className={`mobile-menu-btn stationary ${isProjectDetailPage ? 'Projects' : 'Home'}`}
                     onClick={openNav}
                 >
                     <div className="inner-wrapper">
@@ -64,7 +68,9 @@ export default function Header() {
                         <span aria-hidden="true" className="line-seperator" />
                         <span 
                             className={`mobile-menu-breadcrumb`}
-                        >{activeMenuItem}</span>
+                        >
+                            {isProjectDetailPage ? 'Projects' : 'Home'}
+                        </span>
                     </div>
                     
                 </button>
@@ -92,9 +98,16 @@ export default function Header() {
                 <div className="navigation-overflow-wrapper stationary">
                     <ul className={`navigation stationary`}>
                         {menuItems.map((menuItem, i) => (
-                            <li key={menuItem + i + 'nav-link'}>
+                            <li 
+                                key={menuItem + i + 'nav-link'}
+                                className={`
+                                    ${path === '/' && menuItem === 'Home' || 
+                                    path === '/#home' && menuItem === 'Home' ? 'active' : ''}
+                                    ${isProjectDetailPage && menuItem === 'Projects' ? 'active' : ''}
+                                `}
+                            >
 
-                                <div className={`nav-item-outer-wrapper ${activeMenuItem === menuItem ? 'active' : ''}`}>
+                                <div className={`nav-item-outer-wrapper`}>
 
                                     <Link 
                                         to={`/#${menuItem.toLowerCase()}`}
@@ -114,8 +127,16 @@ export default function Header() {
                 <div className="navigation-overflow-wrapper scrollable">
                     <ul className={`navigation scrollable`}>
                         {menuItems.map((menuItem, i) => (
-                            <li key={menuItem + i + 'nav-link'}>
-                                <div className={`nav-item-outer-wrapper ${activeMenuItem === menuItem ? 'active' : ''}`}>
+                            <li 
+                                key={menuItem + i + 'nav-link'}
+                                className={`
+                                    ${
+                                        isProjectDetailPage && menuItem === 'Projects' ? 'active' : 
+                                        !isProjectDetailPage && activeMenuItem === menuItem ? 'active' : ''
+                                    }
+                                `}
+                            >
+                                <div className={`nav-item-outer-wrapper`}>
                                     <Link 
                                         to={`/#${menuItem.toLowerCase()}`}
                                         onClick={closeNav}

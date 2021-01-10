@@ -1,5 +1,6 @@
 
 .jr-button__module {
+    position: relative;
     display: flex;
     align-items: flex-end;
     padding: 1rem;
@@ -9,18 +10,38 @@
     color: color(page_background);
     background: color(primary);
     text-align: left;
+    overflow: hidden;
 
     @media (min-width: breakpoint(sm)) {
         margin-top: 0px;
         padding: 10px 1rem;
     }
 
-
     @media (min-width: breakpoint(xxl)) {
         font-size: px-to-rem(18px);
+    }
+    
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform: translateX(-100%);
+        height: 3px;
+        width: 100%;
+        transition: .45s $custom_easing transform;
+        // transition: .5s cubic-bezier(.19,1,.22,1) transform;
+        background: color(accent);
     }
 
     .text {
         margin-right: 10px;
+    }
+
+    &:hover {
+        // color: color(accent);
+        &::before {
+            transform: translateX(0);
+        }
     }
 }

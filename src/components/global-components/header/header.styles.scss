@@ -198,15 +198,19 @@
                 // }
             }
 
-            .nav-item-outer-wrapper.active a {
-                margin-top: 0;
-                left: 50%;
-                transform: rotate(0deg) translateY(-50%) translateX(-50%);
-                font-weight: 700;
-                color: color(primary);
+            .active {
+                a {
+                    color: color(primary);
+                }
+                // margin-top: 0;
+                // left: 50%;
+                // transform: rotate(0deg) translateY(-50%) translateX(-50%);
+                // font-weight: 700;
+            
+                // color: color(accent);
 
                 .number {
-                    display: none;
+                    // display: none;
                     // position: static;
                     // display: block;
                     // margin-bottom: -5px;
@@ -218,6 +222,7 @@
                     // right: -7px;
                     // width: 45px;
                     // text-align: right;
+                    opacity: 1;
                 }
             }
             
@@ -293,7 +298,7 @@
 
            
             
-            .nav-item-outer-wrapper.active {
+            .active {
             
                 a {
                     opacity: 1;

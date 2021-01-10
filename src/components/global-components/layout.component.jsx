@@ -7,13 +7,14 @@ import Header from "./header/header.component"
 import GlobalProvider from "./global.context"
 import Footer from "./footer/footer.component"
 
-export default function Layout({ children }) {
+export default function Layout({ path, children }) {
+  console.log('path', path)
 
   return (
     <div className="page-width-container">
       <div className="page-content-container">
         <GlobalProvider>
-          <Header />
+          <Header path={path} />
             {children}
           <Footer />
         </GlobalProvider>
