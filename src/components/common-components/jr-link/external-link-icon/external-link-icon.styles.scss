@@ -4,7 +4,7 @@
     // width
    width: 20px;
     height: auto;
-    transition: .2s linear transform;
+    transition: .2s $custom_easing transform;
     transform: rotate(0);
     transition-delay: .2s;
     margin-left: 10px;
@@ -39,6 +39,6 @@ a:hover .external-link-icon__module {
 
     .external-link-arrow {
         transform: translate(3px, -3px);
-        transition-delay: .15s;
+        transition-delay: .1s;
     }
 }

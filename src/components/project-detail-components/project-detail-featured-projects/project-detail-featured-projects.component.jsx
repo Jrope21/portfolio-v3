@@ -7,7 +7,11 @@ import JrButton from '@common-components/jr-button/jr-button.component'
 
 import { featuredProjects } from './_data'
 
-const ProjectDetailFeaturedProjects = ({ }) => {
+const ProjectDetailFeaturedProjects = () => {
+
+    const currentUrlPath = document.location.pathname;
+    // console.log(currentUrlPath)
+
     return (
         <section 
             data-sal="mount"
@@ -37,7 +41,7 @@ const ProjectDetailFeaturedProjects = ({ }) => {
                             year={project.year}
                             urlPath={project.urlPath}
                             isProjectLink={true}
-                            deactivateLink={false}
+                            deactivateLink={currentUrlPath.match(project.urlSegment)}
                         />
                     </div>             
                 ))}

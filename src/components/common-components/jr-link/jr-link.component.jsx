@@ -20,6 +20,7 @@ export default function JrLink({
         <Link
             className={`jr-link__module internal-link ${className}`}
             to={to} 
+            {...otherProps}
         >
             {children}
             <JrPointer
@@ -36,8 +37,11 @@ export default function JrLink({
             href={href} 
             rel="noopener noreferrer" 
             target="_blank"
+            {...otherProps}
         >
-            {children}
+            <span className="inner-text">
+                {children}
+            </span>
             <ExternalLinkIcon className={iconClassName} />
         </a>
     )

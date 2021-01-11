@@ -90,6 +90,10 @@
     &.is-link{
         overflow: hidden;
 
+        &.disable-link {
+            opacity: .3;
+            cursor:unset
+        }
 
         .bottom::before {
             content: '';
@@ -164,7 +168,7 @@
             // }
         // }
 
-        &:hover {
+        &:hover:not(.disable-link) {
             .bottom::before {
                 transform: translateX(0);
             }

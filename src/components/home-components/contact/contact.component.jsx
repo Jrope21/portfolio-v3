@@ -4,9 +4,19 @@ import './contact.styles.scss'
 import NumberedSectionTitle from '@home-components/numbered-section-title/numbered-section-title.component'
 import SplitTextCta from '@common-components/split-text-cta/split-text-cta.component'
 
+import useInputCollection from '@hooks/useInputCollection';
+
+const INITIAL_INPUT_VALUES = {
+    name: '',
+    email: '',
+    message: ''
+}
+
 const Contact = React.forwardRef(({ sectionRef }) => {
 
     const [isSubmitting, setIsSubmitting] = useState(false);
+
+    const [inputValues, updateInputValue] = useInputCollection(INITIAL_INPUT_VALUES);
 
     return (
         <section 
@@ -43,6 +53,8 @@ const Contact = React.forwardRef(({ sectionRef }) => {
                         name="name" 
                         id="contact-name"
                         className="contact-input"
+                        value={inputValues.name}
+                        onChange={updateInputValue}
                     />
                 </label>
                 <label 
@@ -55,9 +67,11 @@ const Contact = React.forwardRef(({ sectionRef }) => {
                         disabled={isSubmitting ? 'disabled' : ''}
                         required="required"
                         type="email" 
-                        name="name" 
+                        name="email" 
                         id="contact-email"
                         className="contact-input"
+                        value={inputValues.email}
+                        onChange={updateInputValue}
                     />
                 </label>
                 <label 
@@ -68,23 +82,28 @@ const Contact = React.forwardRef(({ sectionRef }) => {
                     <span className="sr-only">Type in any additional details here</span>
                     <textarea 
                         disabled={isSubmitting ? 'disabled' : ''}
-                        name="description" 
+                        name="message" 
                         id="contact-message" 
                         cols="30" 
                         rows="16"
                         placeholder="Type your message here."
                         className="contact-textarea"
+                        value={inputValues.message}
+                        onChange={updateInputValue}
                     ></textarea>
                 </label>
 
-                <button 
-                    // onClick={}
-                    className="contact-submit-btn fade-up__mount" 
-                    type="submit"
-                    style={{ transitionDelay: `500ms` }}
-                >
-                    Send Message
-                </button>
+                <div className="fade-up__mount" style={{ transitionDelay: `500ms` }}>
+                    <button 
+                        // onClick={}
+                        className="contact-submit-btn" 
+                        type="submit"
+                    
+                    >
+                        Send Message
+                    </button>
+                </div>
+              
             </form>
         </section>
     )

@@ -1,6 +1,7 @@
 
 .project-text__module {
     position: relative;
+    z-index: 0;
     margin-top: 25px;
 
     @media (min-width: breakpoint(xs)) {
@@ -108,13 +109,15 @@
         display: flex;
     }
 
-    .project-link {
+    .project-link-container {
+        position: relative;
+        z-index: 1;
         display: flex;
         align-items: center;
+    }
+
+    .project-link {
         font-size: px-to-rem(16px);
-        font-weight: 300;
-        font-style: italic;
-        color: color(accent);
 
         @media (min-width: breakpoint(xs)) {
             font-size: px-to-rem(20px);
@@ -134,34 +137,33 @@
 
         @media (min-width: breakpoint(xl)) {
             font-size: px-to-rem(30px);
+        }     
+    }
+
+    .project-icon {
+        margin-left: 10px;
+        width: 20px;
+
+        @media (min-width: breakpoint(xs)) {
+            width: 22px;
         }
 
-        img {
-            margin-left: 10px;
-            width: 12px;
-            height: auto;
+        @media (min-width: breakpoint(sm)) {
+            width: 24px;
+           
+        }
 
-            @media (min-width: breakpoint(xs)) {
-                width: 14px;
-            }
+        @media (min-width: breakpoint(md)) {
+            width: 26px;
+        }
 
-            @media (min-width: breakpoint(sm)) {
-                width: 16px;
-               
-            }
-    
-            @media (min-width: breakpoint(md)) {
-                width: 18px;
-            }
-    
-            @media (min-width: breakpoint(lg)) {
-                width: 22px;
-                margin-left: 12px;
-            }
-    
-            @media (min-width: breakpoint(xl)) {
-                width: 24px;
-            }
+        @media (min-width: breakpoint(lg)) {
+            width: 30px;
+            margin-left: 12px;
+        }
+
+        @media (min-width: breakpoint(xl)) {
+            width: 32px;
         }
     }
 

@@ -11,7 +11,7 @@ export default function ProjectDetail() {
     return <ProjectDetailTemplate
         title={'Stallion Oilfield'}
         year={'2019'}
-        url={'https://www.stallion.com'}
+        url={'https://www.stallionoilfield.com'}
         linkText={'stallion.com'}
         description={`
             <p>

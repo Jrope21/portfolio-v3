@@ -168,10 +168,16 @@
         color: color(tertiary);
         font-size: px-to-rem(23px);
         font-weight: 800; 
+        cursor: pointer;
+        transition: .3s background-color;
         
         @media (min-width: breakpoint(xxl)) {
             font-size: px-to-rem(25px);
             height: 40px;
+        }
+
+        &:hover {
+            background-color: color(secondary);
         }
     }
 

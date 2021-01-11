@@ -4,9 +4,7 @@ import './featured-project-card.styles.scss'
 import { Link } from 'gatsby'
 
 import JrPointer from '@common-components/jr-pointer/jr-pointer.component'
-
-import LinkIcon from '@images/commons/link_icon.svg'
-import JrLink from '../../../common-components/jr-link/jr-link.component'
+import JrLink from '@common-components/jr-link/jr-link.component'
 
 export default React.memo(function FeaturedProjectCard({
    name,
@@ -29,7 +27,7 @@ export default React.memo(function FeaturedProjectCard({
       
             
                 <div id="project-top-section" className="project-top-section">
-                    <h3 style={{ margin: '0px' }} >
+                    <h3 className="project-title-container" >
                         <JrLink 
                             className="project-title" 
                             iconClassName="project-title-icon"

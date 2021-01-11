@@ -28,6 +28,7 @@ export default function TextTitleCta({
                 ${altColors ? 'alt-colors' : ''} 
                 ${urlPath ? 'has-arrow' : ''}
                 ${isProjectLink ? 'is-project-link' : ''}
+                ${deactivateLink ? 'disable-link' : ''}
                 ${className}
             `}
             {...otherProps}
@@ -47,12 +48,12 @@ export default function TextTitleCta({
                     </div>
                 }
                 
-                {!deactivateLink && 
+                {/* {!deactivateLink &&  */}
                     <JrPointer
                         className="featured-title-pointer"
                         size={isProjectLink ? 'medium' : 'standard'}
                     />
-                }
+                {/* } */}
             </div>
 
             <span className="bottom large-text-title">{title.slice(numberOfTitleLettersOnTop)}</span>
