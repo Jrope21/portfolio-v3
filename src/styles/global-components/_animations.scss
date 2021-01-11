@@ -39,7 +39,6 @@
   @include disabledAnimations('!important');
 }
 
-
 .sal-animate.fade-up__mount, .sal-animate .fade-up__mount, .activate-animations__mount.fade-up__mount, .activate-animations__mount .fade-up__mount, .activate-animations__scoped .fade-up__scoped {
   opacity: 1;
   transform: translateY(0px);

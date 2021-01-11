@@ -4,13 +4,37 @@
 
 .dot-loader__module {
     opacity: 0;
-    transition: .2s ease opacity;
-    animation: .01s linear .25s 1 exitScreen forwards;
+    transition: .25s visibility;
+    visibility: hidden;
+    // animation: .01s linear .25s 1 exitScreen forwards;
 
     &.loading {
-        opacity: 1;
-        animation: unset;
-    }
+      opacity: 1;
+      animation: unset;
+      visibility: visible;
+      transition: .2s ease opacity;
+
+      .loader {
+        -webkit-animation-delay: -0.16s;
+        animation-delay: -0.16s;
+
+        &::before, &::after, & {
+          -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+          -webkit-animation: dot-loader 1.8s infinite ease-in-out;
+          animation: dot-loader 1.8s infinite ease-in-out;
+      }
+
+          &::before {
+            -webkit-animation-delay: -0.32s;
+            animation-delay: -0.32s;
+        }
+
+        &::after {
+            animation-delay: 0.18s;
+        }
+      }
+  }
 
     .overlay {
         position: absolute;
@@ -32,17 +56,11 @@
       left: 50%;
       transform: translate(-50%, -50%);
       text-indent: -9999em;
-      -webkit-animation-delay: -0.16s;
-      animation-delay: -0.16s;
   
       &::before, &::after, & {
           border-radius: 50%;
           width: .75rem;
           height: .75rem;
-          -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-          -webkit-animation: dot-loader 1.8s infinite ease-in-out;
-          animation: dot-loader 1.8s infinite ease-in-out;
       }
   
       &::before, &::after {
@@ -53,13 +71,10 @@
   
       &::before {
           left: -2em;
-          -webkit-animation-delay: -0.32s;
-          animation-delay: -0.32s;
       }
   
       &::after {
           left: 2em;
-          animation-delay: 0.18s;
       }
   }
 }

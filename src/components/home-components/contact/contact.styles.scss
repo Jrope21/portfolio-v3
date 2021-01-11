@@ -179,6 +179,39 @@
         &:hover {
             background-color: color(secondary);
         }
+
+        .inner-container {
+            position: relative;
+        }
+
+        .submit-btn-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 1;
+            transition: opacity 450ms $custom_easing, transform 450ms $custom_easing;
+        }
+
+        .fade-down {
+            opacity: 0;
+            transform: translate(-50%, -20px);
+        }
     }
 
+    .is-submitting {
+
+        .contact-submit-btn {
+            cursor: unset;
+
+            &:hover {
+                background-color: color(accent);
+            }
+        }
+
+        .contact-label {
+            opacity: .5;
+            transition-delay: 0ms !important;
+        }
+    }
 }

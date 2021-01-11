@@ -3,6 +3,7 @@ import './contact.styles.scss'
 
 import NumberedSectionTitle from '@home-components/numbered-section-title/numbered-section-title.component'
 import SplitTextCta from '@common-components/split-text-cta/split-text-cta.component'
+import DotLoader from '@common-components/dot-loader/dot-loader.component';
 
 import useInputCollection from '@hooks/useInputCollection';
 
@@ -15,14 +16,30 @@ const INITIAL_INPUT_VALUES = {
 const Contact = React.forwardRef(({ sectionRef }) => {
 
     const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submissionSuccess, setSubmissionSuccess] = useState(false);
+    const [submissionError, setSubmissionError] = useState(false);
 
     const [inputValues, updateInputValue] = useInputCollection(INITIAL_INPUT_VALUES);
+
+    const submissionHandler = (e) => {
+        e.preventDefault();
+        setIsSubmitting(true);
+
+        setTimeout(() => {
+            setIsSubmitting(false);
+            setSubmissionSuccess(true);
+
+            setTimeout(() => {
+                setSubmissionSuccess(false);
+            }, 1500)    
+        }, 750)
+    }
 
     return (
         <section 
             data-sal="mount"
             ref={sectionRef}
-            className="contact__module"
+            className={`contact__module`}
         >
             <div className="titles-container">
                 <NumberedSectionTitle
@@ -40,7 +57,7 @@ const Contact = React.forwardRef(({ sectionRef }) => {
                 />
             </div>
 
-            <form className="contact-form" action="">
+            <form className={`contact-form ${isSubmitting ? 'is-submitting' : ''}`} action="">
                 <label 
                     className="contact-label fade-up__mount" 
                     htmlFor="contact-name"
@@ -95,12 +112,24 @@ const Contact = React.forwardRef(({ sectionRef }) => {
 
                 <div className="fade-up__mount" style={{ transitionDelay: `500ms` }}>
                     <button 
-                        // onClick={}
+                        onClick={submissionHandler}
                         className="contact-submit-btn" 
                         type="submit"
-                    
                     >
-                        Send Message
+                            
+                        <span className={`submit-btn-text ${submissionSuccess || submissionError ? 'fade-down' : ''}`}>
+                            Send Message
+                        </span>
+
+                        <span className={`submit-btn-text ${submissionSuccess ? '' : 'fade-down'}`}>
+                            Success
+                        </span>
+
+                        <span className={`submit-btn-text ${submissionError ? '' : 'fade-down'}`}>
+                            Error
+                        </span>
+
+                        <DotLoader overlay={true} loading={isSubmitting} />
                     </button>
                 </div>
               
