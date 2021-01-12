@@ -1,5 +1,7 @@
 
 .hero__module {
+    position: relative;
+    z-index: 1;
     
     .hero-image {
         display: block;

@@ -5,6 +5,14 @@
     li {
         margin-right: 11px;
 
+        img {
+            width: 24px;
+
+            @media (min-width: breakpoint(xl)) {
+                width: 32px;
+            }
+        }
+        
         &:last-of-type {
             margin: 0;
         }

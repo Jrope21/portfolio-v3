@@ -49,7 +49,11 @@ export default function FeaturedExperienceCard({
                 >
                     <span className="sr-only">Links relevant to my time at {name}: </span>
                     {links.map(({ href, text }, i) => (
-                        <JrLink className="job-link" href={href} >{text}</JrLink>
+                        <JrLink 
+                            className="job-link" 
+                            href={href} 
+                            key={text + i}
+                        >{text}</JrLink>
                     ))}
                     
                 </p>
