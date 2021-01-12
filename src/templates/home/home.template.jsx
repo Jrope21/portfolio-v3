@@ -29,11 +29,15 @@ export default function HomeTemplate() {
   const [isHeroAnimationsDone, setIsHeroAnimitionsDone] = useState(false);
 
   useEffect(() => {
+      let isMounted = true;
+
       setIsMounted(true);
 
       setTimeout(() => {
-        setIsHeroAnimitionsDone(true)
+        if(isMounted) setIsHeroAnimitionsDone(true)
       }, heroAnimationDelay)
+
+      return (() => isMounted = false)
   }, [])
  
   useScrollPosition(({ prevPos, currPos }) => {
