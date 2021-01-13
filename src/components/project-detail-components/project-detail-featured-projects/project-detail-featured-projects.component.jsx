@@ -50,7 +50,7 @@ const ProjectDetailFeaturedProjects = () => {
             <JrButton 
                 className={'view-all-btn fade-up__mount'}
                 style={{ transitionDelay: `${100 + featuredProjects.length * 100}ms` }}
-                urlPath={'/project-detail'}
+                urlPath={'/archive'}
                 text={'Use archive for the full list of projects I’ve worked on.'}
             />
 

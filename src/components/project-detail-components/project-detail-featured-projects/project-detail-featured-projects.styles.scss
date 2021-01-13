@@ -4,21 +4,7 @@
     // display: flex;
     // flex-wrap: wrap;
 
-    @media (min-width: breakpoint(sm)) {
-        margin-bottom: 30px;
-    }
 
-    @media (min-width: breakpoint(md)) {
-        margin-bottom: 50px;
-    }
-
-    @media (min-width: breakpoint(lg)) {
-        margin-bottom: 75px;
-    }
-
-    @media (min-width: breakpoint(xl)) {
-        margin-bottom: 100px;
-    }
 
     .design-element-line {
         content: '';

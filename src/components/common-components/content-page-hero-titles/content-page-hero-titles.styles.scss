@@ -1,22 +1,9 @@
 
-.project-text__module {
-    position: relative;
-    z-index: 0;
-
-    @media (min-width: breakpoint(sm)) {
-        margin-bottom: 30px;
-    }
-
-    @media (min-width: breakpoint(md)) {
-        margin-bottom: 40px;
-    }
-
-    @media (min-width: breakpoint(xl)) {
-        margin-bottom: 55px;
-    }
+.content-page-hero-titles__module {
 
     .project-title {
         font-family: $font_header_alt;
+        color: color(primary);
         letter-spacing: 2px;
         font-size: px-to-rem(38px);
         text-transform: uppercase;
@@ -91,7 +78,36 @@
         }
     }
 
-    .link-and-year-container {
+    .sub-title {
+        margin: 0;
+        font-size: px-to-rem(16px);
+        font-weight: 300;
+        font-style: italic;
+        color: color(accent);
+
+
+        @media (min-width: breakpoint(xs)) {
+            font-size: px-to-rem(16px);
+        }
+
+        @media (min-width: breakpoint(sm)) {
+            font-size: px-to-rem(18px);   
+        }
+
+        @media (min-width: breakpoint(md)) {
+            font-size: px-to-rem(20px);
+        }
+
+        @media (min-width: breakpoint(lg)) {
+            font-size: px-to-rem(23px);
+        }
+
+        @media (min-width: breakpoint(xl)) {
+            font-size: px-to-rem(26px);
+        }
+    }
+
+    .sub-text-container {
         display: flex;
     }
 
@@ -167,110 +183,5 @@
         @media (max-width: breakpoint(xs)) {
             font-size: px-to-rem(25px);
         }
-    }
-
-    .description-and-skills-container {
-        position: relative;
-        display: flex;
-        flex-direction: column-reverse;
-        margin-top: -20px;
-
-        @media (min-width: breakpoint(sm)) {
-            flex-direction: row;
-            justify-content: space-between;
-            margin-top: 0;
-        }
-
-        
-    }
-
-    .design-element-line-container {
-        position: absolute;
-        z-index: -1;
-        // left: 115px;
-        left: 25%;
-        top: 200px;
-        height: calc(100% - 150px);
-        width: 3px;
-        // background-color: color(accent);
-        overflow: hidden;
-        
-        @media (min-width: breakpoint(xs)) {
-            left: 35%;
-        }
-
-        @media (min-width: breakpoint(sm)) {
-            display: none;
-        }
-    }
-
-    .design-element-line {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        background-color: color(accent);
-        transform: translateY(-100%);
-        transition: .45s $custom_easing transform;
-        transition-delay: 450ms;
-    }
-
-    &.sal-animate .design-element-line {
-        transform: translateY(0);
-    }
-
-    .skills-list {
-        padding-top: 40px;
-        padding-bottom: 15px;
-
-        @media (min-width: breakpoint(sm)) {
-            margin-top: -20px;
-        }
-
-        @media (min-width: breakpoint(lg)) {
-            padding-top: 60px;
-            margin-top: -35px;
-        }
-
-        @media (min-width: breakpoint(xl)) {
-            padding-top: 80px;
-            margin-top: -55px;
-            padding-bottom: 20px;
-        }
-    }
-
-    .project-description {
-        position: relative;
-        // z-index: 1;
-        background-color: color(page_background);
-        padding: 10px 0;
-        margin: 0;
-        font-size: px-to-rem(14px);
-        font-weight: 300;
-
-        @media (min-width: breakpoint(sm)) {
-            flex: 1;
-            max-width: 535px;
-            padding-right: 10px;
-        }
-
-        @media (min-width: breakpoint(md)) {
-            font-size: px-to-rem(16px);
-        }
-
-        @media (min-width: breakpoint(lg)) {
-            max-width: 635px;
-        }
-
-        @media (min-width: breakpoint(xl)) {
-            font-size: px-to-rem(18px);
-            max-width: 700px;
-        }
-
-        @media (min-width: breakpoint(xxl)) {
-            font-size: px-to-rem(20px);
-            // max-width: 700px;
-        }
-    }
+    }   
 }

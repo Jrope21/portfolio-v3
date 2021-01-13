@@ -4,8 +4,6 @@ import ProjectDetailCarousel from '@project-detail-components/project-detail-car
 import ProjectText from '@project-detail-components/project-text/project-text.component'
 import ProjectDetailFeaturedProjects from '@project-detail-components/project-detail-featured-projects/project-detail-featured-projects.component'
 
-import Img1 from '@images/project-detail/uptexas/1.jpg'
-
 export default function ProjectDetailTemplate({
     title,
     year,
@@ -16,7 +14,7 @@ export default function ProjectDetailTemplate({
     images
 }) {
     return (
-        <main className="project-detail__template project-detail-container">
+        <main className="project-detail__template content-page-container container-vertical-spacer">
             <ProjectText 
                 title={title}
                 year={year}
@@ -30,9 +28,7 @@ export default function ProjectDetailTemplate({
                 images={images}
             />
 
-            <ProjectDetailFeaturedProjects
-            
-            />
+            <ProjectDetailFeaturedProjects />
         </main>
     )
 }

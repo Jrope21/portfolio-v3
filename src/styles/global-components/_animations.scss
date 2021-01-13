@@ -30,6 +30,11 @@
   .slide-up, .slide-up__mount {
     transform: translateY(100%) #{$important};
   }
+
+  .fade-left__mount {
+    opacity: .01 #{$important};
+    transform: translateX(20px) #{$important};
+  }
   
 }
 
@@ -43,6 +48,15 @@
   opacity: 1;
   transform: translateY(0px);
   transition: opacity 450ms $custom_easing, transform 450ms $custom_easing;
+}
+
+.sal-animate {
+
+  &.fade-left__mount, .fade-left__mount {
+      opacity: 1;
+      transform: translateX(0px);
+      transition: opacity 450ms $custom_easing, transform 450ms $custom_easing;
+  }
 }
 
 .sal-animate.slide-up__mount, .sal-animate .slide-up__mount, .activate-animations__mount.slide-up__mount, .activate-animations__mount .slide-up__mount, .activate-animations__scoped .slide-up__scoped {

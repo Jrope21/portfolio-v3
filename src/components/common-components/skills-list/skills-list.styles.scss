@@ -16,6 +16,26 @@
         padding-bottom: 15px;
     }
 
+    .list-title {
+        margin: 0 0 17px 16px;
+        margin-right: 17px;
+        color: color(primary);
+        font-size: px-to-rem(20px);
+        text-align: right;  
+        text-transform: uppercase;
+        font-weight: 800;
+
+        &::after {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            margin-left: 1px;
+            border-radius: 50%;
+            background-color: color(primary);
+        }
+    }
+
     &::after {
         content: ''; 
         position: absolute;

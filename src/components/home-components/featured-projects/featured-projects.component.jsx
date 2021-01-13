@@ -52,7 +52,7 @@ const FeaturedProjects = React.forwardRef(({ sectionRef }) => {
 
             <JrButton 
                 className="fade-up__mount"
-                urlPath={'/project-detail'}
+                urlPath={'/archive'}
                 text={'Use archive for the full list of projects I’ve worked on.'}
                 style={{ transitionDelay: `900ms` }}
             />
