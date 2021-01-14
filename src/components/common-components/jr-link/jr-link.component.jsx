@@ -3,8 +3,8 @@ import './jr-link.styles.scss'
 
 import { Link } from 'gatsby'
 
-import ExternalLinkIcon from './external-link-icon/external-link-icon.component'
-import JrPointer from '@common-components/jr-pointer/jr-pointer.component'
+import ExternalLinkIcon from '@common-components/icons/external-link-icon/external-link-icon.component'
+import JrPointer from '@common-components/icons/jr-pointer/jr-pointer.component'
 
 export default function JrLink({
     className = '',
