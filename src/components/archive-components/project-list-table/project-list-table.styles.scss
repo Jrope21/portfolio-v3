@@ -10,16 +10,18 @@ $table_border: 3px solid rgba(color(secondary), .7);
     }
 
     .table-title {
+        display: flex;
+        justify-content: center;
         font-size: px-to-rem(18px);
         font-weight: 700;
         color: color(accent);
         padding-right: 10px;
-        text-align: center;
+        // text-align: center;
         margin: 0;
         padding: 20px 0px 20px 0px;
 
         &:first-of-type {
-            text-align: left;
+            justify-content: flex-start;
             padding-left: 3px;
         }
     }
@@ -36,7 +38,12 @@ $table_border: 3px solid rgba(color(secondary), .7);
     .year {
         font-size: px-to-rem(16px);
         font-weight: 700;
-        transform: rotate(-90deg) translateY(4px);
+        transform: rotate(-90deg);
+    }
+
+    .link-text {
+        font-size: px-to-rem(14px);
+        font-weight: 700;
     }
 
     .project-row {
@@ -51,6 +58,7 @@ $table_border: 3px solid rgba(color(secondary), .7);
     .table-col {
         display: flex;
         align-items: center;
+        justify-content: center;
     }
 
     .col-border {
@@ -72,6 +80,11 @@ $table_border: 3px solid rgba(color(secondary), .7);
 
     .table-col-3 {
         display: none;
+
+        @media (min-width: breakpoint(sm)) {
+            display: flex;
+            width: 25%;
+        }
     }
 
     .table-col-4 {
@@ -80,6 +93,10 @@ $table_border: 3px solid rgba(color(secondary), .7);
 
     .table-col-5 {
         width: 27%;
+
+        @media (min-width: breakpoint(sm)) {
+            width: 20%;
+        }
     }
 
     // .links-container {

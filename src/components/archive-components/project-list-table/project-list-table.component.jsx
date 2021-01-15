@@ -52,7 +52,7 @@ export default function ProjectListTable({ tableTitles = [], projects = [] }) {
                                     <ExternalLinkIcon />
                                 </a>
                             : 
-                                <span>TBD</span>
+                                <span className="link-text">TBD</span>
                             }
 
                             {projectDetailPath &&

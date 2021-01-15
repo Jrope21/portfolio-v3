@@ -42,7 +42,7 @@ export default function JrLink({
             <span className="inner-text">
                 {children}
             </span>
-            <ExternalLinkIcon className={iconClassName} />
+            <ExternalLinkIcon className={`external-link-icon ${iconClassName}`} />
         </a>
     )
 

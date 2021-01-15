@@ -52,4 +52,12 @@
         font-weight: 300;
         color: color(accent);
     }
+
+    .external-link-icon {
+        margin-left: 10px;
+
+        @media (min-width: breakpoint(sm)) {
+            margin-left: 20px;
+        }
+    }
 }

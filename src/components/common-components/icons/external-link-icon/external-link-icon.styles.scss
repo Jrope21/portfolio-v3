@@ -7,12 +7,6 @@
     transition: .2s $custom_easing transform;
     transform: rotate(0);
     transition-delay: .2s;
-    margin-left: 10px;
-
-    @media (min-width: breakpoint(sm)) {
-        margin-left: 20px;
-        // width: 20px;
-    }
 
     @media (min-width: breakpoint(md)) {
         width: 22px;
