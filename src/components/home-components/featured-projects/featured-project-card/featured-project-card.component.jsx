@@ -3,7 +3,7 @@ import './featured-project-card.styles.scss'
 
 import { Link } from 'gatsby'
 
-import JrPointer from '@common-components/jr-pointer/jr-pointer.component'
+import JrPointer from '@common-components/icons/jr-pointer/jr-pointer.component'
 import JrLink from '@common-components/jr-link/jr-link.component'
 
 export default React.memo(function FeaturedProjectCard({

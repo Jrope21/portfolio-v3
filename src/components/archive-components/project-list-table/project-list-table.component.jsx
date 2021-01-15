@@ -1,5 +1,5 @@
 import React from 'react'
-import './projects-table.styles.scss'
+import './project-list-table.styles.scss'
 
 import { Link } from 'gatsby'
 
@@ -7,13 +7,14 @@ import ExternalLinkIcon from '@common-components/icons/external-link-icon/extern
 
 import { generateKey } from '../../../helpers/_generate-key'
 
-export default function ProjectsTable({ tableTitles, projects }) {
-    return (
-        <div className="projects-table__module">
+export default function ProjectListTable({ tableTitles = [], projects = [] }) {
+    
+    if(projects.length) return (
+        <div className="project-list-table__module">
 
-            <div className="table-titles">
+            <div className="table-titles-container">
                 {tableTitles.map((title, i) => (
-                    <h3 className={`table-title table-col-${i + 1}`} key={generateKey(title)}>{title}</h3>
+                    <h3 className={`table-title col-border table-col-${i + 1}`} key={generateKey(title)}>{title}</h3>
                 ))}
             </div>
                 
@@ -27,22 +28,22 @@ export default function ProjectsTable({ tableTitles, projects }) {
                     projectDetailPath,
                     githubLink
                 }) => (
-                    <div className="project-row" key={generateKey(project)}>
-                        <div className="table-col-1">
+                    <div className="project-row" key={generateKey(name)}>
+                        <div className="table-col-1 table-col col-border">
                             <span className="year">{year}</span>
                         </div>  
-                        <div className="table-col-2">
-                            <p>{name}</p>
+                        <div className="table-col-2 table-col col-border">
+                            <p className="col-text">{name}</p>
                         </div>
-                        <div className="table-col-3">
-                            <p>{madeAt}</p>
+                        <div className="table-col-3 table-col col-border">
+                            <p className="col-text">{madeAt}</p>
                         </div>
-                        <div className="table-col-4">
-                            {featuredTech}
+                        <div className="table-col-4 table-col col-border">
+                            <p className="col-text">{featuredTech}</p>       
                         </div>
-                        <div className="table-col-5 links-container">
+                        <div className="table-col-5 table-col col-border links-container">
 
-                            {projectLink &&
+                            {projectLink ?
                                 <a 
                                     href={projectLink} 
                                     rel="noopener noreferrer" 
@@ -50,6 +51,8 @@ export default function ProjectsTable({ tableTitles, projects }) {
                                 >
                                     <ExternalLinkIcon />
                                 </a>
+                            : 
+                                <span>TBD</span>
                             }
 
                             {projectDetailPath &&
@@ -75,4 +78,6 @@ export default function ProjectsTable({ tableTitles, projects }) {
 
         </div>
     )
+
+    return null;
 }

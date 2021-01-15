@@ -3,7 +3,7 @@ import './jr-button.styles.scss'
 
 import { Link } from 'gatsby'
 
-import JrPointer from '@common-components/jr-pointer/jr-pointer.component'
+import JrPointer from '@common-components/icons/jr-pointer/jr-pointer.component'
 
 export default function JrButton({
     urlPath,

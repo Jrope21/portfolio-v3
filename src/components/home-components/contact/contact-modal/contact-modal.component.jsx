@@ -1,6 +1,6 @@
 import React from 'react'
 
-import JrLink from '@common-components/jr-link/jr-link.component'
+import JrLink from '../../../common-components/content-page-hero-titles/node_modules/@common-components/jr-link/jr-link.component'
 
 export default function ContactModal({
     title,

@@ -1,0 +1,88 @@
+
+$table_border: 3px solid rgba(color(secondary), .7);
+
+.project-list-table__module {
+    position: relative;
+    z-index: 0;
+ 
+    .table-titles-container {
+        display: flex;
+    }
+
+    .table-title {
+        font-size: px-to-rem(18px);
+        font-weight: 700;
+        color: color(accent);
+        padding-right: 10px;
+        text-align: center;
+        margin: 0;
+        padding: 20px 0px 20px 0px;
+
+        &:first-of-type {
+            text-align: left;
+            padding-left: 3px;
+        }
+    }
+
+    .col-text {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        padding: 28px 5px;
+        font-size: px-to-rem(14px);
+        font-weight: 700;
+    }
+
+    .year {
+        font-size: px-to-rem(16px);
+        font-weight: 700;
+        transform: rotate(-90deg) translateY(4px);
+    }
+
+    .project-row {
+        display: flex;
+        border-bottom: $table_border;
+
+        &:last-of-type {
+            border: none;
+        }
+    }
+    
+    .table-col {
+        display: flex;
+        align-items: center;
+    }
+
+    .col-border {
+        border-right: $table_border;
+
+        &:last-of-type {
+            border: none;
+        }
+    }
+
+    .table-col-1 {
+        width: 53px; 
+        // this must match the ".design-element-line" in "project-list.component"
+    }
+
+    .table-col-2 {
+        flex: 1;
+    }
+
+    .table-col-3 {
+        display: none;
+    }
+
+    .table-col-4 {
+        display: none;
+    }
+
+    .table-col-5 {
+        width: 27%;
+    }
+
+    // .links-container {
+    //     width: 100%;
+    // }
+}

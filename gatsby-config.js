@@ -9,7 +9,7 @@ module.exports = {
     title: ``,
     description: ``,
     author: ``,
-    siteUrl: `https://direpairsadmin.wpcomstaging.com`, // the url your frontend is hosted at
+    siteUrl: `https://www.joshuaroper.com`, // the url your frontend is hosted at
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

@@ -1,21 +1,26 @@
 
 .project-list__module {
     position: relative;
+    // padding-top: 45px;
+
+    .list-filters-container {
+        position: relative;
+    }
 
     .design-element-line-container {
         position: absolute;
         z-index: -1;
         // left: 115px;
-        left: 25%;
-        top: 200px;
-        height: calc(100% - 150px);
+        left: 50px;
+        top: 0;
+        height: 100%;
         width: 3px;
         // background-color: color(accent);
         overflow: hidden;
         
-        @media (min-width: breakpoint(xs)) {
-            left: 35%;
-        }
+        // @media (min-width: breakpoint(xs)) {
+        //     left: 35%;
+        // }
 
         @media (min-width: breakpoint(sm)) {
             display: none;
@@ -28,7 +33,7 @@
         left: 0;
         height: 100%;
         width: 100%;
-        background-color: color(accent);
+        background-color: rgba(color(accent), .7);
         transform: translateY(-100%);
         transition: .45s $custom_easing transform;
         transition-delay: 450ms;

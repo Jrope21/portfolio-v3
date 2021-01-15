@@ -3,7 +3,7 @@ import './split-text-cta.styles.scss'
 
 import { Link } from 'gatsby'
 
-import JrPointer from '@common-components/jr-pointer/jr-pointer.component'
+import JrPointer from '@common-components/icons/jr-pointer/jr-pointer.component'
 import TextDisplacement from '@common-components/text-displacement/text-displacement.component'
 
 export default function TextTitleCta({

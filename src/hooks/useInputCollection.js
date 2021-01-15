@@ -7,8 +7,9 @@ function reducer(inputValues, { key, value }) {
     }
 }
 
-// example initial_inputValues that must get passed (this is REQUIRED)
-// const INITIAL_inputValues = {
+// example initial_state that must get passed (this is REQUIRED)
+// => match object keys to the name's of the input's
+// const INITIAL_STATE = {
 //     email: '',
 //     username: '',
 //     password: ''

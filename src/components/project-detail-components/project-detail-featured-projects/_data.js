@@ -46,11 +46,3 @@ export const featuredProjects = [
         key: "fdsdfairepadsaksljadakj"
     },
 ]
-
-// title={projects.title}
-// description={'Project Details'}
-// numberOfTitleLettersOnTop={project.numberOfTitleLettersOnTop}
-// year={projects.year}
-// urlPath={project.path}
-// isProjectLink={true}
-// deactivateLink={false}
