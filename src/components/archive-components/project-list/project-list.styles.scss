@@ -22,8 +22,9 @@
         //     left: 35%;
         // }
 
-        @media (min-width: breakpoint(sm)) {
-            display: none;
+        @media (min-width: breakpoint(lg)) {
+            height: calc(100% + 80px);
+            top: -80px;
         }
     }
 

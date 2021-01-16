@@ -6,6 +6,21 @@ export const tableTitlesData = [
     'Link'
 ]
 
+export const listFiltersData = [
+    'Front End',
+    'Back End',
+    'Gatsby', 
+    'React', 
+    'Node Js', 
+    'HTML5',
+    'SCSS', 
+    'JavaScript',
+    'WordPress', 
+    'Kentico',
+    'PHP',
+    'UI/UX Design'
+]
+
 export const projectsData = [
     {
         year: `2021`,

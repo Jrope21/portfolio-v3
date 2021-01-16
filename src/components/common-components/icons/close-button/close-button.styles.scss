@@ -1,0 +1,18 @@
+
+.close-button__module {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    padding: 14px;
+    border-radius: 50%;
+    box-shadow: 18px 18px 20px #24262B, -18px -18px 20px #30343A;
+    background-color: color(background_alt);
+    .close-button-icon {
+        max-width: 100%;
+        // width: 200px;
+        // padding: 5px;
+        height: auto;
+    }
+}

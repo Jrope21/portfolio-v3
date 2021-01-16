@@ -10,7 +10,7 @@ import { generateKey } from '../../../helpers/_generate-key'
 export default function ProjectListTable({ tableTitles = [], projects = [] }) {
     
     if(projects.length) return (
-        <div className="project-list-table__module">
+        <div className="project-list-table__module fade-up__mount">
 
             <div className="table-titles-container">
                 {tableTitles.map((title, i) => (
