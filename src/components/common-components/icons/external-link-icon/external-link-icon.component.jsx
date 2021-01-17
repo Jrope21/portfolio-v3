@@ -1,10 +1,10 @@
 import React from 'react'
 import './external-link-icon.styles.scss'
 
-export default function ExternalLinkIcon({className = ''}) {
+export default function ExternalLinkIcon({ className = '', altColor = false }) {
     return (
         <svg 
-            className={`external-link-icon__module ${className}`}
+            className={`external-link-icon__module ${className} ${altColor ? 'alt-color' : ''}`}
             xmlns="http://www.w3.org/2000/svg" 
             height="24" 
             viewBox="0 0 24 24" 

@@ -25,6 +25,18 @@
         text-transform: uppercase;
         font-weight: 800;
 
+        @media (min-width: breakpoint(md)) {
+            font-size: px-to-rem(22px);
+        }
+
+        @media (min-width: breakpoint(xl)) {
+            font-size: px-to-rem(24px);
+        }
+
+        @media (min-width: breakpoint(xxl)) {
+            font-size: px-to-rem(26px);
+        }
+
         &::after {
             content: '';
             display: inline-block;

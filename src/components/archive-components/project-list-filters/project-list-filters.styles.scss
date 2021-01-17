@@ -54,6 +54,11 @@ $popup_animation_time: .45s;
             margin-top: -170px;
         }
 
+
+        @media (min-width: breakpoint(xxl)) {
+            max-width: 800px;
+        }
+
         &.activate-animations__scoped {
             transition-delay: 0ms;
             .close-filters-btn {

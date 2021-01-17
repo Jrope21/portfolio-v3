@@ -4,7 +4,7 @@
     // width
    width: 20px;
     height: auto;
-    transition: .2s $custom_easing transform;
+    transition: .2s $custom_easing transform, .2s $custom_easing fill;
     transform: rotate(0);
     transition-delay: .2s;
 
@@ -21,14 +21,27 @@
         transform: translate(0);
         transition: .2s $custom_easing transform;
     }
-}
 
-a:hover .external-link-icon__module {
-    transform: rotate(45deg);
-    transition-delay: 0s;
-
-    .external-link-arrow {
-        transform: translate(3px, -3px);
-        transition-delay: .1s;
+    &.alt-color {
+        fill: color(secondary);
     }
 }
+
+
+
+a:hover {
+
+    .external-link-icon__module.alt-color {
+        fill: color(accent);
+    }
+
+    .external-link-icon__module {
+        transform: rotate(45deg);
+        transition-delay: 0s;
+    
+        .external-link-arrow {
+            transform: translate(3px, -3px);
+            transition-delay: .1s;
+        }
+    }
+} 

@@ -4,6 +4,8 @@ import './project-list-table.styles.scss'
 import { Link } from 'gatsby'
 
 import ExternalLinkIcon from '@common-components/icons/external-link-icon/external-link-icon.component'
+import JrPointer from '@common-components/icons/jr-pointer/jr-pointer.component'
+import GithubIcon from '@images/socials/github_icon_alt.svg';
 
 import { generateKey } from '../../../helpers/_generate-key'
 
@@ -58,7 +60,7 @@ export default function ProjectListTable({ tableTitles = [], projects = [] }) {
                                     rel="noopener noreferrer" 
                                     target="_blank"
                                 >
-                                    <ExternalLinkIcon />
+                                    <ExternalLinkIcon altColor={true} />
                                 </a>
                             : 
                                 <span className="link-text">TBD</span>
@@ -66,7 +68,10 @@ export default function ProjectListTable({ tableTitles = [], projects = [] }) {
 
                             {projectDetailPath &&
                                 <Link to={projectDetailPath}>
-                                    <ExternalLinkIcon />
+                                    <JrPointer 
+                                        className="project-detail-link-icon" 
+                                        enableHoverAnimations={true}
+                                    />
                                 </Link>
                             }
 
@@ -76,7 +81,7 @@ export default function ProjectListTable({ tableTitles = [], projects = [] }) {
                                     rel="noopener noreferrer" 
                                     target="_blank"
                                 >
-                                    <ExternalLinkIcon />
+                                    <GithubIcon />
                                 </a>
                             }
                            

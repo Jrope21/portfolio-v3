@@ -2,8 +2,7 @@ import React, { useState, useEffect } from 'react'
 import './project-list-filters.styles.scss'
 
 import FilterButton from '@archive-components/filter-button/filter-button.component'
-import CloseButton from '../../common-components/icons/close-button/close-button.component';
-import { generateKey } from '../../../helpers/_generate-key';
+import CloseButton from '@common-components/icons/close-button/close-button.component';
 
 export default function ProjectListFilters({ listFilters }) {
 

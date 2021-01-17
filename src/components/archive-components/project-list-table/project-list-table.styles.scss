@@ -60,12 +60,36 @@ $table_border: 3px solid rgba(color(secondary), .7);
         }
     }
 
+    .links-container {
+         
+        a {
+            margin: 0 4px;
+
+            @media (min-width: breakpoint(sm)) {
+                margin: 0 6px;
+            }
+        }
+    }
+
     .link-text {
         font-size: px-to-rem(14px);
         font-weight: 700;
 
         @media (min-width: breakpoint(xxl)) {
             font-size: px-to-rem(16px);
+        }
+    }
+
+    
+    // .external-link-icon {
+    //     fill: color(secondary);
+    // }
+
+    .project-detail-link-icon {
+        width: 16px;
+
+        @media (min-width: breakpoint(xl)) {
+            width: 18px;
         }
     }
 

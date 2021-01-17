@@ -5,5 +5,20 @@
     .featured-projects-list {
         padding-top: 55px;
         padding-bottom: 15px;
+
+        @media (min-width: breakpoint(md)) {
+            padding-top: 75px;
+            padding-bottom: 25px;
+        }
+
+        @media (min-width: breakpoint(xl)) {
+            padding-top: 80px;
+            padding-bottom: 30px;
+        }
+
+        @media (min-width: breakpoint(xxl)) {
+            padding-top: 85px;
+            padding-bottom: 35px;
+        }
     }
 }
