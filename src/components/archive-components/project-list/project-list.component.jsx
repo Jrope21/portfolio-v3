@@ -8,11 +8,19 @@ import { listFiltersData, projectsData, tableTitlesData } from './_data'
 export default function ProjectList() {
 
     const [isMounted, setIsMounted] = useState(false);
+    const [projects, setProjects] = useState(projectsData)
 
     useEffect(() => {
         setIsMounted(true);
     }, [])
     
+    const filterProjects = (filterTag) => setProjects(
+        projects.filter(({ filterTags }) => {
+            if(filterTags[filterTag]) return true;
+            return false;
+        })
+    )
+
     return (
         <section 
             // data-sal="mount" 
@@ -24,7 +32,10 @@ export default function ProjectList() {
                     <span className="design-element-line" />
                 </div>
 
-                <ProjectListFilters listFilters={listFiltersData} />     
+                <ProjectListFilters 
+                    listFilters={listFiltersData} 
+                    filterProjects={filterProjects}
+                />     
             </div>
 
 

@@ -4,7 +4,7 @@ import './project-list-filters.styles.scss'
 import FilterButton from '@archive-components/filter-button/filter-button.component'
 import CloseButton from '@common-components/icons/close-button/close-button.component';
 
-export default function ProjectListFilters({ listFilters }) {
+export default function ProjectListFilters({ listFilters, filterProjects }) {
 
     const [isFiltersVisible, setIsFiltersVisible] = useState(false);
     const [isMounted, setIsMounted] = useState(false);
@@ -47,6 +47,7 @@ export default function ProjectListFilters({ listFilters }) {
                             className="list-filter-button fade-up__scoped"
                             key={filterText + i + 'project-list-filters'}
                             style={{ transitionDelay: `${500 + i * 50}ms` }}
+                            onClick={() => filterProjects(filterText)}
                         >
                             {filterText}
                         </FilterButton>
