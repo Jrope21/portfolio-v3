@@ -7,6 +7,7 @@ export const tableTitlesData = [
 ]
 
 export const listFiltersData = [
+    'All',
     'Front End',
     'Back End',
     'Gatsby', 
@@ -16,7 +17,7 @@ export const listFiltersData = [
     'SCSS',
     'JavaScript',
     'WordPress', 
-    'Kentico',
+    // 'Kentico',
     'PHP',
     'UI/UX Design'
 ]
@@ -28,7 +29,8 @@ export const projectsData = [
         madeAt: `Freelance`,
         featuredTech: `Gatsby, React, Node Js, SASS, WordPress, PHP`,
         filterTags: {
-            'Front End': 'Front End',
+        'All': 'All',         
+        'Front End': 'Front End',
             'Back End': 'Back End',
             'Gatsby': 'Gatsby',
             'React': 'React', 
@@ -44,7 +46,6 @@ export const projectsData = [
         projectDetailPath: ``,
         githubLink: ``,
         inProgress: true,
-        isVisible: true,
     },
     {
         year: `2021`,
@@ -52,7 +53,8 @@ export const projectsData = [
         madeAt: `Freelance`,
         featuredTech: `Next, React, Node Js, SCSS, WordPress, PHP`,
         filterTags: {
-            'Front End': 'Front End',
+        'All': 'All',         
+        'Front End': 'Front End',
             'Back End': 'Back End',
             'React': 'React', 
             'Node Js': 'Node Js', 
@@ -67,7 +69,6 @@ export const projectsData = [
         projectDetailPath: ``,
         githubLink: ``,
         inProgress: true,
-        isVisible: true,
     },
     {
         year: `2020`,
@@ -75,6 +76,7 @@ export const projectsData = [
         madeAt: `Freelance`,
         featuredTech: `Gatsby, React, Node Js, SASS, WordPress, PHP`,
         filterTags: {
+            'All': 'All',         
             'Front End': 'Front End',
             'Back End': 'Back End',
             'Gatsby': 'Gatsby',
@@ -91,7 +93,6 @@ export const projectsData = [
         projectDetailPath: `/projects/di-repairs`,
         githubLink: ``,
         inProgress: false,
-        isVisible: true,
     },
     {
         year: `2020`,
@@ -99,7 +100,8 @@ export const projectsData = [
         madeAt: `Imaginuity`,
         featuredTech: `React, Redux, SCSS, SiteFinity, Stripe, Ucommerce`,
         filterTags: {
-            'Front End': 'Front End',
+    'All': 'All',         
+    'Front End': 'Front End',
             'React': 'React', 
             'Node Js': 'Node Js', 
             'HTML5': 'HTML5',
@@ -110,7 +112,6 @@ export const projectsData = [
         projectDetailPath: ``,
         githubLink: ``,
         inProgress: false,
-        isVisible: true,
     },
     {
         year: `2019`,
@@ -118,7 +119,9 @@ export const projectsData = [
         madeAt: `Imaginuity`,
         featuredTech: `React, React Static, Node JS, SCSS, WordPress, PHP`,
         filterTags: {
+            'All': 'All',         
             'Front End': 'Front End',
+            'Back End': 'Back End',
             'React': 'React',  
             'Node Js': 'Node Js', 
             'HTML5': 'HTML5',
@@ -131,7 +134,6 @@ export const projectsData = [
         projectDetailPath: ``,
         githubLink: ``,
         inProgress: false,
-        isVisible: true,
     },
     {
         year: `2019`,
@@ -139,6 +141,7 @@ export const projectsData = [
         madeAt: `Imaginuity`,
         featuredTech: `JavaScript, SCSS, HTML5, WordPress, PHP`,
         filterTags: {
+            'All': 'All',         
             'Front End': 'Front End',
             'HTML5': 'HTML5',
             'SCSS': 'SCSS', 
@@ -150,7 +153,6 @@ export const projectsData = [
         projectDetailPath: ``,
         githubLink: ``,
         inProgress: false,
-        isVisible: true,
     },
     {
         year: `2019`,
@@ -158,6 +160,7 @@ export const projectsData = [
         madeAt: `Imaginuity`,
         featuredTech: `JavaScript, jQuery, PHP, SCSS, Webpack`,
         filterTags: {
+            'All': 'All',         
             'Front End': 'Front End',
             'Back End': 'Back End',
             'HTML5': 'HTML5',
@@ -170,7 +173,6 @@ export const projectsData = [
         projectDetailPath: ``,
         githubLink: ``,
         inProgress: false,
-        isVisible: true,
     },
     {
         year: `2019`,
@@ -178,6 +180,7 @@ export const projectsData = [
         madeAt: `Imaginuity`,
         featuredTech: `JavaScript, SCSS, HTML5, WordPress, PHP`,
         filterTags: {
+            'All': 'All',         
             'Front End': 'Front End',
             'HTML5': 'HTML5',
             'SCSS': 'SCSS', 
@@ -189,7 +192,6 @@ export const projectsData = [
         projectDetailPath: ``,
         githubLink: ``,
         inProgress: false,
-        isVisible: true,
     },
     {
         year: `2019`,
@@ -197,6 +199,7 @@ export const projectsData = [
         madeAt: `Imaginuity`,
         featuredTech: `Javascript, jQuery, CSS, Kentico`,
         filterTags: {
+            'All': 'All',         
             'Front End': 'Front End',
             'HTML5': 'HTML5',
             'SCSS': 'SCSS', 
@@ -207,7 +210,6 @@ export const projectsData = [
         projectDetailPath: ``,
         githubLink: ``,
         inProgress: false,
-        isVisible: true,
     },
     {
         year: `2019`,
@@ -215,6 +217,7 @@ export const projectsData = [
         madeAt: `Imaginuity`,
         featuredTech: `Javascript, jQuery, CSS, Kentico`,
         filterTags: {
+            'All': 'All',         
             'Front End': 'Front End',
             'HTML5': 'HTML5',
             'SCSS': 'SCSS', 
@@ -225,7 +228,6 @@ export const projectsData = [
         projectDetailPath: ``,
         githubLink: ``,
         inProgress: false,
-        isVisible: true,
     },
     {
         year: `2019`,
@@ -233,6 +235,7 @@ export const projectsData = [
         madeAt: `Personal`,
         featuredTech: `Svelte, Sapper, SCSS, Netlify`,
         filterTags: {
+            'All': 'All',         
             'Front End': 'Front End',
             'Back End': 'Back End',
             'Node Js': 'Node Js', 
@@ -245,7 +248,6 @@ export const projectsData = [
         projectDetailPath: ``,
         githubLink: ``,
         inProgress: false,
-        isVisible: true,
     },
     {
         year: `2018`,
@@ -253,6 +255,7 @@ export const projectsData = [
         madeAt: `Freelance`,
         featuredTech: `JavaScript, WordPress, PHP, DiviBuilder`,
         filterTags: {
+            'All': 'All',         
             'Front End': 'Front End',
             'Back End': 'Back End',
             'HTML5': 'HTML5',
@@ -266,7 +269,6 @@ export const projectsData = [
         projectDetailPath: ``,
         githubLink: ``,
         inProgress: false,
-        isVisible: true,
     },
     {
         year: `2017`,
@@ -274,6 +276,7 @@ export const projectsData = [
         madeAt: `Personal`,
         featuredTech: `JavaScript, GSAP, CSS, HTML`,
         filterTags: {
+            'All': 'All',         
             'Front End': 'Front End',
             'HTML5': 'HTML5',
             'SCSS': 'SCSS', 
@@ -284,7 +287,6 @@ export const projectsData = [
         projectDetailPath: ``,
         githubLink: ``,
         inProgress: false,
-        isVisible: true,
     },
     {
         year: `2017`,
@@ -292,6 +294,7 @@ export const projectsData = [
         madeAt: `Freelance`,
         featuredTech: `JavaScript, CSS, BootStrap, HTML, PHP`,
         filterTags: {
+            'All': 'All',         
             'Front End': 'Front End',
             'Back End': 'Back End',
             'HTML5': 'HTML5',
@@ -304,6 +307,5 @@ export const projectsData = [
         projectDetailPath: ``,
         githubLink: ``,
         inProgress: false,
-        isVisible: true,
     },
 ]

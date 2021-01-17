@@ -95,10 +95,23 @@ $table_border: 3px solid rgba(color(secondary), .7);
 
     .project-row {
         display: flex;
+        // display: none;
+        visibility: hidden;
         border-bottom: $table_border;
+        // opacity: 0;
+        // transition: opacity 450ms $custom_easing, max-height 450ms $custom_easing;
+        transition: visibility .400ms ;
+        // max-height: 0px;
 
         &:last-of-type {
             border: none;
+        }
+
+        &.is-visible {
+          visibility: visible;
+            // display: flex;
+            // opacity: 1;
+            // max-height: 350px;
         }
     }
     

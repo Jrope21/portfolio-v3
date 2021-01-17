@@ -36,7 +36,7 @@ $popup_animation_time: .45s;
         padding-top: 40px;
         background-color: color(page_background);
         // transition-delay: 700ms;
-        max-width: 750px;
+       
 
 
         @media (min-width: breakpoint(xs)) {
@@ -52,6 +52,7 @@ $popup_animation_time: .45s;
             margin-left: 70px;
             width: auto;
             margin-top: -170px;
+            max-width: 750px;
         }
 
 
@@ -83,6 +84,11 @@ $popup_animation_time: .45s;
                     transition-delay: $popup_animation_time !important;
                     transition: unset;
                 }
+
+                &.is-active {
+                    color: color(accent);
+                    // transition-delay: .4s;
+                }
               
                 // transition: opacity 450ms $custom_easing, transform 450ms $custom_easing;
             }
@@ -104,7 +110,7 @@ $popup_animation_time: .45s;
         opacity: 0;
         transition: opacity 350ms $custom_easing, transform 450ms $custom_easing;
 
-        @media (min-width: breakpoint(md)) {
+        @media (min-width: breakpoint(lg)) {
             display: none;
         }
     }

@@ -8,18 +8,39 @@ import { listFiltersData, projectsData, tableTitlesData } from './_data'
 export default function ProjectList() {
 
     const [isMounted, setIsMounted] = useState(false);
-    const [projects, setProjects] = useState(projectsData)
+    const [activeFilterTag, setActiveFilterTag] = useState('All');
+    const [isFilterModalOpen, setIsFilterModalOpen] = useState(false);
+    const [isFilteringForProjects, setIsFilteringForProjects] = useState(false);
+    // const [isFiltered, setIsFiltered] = useState(true);
 
     useEffect(() => {
         setIsMounted(true);
     }, [])
+
+    useEffect(() => {
+        let isUnmounted = false;
+
+        if (isMounted) {
+            setIsFilteringForProjects(true);
+
+
+           
+            
+            setTimeout(() =>{
+                closeFilterModal();
+            }, 600)
+
+            setTimeout(() =>{
+                if(!isUnmounted) setIsFilteringForProjects(false);
+            }, 1250)
+        }
+
+        return (() => isUnmounted = true)
+    }, [activeFilterTag])
     
-    const filterProjects = (filterTag) => setProjects(
-        projects.filter(({ filterTags }) => {
-            if(filterTags[filterTag]) return true;
-            return false;
-        })
-    )
+    const filterProjects = (filterTag) => setActiveFilterTag(filterTag);
+    const openFilterModal = () => setIsFilterModalOpen(true);
+    const closeFilterModal = () => setIsFilterModalOpen(false);
 
     return (
         <section 
@@ -35,13 +56,41 @@ export default function ProjectList() {
                 <ProjectListFilters 
                     listFilters={listFiltersData} 
                     filterProjects={filterProjects}
+                    activeFilterTag={activeFilterTag}
+                    openFilterModal={openFilterModal}
+                    closeFilterModal={closeFilterModal}
+                    isFilterModalOpen={isFilterModalOpen}
                 />     
+            </div>
+
+            <div className={`filtering-modal ${isFilteringForProjects ? 'is-visible activate-animations__scoped' : ''}`}>
+                <div className="filtering-modal-inner-container">
+                    <span 
+                        className="fade-up__scoped filtering-modal-text"
+                        style={{ transitionDelay: '450ms' }}
+                    >
+                        Filtering
+                    </span>
+                    <span 
+                        className="fade-up__scoped filtering-modal-text"
+                        style={{ transitionDelay: '500ms' }}
+                    >
+                        {activeFilterTag}
+                    </span>
+                    <span 
+                        className="fade-up__scoped filtering-modal-text"
+                        style={{ transitionDelay: '550ms' }}
+                    >
+                        Projects
+                    </span>
+                </div>
             </div>
 
 
             <ProjectListTable
                 tableTitles={tableTitlesData}
                 projects={projectsData}
+                activeFilterTag={activeFilterTag}
             />
             
         </section>

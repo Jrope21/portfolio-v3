@@ -9,7 +9,11 @@ import GithubIcon from '@images/socials/github_icon_alt.svg';
 
 import { generateKey } from '../../../helpers/_generate-key'
 
-export default function ProjectListTable({ tableTitles = [], projects = [] }) {
+export default function ProjectListTable({ 
+    tableTitles = [], 
+    projects = [], 
+    activeFilterTag = 'All' 
+}) {
 
     const [isMounted, setIsMounted] = useState(false);
 
@@ -25,7 +29,10 @@ export default function ProjectListTable({ tableTitles = [], projects = [] }) {
 
             <div className="table-titles-container">
                 {tableTitles.map((title, i) => (
-                    <h3 className={`table-title col-border table-col-${i + 1}`} key={generateKey(title)}>{title}</h3>
+                    <h3 
+                        className={`table-title col-border table-col-${i + 1}`} 
+                        key={title + 'project-table-titles' + i}
+                    >{title}</h3>
                 ))}
             </div>
                 
@@ -37,9 +44,13 @@ export default function ProjectListTable({ tableTitles = [], projects = [] }) {
                     featuredTech,
                     projectLink,
                     projectDetailPath,
-                    githubLink
-                }) => (
-                    <div className="project-row" key={generateKey(name)}>
+                    githubLink,
+                    filterTags
+                }, i) => (
+                    <div 
+                        className={`project-row ${filterTags[activeFilterTag] ? 'is-visible' : ''}`}
+                        key={name + 'project-table' + i}
+                    >
                         <div className="table-col-1 table-col col-border">
                             <span className="year">{year}</span>
                         </div>  
