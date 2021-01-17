@@ -8,4 +8,8 @@
     font-size: px-to-rem(12px);
     font-weight: 700;
     text-transform: uppercase;
+
+    @media (min-width: breakpoint(xxl)) {
+        font-size: px-to-rem(14px);
+    }
 }

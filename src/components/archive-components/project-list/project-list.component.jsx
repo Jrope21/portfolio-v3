@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './project-list.styles.scss'
 
 import ProjectListFilters from '@archive-components/project-list-filters/project-list-filters.component'
@@ -6,8 +6,18 @@ import ProjectListTable from '@archive-components/project-list-table/project-lis
 import { listFiltersData, projectsData, tableTitlesData } from './_data'
 
 export default function ProjectList() {
+
+    const [isMounted, setIsMounted] = useState(false);
+
+    useEffect(() => {
+        setIsMounted(true);
+    }, [])
+    
     return (
-        <section data-sal="mount" className="project-list__module"> 
+        <section 
+            // data-sal="mount" 
+            className={`project-list__module ${isMounted ? 'activate-animations__mount' : ''}`}
+        > 
 
             <div className="list-filters-container">
                 <div className="design-element-line-container">

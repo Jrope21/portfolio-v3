@@ -26,6 +26,10 @@
             height: calc(100% + 80px);
             top: -80px;
         }
+
+        @media (min-width: breakpoint(xxl)) {
+            left: 53px;
+        }
     }
 
     .design-element-line {
@@ -40,7 +44,10 @@
         transition-delay: 450ms;
     }
 
-    &.sal-animate .design-element-line {
-        transform: translateY(0);
-    }
+    &.sal-animate, &.activate-animations__mount {
+
+        .design-element-line {
+            transform: translateY(0);
+        }
+    } 
 }

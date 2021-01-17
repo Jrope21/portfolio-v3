@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './project-list-table.styles.scss'
 
 import { Link } from 'gatsby'
@@ -8,9 +8,18 @@ import ExternalLinkIcon from '@common-components/icons/external-link-icon/extern
 import { generateKey } from '../../../helpers/_generate-key'
 
 export default function ProjectListTable({ tableTitles = [], projects = [] }) {
+
+    const [isMounted, setIsMounted] = useState(false);
+
+    useEffect(() => {
+        setIsMounted(true);
+    }, [])
     
     if(projects.length) return (
-        <div className="project-list-table__module fade-up__mount">
+        <div 
+            className={`project-list-table__module fade-up__mount ${isMounted ? 'activate-animations__mount' : ''}`}
+            style={{ transitionDelay: '800ms' }}
+        >
 
             <div className="table-titles-container">
                 {tableTitles.map((title, i) => (

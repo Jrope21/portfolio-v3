@@ -17,10 +17,6 @@
         // margin-left: 25px;
     }
 
-    @media (min-width: breakpoint(xxl)) {
-        margin-left: 25px;
-    }
-
     .external-link-arrow {
         transform: translate(0);
         transition: .2s $custom_easing transform;
