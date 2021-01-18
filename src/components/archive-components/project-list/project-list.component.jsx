@@ -9,6 +9,9 @@ export default function ProjectList() {
 
     const [isMounted, setIsMounted] = useState(false);
     const [activeFilterTag, setActiveFilterTag] = useState('All');
+
+    const [projects, setProjects] = useState(projectsData);
+
     const [isFilterModalOpen, setIsFilterModalOpen] = useState(false);
     const [isFilteringForProjects, setIsFilteringForProjects] = useState(false);
     // const [isFiltered, setIsFiltered] = useState(true);
@@ -22,11 +25,12 @@ export default function ProjectList() {
 
         if (isMounted) {
             setIsFilteringForProjects(true);
-
-
-           
-            
-            setTimeout(() =>{
+            // closeFilterModal();
+          
+            setTimeout(() => {
+                setProjects(
+                    projectsData.filter(({ filterTags }) => filterTags[activeFilterTag])
+                )
                 closeFilterModal();
             }, 600)
 
@@ -54,6 +58,7 @@ export default function ProjectList() {
                 </div>
 
                 <ProjectListFilters 
+                    enablePageTransitions={!isFilteringForProjects}
                     listFilters={listFiltersData} 
                     filterProjects={filterProjects}
                     activeFilterTag={activeFilterTag}
@@ -89,7 +94,7 @@ export default function ProjectList() {
 
             <ProjectListTable
                 tableTitles={tableTitlesData}
-                projects={projectsData}
+                projects={projects}
                 activeFilterTag={activeFilterTag}
             />
             

@@ -7,10 +7,12 @@ import JrButton from '@common-components/jr-button/jr-button.component'
 
 import { featuredProjects } from './_data'
 
-const ProjectDetailFeaturedProjects = () => {
+let currentUrlPath;
+if(typeof window !== undefined){
+    currentUrlPath = document.location.pathname;
+}
 
-    const currentUrlPath = document.location.pathname;
-    // console.log(currentUrlPath)
+const ProjectDetailFeaturedProjects = () => {
 
     return (
         <section 

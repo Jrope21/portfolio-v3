@@ -48,8 +48,12 @@ export default function ProjectListTable({
                     filterTags
                 }, i) => (
                     <div 
-                        className={`project-row ${filterTags[activeFilterTag] ? 'is-visible' : ''}`}
-                        key={name + 'project-table' + i}
+                        className={`
+                            project-row 
+                            is-visible
+                        `}
+                        // ${filterTags[activeFilterTag] ? 'is-visible' : ''}
+                        key={name + 'project-table'}
                     >
                         <div className="table-col-1 table-col col-border">
                             <span className="year">{year}</span>

@@ -5,6 +5,7 @@ import FilterButton from '@archive-components/filter-button/filter-button.compon
 import CloseButton from '@common-components/icons/close-button/close-button.component';
 
 export default function ProjectListFilters({ 
+    enablePageTransitions = true,
     listFilters, 
     filterProjects, 
     activeFilterTag,
@@ -33,31 +34,42 @@ export default function ProjectListFilters({
     }, [])
 
     return (
-        <div className={`project-list-filters__module ${isMounted ? 'is-mounted' : ''}`}>
-            <FilterButton 
-                className="mobile-toggle-btn"
-                onClick={openFilterModal}
+        <div className={`project-list-filters__module ${isMounted ? 'is-mounted' : ''} `}>
+            <div 
+                className="mobile-toggle-btn fade-up__mount"
+                style={{ transitionDelay: `500ms` }}
             >
-                Project Filters
-            </FilterButton>
+                <FilterButton 
+                    onClick={openFilterModal}
+                >
+                    Project Filters
+                </FilterButton>
+            </div>
+           
 
 
 
-            <div className={`filter-buttons-outer-container ${isFilterModalOpen? ' is-visible activate-animations__scoped' : ''}`}>
+            <div className={`filter-buttons-outer-container ${!enablePageTransitions ? 'disable-page-animation' : ''} ${isFilterModalOpen? ' is-visible activate-animations__scoped' : ''}`}>
                 <CloseButton 
                     className="close-filters-btn" 
                     onClick={closeFilterModal}
                 />
                 <div className={`filter-buttons-inner-container`}>
                     {listFilters.map((filterText, i) => (
-                        <FilterButton
-                            className={`list-filter-button fade-up__scoped ${activeFilterTag === filterText ? 'is-active' : ''}`}
-                            key={filterText + i + 'project-list-filters'}
+                        <div 
+                            className={`list-filter-button fade-up__scoped`}
                             style={{ transitionDelay: `${500 + i * 50}ms` }}
-                            onClick={() => filterProjects(filterText)}
+                            key={filterText + i + 'project-list-filters'}
                         >
-                            {filterText}
-                        </FilterButton>
+                            <FilterButton
+                                className={`${activeFilterTag === filterText ? 'is-active' : ''}`}
+                            
+                                onClick={() => filterProjects(filterText)}
+                            >
+                                {filterText}
+                            </FilterButton>
+                        </div>
+                    
                     ))}
                 </div>
             </div>

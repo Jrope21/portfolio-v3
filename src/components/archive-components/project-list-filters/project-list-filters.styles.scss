@@ -36,6 +36,10 @@ $popup_animation_time: .45s;
         padding-top: 40px;
         background-color: color(page_background);
         // transition-delay: 700ms;
+
+        &.disable-page-animation {
+            transition: unset;
+        }
        
 
 
@@ -85,10 +89,7 @@ $popup_animation_time: .45s;
                     transition: unset;
                 }
 
-                &.is-active {
-                    color: color(accent);
-                    // transition-delay: .4s;
-                }
+              
               
                 // transition: opacity 450ms $custom_easing, transform 450ms $custom_easing;
             }
@@ -116,6 +117,7 @@ $popup_animation_time: .45s;
     }
 
     .list-filter-button {
+        display: inline-block;
         position: relative;
         z-index: 1;
         margin: 20px 8px;
@@ -126,6 +128,10 @@ $popup_animation_time: .45s;
 
         @media (min-width: breakpoint(lg)) {
             margin: 20px 10px;
+        }
+
+        .is-active {
+            color: color(accent);
         }
     }
 
@@ -139,6 +145,12 @@ $popup_animation_time: .45s;
                 transform: translateY(0);
                 transition: opacity 450ms $custom_easing, transform 450ms $custom_easing;
             } 
+        }
+    }
+
+    &.deactivate-animatinon {
+        .filter-buttons-outer-container {
+            transition: unset !important;
         }
     }
 }

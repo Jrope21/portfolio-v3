@@ -120,6 +120,21 @@
         color: color(primary);
         text-transform: uppercase;
         margin: 0 2px;
+
+        @media (min-width: breakpoint(sm)) {
+            font-size: px-to-rem(18px);
+            margin: 0 3px;
+        }
+
+        @media (min-width: breakpoint(xl)) {
+            font-size: px-to-rem(20px);
+           
+        }
+
+        @media (min-width: breakpoint(xxl)) {
+            font-size: px-to-rem(22px);
+            margin: 0 4px;
+        }
     }
 
     &.sal-animate, &.activate-animations__mount {
