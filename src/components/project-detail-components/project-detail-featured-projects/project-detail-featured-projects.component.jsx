@@ -7,7 +7,7 @@ import JrButton from '@common-components/jr-button/jr-button.component'
 
 import { featuredProjects } from './_data'
 
-const currentUrlPath = typeof document !== `undefined` ? document.location.pathname : null;
+const currentUrlPath = typeof document !== `undefined` ? document.location.pathname : '';
 
 const ProjectDetailFeaturedProjects = () => {
 
