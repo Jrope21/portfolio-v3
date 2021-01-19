@@ -4,6 +4,7 @@ import './contact.styles.scss'
 import NumberedSectionTitle from '@home-components/numbered-section-title/numbered-section-title.component'
 import SplitTextCta from '@common-components/split-text-cta/split-text-cta.component'
 import DotLoader from '@common-components/dot-loader/dot-loader.component';
+import ContactModal from './contact-modal/contact-modal.component';
 
 import useInputCollection from '@hooks/useInputCollection';
 
@@ -132,10 +133,22 @@ const Contact = React.forwardRef(({ sectionRef }) => {
                         <DotLoader overlay={true} loading={isSubmitting} />
                     </button>
                 </div>
+
+                <ContactModal 
+                    title={'Congrats!'}
+                    description={'Your message was submitted.'}
+                    flagText={`Don't Be Shy!`}
+                    buttonText={'Send Another One'}
+                />
               
             </form>
         </section>
     )
 });
+
+// title,
+// description,
+// flagText,
+// buttonText
 
 export default Contact;

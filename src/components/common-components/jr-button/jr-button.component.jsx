@@ -7,20 +7,21 @@ import JrPointer from '@common-components/icons/jr-pointer/jr-pointer.component'
 
 export default function JrButton({
     urlPath,
-    text,
+    children,
     hasArrow = true,
     className = '',
+    btnStyle = 'large', // standard, external-link, large
     ...otherProps
 }) {
 
-    if (urlPath && text) return (
+    if (urlPath && children) return (
         <Link 
-            className={`jr-button__module ${className}`}
+            className={`jr-button__module ${className} ${btnStyle}`}
             to={urlPath}
             {...otherProps}
         >
             <span className="text">
-               {text}
+               {children}
             </span>
             {hasArrow && 
                 <JrPointer
@@ -32,21 +33,22 @@ export default function JrButton({
         </Link>
     )
 
-    if(text) return (
+    if(children) return (
         <button 
-            className="jr-button__module"
+            className={`jr-button__module ${btnStyle} ${className} hoverable`}
             {...otherProps}
         >
             <span className="text">
-               {text}
+               {children}
             </span>
-            {hasArrow && 
+            {hasArrow || btnStyle === "standard" ?
                 <JrPointer
-                    altColor={true}
-                    size={'small'}
-                    
+                    className="detail-btn-pointer"
+                    enableHoverAnimations={true}
+                    altColor={btnStyle === 'large' ? true : false}
+                    size={'small'} 
                 />
-            }
+            : null}
         </button>
     )
 

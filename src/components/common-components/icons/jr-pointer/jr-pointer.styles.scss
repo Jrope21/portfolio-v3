@@ -32,12 +32,15 @@
     }
 }
 
-a:hover .jr-pointer__module.enable-hover-animations {
-    transform: translateX(10px); 
+a:hover, .hoverable:hover {
 
-    &:not(.alt-color) {
-        fill: color(accent)!important;
-    }  
+    .jr-pointer__module.enable-hover-animations {
+        transform: translateX(10px); 
+    
+        &:not(.alt-color) {
+            fill: color(accent)!important;
+        }  
+    }
 }
 
 

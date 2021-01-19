@@ -1,47 +1,103 @@
 
 .jr-button__module {
-    position: relative;
-    display: flex;
-    align-items: flex-end;
-    padding: 1rem;
-    margin-top: 25px;
-    font-size: px-to-rem(16px);
-    font-weight: 700;
-    color: color(page_background);
-    background: color(primary);
-    text-align: left;
-    overflow: hidden;
+    cursor: pointer;
 
-    @media (min-width: breakpoint(sm)) {
-        margin-top: 0px;
-        padding: 10px 1rem;
-    }
+    &.standard {
+        display: flex;
+        align-items: center;
+        font-style: italic;
+        // color: color(page_background);
+        justify-content: center;
+        background: color(page_background);
+        font-size: px-to-rem(16px);
+        font-weight: 500;
+        color: color(secondary);
+        transition: .3s color;
+        
 
-    @media (min-width: breakpoint(xxl)) {
-        font-size: px-to-rem(18px);
-    }
+        .text {
+            position: relative;
+            overflow: hidden;
+     
+             &::before {
+                 content: '';
+                 position: absolute;
+                 bottom: 0;
+                 left: 0;
+                 border-bottom: 1px solid color(accent);
+                 width: 100%;
+                 transform: translateX(-100%);
+                 transition: .25s $custom_easing transform;
+             }
+        }
+
+
+        @media (min-width: breakpoint(xxl)) {
+            font-size: px-to-rem(18px);
+        }
+
+        .detail-btn-pointer {
+            margin-left: 8px;
+        }
     
-    &::before {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        transform: translateX(-100%);
-        height: 3px;
-        width: 100%;
-        transition: .45s $custom_easing transform;
-        // transition: .5s cubic-bezier(.19,1,.22,1) transform;
-        background: color(accent);
+        &:hover {
+            color: color(accent);
+        }
+        
+        &:hover {
+            color: color(accent);
+       
+            // .text::before {
+            //     transform: translate(0);
+            // }
+       }
     }
 
-    .text {
-        margin-right: 10px;
-    }
-
-    &:hover {
-        // color: color(accent);
+    &.large {
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        padding: 1rem;
+        margin-top: 25px;
+        font-size: px-to-rem(16px);
+        font-weight: 700;
+        color: color(page_background);
+        background: color(primary);
+        text-align: left;
+        overflow: hidden;
+    
+        @media (min-width: breakpoint(sm)) {
+            margin-top: 0px;
+            padding: 10px 1rem;
+        }
+    
+        @media (min-width: breakpoint(xxl)) {
+            font-size: px-to-rem(18px);
+        }
+        
         &::before {
-            transform: translateX(0);
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transform: translateX(-100%);
+            height: 3px;
+            width: 100%;
+            transition: .45s $custom_easing transform;
+            // transition: .5s cubic-bezier(.19,1,.22,1) transform;
+            background: color(accent);
+        }
+    
+        .text {
+            margin-right: 10px;
+        }
+    
+        &:hover {
+            // color: color(accent);
+            &::before {
+                transform: translateX(0);
+            }
         }
     }
+
 }

@@ -1,6 +1,8 @@
 import React from 'react'
+import './contact-modal.styles.scss'
 
-import JrLink from '../../../common-components/content-page-hero-titles/node_modules/@common-components/jr-link/jr-link.component'
+// import JrLink from '@common-components/jr-link/jr-link.component'
+import JrButton from '@common-components/jr-button/jr-button.component'
 
 export default function ContactModal({
     title,
@@ -17,11 +19,11 @@ export default function ContactModal({
                 <h2 className="title">{title}</h2>
                 <p className="description">{description}</p>
 
-                <div className="bottom-button">
+                <div className="bottom-button-container">
                     <p className="flag-text">{flagText}</p>
-                    <JrLink href="a">
+                    <JrButton className="bottom-button" btnStyle={'standard'}>
                         {buttonText}
-                    </JrLink>
+                    </JrButton>
                 </div>
             </div>
         </div>

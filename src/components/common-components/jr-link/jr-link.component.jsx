@@ -6,6 +6,9 @@ import { Link } from 'gatsby'
 import ExternalLinkIcon from '@common-components/icons/external-link-icon/external-link-icon.component'
 import JrPointer from '@common-components/icons/jr-pointer/jr-pointer.component'
 
+
+// TODO -- Refactor this component into "jr-button"
+// maybe set this up to only handle link ogic (not styling)??
 export default function JrLink({
     className = '',
     iconClassName = '',
