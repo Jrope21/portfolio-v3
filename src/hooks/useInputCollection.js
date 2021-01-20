@@ -1,9 +1,30 @@
 import React, { useReducer } from 'react';
 
-function reducer(inputValues, { key, value }) {
-    return {
-        ...inputValues,
-        [key]: value
+
+const ACTION_TYPES = {
+    'UPDATE_INPUT_VALUE': 'UPDATE_INPUT_VALUE',
+    'RESET_INPUT_VALUE': 'RESET_INPUT_VALUE',
+    'RESET_INPUT_VALUES': 'RESET_INPUT_VALUES'
+}
+
+function reducer(inputValues, action) {
+    switch(action.type) {
+        case ACTION_TYPES.UPDATE_INPUT_VALUE:
+            return { 
+                ...inputValues,
+                [action.payload.key]: action.payload.value
+            };
+        case ACTION_TYPES.RESET_INPUT_VALUE:
+            return {
+                ...inputValues,
+                [action.payload.key]: ''
+            }
+        case ACTION_TYPES.RESET_INPUT_VALUES:
+            return {
+                ...action.payload
+            };
+        default:
+             return null;
     }
 }
 
@@ -18,11 +39,28 @@ function reducer(inputValues, { key, value }) {
 const useInputCollection = (initial_state) => {
     const [inputValues, dispatch] = useReducer(reducer, initial_state);
 
-    const updateInputValue = (e) => {
-        dispatch({ key: e.target.name, value: e.target.value })
+    const actions = {
+        updateInputValue: (e) => {
+            dispatch({ 
+                type: ACTION_TYPES.UPDATE_INPUT_VALUE,
+                payload: {key: e.target.name, value: e.target.value}
+            })
+        },
+        resetInputValue: (name) => {
+            dispatch({ 
+                type: ACTION_TYPES.RESET_INPUT_VALUE,
+                payload: {key: name}
+            })
+        },
+        resetInputValues: () => {
+            dispatch({
+                type: ACTION_TYPES.RESET_INPUT_VALUES,
+                payload: initial_state
+            })
+        } 
     }
 
-    return [inputValues, updateInputValue];
+    return [inputValues, actions];
 }
 
 export default useInputCollection;

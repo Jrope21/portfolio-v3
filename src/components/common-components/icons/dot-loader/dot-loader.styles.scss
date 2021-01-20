@@ -4,14 +4,14 @@
 
 .dot-loader__module {
     opacity: 0;
-    transition: .25s visibility;
-    visibility: hidden;
+    transition: .25s visibility, .5s ease opacity;
+    // visibility: hidden;
     // animation: .01s linear .25s 1 exitScreen forwards;
 
     &.loading {
       opacity: 1;
-      animation: unset;
-      visibility: visible;
+      // animation: unset;
+      // visibility: visible;
       transition: .2s ease opacity;
 
       .loader {
@@ -52,10 +52,14 @@
       margin: 0 auto;
       z-index: 6;
       position: absolute;
-      top: -5px;
+      top: -8px;
       left: 50%;
       transform: translate(-50%, -50%);
       text-indent: -9999em;
+
+      @media (min-width: breakpoint(xxl)) {
+        top: -5px;
+      }
   
       &::before, &::after, & {
           border-radius: 50%;

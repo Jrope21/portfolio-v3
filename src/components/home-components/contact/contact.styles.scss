@@ -67,8 +67,11 @@
         }
     }
 
-    .contact-form {
+    .form-outer-container {
         position: relative;
+    }
+
+    .contact-form { 
         padding: 0 10px;
         opacity: 1;
         transition: .45s $custom_easing opacity;
@@ -188,12 +191,12 @@
         }
 
         .submit-btn-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            // position: absolute;
+            // top: 50%;
+            // left: 50%;
+            // transform: translate(-50%, -50%);
             opacity: 1;
-            transition: opacity 450ms $custom_easing, transform 450ms $custom_easing;
+            transition: opacity 450ms $custom_easing;
         }
 
         .fade-down {

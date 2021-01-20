@@ -1,29 +1,72 @@
 
 .contact-modal__module {
-    display: flex;
-    box-shadow: 18px 18px 20px #24262B, -18px -18px 20px #30343A;
-    max-width: 445px;
-    border-radius: 20px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 35px;
+    width: 90%;
+    max-width: 260px;
+    // margin: 0 auto;
+
+    @media (min-width: breakpoint(sm)) {
+        max-width: 445px;
+        bottom: 70px;
+    }
+  
+    @media (min-width: breakpoint(xxl)) {
+        max-width: 460px;
+    }
+
+    .contact-modal-inner-container {
+        position: relative;
+        bottom: 20px;
+        padding: 0px 15px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 18px 18px 20px #24262B, -18px -18px 20px #30343A; 
+        border-radius: 20px;
+        background-color: color(page_background);
+
+        @media (min-width: breakpoint(sm)) {
+            flex-direction: row;
+            padding: 15px 0;
+        }
+    }
 
     .contact-modal-left {
         position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 145px;
+     width: 100%;
+     padding: 35px 0px 35px 0;
         overflow: hidden;
+
+        @media (min-width: breakpoint(sm)) {
+            width: 145px;
+            padding: 0;
+            // padding: 20px 0px 20px 0;
+        }
 
         &::after {
             content: '';
             position: absolute;
             right: 0;
-            top: 0;
-            width: 3px;
-            height: 100%;
+           bottom: 0;
+            width: 100%;
+            height: 3px;
             background-color: color(accent);
-            transform: translateY(-100%);
+            transform: translateX(-100%);
             transition: .3s $custom_easing transform;
             transition-delay: .5s;
+
+            @media (min-width: breakpoint(sm)) {
+                transform: translateY(-100%);
+                width: 3px;
+                height: 100%;
+                top: 0;
+                bottom: unset;
+            }
         }
 
         .check-mark-icon {
@@ -34,7 +77,11 @@
     }
 
     .contact-modal-right {
-        padding: 25px 35px;
+        padding: 35px 15px;
+
+        @media (min-width: breakpoint(sm)) {
+            padding: 10px 35px;
+        }
     }
 
     .title {
@@ -50,11 +97,19 @@
     }
 
     .bottom-button-container {
-        margin-top: 50px;
+        margin-top: 70px;
+
+        @media (min-width: breakpoint(sm)) {
+            margin-top: 50px;
+        }
     }
 
     .bottom-button {
-        margin-left: 50px;
+        margin-left: 20px;
+
+        @media (min-width: breakpoint(sm)) {
+            margin-left: 50px;
+        }
     }
 
     .flag-text {
@@ -62,6 +117,18 @@
         font-weight: 300;
         font-style: italic;
         margin: 0 0 5px 0;
+    }
+
+    .close-btn-container {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+
+    .close-btn {
+
+        width: 15px;
+        height: 15px;
     }
 
     &.activate-animations__scoped {
@@ -72,7 +139,7 @@
         }
 
         .contact-modal-left::after {
-            transform: translateY(0);
+            transform: translate(0);
         }
     }
 }

@@ -18,8 +18,8 @@ export default function Header({ path }) {
     const [isMobileNavFixed, setIsMobileNavFixed] = useState(false);
     const [isMobileMenuBtnSwapping, setIsMobileMenuBtnSwapping] = useState(false);
     const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
-
-    const isProjectDetailPage = path.match('projects/') ? true : false
+    // console.log(path)
+    const isProjectPage = path !== '/' ? true : false
     
     const openNav = () => setIsMobileNavOpen(true);
     const closeNav = () => setIsMobileNavOpen(false);
@@ -60,7 +60,7 @@ export default function Header({ path }) {
         <header className={`header__module ${isMobileMenuBtnSwapping ? 'mobile-menu-swapping' : ''} ${isMobileNavFixed ? 'mobile-nav-fixed' : ''} ${isMobileNavOpen ? 'mobile-nav-open' : ''}`}>
             <nav>
                 <button 
-                    className={`mobile-menu-btn stationary ${isProjectDetailPage ? 'Projects' : 'Home'}`}
+                    className={`mobile-menu-btn stationary ${isProjectPage ? 'Projects' : 'Home'}`}
                     onClick={openNav}
                 >
                     <div className="inner-wrapper">
@@ -69,7 +69,7 @@ export default function Header({ path }) {
                         <span 
                             className={`mobile-menu-breadcrumb`}
                         >
-                            {isProjectDetailPage ? 'Projects' : 'Home'}
+                            {isProjectPage ? 'Projects' : 'Home'}
                         </span>
                     </div>
                     
@@ -77,7 +77,7 @@ export default function Header({ path }) {
 
                 <div className="mobile-menu-btn-scrollable-wrapper">
                     <button 
-                        className={`mobile-menu-btn scrollable ${isProjectDetailPage ? 'Projects' : activeMenuItem}`}
+                        className={`mobile-menu-btn scrollable ${isProjectPage ? 'Projects' : activeMenuItem}`}
                         onClick={openNav}
                     >
                         <div className="inner-wrapper">
@@ -86,7 +86,7 @@ export default function Header({ path }) {
                             <span 
                                 className={`mobile-menu-breadcrumb`}
                             >
-                                {isProjectDetailPage ? 'Projects' : activeMenuItem}
+                                {isProjectPage ? 'Projects' : activeMenuItem}
                             </span>
                         </div>
                         
@@ -105,7 +105,7 @@ export default function Header({ path }) {
                                 className={`
                                     ${path === '/' && menuItem === 'Home' || 
                                     path === '/#home' && menuItem === 'Home' ? 'active' : ''}
-                                    ${isProjectDetailPage && menuItem === 'Projects' ? 'active' : ''}
+                                    ${isProjectPage && menuItem === 'Projects' ? 'active' : ''}
                                 `}
                             >
 
@@ -133,8 +133,8 @@ export default function Header({ path }) {
                                 key={menuItem + i + 'nav-link'}
                                 className={`
                                     ${
-                                        isProjectDetailPage && menuItem === 'Projects' ? 'active' : 
-                                        !isProjectDetailPage && activeMenuItem === menuItem ? 'active' : ''
+                                        isProjectPage && menuItem === 'Projects' ? 'active' : 
+                                        !isProjectPage && activeMenuItem === menuItem ? 'active' : ''
                                     }
                                 `}
                             >
