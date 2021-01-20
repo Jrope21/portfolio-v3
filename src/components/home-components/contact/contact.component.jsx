@@ -30,9 +30,9 @@ const Contact = React.forwardRef(({ sectionRef }) => {
             setIsSubmitting(false);
             setSubmissionSuccess(true);
 
-            setTimeout(() => {
-                setSubmissionSuccess(false);
-            }, 1500)    
+            // setTimeout(() => {
+            //     setSubmissionSuccess(true);
+            // }, 1500)    
         }, 750)
     }
 
@@ -58,7 +58,13 @@ const Contact = React.forwardRef(({ sectionRef }) => {
                 />
             </div>
 
-            <form className={`contact-form ${isSubmitting ? 'is-submitting' : ''}`} action="">
+            <form className={`contact-form ${
+                isSubmitting || 
+                submissionSuccess || 
+                submissionError ? 'is-submitting' : ''}
+            `} 
+                action=""
+            >
                 <label 
                     className="contact-label fade-up__mount" 
                     htmlFor="contact-name"
@@ -118,30 +124,30 @@ const Contact = React.forwardRef(({ sectionRef }) => {
                         type="submit"
                     >
                             
-                        <span className={`submit-btn-text ${submissionSuccess || submissionError ? 'fade-down' : ''}`}>
+                        <span className={`submit-btn-text`}>
                             Send Message
                         </span>
 
-                        <span className={`submit-btn-text ${submissionSuccess ? '' : 'fade-down'}`}>
+                        <span className={`submit-btn-text`}>
                             Success
                         </span>
 
-                        <span className={`submit-btn-text ${submissionError ? '' : 'fade-down'}`}>
+                        <span className={`submit-btn-text`}>
                             Error
                         </span>
 
                         <DotLoader overlay={true} loading={isSubmitting} />
                     </button>
                 </div>
-
-                <ContactModal 
-                    title={'Congrats!'}
-                    description={'Your message was submitted.'}
-                    flagText={`Don't Be Shy!`}
-                    buttonText={'Send Another One'}
-                />
-              
             </form>
+
+            <ContactModal 
+                title={'Congrats!'}
+                description={'Your message was submitted.'}
+                flagText={`Don't Be Shy!`}
+                buttonText={'Send Another One'}
+                isVisible={submissionSuccess}
+            />
         </section>
     )
 });

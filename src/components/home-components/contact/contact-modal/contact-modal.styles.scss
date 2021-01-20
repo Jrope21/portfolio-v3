@@ -1,11 +1,36 @@
 
 .contact-modal__module {
+    display: flex;
     box-shadow: 18px 18px 20px #24262B, -18px -18px 20px #30343A;
     max-width: 445px;
     border-radius: 20px;
 
-    .left {
+    .contact-modal-left {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 145px;
+        overflow: hidden;
 
+        &::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 3px;
+            height: 100%;
+            background-color: color(accent);
+            transform: translateY(-100%);
+            transition: .3s $custom_easing transform;
+            transition-delay: .5s;
+        }
+
+        .check-mark-icon {
+            transform: scale(.1);
+            opacity: 0;
+            transition: opacity 350ms $custom_easing, transform 450ms $custom_easing;
+        }
     }
 
     .contact-modal-right {
@@ -37,5 +62,17 @@
         font-weight: 300;
         font-style: italic;
         margin: 0 0 5px 0;
+    }
+
+    &.activate-animations__scoped {
+
+        .check-mark-icon {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .contact-modal-left::after {
+            transform: translateY(0);
+        }
     }
 }

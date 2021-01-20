@@ -68,7 +68,10 @@
     }
 
     .contact-form {
+        position: relative;
         padding: 0 10px;
+        opacity: 1;
+        transition: .45s $custom_easing opacity;
 
         @media (min-width: breakpoint(sm)) {
             padding: 0 0 0 10px;
@@ -200,6 +203,8 @@
     }
 
     .is-submitting {
+        opacity: .5;
+        // transition-delay: 0ms !important;
 
         .contact-submit-btn {
             cursor: unset;
@@ -209,9 +214,9 @@
             }
         }
 
-        .contact-label {
-            opacity: .5;
-            transition-delay: 0ms !important;
-        }
+        // .contact-label {
+        //     opacity: .5;
+        //     transition-delay: 0ms !important;
+        // }
     }
 }

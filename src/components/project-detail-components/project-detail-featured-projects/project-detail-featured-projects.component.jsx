@@ -7,9 +7,10 @@ import JrButton from '@common-components/jr-button/jr-button.component'
 
 import { featuredProjects } from './_data'
 
-const currentUrlPath = typeof document !== `undefined` ? document.location.pathname : '';
 
 const ProjectDetailFeaturedProjects = () => {
+
+    const currentUrlPath = typeof document !== `undefined` ? document.location.pathname : '';
 
     return (
         <section 
@@ -50,8 +51,9 @@ const ProjectDetailFeaturedProjects = () => {
                 className={'view-all-btn fade-up__mount'}
                 style={{ transitionDelay: `${100 + featuredProjects.length * 100}ms` }}
                 urlPath={'/archive'}
-                text={'Use archive for the full list of projects I’ve worked on.'}
-            />
+            > 
+                Use archive for the full list of projects I’ve worked on.
+            </JrButton>
 
         </section>
     )
