@@ -15,7 +15,7 @@ export default function ContactModal({
 }) {
     return (
         <div className={`contact-modal__module ${isVisible ? 'activate-animations__scoped' : ''}`}>
-            <div className={`contact-modal-inner-container fade-up__scoped`}>
+            <div className={`contact-modal-inner-container fade-up__scoped fade-down-out`}>
                 <div className="contact-modal-left">
                     <CheckMark
                         className="check-mark-icon"
@@ -50,8 +50,8 @@ export default function ContactModal({
                 </div>
 
                 <div 
-                    className="fade-up__scoped close-btn-container"
-                    style={{ transitionDelay: `350ms` }}    
+                    className="close-btn-container"
+                    style={{ transitionDelay: `450ms` }}    
                 >
                     <CloseButton
                         className="close-btn"
