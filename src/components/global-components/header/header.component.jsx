@@ -7,7 +7,7 @@ import { useScrollPosition } from "@hooks/useScrollPosition"
 import { GlobalContext } from '@global-components/global.context'
 import { menuItems } from '@config'
 
-export default function Header({ path }) {
+export default function Header({ path = '/' }) {
 
     const [globalContextData] = useContext(GlobalContext)
     const { activeMenuItem } = globalContextData;
@@ -70,6 +70,7 @@ export default function Header({ path }) {
                             className={`mobile-menu-breadcrumb`}
                         >
                             {isProjectPage ? 'Projects' : 'Home'}
+
                         </span>
                     </div>
                     

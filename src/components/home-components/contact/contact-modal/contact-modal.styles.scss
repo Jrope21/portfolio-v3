@@ -5,7 +5,7 @@
     transform: translateX(-50%);
     bottom: 35px;
     width: 90%;
-    max-width: 260px;
+    max-width: 270px;
     // visibility: hidden;
     // tran
     // display: none;
@@ -79,7 +79,7 @@
             background-color: color(accent);
             transform: translateX(-100%);
             transition: .3s $custom_easing transform;
-            transition-delay: .5s;
+            transition-delay: .75s;
 
             @media (min-width: breakpoint(sm)) {
                 transform: translateY(-100%);
