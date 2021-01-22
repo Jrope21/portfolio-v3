@@ -1,12 +1,12 @@
 
 $card_border: 3px solid rgba(color(secondary), .7);
 
-.sal-animate .featured-project-card__module .project-description {
-    // BUG --- "data-sal" wouldn't trigger on scroll unless this started out as
-    // "display: none"
-    // no idea why -- scroll plugin has react compatability issues
-    display: block;
-}
+// .sal-animate .featured-project-card__module .project-description {
+//     // BUG --- "data-sal" wouldn't trigger on scroll unless this started out as
+//     // "display: none"
+//     // no idea why -- scroll plugin has react compatability issues
+//     display: block;
+// }
 
 .featured-project-card__module {
 
@@ -76,10 +76,10 @@ $card_border: 3px solid rgba(color(secondary), .7);
     }
 
     .project-description {
-        // BUG --- "data-sal" wouldn't trigger on scroll unless this started out as
-        // "display: none"
-        // no idea why -- scroll plugin has react compatability issues
-        display: none;
+        // // BUG --- "data-sal" wouldn't trigger on scroll unless this started out as
+        // // "display: none"
+        // // no idea why -- scroll plugin has react compatability issues
+        // display: none;
         font-size: px-to-rem(14px);
         margin: 6px 0 12px 0;
         font-weight: 300;

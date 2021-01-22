@@ -67,6 +67,7 @@
             }
 
             &.scrollable {
+                z-index: -1;
                 position: fixed;
                 left: calc(50% - #{$page_container_max_width} / 2);
             }
@@ -512,6 +513,10 @@
                 transform: translateX(-10px) !important;
                 opacity: 0;
             }
+        }
+
+        .navigation-overflow-wrapper.stationary {
+            z-index: -2;
         }
     }
 

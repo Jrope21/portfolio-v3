@@ -48,6 +48,18 @@
         }
     }
 
+    // &::before {
+    //     content: ''; 
+    //     position: absolute;
+    //     right: 0;
+    //     top: 0;
+    //     width: 3px;
+    //     height: 100%;
+    //     // border-right: 3px solid color(accent);
+    //     background-color: color(accent);
+    //     opacity: .1;
+    // }
+
     &::after {
         content: ''; 
         position: absolute;
