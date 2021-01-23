@@ -46,7 +46,7 @@ export default function HomeTemplate() {
     // const updatedViewedSections = allViewedSections;
     
     // set to >= 1, so the menu won't change to "Home"
-    for(let i = sectionNavNamesInOrder.length - 1; i >= 1; i--) {
+    for(let i = sectionNavNamesInOrder.length - 1; i >= 0; i--) {
       const elementScrollY = sectionRefs.current[i].current.offsetTop;
 
       if(elementScrollY < currentScrollY + 200) {

@@ -18,7 +18,6 @@ export default function Header({ path = '/' }) {
     const [isMobileNavFixed, setIsMobileNavFixed] = useState(false);
     const [isMobileMenuBtnSwapping, setIsMobileMenuBtnSwapping] = useState(false);
     const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
-    // console.log(path)
     const isProjectPage = path !== '/' ? true : false
     
     const openNav = () => setIsMobileNavOpen(true);
@@ -51,8 +50,7 @@ export default function Header({ path = '/' }) {
     }, [isMobileNavFixed])
 
     useEffect(() => {
-        setIsMounted(true);
-        
+        setIsMounted(true);    
     }, [])
     
 
@@ -105,8 +103,8 @@ export default function Header({ path = '/' }) {
                                 key={menuItem + i + 'nav-link'}
                                 className={`
                                     ${path === '/' && menuItem === 'Home' || 
-                                    path === '/#home' && menuItem === 'Home' ? 'active' : ''}
-                                    ${isProjectPage && menuItem === 'Projects' ? 'active' : ''}
+                                    path === '/#home' && menuItem === 'Home' ? 'active-stationary' : ''}
+                                    ${isProjectPage && menuItem === 'Projects' ? 'active-stationary active' : activeMenuItem === menuItem && !isProjectPage  ? 'active' : ''}
                                 `}
                             >
 

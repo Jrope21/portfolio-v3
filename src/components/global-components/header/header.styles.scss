@@ -199,33 +199,40 @@
                 // }
             }
 
+            .active-stationary {
+
+                @media (min-width: breakpoint(lg)) {
+                    a {
+                        color: color(primary);
+                    }
+    
+                    .number {
+                        opacity: 1;
+                    }
+                }
+            }
+
             .active {
+
                 a {
                     color: color(primary);
                 }
-                // margin-top: 0;
-                // left: 50%;
-                // transform: rotate(0deg) translateY(-50%) translateX(-50%);
-                // font-weight: 700;
-            
-                // color: color(accent);
 
                 .number {
-                    // display: none;
-                    // position: static;
-                    // display: block;
-                    // margin-bottom: -5px;
-                    // margin: 0;
-                    // top: 21px;
-                    // bottom: 0;
-                    // left: 50%;
-                    // transform: translateX(-50%);
-                    // right: -7px;
-                    // width: 45px;
-                    // text-align: right;
                     opacity: 1;
                 }
+
+                @media (min-width: breakpoint(lg)) {
+                    a {
+                        color: rgba(color(secondary), .7);
+                    }
+
+                    .number {
+                        opacity: .5;
+                    }
+                }           
             }
+            
             
         }
 
