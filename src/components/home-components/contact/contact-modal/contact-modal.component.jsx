@@ -11,32 +11,43 @@ export default function ContactModal({
     flagText,
     buttonText,
     isVisible,
-    closeModal
+    closeModal,
+    submissionError
 }) {
     return (
         <div className={`contact-modal__module ${isVisible ? 'activate-animations__scoped' : ''}`}>
             <div className={`contact-modal-inner-container fade-up__scoped fade-down-out`}>
                 <div className="contact-modal-left">
-                    <CheckMark
-                        className="check-mark-icon"
-                        isClickable={true}
-                        style={{ transitionDelay: `200ms` }}
-                        onClick={closeModal}
-                    />
+                    {!submissionError ? 
+                        <CheckMark
+                            className="check-mark-icon"
+                            isClickable={true}
+                            style={{ transitionDelay: `200ms` }}
+                            onClick={closeModal}
+                        />
+                    :
+                        <CloseButton
+                            className="error-icon-container"
+                            iconClassName="error-icon"
+                            style={{ transitionDelay: `200ms` }}
+                            onClick={closeModal}
+                        />
+                    }
+                   
                 </div>
                 <div className="contact-modal-right">
                     <h2 
                         className="title fade-up__scoped"
-                        style={{ transitionDelay: `250ms` }}
+                        style={{ transitionDelay: `300ms` }}
                     >{title}</h2>
                     <p 
                         className="description fade-up__scoped"
-                        style={{ transitionDelay: `300ms` }}
+                        style={{ transitionDelay: `400ms` }}
                     >{description}</p>
 
                     <div 
                         className="bottom-button-container fade-up__scoped"
-                        style={{ transitionDelay: `350ms` }}
+                        style={{ transitionDelay: `500ms` }}
                     >
                         <p className="flag-text">{flagText}</p>
                         <JrButton 
@@ -51,7 +62,7 @@ export default function ContactModal({
 
                 <div 
                     className="close-btn-container"
-                    style={{ transitionDelay: `450ms` }}    
+                    style={{ transitionDelay: `600ms` }}    
                 >
                     <CloseButton
                         className="close-btn"

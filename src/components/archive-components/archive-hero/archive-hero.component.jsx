@@ -16,19 +16,19 @@ export default function ArchiveHero() {
                     className="featured-projects-list"
                     title={'Featured'}
                     skills={[
-                        `<a href="https://www.direpairs.com" rel="noopener noreferrer" target="_blank">
+                        `<a class="inline-link" href="https://www.direpairs.com" rel="noopener noreferrer" target="_blank">
                             direpairs.com
                         </a>`,
-                        `<a href="https://www.visithalcyon.com" rel="noopener noreferrer" target="_blank">
+                        `<a class="inline-link" href="https://www.visithalcyon.com" rel="noopener noreferrer" target="_blank">
                             visithalcyon.com
                          </a>`,
-                        `<a href="https://www.stallionoilfield.com" rel="noopener noreferrer" target="_blank">
+                        `<a class="inline-link" href="https://www.stallionoilfield.com" rel="noopener noreferrer" target="_blank">
                             stallionoilfield.com
                         </a>`,
-                        `<a href="https://www.uptexas.org" rel="noopener noreferrer" target="_blank">
+                        `<a class="inline-link" href="https://www.uptexas.org" rel="noopener noreferrer" target="_blank">
                             uptexas.org
                         </a>`,
-                        `<a href="https://www.creativerevolt.com" rel="noopener noreferrer" target="_blank">
+                        `<a class="inline-link" href="https://www.creativerevolt.com" rel="noopener noreferrer" target="_blank">
                             creativerevolt.com
                         </a>`,
                     ]} 

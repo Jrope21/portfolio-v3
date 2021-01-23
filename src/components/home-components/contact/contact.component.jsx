@@ -151,11 +151,12 @@ const Contact = React.forwardRef(({ sectionRef }) => {
                 </form>
 
                 <ContactModal 
-                    title={'Congrats!'}
-                    description={'Your message was submitted.'}
+                    title={!submissionError ? 'Congrats!' : 'Uh Oh!'}
+                    description={!submissionError ? 'Your message was submitted.' : 'Your message was not submitted.'}
                     flagText={`Don't Be Shy!`}
-                    buttonText={'Send Another One'}
-                    isVisible={submissionSuccess}
+                    buttonText={!submissionError ? 'Send Another One' : 'Try Another One'}
+                    submissionError={submissionError}
+                    isVisible={submissionSuccess || submissionError}
                     closeModal={resetForm}
                 />
             </div>

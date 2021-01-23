@@ -25,12 +25,21 @@
         text-transform: uppercase;
         font-weight: 800;
 
+        @media (min-width: breakpoint(sm)) {
+            margin-right: 25px;
+        }
+
         @media (min-width: breakpoint(md)) {
             font-size: px-to-rem(22px);
         }
 
+        @media (min-width: breakpoint(lg)) {
+            margin-right: 27px;
+        }
+
         @media (min-width: breakpoint(xl)) {
             font-size: px-to-rem(24px);
+            margin-right: 35px;
         }
 
         @media (min-width: breakpoint(xxl)) {
