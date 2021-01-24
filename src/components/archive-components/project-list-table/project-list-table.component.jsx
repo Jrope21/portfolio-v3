@@ -69,7 +69,7 @@ export default function ProjectListTable({
                         </div>
                         <div className="table-col-5 table-col col-border links-container">
 
-                            {projectLink ?
+                            {projectLink && !projectDetailPath ?
                                 <a 
                                     href={projectLink} 
                                     rel="noopener noreferrer" 
@@ -77,9 +77,7 @@ export default function ProjectListTable({
                                 >
                                     <ExternalLinkIcon altColor={true} />
                                 </a>
-                            : 
-                                <span className="link-text">TBD</span>
-                            }
+                            : null}
 
                             {projectDetailPath &&
                                 <Link to={projectDetailPath}>
@@ -99,6 +97,10 @@ export default function ProjectListTable({
                                     <GithubIcon />
                                 </a>
                             }
+
+                            {!projectLink && !projectDetailPath ? 
+                                <span className="link-text">TBD</span>
+                            : null}
                            
                         </div>
                     </div>

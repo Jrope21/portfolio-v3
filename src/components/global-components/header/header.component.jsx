@@ -18,7 +18,7 @@ export default function Header({ path = '/' }) {
     const [isMobileNavFixed, setIsMobileNavFixed] = useState(false);
     const [isMobileMenuBtnSwapping, setIsMobileMenuBtnSwapping] = useState(false);
     const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
-    const isProjectPage = path !== '/' ? true : false
+    const isProjectPage = path && path !== '/' ? true : false
     
     const openNav = () => setIsMobileNavOpen(true);
     const closeNav = () => setIsMobileNavOpen(false);
