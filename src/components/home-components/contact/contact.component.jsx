@@ -33,7 +33,7 @@ const Contact = React.forwardRef(({ sectionRef }) => {
             // setTimeout(() => {
             //     setSubmissionSuccess(true);
             // }, 1500)    
-        }, 750)
+        }, 850)
     }
 
     const resetForm = () => {

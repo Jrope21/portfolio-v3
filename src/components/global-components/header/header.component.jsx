@@ -54,7 +54,7 @@ export default function Header({ path = '/' }) {
     }, [])
     
 
-    return (
+    if(isMounted) return (
         <header className={`header__module ${isMobileMenuBtnSwapping ? 'mobile-menu-swapping' : ''} ${isMobileNavFixed ? 'mobile-nav-fixed' : ''} ${isMobileNavOpen ? 'mobile-nav-open' : ''}`}>
             <nav>
                 <button 
@@ -133,7 +133,8 @@ export default function Header({ path = '/' }) {
                                 className={`
                                     ${
                                         isProjectPage && menuItem === 'Projects' ? 'active' : 
-                                        !isProjectPage && activeMenuItem === menuItem ? 'active' : ''
+                                        !isProjectPage && activeMenuItem === menuItem  && activeMenuItem !== 'Home' ? 'active' : 
+                                        activeMenuItem === 'Home' && menuItem === 'Experience' ? 'active' : ''
                                     }
                                 `}
                             >
@@ -154,4 +155,5 @@ export default function Header({ path = '/' }) {
             </nav>
         </header>
     )
+    return null;
 }

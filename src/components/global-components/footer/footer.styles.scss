@@ -12,6 +12,8 @@
     }
 
     .download-btn {
+        position: relative;
+        z-index: 0;
         color: color(page_background);
         margin: 12px 0 0 0;
         padding: 8px 15px;
@@ -31,8 +33,24 @@
             margin: 15px 0 0 0;
         }
 
-        &:hover {
-            background-color: color(accent);
+        &::before {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            bottom: 0;
+            left: 0;
+            // transform: translateX(-100%);
+            opacity: 0;
+            height: 100%;
+            width: 100%;
+            transition: .3s $custom_easing opacity;
+            // transition: .5s cubic-bezier(.19,1,.22,1) transform;
+            background: color(accent);
+            border-radius: 5px;
+        }
+
+        &:hover::before {
+            opacity: 1;
             // color: color(secondary);
         }
     }
