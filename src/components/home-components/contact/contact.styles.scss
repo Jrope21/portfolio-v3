@@ -21,8 +21,6 @@
 
     @media (min-width: breakpoint(xl)) {
         padding-left: 220px;
-        // margin-top: -125px;
-        // margin-bottom: 75px;
     }
 
     .titles-container {
@@ -143,10 +141,6 @@
         @media (min-width: breakpoint(xl)) {
             max-width: 490px;
         }
-
-        // @media (min-width: breakpoint(lg)) {
-        //     max-width: 490px;
-        // }
     }
 
     .contact-textarea {
@@ -177,31 +171,10 @@
         font-size: px-to-rem(23px);
         font-weight: 800; 
         cursor: pointer;
-        // transition: .3s background-color;
         
         @media (min-width: breakpoint(xxl)) {
             font-size: px-to-rem(25px);
             height: 40px;
-        }
-
-        &::before {
-            content: '';
-            position: absolute;
-            z-index: -1;
-            bottom: 0;
-            left: 0;
-            // transform: translateX(-100%);
-            opacity: 0;
-            height: 100%;
-            width: 100%;
-            transition: .3s $custom_easing opacity;
-            // transition: .5s cubic-bezier(.19,1,.22,1) transform;
-            background: color(secondary);
-        }
-
-        &:hover::before {
-            opacity: 1;
-            // background-color: color(secondary);
         }
 
         .inner-container {
@@ -209,10 +182,6 @@
         }
 
         .submit-btn-text {
-            // position: absolute;
-            // top: 50%;
-            // left: 50%;
-            // transform: translate(-50%, -50%);
             opacity: 1;
             transition: opacity 450ms $custom_easing;
         }
@@ -225,22 +194,17 @@
 
     .is-submitting {
         opacity: .5;
-        // transition-delay: 0ms !important;
 
         .contact-submit-btn {
             cursor: unset;
 
-            &::before {
+            &::before { // this overrides the hover:bg-change class
                 opacity: 0;
             }
-            &:hover {
+
+            &:hover { // this overrides the hover:bg-change class
                 background-color: color(accent);
             }
         }
-
-        // .contact-label {
-        //     opacity: .5;
-        //     transition-delay: 0ms !important;
-        // }
     }
 }

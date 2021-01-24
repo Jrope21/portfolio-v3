@@ -4,7 +4,10 @@ import './check-mark.styles.scss'
 export default function CheckMark({ isClickable = false, className = '', ...otherProps }) {
 
     if(isClickable) return (
-        <button className={`check-mark__module is-clickable ${className}`} {...otherProps}>
+        <button 
+            className={`check-mark__module hover:btn-shadow ${className}`} 
+            {...otherProps}
+        >
             <svg 
                 width="37" 
                 height="29" 
@@ -18,7 +21,10 @@ export default function CheckMark({ isClickable = false, className = '', ...othe
     )
 
     return (
-        <div className={`check-mark__module ${className}`} {...otherProps}>
+        <div 
+            className={`check-mark__module ${className}`} 
+            {...otherProps}
+        >
             <svg 
                 width="37" 
                 height="29" 

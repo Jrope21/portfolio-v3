@@ -6,7 +6,6 @@
         display: flex;
         align-items: center;
         font-style: italic;
-        // color: color(page_background);
         justify-content: center;
         background: color(page_background);
         font-size: px-to-rem(16px);
@@ -46,10 +45,6 @@
         
         &:hover {
             color: color(accent);
-       
-            // .text::before {
-            //     transform: translate(0);
-            // }
        }
     }
 
@@ -65,7 +60,6 @@
         background-color: color(primary);
         text-align: left;
         overflow: hidden;
-        // transition: .5s background-color;
 
         @media (min-width: breakpoint(sm)) {
             margin-top: 0px;
@@ -75,33 +69,9 @@
         @media (min-width: breakpoint(xxl)) {
             font-size: px-to-rem(18px);
         }
-        
-        &::before {
-            content: '';
-            position: absolute;
-            z-index: -1;
-            bottom: 0;
-            left: 0;
-            // transform: translateX(-100%);
-            opacity: 0;
-            height: 100%;
-            width: 100%;
-            transition: .3s $custom_easing opacity;
-            // transition: .5s cubic-bezier(.19,1,.22,1) transform;
-            background: color(accent);
-        }
     
         .text {
             margin-right: 10px;
-        }
-    
-        &:hover {
-            // background-color: color(accent);
-            // color: color(accent);
-            &::before {
-                // transform: translateX(0);
-                opacity: 1;
-            }
         }
     }
 

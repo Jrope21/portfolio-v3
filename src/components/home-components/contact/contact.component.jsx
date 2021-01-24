@@ -139,7 +139,7 @@ const Contact = React.forwardRef(({ sectionRef }) => {
                     <div className="fade-up__mount" style={{ transitionDelay: `500ms` }}>
                         <button 
                             onClick={submissionHandler}
-                            className="contact-submit-btn" 
+                            className="contact-submit-btn hover:bg-change hover:_bg-secondary" 
                             type="submit"
                         >                       
                             <span className={`submit-btn-text`}>

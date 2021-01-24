@@ -36,13 +36,13 @@ export default function JrLink({
 
     if(href) return (
         <a 
-            className={`jr-link__module external-link ${className}`}
+            className={`jr-link__module external-link  ${className}`}
             href={href} 
             rel="noopener noreferrer" 
             target="_blank"
             {...otherProps}
         >
-            <span className="inner-text">
+            <span className="hover:text-underline inner-text">
                 {children}
             </span>
             <ExternalLinkIcon className={`external-link-icon ${iconClassName}`} />

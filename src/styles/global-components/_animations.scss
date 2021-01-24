@@ -1,51 +1,25 @@
-@keyframes exitScreen {
-    100% {
-      transform: translate(-9999px);
-    }
-}
+// ********************************************************
+// ********************************************************
+// **
+// **  Theme Wide Animations
+// **
+// **  general style guidelines
+// **
+// **  1. partials (classes requireing a parent) -- will have a _ before the class
+// **  => example: _bg-accent
+// **  m = mount
+// **  s = scoped
+// **
+// ********************************************************
+// ********************************************************
 
-// .fade-up-enter-done {
-//   transition: opacity 350ms cubic-bezier(0.645, 0.045, 0.355, 1), transform 350ms cubic-bezier(0.645, 0.045, 0.355, 1);
 
-// }
-
-// .fade-up-enter-active {
-//   opacity: 1;
-//   transform: translateY(0px);
-//   transition: opacity 350ms cubic-bezier(0.645, 0.045, 0.355, 1), transform 350ms cubic-bezier(0.645, 0.045, 0.355, 1);
-// }
-
-// .fade-up-enter {
-//   opacity: 0.01;
-//   transform: translateY(20px);
-//   // transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1), transform 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
-// }
-
-@keyframes fadeDownOut{
-  0%{
-    opacity: 1;
-    transform: translateX(0px);
-  }
-
-  99% {
-    opacity: .01 !important;
-    transform: translateY(20px) !important;
-  }
-
-  100% {
-    opacity: .01 !important;
-    transform: translateY(20px) !important;
-    overflow: hidden;
-    width: 0;
-    height: 0;
-  }
-}
 
 @mixin disabledAnimations ($important: '') {
-  .fade-up, .fade-up__mount, .fade-up__scoped {
+  .fade-up, .fade-up__mount, .fade-up__scoped { // this is the main intro animation class
     opacity: .01 #{$important};
     transform: translateY(20px) #{$important};
-    // transition: opacity 450ms $custom_easing, transform 450ms $custom_easing;
+    will-change: transform, opacity;
   }
   
   .slide-up, .slide-up__mount {
@@ -56,13 +30,6 @@
     opacity: .01 #{$important};
     transform: translateX(20px) #{$important};
   }
-  
-}
-
-.fade-down-out {
-  opacity: .01;
-  transform: translateY(20px);
-  transition: opacity 450ms $custom_easing, transform 450ms $custom_easing;
 }
 
 @include disabledAnimations();
@@ -71,22 +38,144 @@
   @include disabledAnimations('!important');
 }
 
-.sal-animate.fade-up__mount, .sal-animate .fade-up__mount, .activate-animations__mount.fade-up__mount, .activate-animations__mount .fade-up__mount, .activate-animations__scoped .fade-up__scoped, .activate-animations__scoped.fade-up__scoped {
-  opacity: 1;
-  transform: translateY(0px);
+
+// ********************************************************
+// ********************************************************
+// **
+// **  Mount state animations
+// **
+// ********************************************************
+// ********************************************************
+
+
+.fade-down-out { // using on contact modal
+  opacity: .01;
+  transform: translateY(20px);
   transition: opacity 450ms $custom_easing, transform 450ms $custom_easing;
 }
 
-.sal-animate {
+.sal-animate, .activate-animations__mount {
 
-  &.fade-left__mount, .fade-left__mount {
-      opacity: 1;
-      transform: translateX(0px);
-      transition: opacity 450ms $custom_easing, transform 450ms $custom_easing;
+  &.fade-up__mount, .fade-up__mount {
+    opacity: 1;
+    transform: translateY(0px);
+    transition: opacity 450ms $custom_easing, transform 450ms $custom_easing;
+  }
+
+  &.slide-up__mount, .slide-up__mount{
+    transform: translateY(0);
+    transition: .3s $custom_easing transform;
   }
 }
 
-.sal-animate.slide-up__mount, .sal-animate .slide-up__mount, .activate-animations__mount.slide-up__mount, .activate-animations__mount .slide-up__mount, .activate-animations__scoped .slide-up__scoped {
-  transform: translateY(0);
-  transition: .3s $custom_easing transform;
+// ********************************************************
+// ********************************************************
+// **
+// **  Scoped state animations
+// **
+// ********************************************************
+// ********************************************************
+
+
+.activate-animations__scoped {
+
+  &.fade-up__scoped, .fade-up__scoped {
+    opacity: 1;
+    transform: translateY(0px);
+    transition: opacity 450ms $custom_easing, transform 450ms $custom_easing;
+  }
+}
+
+
+// ********************************************************
+// ********************************************************
+// **
+// **  Hover state animations
+// **
+// ********************************************************
+// ********************************************************
+
+
+.hover\:bg-change {
+    position: relative;
+    overflow: hidden;
+
+      &::before { // doing this for animation performance boost (transition opacity)
+        content: '';
+        position: absolute;
+        z-index: -1;
+        bottom: 0;
+        left: 0;
+        opacity: 0;
+        height: 100%;
+        width: 100%;
+        transition: .3s $custom_easing opacity;     
+    }
+
+    &.hover\:_bg-accent:before {
+        background-color: color(accent);
+    }
+
+    &.hover\:_bg-secondary:before {
+      background-color: color(secondary);
+    }
+
+
+    &:hover::before {
+        opacity: 1;
+    }
+}
+
+.hover\:btn-shadow {
+  position: relative;
+  box-shadow: 1px 1px 2px #24262B, -1px -1px 2px #30343A;
+  // overflow: hidden;
+
+  &::before { // doing this for animation performance boost (transition opacity)
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 1;
+      box-shadow: 18px 18px 20px #24262B, -18px -18px 20px #30343A;
+      transition: .3s opacity $custom_easing;
+      border-radius: 50px;
+  }
+
+  &:hover {
+      &::before {
+          opacity: 0;
+      }
+  }
+}
+
+
+.hover\:text-underline {
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+      content: '';
+      transform: translateX(-100%);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      border-bottom: 1px solid;
+      transition: .3s $custom_easing transform;
+  }
+
+  &:hover::before {
+      transform: translateX(0);     
+  }
+}
+
+a:hover .hover\:text-underline { // dont want underline to disappear on hovered links 
+
+  &::before {
+    transform: translateX(0);     
+  }
 }

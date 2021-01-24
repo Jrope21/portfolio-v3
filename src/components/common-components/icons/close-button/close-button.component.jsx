@@ -3,7 +3,7 @@ import './close-button.styles.scss'
 
 export default function CloseButton({ className = '', iconClassName = '', ...otherProps }) {
     return (
-        <button className={`close-button__module ${className}`} {...otherProps}>
+        <button className={`close-button__module hover:btn-shadow ${className}`} {...otherProps}>
             <span className="sr-only">This is a close button</span>
             <svg 
                 className={`close-button-icon ${iconClassName}`}

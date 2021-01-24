@@ -41,8 +41,7 @@ export default function ProjectDetailCarousel({ images }) {
                     ))}
                 </div>
                 <ol 
-                    className="carousel-controls-container "
-                    
+                    className="carousel-controls-container "       
                 >
                     {images.map(({ alt },  i) => (
                         <li 

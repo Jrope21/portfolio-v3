@@ -72,7 +72,7 @@
             background: color(accent);
             transition-delay: 100ms;
             transform: translateX(-100%);
-            transition: .45s $custom_easing transform;
+            transition: .3s $custom_easing transform;
 
             @media (min-width: breakpoint(sm)) {
                 transform: translateY(-100%);

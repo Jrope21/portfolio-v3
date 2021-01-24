@@ -1,26 +1,28 @@
 
 
-.page-width-container { // this wraps all page template
+.page-width-container { // this wraps all page templates
     max-width: 1650px;
     margin: 0 auto;
 }
 
-.page-content-container { // this wraps all page template
+.page-content-container { // this wraps all page templates
     display: flex;
     flex-direction: column;
     position: relative;
 }
 
 .container {
-    @include paddingLR(15px);
-    @include marginCenter();
-    max-width: 1280px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    
     @media (min-width: breakpoint(xs)) {
-        @include paddingLR(20px);
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     @media (min-width: breakpoint(sm)) {
-        // padding-left: 112px;
         max-width: 735px;
     }
 
@@ -29,79 +31,27 @@
     }
 
     @media (min-width: breakpoint(lg)) {
-        // padding-left: 112px;
         padding-left: 125px;
         max-width: 1280px;
     }
 
     @media (min-width: breakpoint(xxl)) {
-        // padding-left: 112px;
         max-width: 1400px;
     }
-
-    // @media()
 }
 
-// .container {
-//     @include paddingLR(15px);
-
-//     @media (min-width: breakpoint(xs)) {
-//         @include paddingLR(20px);
-//     }
-    
-//     @media (min-width: breakpoint(sm)) {
-//         padding-left: 112px;
-//     }
-
-//     @media (min-width: breakpoint(md)) {
-//         margin-left: 4%;
-//         margin-right: 4%;
-//     }
-
-//     @media (min-width: breakpoint(lg)) {
-//         // margin-left: ;
-//     }
-// }
-
-
-// .project-detail-container {
-//     @include paddingLR(15px);
-//     @include marginCenter();
-//     max-width: 1280px;
-//     @media (min-width: breakpoint(xs)) {
-//         @include paddingLR(20px);
-//     }
-
-//     @media (min-width: breakpoint(sm)) {
-//         padding-left: 112px;
-//         // padding-left: 125px;
-//         // padding-right: 40px;
-//         max-width: 735px;
-//     }
-
-//     @media (min-width: breakpoint(md)) {
-//         max-width: 875px;
-//     }
-
-//     @media (min-width: breakpoint(lg)) {
-//         // @include paddingLR(112px);
-//         @include paddingLR(125px);
-//         max-width: 1300px;
-//     }
-// }
 
 .content-page-container {
-    @include paddingLR(15px);
-    @include marginCenter();
-    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+
     @media (min-width: breakpoint(xs)) {
-        @include paddingLR(20px);
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     @media (min-width: breakpoint(sm)) {
         padding-left: 112px;
-        // padding-left: 125px;
-        // padding-right: 40px;
         max-width: 735px;
     }
 
@@ -110,8 +60,8 @@
     }
 
     @media (min-width: breakpoint(lg)) {
-        // @include paddingLR(112px);
-        @include paddingLR(125px);
+        padding-left: 125px;
+        padding-right: 125px;
         max-width: 1300px;
     }
 
@@ -143,6 +93,3 @@
         }
     }
 }
-
-
-// .container

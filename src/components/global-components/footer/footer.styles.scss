@@ -17,12 +17,10 @@
         color: color(page_background);
         margin: 12px 0 0 0;
         padding: 8px 15px;
-        // border: 1px solid color(secondary);
         background-color: color(secondary);
         font-weight: 700;
         border-radius: 5px;
         font-size: px-to-rem(14px);
-        transition: .3s background-color;
 
         @media (min-width: breakpoint(md)) {
             padding: 9px 21px;
@@ -31,27 +29,6 @@
         @media (min-width: breakpoint(xxl)) {
             font-size: px-to-rem(16px);
             margin: 15px 0 0 0;
-        }
-
-        &::before {
-            content: '';
-            position: absolute;
-            z-index: -1;
-            bottom: 0;
-            left: 0;
-            // transform: translateX(-100%);
-            opacity: 0;
-            height: 100%;
-            width: 100%;
-            transition: .3s $custom_easing opacity;
-            // transition: .5s cubic-bezier(.19,1,.22,1) transform;
-            background: color(accent);
-            border-radius: 5px;
-        }
-
-        &:hover::before {
-            opacity: 1;
-            // color: color(secondary);
         }
     }
 

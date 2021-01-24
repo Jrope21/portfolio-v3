@@ -8,7 +8,6 @@ import GlobalProvider from "./global.context"
 import Footer from "./footer/footer.component"
 
 export default function Layout({ path, children }) {
-  console.log('path', path)
 
   return (
     <div className="page-width-container">

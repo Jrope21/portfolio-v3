@@ -1,5 +1,5 @@
 import React from 'react'
-import ProjectDetailTemplate from '@templates/project-detail/project-detail.template'
+import ProjectDetailTemplate from '@templates/project-detail.template'
 
 import Img1 from '@images/project-detail/di-repairs/1.png'
 import Img2 from '@images/project-detail/di-repairs/2.png'

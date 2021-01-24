@@ -4,29 +4,6 @@
     align-items: center;
     font-style: italic;
 
-   .inner-text {
-       position: relative;
-       overflow: hidden;
-
-        &::before {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            border-bottom: 1px solid color(accent);
-            width: 100%;
-            transform: translateX(-100%);
-            transition: .25s $custom_easing transform;
-        }
-   }
-
-   &:hover {
-       
-        .inner-text::before {
-            transform: translate(0);
-        }
-   }
-
     &.internal-link {
         justify-content: center;
         background: color(page_background);
@@ -59,10 +36,5 @@
         @media (min-width: breakpoint(sm)) {
             margin-left: 20px;
         }
-
-        // @media (min-width: breakpoint(xxl)) {
-        //     margin-left: 25px;
-        // }
-    
     }
 }
