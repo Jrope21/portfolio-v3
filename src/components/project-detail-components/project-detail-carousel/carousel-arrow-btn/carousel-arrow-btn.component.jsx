@@ -12,7 +12,7 @@ export default function CarouselArrowBtn({ direction = 'right', hoverText = '', 
         {hoverText && 
             <span className="hover-text">{hoverText}</span>
         }
-        <span class="arrow"></span>
+        <span className="arrow"></span>
     </button>
     )
 }
