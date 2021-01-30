@@ -5,6 +5,8 @@ import ProjectListFilters from '@archive-components/project-list-filters/project
 import ProjectListTable from '@archive-components/project-list-table/project-list-table.component'
 import { listFiltersData, projectsData, tableTitlesData } from './_data'
 
+// import projectDataTest from '../../../../content/projects/projects'
+
 export default function ProjectList() {
 
     const [isMounted, setIsMounted] = useState(false);
