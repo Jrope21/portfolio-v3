@@ -2,7 +2,7 @@ const HeroImageMobile = require('@images/home/portfolio_hero_mobile.jpg');
 const HeroImageTablet = require('@images/home/portfolio_hero_tablet.jpg');
 const HeroImageDesktop = require('@images/home/portfolio_hero_desktop.jpg');
 
-const heroData = {
+const hero = {
     hero_image: {
         desktop_src: HeroImageDesktop,
         table_src: HeroImageTablet,
