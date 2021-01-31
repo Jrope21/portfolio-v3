@@ -4,7 +4,7 @@
     "hero": {
         "hero_image": {
             "desktop_src": "./home-images/portfolio_hero_desktop.jpg",
-            "table_src": "./home-images/portfolio_hero_tablet.jpg",
+            "tablet_src": "./home-images/portfolio_hero_tablet.jpg",
             "mobile_src": "./home-images/portfolio_hero_mobile.jpg",
             "alt": "A Front End Developer typing on a laptop"
         },
@@ -156,7 +156,7 @@
         },
         "statement": "Hi there! I’m Josh, a Dallas-based <strong>front end developer</strong> with a knack for programming and design. My <strong>passion</strong> comes from being a part of a solution that brings each aspect of the customer journey together across both <strong>development and design</strong> processes. I focus on creating <strong>production-ready applications</strong> with my knowledge of the user experience, and writing scalable, <strong>clean code.</strong>",
         "featured_image": {
-            "src": "./home-images/about-me-desktop.jpg",
+            "src": "./home-images/about-me-desktop-img.jpg",
             "alt": "Joshua Roper, a Senior Front End Developer"
         },
         "skills": [

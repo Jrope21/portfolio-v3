@@ -17,7 +17,23 @@ const sectionNavNamesInOrder = [
   'Contact'
 ]
 
-export default function HomeTemplate() {
+export default function HomeTemplate({
+  pageContext: {
+    pageData = {},
+    featuredProjects = {}
+  } = {pageData: {}, featuredProjects: {}}
+}) {
+
+  const { 
+    hero: heroModuleData, 
+    experience: experienceModuleData, 
+    featured_projects: featuredProjectsModuleData, 
+    contact: contactModuleData, 
+    statement_and_skills: StatementAndSkillsModuleData
+  } = pageData;
+
+  console.log(StatementAndSkillsModuleData);
+
   const heroAnimationDelay = 1100;
 
   const sectionRefs = useRef([0,1,2,3,4].map(() => createRef()));
@@ -61,9 +77,6 @@ export default function HomeTemplate() {
     }
   }, [])
 
-  const setActiveSections = () => {
-
-  }
 
   return (
     <main className="home__template">
@@ -72,22 +85,27 @@ export default function HomeTemplate() {
         style={{ height: '0px', lineHeight: '0px' }}
       />
       <Hero 
+        moduleData={heroModuleData}
         activateAnimations={isMounted ? true : false}
         sectionRef={sectionRefs.current[0]} 
       />
       <div className="container">
         <IndustryExperience 
+          moduleData={experienceModuleData}
           // activateAnimations={allViewedSections['Experience'] ? true : false}
           activateAnimations={isHeroAnimationsDone ? true : false}
           sectionRef={sectionRefs.current[1]} 
         />
         <FeaturedProjects 
+          moduleData={featuredProjectsModuleData}
           sectionRef={sectionRefs.current[2]} 
         />
         <StatementAndSkills 
+          moduleData={StatementAndSkillsModuleData}
           sectionRef={sectionRefs.current[3]} 
         />
         <Contact 
+          moduleData={contactModuleData}
           sectionRef={sectionRefs.current[4]} 
         />
       </div>

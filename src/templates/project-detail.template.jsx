@@ -5,27 +5,24 @@ import ProjectText from '@project-detail-components/project-text/project-text.co
 import ProjectDetailFeaturedProjects from '@project-detail-components/project-detail-featured-projects/project-detail-featured-projects.component'
 
 export default function ProjectDetailTemplate({
-    title,
-    year,
-    url,
-    linkText,
-    description,
-    skills,
-    images
+    pageContext: {
+        pageData = {}
+    } = {pageData: {}}
 }) {
+
     return (
         <main className="project-detail__template content-page-container container-vertical-spacer">
             <ProjectText 
-                title={title}
-                year={year}
-                url={url}
-                linkText={linkText}
-                description={description}
-                skills={skills}
+                title={pageData.full_name ? pageData.full_name : pageData.name}
+                year={pageData.year}
+                url={pageData.url}
+                linkText={pageData.url.replace(/^(?:https?:\/\/)?(?:www\.)?/i, "").split('/')[0]}
+                description={pageData.description}
+                skills={pageData.tech.full_list}
             />
 
             <ProjectDetailCarousel 
-                images={images}
+                images={pageData.images}
             />
 
             <ProjectDetailFeaturedProjects />

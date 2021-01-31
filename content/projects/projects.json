@@ -4,7 +4,7 @@
         "name": "Writing Revolt (v2)",
         "made_at": "Freelance",
         "tech": {
-            "featured_tech": ["Gatsby", "React", "Node Js", "SASS", "WordPress", "PHP"],
+            "featured_list": ["Gatsby", "React", "Node Js", "SASS", "WordPress", "PHP"],
             "filter_tags": {
                 "All": "All",         
                 "Front End": "Front End",
@@ -30,7 +30,7 @@
         "name": "Classic Car Cowboy",
         "made_at": "Freelance",
         "tech": {
-            "featured_tech": ["Next", "React", "Node Js", "SCSS", "WordPress", "PHP"],
+            "featured_list": ["Next", "React", "Node Js", "SCSS", "WordPress", "PHP"],
             "filter_tags": {
                 "All": "All",         
                 "Front End": "Front End",
@@ -95,23 +95,23 @@
         },
         "images": [
             {
-                "src": "./project-images/di-repairs/1.jpg",
+                "src": "./project-images/di-repairs/1.png",
                 "alt": "The home page for DI-Repairs custom Gatsby website"
             },
             {
-                "src": "./project-images/di-repairs/2.jpg",
+                "src": "./project-images/di-repairs/2.png",
                 "alt": "A multistep form with API integration on the DI-Repairs website"
             },
             {
-                "src": "./project-images/di-repairs/3.jpg",
+                "src": "./project-images/di-repairs/3.png",
                 "alt": "A contact call-to-action for DI-Repairs custom Gatsby website"
             },
             {
-                "src": "./project-images/di-repairs/4.jpg",
+                "src": "./project-images/di-repairs/4.png",
                 "alt": "A custom hero component on the DI-Repairs website"
             },
             {
-                "src": "./project-images/di-repairs/5.jpg",
+                "src": "./project-images/di-repairs/5.png",
                 "alt": "Custom call-to-action's to various services on DI-Repairs"
             }
         ],
@@ -122,7 +122,7 @@
         "name": "Trinity Consultants",
         "made_at": "Imaginuity",
         "tech": {
-            "featured_tech": "React, Redux, SCSS, SiteFinity, Stripe, Ucommerce",
+            "featured_list": ["React", "Redux", "SCSS", "SiteFinity", "Stripe", "Ucommerce"],
             "filter_tags": {
                 "All": "All",         
                 "Front End": "Front End",
@@ -212,7 +212,7 @@
         "name": "We Buy Ugly House's",
         "made_at": "Imaginuity",
         "tech": {
-            "featured_tech": ["JavaScript", "SCSS", "HTML5", "WordPress", "PHP"],
+            "featured_list": ["JavaScript", "SCSS", "HTML5", "WordPress", "PHP"],
             "filter_tags": {
                 "All": "All",         
                 "Front End": "Front End",
@@ -294,7 +294,7 @@
         "name": "HomeVestors",
         "made_at": "Imaginuity",
         "tech": {
-            "featured_tech": ["JavaScript", "SCSS", "HTML5", "WordPress", "PHP"],
+            "featured_list": ["JavaScript", "SCSS", "HTML5", "WordPress", "PHP"],
             "filter_tags": {
                 "All": "All",         
                 "Front End": "Front End",
@@ -315,7 +315,7 @@
         "name": "Advancial",
         "made_at": "Imaginuity",
         "tech": {
-            "featured_tech": ["Javascript", "jQuery", "CSS", "Kentico"],
+            "featured_list": ["Javascript", "jQuery", "CSS", "Kentico"],
             "filter_tags": {
                 "All": "All",         
                 "Front End": "Front End",
@@ -335,7 +335,7 @@
         "name": "City of Denton",
         "made_at": "Imaginuity",
         "tech": {
-            "featured_tech": ["Javascript", "jQuery", "CSS", "Kentico"],
+            "featured_list": ["Javascript", "jQuery", "CSS", "Kentico"],
             "filter_tags": {
                 "All": "All",         
                 "Front End": "Front End",
@@ -417,7 +417,7 @@
         "name": "Personal Portfolio (v2)",
         "made_at": "Personal",
         "tech": {
-            "featured_tech": ["Svelte", "Sapper", "SCSS", "Netlify"],
+            "featured_list": ["Svelte", "Sapper", "SCSS", "Netlify"],
             "filter_tags": {
                 "All": "All",         
                 "Front End": "Front End",
@@ -475,23 +475,23 @@
         },
         "images": [
             {
-                "src": "./project-images/uptexas/1.jpg",
+                "src": "./project-images/creative-revolt/1.jpg",
                 "alt": "The landing page for Creative Revolt"
             },
             {
-                "src": "./project-images/uptexas/2.jpg",
+                "src": "./project-images/creative-revolt/2.jpg",
                 "alt": "A call to action setup for Creative Revolt"
             },
             {
-                "src": "./project-images/uptexas/3.jpg",
+                "src": "./project-images/creative-revolt/3.jpg",
                 "alt": "The about page for Creative Revolt"
             },
             {
-                "src": "./project-images/uptexas/4.jpg",
+                "src": "./project-images/creative-revolt/4.jpg",
                 "alt": "A call to action exculusively design for Creative Revolt"
             },
             {
-                "src": "./project-images/uptexas/5.jpg",
+                "src": "./project-images/creative-revolt/5.jpg",
                 "alt": "A page from creative revolt that introduces customers to her their courses"
             }
         ],
@@ -502,7 +502,7 @@
         "name": "Personal Portfolio (v1) ",
         "made_at": "Personal",
         "tech": {
-            "featured_tech": ["JavaScript", "GSAP", "CSS", "HTML"],
+            "featured_list": ["JavaScript", "GSAP", "CSS", "HTML"],
             "filter_tags": {
                 "All": "All",         
                 "Front End": "Front End",
@@ -522,7 +522,7 @@
         "name": "Mama's Messy Kitchen",
         "made_at": "Freelance",
         "tech": {
-            "featured_tech": ["JavaScript", "CSS", "BootStrap", "HTML", "PHP"],
+            "featured_list": ["JavaScript", "CSS", "BootStrap", "HTML", "PHP"],
             "filter_tags": {
                 "All": "All",         
                 "Front End": "Front End",

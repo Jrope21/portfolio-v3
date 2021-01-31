@@ -18,14 +18,10 @@
  ********************************************************
  ********************************************************/
 
-const createPages = require("./node-lib/page-creation/create-pages")
-const createProjectDetailPages = require("./node-lib/page-creation/create-project-detail-pages")
-// const createServices = require("./node-lib/page-creation/services/_create-services")
+const createPages = require("./node-lib/page-creation/create-pages");
 
-exports.createPages = async ({ actions }) => {
-  await Promise.all([
-    createPages({ actions }),
-    // createProjectDetailPages({ actions, graphql }),
-    // createServices({ actions, graphql }),
-  ])
-}
+exports.createPages = async ({ graphql, actions }) => {
+    await Promise.all([
+        createPages({ actions, graphql }),
+    ])
+  }

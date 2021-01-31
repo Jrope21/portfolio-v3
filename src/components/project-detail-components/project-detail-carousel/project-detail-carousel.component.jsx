@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import './project-detail-carousel.styles.scss'
 
+import GatsbyImage from "gatsby-image"
+
 import CarouselArrowBtn from './carousel-arrow-btn/carousel-arrow-btn.component';
 
 export default function ProjectDetailCarousel({ images }) {
@@ -27,11 +29,16 @@ export default function ProjectDetailCarousel({ images }) {
                                 direction="left"
                                 onClick={viewPrevSlide}
                             />
-                            <img 
+                            <GatsbyImage
+                                className="carousel-image"
+                                alt={alt}
+                                fluid={src.childImageSharp.fluid}
+                            />
+                            {/* <img 
                                 src={src} 
                                 alt={alt} 
                                 key={'project-detail-carousel' + alt + i} 
-                            />
+                            /> */}
                             <CarouselArrowBtn 
                                 // hoverText={i + 1 > images.length - 1 ? '01.' : `0${i + i}.`}
                                 direction="right"

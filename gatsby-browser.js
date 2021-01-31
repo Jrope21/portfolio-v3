@@ -13,6 +13,6 @@ import CustomLayout from "./wrapPageElement"
 export const wrapPageElement = CustomLayout
 
 if (typeof window !== 'undefined') {
-    // Make scroll behavior of internal links smooth
+    // Makes scroll behavior of internal links smooth
     require('smooth-scroll')('a[href*="#"]');
-  }
+}

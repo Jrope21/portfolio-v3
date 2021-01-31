@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './hero.styles.scss'
 
-import styles from '@styles/variables.scss';
+import GatsbyImage from "gatsby-image"
 
 import SocialIcons from '@common-components/social-icons/social-icons.component';
 
@@ -9,8 +9,17 @@ import SocialIcons from '@common-components/social-icons/social-icons.component'
 // import HeroImageTablet from '@images/home/portfolio_hero_tablet.jpg'
 // import HeroImageDesktop from '@images/home/portfolio_hero_desktop.jpg'
 
-const Hero = React.forwardRef(({ sectionRef, activateAnimations = false }) => {
+const Hero = React.forwardRef(({ sectionRef, activateAnimations = false, moduleData }) => {
 
+    const {
+        hero_image,
+        title,
+        sub_title,
+        skill_one,
+        skill_two,
+        skill_three,
+        skill_four
+    } = moduleData;
     const [isMounted, setIsMounted] = useState(false);
 
     useEffect(() => {
@@ -23,8 +32,23 @@ const Hero = React.forwardRef(({ sectionRef, activateAnimations = false }) => {
             ref={sectionRef}
             
         >
-            {/* <div className="hero-image">
-                <img 
+            <div className="hero-image">
+                <GatsbyImage
+                    className="hero-mobile hero-image-gatbsy"
+                    alt={hero_image.alt}
+                    fluid={hero_image.mobile_src.childImageSharp.fluid}
+                />
+                <GatsbyImage
+                    className="hero-tablet hero-image-gatbsy"
+                    alt={hero_image.alt}
+                    fluid={hero_image.tablet_src.childImageSharp.fluid}
+                />
+                <GatsbyImage
+                    className="hero-desktop hero-image-gatbsy"
+                    alt={hero_image.alt}
+                    fluid={hero_image.desktop_src.childImageSharp.fluid}
+                />
+                {/* <img 
                     className="hero-mobile" 
                     src={HeroImageMobile} 
                     alt="A Front End Developer typing on a laptop"
@@ -38,8 +62,8 @@ const Hero = React.forwardRef(({ sectionRef, activateAnimations = false }) => {
                     className="hero-desktop" 
                     src={HeroImageDesktop} 
                     alt="A Front End Developer typing on a laptop"
-                />
-            </div> */}
+                /> */}
+            </div>
 
             <div className="container">
                 <div className="text-cta" 
@@ -48,12 +72,12 @@ const Hero = React.forwardRef(({ sectionRef, activateAnimations = false }) => {
                     <span 
                         style={{ transitionDelay: `250ms` }}
                         className="title fade-up__mount" 
-                    >Joshua</span>
+                    >{title}</span>
 
                     <h1 
                         style={{ transitionDelay: `350ms` }} 
                         className="sub-title fade-up__mount cta-sizing"
-                    >Joshua Roper, front end developer based in Dallas.</h1>
+                    >{sub_title}</h1>
 
                     <div className="text-cta-bottom-content cta-sizing">
                         
@@ -70,7 +94,7 @@ const Hero = React.forwardRef(({ sectionRef, activateAnimations = false }) => {
                                 style={{ transitionDelay: `650ms` }} 
                                 className="skill fade-up__mount"
                             >
-                                Javascript (ES8)
+                                {skill_one}
                             </div>
                         </div>
                         <div 
@@ -80,15 +104,15 @@ const Hero = React.forwardRef(({ sectionRef, activateAnimations = false }) => {
                             <div 
                                 style={{ transitionDelay: `750ms` }} 
                                 className="skill larger-mobile fade-up__mount"
-                            >Node Js</div>
+                            >{skill_two}</div>
                             <div 
                                 style={{ transitionDelay: `850ms` }} 
                                 className="skill fade-up__mount"
-                            >React</div>
+                            >{skill_three}</div>
                             <div  
                                 style={{ transitionDelay: `950ms` }} 
                                 className="skill fade-up__mount"
-                            >Svelte</div>
+                            >{skill_four}</div>
                         </div>
                     </div>
                 </div>

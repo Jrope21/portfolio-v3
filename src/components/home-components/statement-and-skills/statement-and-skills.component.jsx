@@ -1,16 +1,22 @@
 import React from 'react'
 import './statement-and-skills.styles.scss'
 
-import styles from '@styles/variables.scss'
+import GatsbyImage from "gatsby-image"
 
-import HeroImageDesktop from '@images/home/about-me-desktop-img.jpg'
-import HeroImageMobile from '@images/home/about-me-mobile-img.jpg'
 import NumberedSectionTitle from '@home-components/numbered-section-title/numbered-section-title.component'
 import SkillsList from '@common-components/skills-list/skills-list.component'
 
 import { skillsData } from './_data'
 
-const StatementAndSkills = React.forwardRef(({ sectionRef, activateAnimations = false }) => {
+const StatementAndSkills = React.forwardRef(({ sectionRef, activateAnimations = false, moduleData }) => {
+    
+    const {
+        featured_image,
+        numbered_section_details,
+        skills,
+        statement
+    } = moduleData;
+
     return (
         <section 
             ref={sectionRef}
@@ -19,60 +25,43 @@ const StatementAndSkills = React.forwardRef(({ sectionRef, activateAnimations = 
         >
 
             <div className="relative">
+        
+                <div className="top-container">
 
-         
-            <div className="top-container">
+                    <NumberedSectionTitle
+                        className="title-sections fade-up__mount"
+                        title="Statement<br/> & Skills" 
+                        sectionNumber="3" 
+                        sectionName="about"
+                    />
 
-                <NumberedSectionTitle
-                    className="title-sections fade-up__mount"
-                    title="Statement<br/> & Skills" 
-                    sectionNumber="3" 
-                    sectionName="about"
-                />
+                    <p 
+                        className="statement fade-up__mount"
+                        style={{ transitionDelay: '200ms' }}
+                    >
+                        Hi there! I’m Josh, a Dallas-based <strong>front end developer</strong> with a knack for programming and design. My <strong>passion</strong> comes from being a part of a solution that brings each aspect of the customer journey together across both <strong>development and design</strong> processes. I focus on creating <strong>production-ready applications</strong> with my knowledge of the user experience, and writing scalable, <strong>clean code.</strong>
+                    </p>
 
-                <p 
-                    className="statement fade-up__mount"
-                    style={{ transitionDelay: '200ms' }}
+                </div>
+
+                <div 
+                    className="hero-image fade-up__mount"
+                    style={{ transitionDelay: '100ms' }}
                 >
-                    Hi there! I’m Josh, a Dallas-based <strong>front end developer</strong> with a knack for programming and design. My <strong>passion</strong> comes from being a part of a solution that brings each aspect of the customer journey together across both <strong>development and design</strong> processes. I focus on creating <strong>production-ready applications</strong> with my knowledge of the user experience, and writing scalable, <strong>clean code.</strong>
-                </p>
+                    <GatsbyImage
+                        className="hero-image-gatsby"
+                        alt={featured_image.alt}
+                        fluid={featured_image.src.childImageSharp.fluid}
+                    />
+                    {/* <img src={HeroImageDesktop} alt="Joshua Roper, a Senior Front End Developer"/> */}
+                </div>
 
-            </div>
-            <div 
-                className="hero-image fade-up__mount"
-                style={{ transitionDelay: '100ms' }}
-            >
-                <img src={HeroImageDesktop} alt="Joshua Roper, a Senior Front End Developer"/>
-            </div>
-
-            {/* <picture 
-                className="hero-image fade-up__mount"
-                style={{ transitionDelay: '100ms' }}
-            >
-                <source 
-                    srcSet={HeroImageDesktop}
-                    media={`(min-width: ${styles.breakpointSm}px)`} 
-                />
-                <img src={HeroImageMobile} alt="Joshua Roper, a Senior Front End Developer"/>
-            </picture> */}
             </div>
 
             <SkillsList 
                 className="skills"
                 skills={skillsData} 
             />
-
-            {/* <ul 
-                className="skills list-animate__mount"    
-            >
-                {skillsData.map((skills, i) => (
-                    <li 
-                        key={'statement-skills-list' + skills}
-                        className="fade-up__mount"
-                        style={{ transitionDelay: `${450 + i * 50}ms` }}
-                    >{skills}</li>
-                ))}
-            </ul> */}
         </section>
     )
 });
