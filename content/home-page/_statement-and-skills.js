@@ -1,4 +1,4 @@
-const HeroImageDesktop = require('@images/home/about-me-desktop-img.jpg');
+// const HeroImageDesktop = require('@images/home/about-me-desktop-img.jpg');
 
 const statementAndSkills = {
     numbered_section_details: {
@@ -15,7 +15,7 @@ const statementAndSkills = {
         knowledge of the user experience, and writing scalable, <strong>clean code.</strong>
     `,
     featured_image: {
-        src: HeroImageDesktop,
+        // src: HeroImageDesktop,
         alt: `Joshua Roper, a Senior Front End Developer`
     },
     skills: [

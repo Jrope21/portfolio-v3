@@ -5,7 +5,7 @@ const experience = {
         title: 'My Industry Experience',
         section_number: '01'
     },
-    experience_list = [
+    experience_list: [
         {
             name: 'Sally Beauty',
             startYear: '2020',

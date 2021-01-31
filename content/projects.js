@@ -1,34 +1,34 @@
 const projectFactory =  require('./_project-factory')
 
-const CreativeRevoltImg1 = require('./project-images/creative-revolt/1.jpg')
-const CreativeRevoltImg2 = require('./project-images/creative-revolt/2.jpg')
-const CreativeRevoltImg3 = require('./project-images/creative-revolt/3.jpg')
-const CreativeRevoltImg4 = require('./project-images/creative-revolt/4.jpg')
-const CreativeRevoltImg5 = require('./project-images/creative-revolt/5.jpg')
+// const CreativeRevoltImg1 = require('./project-images/creative-revolt/1.jpg')
+// const CreativeRevoltImg2 = require('./project-images/creative-revolt/2.jpg')
+// const CreativeRevoltImg3 = require('./project-images/creative-revolt/3.jpg')
+// const CreativeRevoltImg4 = require('./project-images/creative-revolt/4.jpg')
+// const CreativeRevoltImg5 = require('./project-images/creative-revolt/5.jpg')
 
-const StallionImg1 = require('./project-images/stallion/1.jpg')
-const StallionImg2 = require('./project-images/stallion/2.jpg')
-const StallionImg3 = require('./project-images/stallion/3.jpg')
-const StallionImg4 = require('./project-images/stallion/4.jpg')
-const StallionImg5 = require('./project-images/stallion/5.jpg')
+// const StallionImg1 = require('./project-images/stallion/1.jpg')
+// const StallionImg2 = require('./project-images/stallion/2.jpg')
+// const StallionImg3 = require('./project-images/stallion/3.jpg')
+// const StallionImg4 = require('./project-images/stallion/4.jpg')
+// const StallionImg5 = require('./project-images/stallion/5.jpg')
 
-const HalcyonImg1 = require('./project-images/halcyon/1.jpg')
-const HalcyonImg2 = require('./project-images/halcyon/2.jpg')
-const HalcyonImg3 = require('./project-images/halcyon/3.jpg')
-const HalcyonImg4 = require('./project-images/halcyon/4.jpg')
-const HalcyonImg5 = require('./project-images/halcyon/5.jpg')
+// const HalcyonImg1 = require('./project-images/halcyon/1.jpg')
+// const HalcyonImg2 = require('./project-images/halcyon/2.jpg')
+// const HalcyonImg3 = require('./project-images/halcyon/3.jpg')
+// const HalcyonImg4 = require('./project-images/halcyon/4.jpg')
+// const HalcyonImg5 = require('./project-images/halcyon/5.jpg')
 
-const UniversityParkImg2 = require('./project-images/uptexas/2.jpg')
-const UniversityParkImg3 = require('./project-images/uptexas/3.jpg')
-const UniversityParkImg1 = require('./project-images/uptexas/1.jpg')
-const UniversityParkImg4 = require('./project-images/uptexas/4.jpg')
-const UniversityParkImg5 = require('./project-images/uptexas/5.jpg')
+// const UniversityParkImg2 = require('./project-images/uptexas/2.jpg')
+// const UniversityParkImg3 = require('./project-images/uptexas/3.jpg')
+// const UniversityParkImg1 = require('./project-images/uptexas/1.jpg')
+// const UniversityParkImg4 = require('./project-images/uptexas/4.jpg')
+// const UniversityParkImg5 = require('./project-images/uptexas/5.jpg')
 
-const DiRepairsImg1 = require('./project-images/di-repairs/1.png')
-const DiRepairsImg2 = require('./project-images/di-repairs/2.png')
-const DiRepairsImg3 = require('./project-images/di-repairs/3.png')
-const DiRepairsImg4 = require('./project-images/di-repairs/4.png')
-const DiRepairsImg5 = require('./project-images/di-repairs/5.png')
+// const DiRepairsImg1 = require('./project-images/di-repairs/1.png')
+// const DiRepairsImg2 = require('./project-images/di-repairs/2.png')
+// const DiRepairsImg3 = require('./project-images/di-repairs/3.png')
+// const DiRepairsImg4 = require('./project-images/di-repairs/4.png')
+// const DiRepairsImg5 = require('./project-images/di-repairs/5.png')
 
 const projectsData = [
     projectFactory({
@@ -130,28 +130,28 @@ const projectsData = [
                 'UI/UX Design': 'UI/UX Design'
             }
         },
-        images: [
-            {
-                src: DiRepairsImg1,
-                alt: `The home page for DI-Repairs custom Gatsby website`,
-            },
-            {
-                src: DiRepairsImg2,
-                alt: `A multistep form with API integration on the DI-Repairs website`,
-            },
-            {
-                src: DiRepairsImg3,
-                alt: `A contact call-to-action for DI-Repairs custom Gatsby website`,
-            },
-            {
-                src: DiRepairsImg4,
-                alt: `A custom hero component on the DI-Repairs website`,
-            },
-            {
-                src: DiRepairsImg5,
-                alt: `Custom call-to-action's to various services on DI-Repairs`,
-            },
-        ],
+        // images: [
+        //     {
+        //         src: DiRepairsImg1,
+        //         alt: `The home page for DI-Repairs custom Gatsby website`,
+        //     },
+        //     {
+        //         src: DiRepairsImg2,
+        //         alt: `A multistep form with API integration on the DI-Repairs website`,
+        //     },
+        //     {
+        //         src: DiRepairsImg3,
+        //         alt: `A contact call-to-action for DI-Repairs custom Gatsby website`,
+        //     },
+        //     {
+        //         src: DiRepairsImg4,
+        //         alt: `A custom hero component on the DI-Repairs website`,
+        //     },
+        //     {
+        //         src: DiRepairsImg5,
+        //         alt: `Custom call-to-action's to various services on DI-Repairs`,
+        //     },
+        // ],
         is_featured: true,
     }),
     projectFactory({
@@ -224,28 +224,28 @@ const projectsData = [
                 'PHP': 'PHP',
             }
         },
-        images: [
-            {
-                src: HalcyonImg1,
-                alt: `A call to action on the home page of the Halcyon Center Mall website`,
-            },
-            {
-                src: HalcyonImg2,
-                alt: `The home page for Halcyon Center Mall website`,
-            },
-            {
-                src: HalcyonImg3,
-                alt: `The dining directory page of the Halcyon Center Mall website`,
-            },
-            {
-                src: HalcyonImg4,
-                alt: `The events directory page of the Halcyon Center Mall website`,
-            },
-            {
-                src: HalcyonImg5,
-                alt: `A spotlight for businesses on the home page of the Halcyon Center Mall website`,
-            },
-        ],
+        // images: [
+        //     {
+        //         src: HalcyonImg1,
+        //         alt: `A call to action on the home page of the Halcyon Center Mall website`,
+        //     },
+        //     {
+        //         src: HalcyonImg2,
+        //         alt: `The home page for Halcyon Center Mall website`,
+        //     },
+        //     {
+        //         src: HalcyonImg3,
+        //         alt: `The dining directory page of the Halcyon Center Mall website`,
+        //     },
+        //     {
+        //         src: HalcyonImg4,
+        //         alt: `The events directory page of the Halcyon Center Mall website`,
+        //     },
+        //     {
+        //         src: HalcyonImg5,
+        //         alt: `A spotlight for businesses on the home page of the Halcyon Center Mall website`,
+        //     },
+        // ],
         is_featured: true,
     }),
     projectFactory({
@@ -306,28 +306,28 @@ const projectsData = [
                 'PHP': 'PHP',
             }
         },
-        images: [
-            {
-                src: StallionImg1,
-                alt: `Stallion's location page for their custom website`,
-            },
-            {
-                src: StallionImg2,
-                alt: `A custom slider on the stallion website`,
-            },
-            {
-                src: StallionImg3,
-                alt: `The services page on Stallion's custom website`,
-            },
-            {
-                src: StallionImg4,
-                alt: `A unique hero image on Stallion's custom website`,
-            },
-            {
-                src: StallionImg5,
-                alt: `A page on stallion utilizing the google maps api`,
-            },
-        ],
+        // images: [
+        //     {
+        //         src: StallionImg1,
+        //         alt: `Stallion's location page for their custom website`,
+        //     },
+        //     {
+        //         src: StallionImg2,
+        //         alt: `A custom slider on the stallion website`,
+        //     },
+        //     {
+        //         src: StallionImg3,
+        //         alt: `The services page on Stallion's custom website`,
+        //     },
+        //     {
+        //         src: StallionImg4,
+        //         alt: `A unique hero image on Stallion's custom website`,
+        //     },
+        //     {
+        //         src: StallionImg5,
+        //         alt: `A page on stallion utilizing the google maps api`,
+        //     },
+        // ],
         is_featured: true,
     }),
     projectFactory({
@@ -436,28 +436,28 @@ const projectsData = [
                 'Kentico': 'Kentico',
             },
         },
-        images: [
-            {
-                src: UniversityParkImg1,
-                alt: `The home page for the City of University Park website`,
-            },
-            {
-                src: UniversityParkImg2,
-                alt: `The library page for the City of University Park website`,
-            },
-            {
-                src: UniversityParkImg3,
-                alt: `The video modal on the City of University Park website`,
-            },
-            {
-                src: UniversityParkImg4,
-                alt: `The direct alarm monitoring form for the City of University Park website`,
-            },
-            {
-                src: UniversityParkImg5,
-                alt: `The newsletter page for the City of University Park website`,
-            },
-        ],
+        // images: [
+        //     {
+        //         src: UniversityParkImg1,
+        //         alt: `The home page for the City of University Park website`,
+        //     },
+        //     {
+        //         src: UniversityParkImg2,
+        //         alt: `The library page for the City of University Park website`,
+        //     },
+        //     {
+        //         src: UniversityParkImg3,
+        //         alt: `The video modal on the City of University Park website`,
+        //     },
+        //     {
+        //         src: UniversityParkImg4,
+        //         alt: `The direct alarm monitoring form for the City of University Park website`,
+        //     },
+        //     {
+        //         src: UniversityParkImg5,
+        //         alt: `The newsletter page for the City of University Park website`,
+        //     },
+        // ],
         is_featured: true,
     }),
     projectFactory({
@@ -526,28 +526,28 @@ const projectsData = [
                 'UI/UX Design': 'UI/UX Design'
             }
         },
-        images: [
-            {
-                src: CreativeRevoltImg1,
-                alt: `The landing page for Creative Revolt`,
-            },
-            {
-                src: CreativeRevoltImg2,
-                alt: `A call to action setup for Creative Revolt`,
-            },
-            {
-                src: CreativeRevoltImg3,
-                alt: `The about page for Creative Revolt`,
-            },
-            {
-                src: CreativeRevoltImg4,
-                alt: `A call to action exculusively design for Creative Revolt`,
-            },
-            {
-                src: CreativeRevoltImg5,
-                alt: `A page from creative revolt that introduces customers to her their courses`,
-            },
-        ],
+        // images: [
+        //     {
+        //         src: CreativeRevoltImg1,
+        //         alt: `The landing page for Creative Revolt`,
+        //     },
+        //     {
+        //         src: CreativeRevoltImg2,
+        //         alt: `A call to action setup for Creative Revolt`,
+        //     },
+        //     {
+        //         src: CreativeRevoltImg3,
+        //         alt: `The about page for Creative Revolt`,
+        //     },
+        //     {
+        //         src: CreativeRevoltImg4,
+        //         alt: `A call to action exculusively design for Creative Revolt`,
+        //     },
+        //     {
+        //         src: CreativeRevoltImg5,
+        //         alt: `A page from creative revolt that introduces customers to her their courses`,
+        //     },
+        // ],
         is_featured: true,
     }),
     projectFactory({

@@ -1,0 +1,210 @@
+{
+    "path": "/",
+    "template": "HOME_PAGE",
+    "hero": {
+        "hero_image": {
+            "desktop_src": "./home-images/portfolio_hero_desktop.jpg",
+            "table_src": "./home-images/portfolio_hero_tablet.jpg",
+            "mobile_src": "./home-images/portfolio_hero_mobile.jpg",
+            "alt": "A Front End Developer typing on a laptop"
+        },
+        "title": "Joshua",
+        "sub_title": "Joshua Roper, front end developer based in Dallas.",
+        "skill_one": "Javascript (ES8)",
+        "skill_two": "Node Js",
+        "skill_three": "React",
+        "skill_four": "Svelte"
+    },
+    "experience": {
+        "numbered_section_details": {
+            "title": "My Industry Experience",
+            "section_number": "01"
+        },
+        "experience_list": [
+            {
+                "name": "Sally Beauty",
+                "start_year": "2020",
+                "end_year": "",
+                "location": "Denton, Texas",
+                "title": "Remote Front End Developer at Sally Beauty",
+                "links": [
+                    {
+                        "text": "sallybeauty.com",
+                        "href": "https://www.sallybeauty.com"
+                    },
+                    {
+                        "text": "cosmoprofbeauty.com",
+                        "href": "https://www.cosmoprofbeauty.com"
+                    }
+                ],
+                "job_description_bullets": [
+                    {
+                        "text": "Developed multiple front end projects for both internal & external use",
+                        "links": "",
+                        "key": "sdfa"
+                    },
+                    {
+                        "text": "Actively maintained & improved a myriad of extremely high-traffic websites",
+                        "links": "",
+                        "key": "fsafdsdfa"
+                    },
+                    {
+                        "text": "Led several web initiatives that got launched into production at a global scale",
+                        "links": "",
+                        "key": "sdfdsfa"
+                    },
+                    {
+                        "text": "Designed and integrated templates utilizing SalesForce Commerce Cloud",
+                        "links": "",
+                        "key": "adssdfa"
+                    }
+                ]
+            },
+            {
+                "name": "Imaginuity",
+                "start_year": "2019",
+                "end_year": "2020",
+                "location": "Dallas, Texas",
+                "title": "Front End Developer at Imaginuity",
+                "links": [
+                    {
+                        "text": "imaginuity.com",
+                        "href": "https://www.imaginuity.com"
+                    }
+                ],
+                "key": "fakhjdsfase",
+                "job_description_bullets": [
+                    {
+                        "text": "Developed the entire Front End for multiple high traffic, 99% up time websites",
+                        "links": "<a href='https://www.stallionoilfield.com' class='hover:text-underline' rel='noopener noreferrer' target='_blank'>stallionoilfield.com</a>,<a href='https://www.uptexas.org' class='hover:text-underline' rel='noopener noreferrer' target='_blank'>uptexas.org</a>,",
+                        "key": "sdf634a"
+                    },
+                    {
+                        "text": "Made web enhancements and landing page’s for multiple businesses",
+                        "links": "webuyuglyhouses.com, homevestors.com, advancial.org, etc...",
+                        "key": "s24dfa"
+                    },
+                    {
+                        "text": "Maintained 10 React based themes responsible for over 100 established malls",
+                        "links": "visithalcyon.com, liberty-center.com, windwardcity.com, etc...",
+                        "key": "23453sdfa"
+                    },
+                    {
+                        "text": "Designed and integrated page templates utilizing a CMS (WordPress / Kentico)",
+                        "links": "",
+                        "key": "sd9768364fa"
+                    }
+                ]
+            },
+            {
+                "name": "Creative Revolt",
+                "start_year": "2017",
+                "end_year": "2018",
+                "location": "Carrollton, Texas",
+                "title": "Freelance Web Development and Marketing at Creative Revolt",
+                "links": [
+                    {
+                        "text": "creativerevolt.com",
+                        "href": "https://www.writingrevolt.com"
+                    }
+                ],
+                "key": "fakhjhgjds",
+                "job_description_bullets": [
+                    {
+                        "text": "Revamped the design with a bolder color palette / layout",
+                        "links": "",
+                        "key": "sdfaytri"
+                    },
+                    {
+                        "text": "Created the landing page and multiple sections utilizing WordPress (DiviBuilder)",
+                        "links": "",
+                        "key": "sdf236tyerdfa"
+                    },
+                    {
+                        "text": "Performed website updates and executed content audits",
+                        "links": "",
+                        "key": "sdf52jgjgbbdfva"
+                    },
+                    {
+                        "text": "Adjusted the website for SEO and created marketable advertisements",
+                        "links": "",
+                        "key": "sd523657546523fa"
+                    }
+                ]
+            }
+        ]
+    },
+    "featured_projects": { 
+        "numbered_section_details": {
+            "title": "Projects I've Worked On",
+            "section_number": "02"
+        },
+        "split_text_cta": {
+            "title": "Archive",
+            "sub_title": "Use Archive for the full list of projects I've worked on.",
+            "path": "/archive"
+        },
+        "button_cta": {
+            "title": "Use archive for the full list of projects I’ve worked on.",
+            "path": "/archive"
+        }
+    },
+    "statement_and_skills": {
+        "numbered_section_details": {
+            "title": "Statement & Skills",
+            "section_number": "03"
+        },
+        "statement": "Hi there! I’m Josh, a Dallas-based <strong>front end developer</strong> with a knack for programming and design. My <strong>passion</strong> comes from being a part of a solution that brings each aspect of the customer journey together across both <strong>development and design</strong> processes. I focus on creating <strong>production-ready applications</strong> with my knowledge of the user experience, and writing scalable, <strong>clean code.</strong>",
+        "featured_image": {
+            "src": "./home-images/about-me-desktop.jpg",
+            "alt": "Joshua Roper, a Senior Front End Developer"
+        },
+        "skills": [
+            "React | Redux",
+            "Gatsby Js | React Static",
+            "Svelte 3 | Sapper",
+            "Node Js | Express",
+            "JavaScript (ES8+)",
+            "jQuery",
+            "Asnychronus JavaScript",
+            "WebPack",
+            "Git (Version Control)",
+            "Command Line",
+            "SASS | SCSS",
+            "CSS",
+            "Foundation | Bootstrap",
+            "HTML (WCAG compliant)",
+            "HTML Emails",
+            "GitHub | BitBucket",
+            "WordPress | Kentico",
+            "Adobe Suite",
+            "Figma",
+            "SEO",
+            "Usability Testing",
+            "Agile | Waterfall"
+        ]
+    },
+    "contact": {
+        "numbered_section_details": {
+            "title": "Get In Touch With Me",
+            "section_number": "04"
+        },
+        "split_text_cta": {
+            "title": "Connect",
+           "sub_title": "Use Archive for the full list of projects I've worked on.",
+            "path": ""
+        },
+        "text_input": {
+           "label": "Name",
+            "place_holder_text": ""
+        },
+        "email_input": {
+            "label": "email",
+            "place_holder_text": ""
+        },
+        "textarea_input": {
+            "label": "",
+            "place_holder_text": "Type your message here."
+        }
+    }
+}

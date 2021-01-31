@@ -19,7 +19,7 @@
  ********************************************************/
 
 const createPages = require("./node-lib/page-creation/create-pages")
-const createProjectDetailPages= require("./node-lib/page-creation/create-project-detail-pages")
+const createProjectDetailPages = require("./node-lib/page-creation/create-project-detail-pages")
 // const createServices = require("./node-lib/page-creation/services/_create-services")
 
 exports.createPages = async ({ actions }) => {

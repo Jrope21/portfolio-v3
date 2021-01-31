@@ -1,12 +1,12 @@
-const HeroImageMobile = require('./home-images/portfolio_hero_mobile.jpg');
-const HeroImageTablet = require('./home-images/portfolio_hero_tablet.jpg');
-const HeroImageDesktop = require('./home-images/portfolio_hero_desktop.jpg');
+// const HeroImageMobile = require('./home-images/portfolio_hero_mobile.jpg');
+// const HeroImageTablet = require('./home-images/portfolio_hero_tablet.jpg');
+// const HeroImageDesktop = require('./home-images/portfolio_hero_desktop.jpg');
 
 const hero = {
     hero_image: {
-        desktop_src: HeroImageDesktop,
-        table_src: HeroImageTablet,
-        mobile_src: HeroImageMobile,
+        // desktop_src: HeroImageDesktop,
+        // table_src: HeroImageTablet,
+        // mobile_src: HeroImageMobile,
         alt: 'A Front End Developer typing on a laptop'
     },
     title: 'Joshua',
@@ -17,4 +17,4 @@ const hero = {
     skill_four: 'Svelte'
 }
 
-module.exports = heroData
+module.exports = hero

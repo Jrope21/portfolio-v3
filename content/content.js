@@ -1,6 +1,6 @@
 const homePage = require('./home-page/home-page');
 const archivePage = require('./archive-page/archive-page');
-const projects = require('./projects/projects');
+const projects = require('./projects');
 
 const content = {
     home_page: homePage,
