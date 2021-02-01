@@ -18,7 +18,7 @@
     "experience": {
         "numbered_section_details": {
             "title": "My Industry Experience",
-            "section_number": "01"
+            "section_number": "1"
         },
         "experience_list": [
             {
@@ -76,7 +76,7 @@
                 "job_description_bullets": [
                     {
                         "text": "Developed the entire Front End for multiple high traffic, 99% up time websites",
-                        "links": "<a href='https://www.stallionoilfield.com' class='hover:text-underline' rel='noopener noreferrer' target='_blank'>stallionoilfield.com</a>,<a href='https://www.uptexas.org' class='hover:text-underline' rel='noopener noreferrer' target='_blank'>uptexas.org</a>,",
+                        "links": "<a href='https://www.stallionoilfield.com' class='hover:text-underline' rel='noopener noreferrer' target='_blank'>stallionoilfield.com</a>, <a href='https://www.uptexas.org' class='hover:text-underline' rel='noopener noreferrer' target='_blank'>uptexas.org</a>",
                         "key": "sdf634a"
                     },
                     {
@@ -137,7 +137,7 @@
     "featured_projects": { 
         "numbered_section_details": {
             "title": "Projects I've Worked On",
-            "section_number": "02"
+            "section_number": "2"
         },
         "split_text_cta": {
             "title": "Archive",
@@ -151,8 +151,8 @@
     },
     "statement_and_skills": {
         "numbered_section_details": {
-            "title": "Statement & Skills",
-            "section_number": "03"
+            "title": "Statement<br/> & Skills",
+            "section_number": "3"
         },
         "statement": "Hi there! I’m Josh, a Dallas-based <strong>front end developer</strong> with a knack for programming and design. My <strong>passion</strong> comes from being a part of a solution that brings each aspect of the customer journey together across both <strong>development and design</strong> processes. I focus on creating <strong>production-ready applications</strong> with my knowledge of the user experience, and writing scalable, <strong>clean code.</strong>",
         "featured_image": {
@@ -186,25 +186,25 @@
     },
     "contact": {
         "numbered_section_details": {
-            "title": "Get In Touch With Me",
-            "section_number": "04"
+            "title": "Get In Touch<br /> With Me",
+            "section_number": "4"
         },
         "split_text_cta": {
             "title": "Connect",
-           "sub_title": "Use Archive for the full list of projects I've worked on.",
+            "sub_title": "Send me an email, let’s get connected!",
             "path": ""
         },
         "text_input": {
            "label": "Name",
-            "place_holder_text": ""
+            "placeholder": ""
         },
         "email_input": {
             "label": "email",
-            "place_holder_text": ""
+            "placeholder": ""
         },
         "textarea_input": {
             "label": "",
-            "place_holder_text": "Type your message here."
+            "placeholder": "Type your message here."
         }
     }
 }

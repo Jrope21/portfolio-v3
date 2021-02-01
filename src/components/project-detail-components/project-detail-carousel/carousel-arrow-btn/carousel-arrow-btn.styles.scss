@@ -1,6 +1,7 @@
 
 .carousel-arrow-btn__module {
     position: relative;
+    z-index: 1;
     cursor: pointer;
 
     .hover-text {

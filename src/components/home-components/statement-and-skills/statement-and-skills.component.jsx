@@ -6,8 +6,6 @@ import GatsbyImage from "gatsby-image"
 import NumberedSectionTitle from '@home-components/numbered-section-title/numbered-section-title.component'
 import SkillsList from '@common-components/skills-list/skills-list.component'
 
-import { skillsData } from './_data'
-
 const StatementAndSkills = React.forwardRef(({ sectionRef, activateAnimations = false, moduleData }) => {
     
     const {
@@ -30,8 +28,8 @@ const StatementAndSkills = React.forwardRef(({ sectionRef, activateAnimations = 
 
                     <NumberedSectionTitle
                         className="title-sections fade-up__mount"
-                        title="Statement<br/> & Skills" 
-                        sectionNumber="3" 
+                        title={numbered_section_details.title} 
+                        sectionNumber={numbered_section_details.section_number}
                         sectionName="about"
                     />
 
@@ -39,7 +37,10 @@ const StatementAndSkills = React.forwardRef(({ sectionRef, activateAnimations = 
                         className="statement fade-up__mount"
                         style={{ transitionDelay: '200ms' }}
                     >
-                        Hi there! I’m Josh, a Dallas-based <strong>front end developer</strong> with a knack for programming and design. My <strong>passion</strong> comes from being a part of a solution that brings each aspect of the customer journey together across both <strong>development and design</strong> processes. I focus on creating <strong>production-ready applications</strong> with my knowledge of the user experience, and writing scalable, <strong>clean code.</strong>
+                        {/* TODO -- mergis into div.. add p tag in content */}
+                        <span  
+                            dangerouslySetInnerHTML={{ __html: statement }}
+                        />
                     </p>
 
                 </div>
@@ -53,14 +54,13 @@ const StatementAndSkills = React.forwardRef(({ sectionRef, activateAnimations = 
                         alt={featured_image.alt}
                         fluid={featured_image.src.childImageSharp.fluid}
                     />
-                    {/* <img src={HeroImageDesktop} alt="Joshua Roper, a Senior Front End Developer"/> */}
                 </div>
 
             </div>
 
             <SkillsList 
                 className="skills"
-                skills={skillsData} 
+                skills={skills} 
             />
         </section>
     )

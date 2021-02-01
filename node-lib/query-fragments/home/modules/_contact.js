@@ -3,7 +3,7 @@ const ContactFragment = `
     contact {
         email_input {
             label
-            place_holder_text
+            placeholder
         }
         numbered_section_details {
             section_number
@@ -16,11 +16,11 @@ const ContactFragment = `
         }
         text_input {
             label
-            place_holder_text
+            placeholder
         }
         textarea_input {
             label
-            place_holder_text
+            placeholder
         }
     }
 `

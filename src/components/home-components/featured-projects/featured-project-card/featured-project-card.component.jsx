@@ -42,7 +42,7 @@ export default React.memo(function FeaturedProjectCard({
                         </a> */}
                     </h3>
                     {/* BUG -- this must be hidden until scroll reveal works :( */}
-                    <p
+                    <div
                         className="project-description" 
                         dangerouslySetInnerHTML={{ __html: description }} 
                     />

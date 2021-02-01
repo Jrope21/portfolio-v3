@@ -20,6 +20,7 @@ const Hero = React.forwardRef(({ sectionRef, activateAnimations = false, moduleD
         skill_three,
         skill_four
     } = moduleData;
+
     const [isMounted, setIsMounted] = useState(false);
 
     useEffect(() => {
@@ -29,8 +30,7 @@ const Hero = React.forwardRef(({ sectionRef, activateAnimations = false, moduleD
     return (
         <section 
             className={`hero__module ${activateAnimations ? 'activate-animations__mount' : ''}`} 
-            ref={sectionRef}
-            
+            ref={sectionRef}          
         >
             <div className="hero-image">
                 <GatsbyImage
@@ -48,21 +48,6 @@ const Hero = React.forwardRef(({ sectionRef, activateAnimations = false, moduleD
                     alt={hero_image.alt}
                     fluid={hero_image.desktop_src.childImageSharp.fluid}
                 />
-                {/* <img 
-                    className="hero-mobile" 
-                    src={HeroImageMobile} 
-                    alt="A Front End Developer typing on a laptop"
-                />
-                <img 
-                    className="hero-tablet" 
-                    src={HeroImageTablet} 
-                    alt="A Front End Developer typing on a laptop"
-                />
-                <img 
-                    className="hero-desktop" 
-                    src={HeroImageDesktop} 
-                    alt="A Front End Developer typing on a laptop"
-                /> */}
             </div>
 
             <div className="container">

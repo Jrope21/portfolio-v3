@@ -14,7 +14,15 @@ const INITIAL_INPUT_VALUES = {
     message: ''
 }
 
-const Contact = React.forwardRef(({ sectionRef }) => {
+const Contact = React.forwardRef(({ sectionRef, moduleData }) => {
+
+    const {
+        numbered_section_details,
+        split_text_cta,
+        text_input,
+        email_input,
+        textarea_input
+    } = moduleData
 
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submissionSuccess, setSubmissionSuccess] = useState(false);
@@ -29,10 +37,6 @@ const Contact = React.forwardRef(({ sectionRef }) => {
         setTimeout(() => {
             setIsSubmitting(false);
             setSubmissionSuccess(true);
-
-            // setTimeout(() => {
-            //     setSubmissionSuccess(true);
-            // }, 1500)    
         }, 850)
     }
 
@@ -52,14 +56,14 @@ const Contact = React.forwardRef(({ sectionRef }) => {
             <div className="titles-container">
                 <NumberedSectionTitle
                     className="section-titles fade-up__mount"
-                    title="Get In Touch<br /> With Me" 
-                    sectionNumber={'4'} 
+                    title={numbered_section_details.title} 
+                    sectionNumber={numbered_section_details.section_number} 
                     sectionName="contact"
                 />
                 <SplitTextCta 
                     className="fade-up__mount"
-                    title={'Connect'}
-                    description={'Send me an email, let’s get connected!'}
+                    title={split_text_cta.title}
+                    description={split_text_cta.sub_title}
                     altColors={true}
                     style={{ transitionDelay: `100ms` }}
                 />
@@ -77,7 +81,7 @@ const Contact = React.forwardRef(({ sectionRef }) => {
                         htmlFor="contact-name"
                         style={{ transitionDelay: `200ms` }}
                     >
-                    <span className="contact-label-text">Name</span>
+                    <span className="contact-label-text">{text_input.label}</span>
                         <input 
                             disabled={
                                 isSubmitting || 
@@ -88,6 +92,7 @@ const Contact = React.forwardRef(({ sectionRef }) => {
                             name="name" 
                             id="contact-name"
                             className="contact-input"
+                            placeholder={text_input.placeholder}
                             value={inputValues.name}
                             onChange={actions.updateInputValue}
                         />
@@ -97,7 +102,7 @@ const Contact = React.forwardRef(({ sectionRef }) => {
                         htmlFor="contact-email"
                         style={{ transitionDelay: `300ms` }}
                     >
-                        <span className="contact-label-text">Email</span>
+                        <span className="contact-label-text">{email_input.label}</span>
                         <input 
                             disabled={
                                 isSubmitting || 
@@ -109,6 +114,7 @@ const Contact = React.forwardRef(({ sectionRef }) => {
                             name="email" 
                             id="contact-email"
                             className="contact-input"
+                            placeholder={email_input.placeholder}
                             value={inputValues.email}
                             onChange={actions.updateInputValue}
                         />
@@ -129,7 +135,7 @@ const Contact = React.forwardRef(({ sectionRef }) => {
                             id="contact-message" 
                             cols="30" 
                             rows="16"
-                            placeholder="Type your message here."
+                            placeholder={textarea_input.placeholder}
                             className="contact-textarea"
                             value={inputValues.message}
                             onChange={actions.updateInputValue}

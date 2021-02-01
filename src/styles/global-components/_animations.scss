@@ -155,6 +155,7 @@
 .hover\:text-underline {
   position: relative;
   overflow: hidden;
+  display: inline-flex;
 
   &::before {
       content: '';

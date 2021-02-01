@@ -32,7 +32,7 @@ export default function HomeTemplate({
     statement_and_skills: StatementAndSkillsModuleData
   } = pageData;
 
-  console.log(StatementAndSkillsModuleData);
+  console.log(pageData, featuredProjects);
 
   const heroAnimationDelay = 1100;
 
@@ -99,6 +99,7 @@ export default function HomeTemplate({
         <FeaturedProjects 
           moduleData={featuredProjectsModuleData}
           sectionRef={sectionRefs.current[2]} 
+          featuredProjects={featuredProjects}
         />
         <StatementAndSkills 
           moduleData={StatementAndSkillsModuleData}
