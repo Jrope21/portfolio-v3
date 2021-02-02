@@ -6,17 +6,22 @@ import ProjectListTable from '@archive-components/project-list-table/project-lis
 import { listFiltersData, projectsData, tableTitlesData } from './_data'
 
 // import projectDataTest from '../../../../content/projects/projects'
-
-export default function ProjectList() {
-
+// tableFilters={project_list.table_filters}
+//                 tableTitles={project_list.table_titles}
+//                 projects={projects}
+export default function ProjectList({
+    tableFilters,
+    tableTitles,
+    allProjects
+}) {
+    console.log(allProjects);
     const [isMounted, setIsMounted] = useState(false);
     const [activeFilterTag, setActiveFilterTag] = useState('All');
 
-    const [projects, setProjects] = useState(projectsData);
+    const [projects, setProjects] = useState(allProjects);
 
     const [isFilterModalOpen, setIsFilterModalOpen] = useState(false);
     const [isFilteringForProjects, setIsFilteringForProjects] = useState(false);
-    // const [isFiltered, setIsFiltered] = useState(true);
 
     useEffect(() => {
         setIsMounted(true);
@@ -27,11 +32,10 @@ export default function ProjectList() {
 
         if (isMounted) {
             setIsFilteringForProjects(true);
-            // closeFilterModal();
-          
+            console.log(allProjects)
             setTimeout(() => {
                 setProjects(
-                    projectsData.filter(({ filterTags }) => filterTags[activeFilterTag])
+                    allProjects.filter(({node: { tech }}) => tech.filter_tags[activeFilterTag])
                 )
                 closeFilterModal();
             }, 600)
@@ -50,7 +54,6 @@ export default function ProjectList() {
 
     return (
         <section 
-            // data-sal="mount" 
             className={`project-list__module ${isMounted ? 'activate-animations__mount' : ''}`}
         > 
 
@@ -61,7 +64,7 @@ export default function ProjectList() {
 
                 <ProjectListFilters 
                     enablePageTransitions={!isFilteringForProjects}
-                    listFilters={listFiltersData} 
+                    listFilters={tableFilters} 
                     filterProjects={filterProjects}
                     activeFilterTag={activeFilterTag}
                     openFilterModal={openFilterModal}
@@ -95,7 +98,7 @@ export default function ProjectList() {
 
 
             <ProjectListTable
-                tableTitles={tableTitlesData}
+                tableTitles={tableTitles}
                 projects={projects}
                 activeFilterTag={activeFilterTag}
             />

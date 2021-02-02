@@ -23,6 +23,7 @@ const ProjectsLayoutFragment = `
                     featured_list
                     full_list
                     priority_list
+                    filter_tags
                 }
                 url
                 url_path

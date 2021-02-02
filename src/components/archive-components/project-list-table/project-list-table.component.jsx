@@ -37,16 +37,18 @@ export default function ProjectListTable({
             </div>
                 
             {/* <div className="table-rows"> */}
-                {projects.map(({
+                {projects.map(({ node: {
                     year,
                     name,
-                    madeAt,
-                    featuredTech,
-                    projectLink,
-                    projectDetailPath,
-                    githubLink,
-                    filterTags
-                }, i) => (
+                    made_at,
+                    // featuredTech,
+                    // projectLink,
+                    url,
+                    url_path,
+                    tech,
+                    // projectDetailPath,
+                    github_link,
+                }}, i) => (
                     <div 
                         className={`
                             project-row 
@@ -62,16 +64,18 @@ export default function ProjectListTable({
                             <p className="col-text">{name}</p>
                         </div>
                         <div className="table-col-3 table-col col-border">
-                            <p className="col-text">{madeAt}</p>
+                            <p className="col-text">{made_at}</p>
                         </div>
                         <div className="table-col-4 table-col col-border">
-                            <p className="col-text">{featuredTech}</p>       
+                            <p className="col-text">
+                                {tech.featured_list.map((tech, i) => `${i !== 0 ? ', ' : '' }${tech}`)}
+                            </p>       
                         </div>
                         <div className="table-col-5 table-col col-border links-container">
 
-                            {projectLink && !projectDetailPath ?
+                            {url && !url_path ?
                                 <a 
-                                    href={projectLink} 
+                                    href={url} 
                                     rel="noopener noreferrer" 
                                     target="_blank"
                                 >
@@ -79,8 +83,8 @@ export default function ProjectListTable({
                                 </a>
                             : null}
 
-                            {projectDetailPath &&
-                                <Link to={projectDetailPath}>
+                            {url_path &&
+                                <Link to={url_path}>
                                     <JrPointer 
                                         className="project-detail-link-icon" 
                                         enableHoverAnimations={true}
@@ -88,9 +92,9 @@ export default function ProjectListTable({
                                 </Link>
                             }
 
-                            {githubLink &&
+                            {github_link &&
                                 <a 
-                                    href={githubLink} 
+                                    href={github_link} 
                                     rel="noopener noreferrer" 
                                     target="_blank"
                                 >
@@ -98,7 +102,7 @@ export default function ProjectListTable({
                                 </a>
                             }
 
-                            {!projectLink && !projectDetailPath ? 
+                            {!url && !url_path ? 
                                 <span className="link-text">TBD</span>
                             : null}
                            

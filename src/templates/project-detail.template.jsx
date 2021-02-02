@@ -3,6 +3,7 @@ import React from 'react'
 import ProjectDetailCarousel from '@project-detail-components/project-detail-carousel/project-detail-carousel.component'
 import ProjectText from '@project-detail-components/project-text/project-text.component'
 import ProjectDetailFeaturedProjects from '@project-detail-components/project-detail-featured-projects/project-detail-featured-projects.component'
+import { formatLinkText } from '../helpers/_format-link-text'
 
 export default function ProjectDetailTemplate({
     pageContext: {
@@ -16,7 +17,7 @@ export default function ProjectDetailTemplate({
                 title={pageData.full_name ? pageData.full_name : pageData.name}
                 year={pageData.year}
                 url={pageData.url}
-                linkText={pageData.url.replace(/^(?:https?:\/\/)?(?:www\.)?/i, "").split('/')[0]}
+                linkText={formatLinkText(pageData.url)}
                 description={pageData.description}
                 skills={pageData.tech.full_list}
             />

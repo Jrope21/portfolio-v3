@@ -27,7 +27,8 @@ const createPages = async ({ actions, graphql }) => { // TODO -- split this func
     component: CONFIG.TEMPLATES.ARCHIVE,
     context: {
       pageData: archivePageJson,
-      featuredProjects: featuredProjects
+      featuredProjects: featuredProjects,
+      projects: allProjectsJson.edges
     },
   })
 
