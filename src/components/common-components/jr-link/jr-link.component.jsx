@@ -7,8 +7,8 @@ import ExternalLinkIcon from '@common-components/icons/external-link-icon/extern
 import JrPointer from '@common-components/icons/jr-pointer/jr-pointer.component'
 
 
-// TODO -- Refactor this component into "jr-button"
-// maybe set this up to only handle link logic (not styling)??
+// TODO -- Refactor this component into "jr-button", or a seperate component
+// should set this component up to only handle link logic (not styling)??
 export default function JrLink({
     className = '',
     iconClassName = '',
@@ -16,36 +16,46 @@ export default function JrLink({
     to = '',
     enableIcons,
     children,
+    isStyled = true,
     ...otherProps
 }) {
 
     if(to) return (
         <Link
-            className={`jr-link__module internal-link ${className}`}
+            className={`${isStyled && `jr-link__module internal-link`} ${className}`}
             to={to} 
             {...otherProps}
         >
             {children}
-            <JrPointer
-                enableHoverAnimations={true}
-                className="detail-btn-pointer"
-                size={'small'}
-            />
+            {isStyled && 
+                <JrPointer
+                    enableHoverAnimations={true}
+                    className="detail-btn-pointer"
+                    size={'small'}
+                />
+            }
         </Link>
     )
 
     if(href) return (
         <a 
-            className={`jr-link__module external-link  ${className}`}
+            className={`${isStyled && `jr-link__module external-link`}  ${className}`}
             href={href} 
             rel="noopener noreferrer" 
             target="_blank"
             {...otherProps}
         >
-            <span className="hover:text-underline inner-text">
-                {children}
-            </span>
-            <ExternalLinkIcon className={`external-link-icon ${iconClassName}`} />
+            {isStyled ? 
+                <>
+                    <span className="hover:text-underline inner-text">
+                        {children}
+                    </span>
+                    <ExternalLinkIcon className={`external-link-icon ${iconClassName}`} />
+                </>
+            :
+                children  
+            }
+           
         </a>
     )
 

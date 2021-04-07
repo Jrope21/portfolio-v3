@@ -19,6 +19,7 @@ const FeaturedProjects = React.forwardRef(({ sectionRef, moduleData, featuredPro
             data-sal="mount"
             ref={sectionRef}
             className={`featured-projects__module`}
+            id="projects"
         >
 
             <div className="titles-container">
@@ -26,7 +27,6 @@ const FeaturedProjects = React.forwardRef(({ sectionRef, moduleData, featuredPro
                     className="section-titles fade-up__mount"
                     title={numbered_section_details.title} 
                     sectionNumber={numbered_section_details.section_number} 
-                    sectionName="projects"
                 />
                 <SplitTextCta 
                     title={split_text_cta.title}

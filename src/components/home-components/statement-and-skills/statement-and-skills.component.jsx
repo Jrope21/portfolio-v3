@@ -20,6 +20,7 @@ const StatementAndSkills = React.forwardRef(({ sectionRef, activateAnimations = 
             ref={sectionRef}
             className="statement-and-skills__module"
             data-sal="mount"
+            id="about"
         >
 
             <div className="relative">
@@ -30,7 +31,6 @@ const StatementAndSkills = React.forwardRef(({ sectionRef, activateAnimations = 
                         className="title-sections fade-up__mount"
                         title={numbered_section_details.title} 
                         sectionNumber={numbered_section_details.section_number}
-                        sectionName="about"
                     />
 
                     <p 

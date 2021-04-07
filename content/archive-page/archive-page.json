@@ -7,18 +7,54 @@
     },
     "project_list": {
         "table_filters": [
-            "All",
-            "Front End",
-            "Back End",
-            "Gatsby", 
-            "React", 
-            "Node Js",
-            "HTML5",
-            "SCSS",
-            "JavaScript",
-            "WordPress", 
-            "PHP",
-            "UI/UX Design"
+            {
+                "key": "all",
+                "text": "All"
+            },
+            {
+                "key": "front_end",
+                "text": "Front End"
+            },
+            {
+                "key": "back_end",
+                "text": "Back End"
+            },
+            {
+                "key": "gatsby",
+                "text": "Gatsby"
+            },
+            {
+                "key": "react",
+                "text": "React"
+            },
+            {
+                "key": "nodejs",
+                "text": "Node Js"
+            },
+            {
+                "key": "html5",
+                "text": "HTML5"
+            },
+            {
+                "key": "scss",
+                "text": "SCSS"
+            },
+            {
+                "key": "javascript",
+                "text": "JavaScript"
+            },
+            {
+                "key": "wordpress",
+                "text": "WordPress"
+            },
+            {
+                "key": "php",
+                "text": "PHP"
+            },
+            {
+                "key": "uiux_design",
+                "text": "UI/UX Design"
+            }
         ],
         "table_titles": [
             "Year",

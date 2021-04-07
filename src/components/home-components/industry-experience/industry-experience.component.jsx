@@ -21,6 +21,7 @@ const IndustryExperience = React.forwardRef(({ sectionRef, activateAnimations = 
         <section 
             data-sal="mount"
             ref={sectionRef}
+            id="experience"
             className={`
                 industry-experience__module   
             `}
@@ -34,7 +35,6 @@ const IndustryExperience = React.forwardRef(({ sectionRef, activateAnimations = 
                     className="title-sections fade-up__mount"
                     title={numbered_section_details.title} 
                     sectionNumber={numbered_section_details.section_number} 
-                    sectionName="experience"
                 />
                 <div 
                     className="mobile-line-seperator" 

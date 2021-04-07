@@ -3,12 +3,7 @@ import './project-list.styles.scss'
 
 import ProjectListFilters from '@archive-components/project-list-filters/project-list-filters.component'
 import ProjectListTable from '@archive-components/project-list-table/project-list-table.component'
-import { listFiltersData, projectsData, tableTitlesData } from './_data'
 
-// import projectDataTest from '../../../../content/projects/projects'
-// tableFilters={project_list.table_filters}
-//                 tableTitles={project_list.table_titles}
-//                 projects={projects}
 export default function ProjectList({
     tableFilters,
     tableTitles,
@@ -16,7 +11,7 @@ export default function ProjectList({
 }) {
     console.log(allProjects);
     const [isMounted, setIsMounted] = useState(false);
-    const [activeFilterTag, setActiveFilterTag] = useState('All');
+    const [activeFilterTag, setActiveFilterTag] = useState({ key: 'all', text: 'All' });
 
     const [projects, setProjects] = useState(allProjects);
 
@@ -35,7 +30,7 @@ export default function ProjectList({
             console.log(allProjects)
             setTimeout(() => {
                 setProjects(
-                    allProjects.filter(({node: { tech }}) => tech.filter_tags[activeFilterTag])
+                    allProjects.filter(({node: { tech }}) => tech.filter_tags[activeFilterTag.key])
                 )
                 closeFilterModal();
             }, 600)
@@ -85,7 +80,7 @@ export default function ProjectList({
                         className="fade-up__scoped filtering-modal-text"
                         style={{ transitionDelay: '500ms' }}
                     >
-                        {activeFilterTag}
+                        {activeFilterTag.text}
                     </span>
                     <span 
                         className="fade-up__scoped filtering-modal-text"

@@ -6,18 +6,18 @@
         "tech": {
             "featured_list": ["Gatsby", "React", "Node Js", "SASS", "WordPress", "PHP"],
             "filter_tags": {
-                "All": "All",         
-                "Front End": "Front End",
-                "Back End": "Back End",
-                "Gatsby": "Gatsby",
-                "React": "React", 
-                "Node Js": "Node Js", 
-                "HTML5": "HTML5",
-                "SCSS": "SCSS", 
-                "JavaScript": "JavaScript",
-                "WordPress": "WordPress", 
-                "PHP": "PHP",
-                "UI/UX Design": "UI/UX Design"
+                "all": "All",         
+                "front_end": "Front End",
+                "back_end": "Back End",
+                "gatsby": "Gatsby",
+                "react": "React", 
+                "nodejs": "Node Js", 
+                "html5": "HTML5",
+                "scss": "SCSS", 
+                "javascript": "JavaScript",
+                "wordpress": "WordPress", 
+                "php": "PHP",
+                "uiux_design": "UI/UX Design"
             }
         }, 
         "url": "",
@@ -32,17 +32,17 @@
         "tech": {
             "featured_list": ["Next", "React", "Node Js", "SCSS", "WordPress", "PHP"],
             "filter_tags": {
-                "All": "All",         
-                "Front End": "Front End",
-                "Back End": "Back End",
-                "React": "React", 
-                "Node Js": "Node Js", 
-                "HTML5": "HTML5",
-                "SCSS": "SCSS", 
-                "JavaScript": "JavaScript",
-                "WordPress": "WordPress", 
-                "PHP": "PHP",
-                "UI/UX Design": "UI/UX Design"
+                "all": "All",         
+                "front_end": "Front End",
+                "back_end": "Back End",
+                "react": "React", 
+                "nodejs": "Node Js", 
+                "html5": "HTML5",
+                "scss": "SCSS", 
+                "javascript": "JavaScript",
+                "wordpress": "WordPress", 
+                "php": "PHP",
+                "uiux_design": "UI/UX Design"
             }
         },   
         "url": "",
@@ -83,14 +83,14 @@
                 "Figma"
             ],
             "filter_tags": {
-                "All": "All",         
-                "Front End": "Front End",
-                "Back End": "Back End",
-                "HTML5": "HTML5",
-                "SCSS": "SCSS", 
-                "JavaScript": "JavaScript",
-                "PHP": "PHP",
-                "UI/UX Design": "UI/UX Design"
+                "all": "All",         
+                "front_end": "Front End",
+                "back_end": "Back End",
+                "html5": "HTML5",
+                "scss": "SCSS", 
+                "javascript": "JavaScript",
+                "php": "PHP",
+                "uiux_design": "UI/UX Design"
             }
         },
         "images": [
@@ -124,13 +124,13 @@
         "tech": {
             "featured_list": ["React", "Redux", "SCSS", "SiteFinity", "Stripe", "Ucommerce"],
             "filter_tags": {
-                "All": "All",         
-                "Front End": "Front End",
-                "React": "React", 
-                "Node Js": "Node Js", 
-                "HTML5": "HTML5",
-                "SCSS": "SCSS", 
-                "JavaScript": "JavaScript"
+                "all": "All",         
+                "front_end": "Front End",
+                "react": "React", 
+                "nodejs": "Node Js", 
+                "html5": "HTML5",
+                "scss": "SCSS", 
+                "javascript": "JavaScript"
             }
         }, 
         "url": "https://www.trinityconsultants.com",
@@ -171,16 +171,16 @@
                 "Adobe XD"
             ],
             "filter_tags": {
-                "All": "All",         
-                "Front End": "Front End",
-                "Back End": "Back End",
-                "React": "React",  
-                "Node Js": "Node Js", 
-                "HTML5": "HTML5",
-                "SCSS": "SCSS", 
-                "JavaScript": "JavaScript",
-                "WordPress": "WordPress", 
-                "PHP": "PHP"
+                "all": "All",         
+                "front_end": "Front End",
+                "back_end": "Back End",
+                "react": "React",  
+                "nodejs": "Node Js", 
+                "html5": "HTML5",
+                "scss": "SCSS", 
+                "javascript": "JavaScript",
+                "wordpress": "WordPress", 
+                "php": "PHP"
             }
         },
         "images": [
@@ -214,13 +214,13 @@
         "tech": {
             "featured_list": ["JavaScript", "SCSS", "HTML5", "WordPress", "PHP"],
             "filter_tags": {
-                "All": "All",         
-                "Front End": "Front End",
-                "HTML5": "HTML5",
-                "SCSS": "SCSS", 
-                "JavaScript": "JavaScript",
-                "WordPress": "WordPress", 
-                "PHP": "PHP"
+                "all": "All",         
+                "front_end": "Front End",
+                "html5": "HTML5",
+                "scss": "SCSS", 
+                "javascript": "JavaScript",
+                "wordpress": "WordPress", 
+                "php": "PHP"
             }
         }, 
         "url": "https://www.webuyuglyhouses.com",
@@ -255,14 +255,14 @@
                 "Adobe Suite"
             ],
             "filter_tags": {
-                "All": "All",         
-                "Front End": "Front End",
-                "Back End": "Back End",
-                "HTML5": "HTML5",
-                "SCSS": "SCSS", 
-                "JavaScript": "JavaScript",
-                "WordPress": "WordPress", 
-                "PHP": "PHP"
+                "all": "All",         
+                "front_end": "Front End",
+                "back_end": "Back End",
+                "html5": "HTML5",
+                "scss": "SCSS", 
+                "javascript": "JavaScript",
+                "wordpress": "WordPress", 
+                "php": "PHP"
             }
         },
         "images": [
@@ -296,13 +296,13 @@
         "tech": {
             "featured_list": ["JavaScript", "SCSS", "HTML5", "WordPress", "PHP"],
             "filter_tags": {
-                "All": "All",         
-                "Front End": "Front End",
-                "HTML5": "HTML5",
-                "SCSS": "SCSS", 
-                "JavaScript": "JavaScript",
-                "WordPress": "WordPress", 
-                "PHP": "PHP"
+                "all": "All",         
+                "front_end": "Front End",
+                "html5": "HTML5",
+                "scss": "SCSS", 
+                "javascript": "JavaScript",
+                "wordpress": "WordPress", 
+                "php": "PHP"
             }
         },
         "url": "https://www.homevestors.com",
@@ -317,12 +317,12 @@
         "tech": {
             "featured_list": ["Javascript", "jQuery", "CSS", "Kentico"],
             "filter_tags": {
-                "All": "All",         
-                "Front End": "Front End",
-                "HTML5": "HTML5",
-                "SCSS": "SCSS", 
-                "JavaScript": "JavaScript",
-                "Kentico": "Kentico"
+                "all": "All",         
+                "front_end": "Front End",
+                "html5": "HTML5",
+                "scss": "SCSS", 
+                "javascript": "JavaScript",
+                "kentico": "Kentico"
             }
         },  
         "url": "https://www.advancial.org",
@@ -337,12 +337,12 @@
         "tech": {
             "featured_list": ["Javascript", "jQuery", "CSS", "Kentico"],
             "filter_tags": {
-                "All": "All",         
-                "Front End": "Front End",
-                "HTML5": "HTML5",
-                "SCSS": "SCSS", 
-                "JavaScript": "JavaScript",
-                "Kentico": "Kentico"
+                "all": "All",         
+                "front_end": "Front End",
+                "html5": "HTML5",
+                "scss": "SCSS", 
+                "javascript": "JavaScript",
+                "kentico": "Kentico"
             }
         },
         "url": "https://www.cityofdenton.com/en-us/",
@@ -380,12 +380,12 @@
                 "Adobe XD"
             ],
             "filter_tags": {
-                "All": "All",         
-                "Front End": "Front End",
-                "HTML5": "HTML5",
-                "SCSS": "SCSS", 
-                "JavaScript": "JavaScript",
-                "Kentico": "Kentico"
+                "all": "All",         
+                "front_end": "Front End",
+                "html5": "HTML5",
+                "scss": "SCSS", 
+                "javascript": "JavaScript",
+                "kentico": "Kentico"
             }
         },
         "images": [
@@ -419,14 +419,14 @@
         "tech": {
             "featured_list": ["Svelte", "Sapper", "SCSS", "Netlify"],
             "filter_tags": {
-                "All": "All",         
-                "Front End": "Front End",
-                "Back End": "Back End",
-                "Node Js": "Node Js", 
-                "HTML5": "HTML5",
-                "SCSS": "SCSS", 
-                "JavaScript": "JavaScript",
-                "UI/UX Design": "UI/UX Design"
+                "all": "All",         
+                "front_end": "Front End",
+                "back_end": "Back End",
+                "nodejs": "Node Js", 
+                "html5": "HTML5",
+                "scss": "SCSS", 
+                "javascript": "JavaScript",
+                "uiux_design": "UI/UX Design"
             }
         },
         "url": "",
@@ -462,15 +462,15 @@
                 "Convert Kit"
             ],
             "filter_tags": {
-                "All": "All",         
-                "Front End": "Front End",
-                "Back End": "Back End",
-                "HTML5": "HTML5",
-                "SCSS": "SCSS", 
-                "JavaScript": "JavaScript",
-                "WordPress": "WordPress", 
-                "PHP": "PHP",
-                "UI/UX Design": "UI/UX Design"
+                "all": "All",         
+                "front_end": "Front End",
+                "back_end": "Back End",
+                "html5": "HTML5",
+                "scss": "SCSS", 
+                "javascript": "JavaScript",
+                "wordpress": "WordPress", 
+                "php": "PHP",
+                "uiux_design": "UI/UX Design"
             }
         },
         "images": [
@@ -504,12 +504,12 @@
         "tech": {
             "featured_list": ["JavaScript", "GSAP", "CSS", "HTML"],
             "filter_tags": {
-                "All": "All",         
-                "Front End": "Front End",
-                "HTML5": "HTML5",
-                "SCSS": "SCSS", 
-                "JavaScript": "JavaScript",
-                "UI/UX Design": "UI/UX Design"
+                "all": "All",         
+                "front_end": "Front End",
+                "html5": "HTML5",
+                "scss": "SCSS", 
+                "javascript": "JavaScript",
+                "uiux_design": "UI/UX Design"
             }
         },    
         "url": "",
@@ -524,14 +524,14 @@
         "tech": {
             "featured_list": ["JavaScript", "CSS", "BootStrap", "HTML", "PHP"],
             "filter_tags": {
-                "All": "All",         
-                "Front End": "Front End",
-                "Back End": "Back End",
-                "HTML5": "HTML5",
-                "SCSS": "SCSS", 
-                "JavaScript": "JavaScript",
-                "PHP": "PHP",
-                "UI/UX Design": "UI/UX Design"
+                "all": "All",         
+                "front_end": "Front End",
+                "back_end": "Back End",
+                "html5": "HTML5",
+                "scss": "SCSS", 
+                "javascript": "JavaScript",
+                "php": "PHP",
+                "uiux_design": "UI/UX Design"
             }
         },
         "url": "",

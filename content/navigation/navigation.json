@@ -1,0 +1,40 @@
+{
+    "links": [
+        {
+            "name": "Home",
+            "path": "/",
+            "children": []
+        },
+        {
+            "name": "Experience",
+            "path": "/#experience",
+            "children": []
+        },
+        {
+            "name": "Projects",
+            "path": "/#projects",
+            "children": [
+                {
+                    "name": "Archive",
+                    "path": "/archive",
+                    "children": []
+                },
+                {
+                    "name": "Project Detail",
+                    "path": "/projects/:id",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "About",
+            "path": "/#about",
+            "children": []
+        },
+        {
+            "name": "Contact",
+            "path": "/#contact",
+            "children": []
+        }
+    ]
+}

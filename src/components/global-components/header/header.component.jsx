@@ -2,7 +2,7 @@ import React, { useEffect, useState, useContext } from 'react'
 import './header.styles.scss'
 
 import classNames from 'classnames';
-import { Link } from "gatsby"
+import { graphql, Link, useStaticQuery } from "gatsby"
 
 import { useScrollPosition } from "@hooks/useScrollPosition"
 import { useIsMounted } from '@hooks/useIsMounted'
@@ -11,7 +11,27 @@ import { useIsBodyScrollable } from '@hooks/useIsBodyScrollable'
 import { GlobalContext } from '@global-components/global.context'
 import { menuItems } from '@config'
 
-export default function Header({ path = '/' }) {
+export default function Header({ currentPath = '/' }) {
+
+    const { allNavigationJson } = useStaticQuery(graphql`
+        query MyQuery {
+            allNavigationJson {
+                nodes {
+                    links {
+                        name
+                        path
+                        children {
+                            name
+                            path
+                        }
+                    }          
+                }
+            }
+        }
+    `)
+
+    const navItems = allNavigationJson.nodes[0].links
+    console.log('nav items', navItems);
 
     const [ globalContextData ] = useContext(GlobalContext)
     const { activeMenuItem } = globalContextData;
@@ -23,7 +43,7 @@ export default function Header({ path = '/' }) {
     const [isMobileMenuBtnSwapping, setIsMobileMenuBtnSwapping] = useState(false);
     const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
 
-    const isProjectPage = path && path !== '/' ? true : false
+    const isProjectPage = currentPath && currentPath !== '/' ? true : false
     
     const openNav = () => setIsMobileNavOpen(true);
     const closeNav = () => setIsMobileNavOpen(false);
@@ -50,7 +70,7 @@ export default function Header({ path = '/' }) {
     }, [isMobileNavFixed])
     
 
-    if(path) return (
+    if(currentPath) return (
         <header 
             className={classNames('header__module', {
                 'mobile-menu-swapping': isMobileMenuBtnSwapping,
@@ -103,23 +123,23 @@ export default function Header({ path = '/' }) {
 
                 <div className="navigation-overflow-wrapper stationary">
                     <ul className={`navigation stationary`}>
-                        {menuItems.map((menuItem, i) => (
+                        {navItems.map(({ name, path, children }, i) => (
                             <li 
-                                key={menuItem + 'nav-link stationary'}
+                                key={name + 'nav-link stationary'}
                                 className={classNames({
-                                    'active-stationary': !isProjectPage && menuItem === 'Home' && path === '/',
-                                    'active-stationary active': isProjectPage && menuItem === 'Projects',
-                                    'active': !isProjectPage && activeMenuItem === menuItem
+                                    'active-stationary': !isProjectPage && name === 'Home' && currentPath === '/',
+                                    'active-stationary active': isProjectPage && name === 'Projects',
+                                    'active': !isProjectPage && activeMenuItem === name
                                 })}
                             >
 
                                 <div className={`nav-item-outer-wrapper`}>
 
                                     <Link 
-                                        to={`/#${menuItem.toLowerCase()}`}
+                                        to={path === '/' ? '/#' : path}
                                         onClick={closeNav}
                                     >
-                                        {menuItem}
+                                        {name}
                                         <span className="number">{`0${i}.`}</span>
                                     </Link>
                                 </div>
@@ -130,22 +150,22 @@ export default function Header({ path = '/' }) {
 
                 <div className="navigation-overflow-wrapper scrollable">
                     <ul className={`navigation scrollable`}>
-                        {menuItems.map((menuItem, i) => (
+                        {navItems.map(({ name, path, children }, i) => (
                             <li 
-                                key={menuItem + i + 'nav-link'}
+                                key={name + i + 'nav-link'}
                                 className={classNames({
-                                    'active-stationary': !isProjectPage && menuItem === 'Home' && path === '/',
-                                    'active-stationary active': isProjectPage && menuItem === 'Projects',
-                                    'active': (!isProjectPage && activeMenuItem === menuItem && activeMenuItem !== 'Home' ) || (activeMenuItem === 'Home' && menuItem === 'Experience'),
+                                    'active-stationary': !isProjectPage && name === 'Home' && currentPath === '/',
+                                    'active-stationary active': isProjectPage && name === 'Projects',
+                                    'active': (!isProjectPage && activeMenuItem === name && activeMenuItem !== 'Home' ) || (activeMenuItem === 'Home' && name === 'Experience'),
                                 })}
                             >
                                 <div className={`nav-item-outer-wrapper`}>
                                     <Link 
-                                        to={`/#${menuItem.toLowerCase()}`}
+                                        to={path === '/' ? '/#' : path}
                                         onClick={closeNav}
                                     >
                                         <span className="number">{`0${i}.`}</span>
-                                        {menuItem}
+                                        {name}
                                     </Link>
                                 </div>
                             </li>

@@ -14,20 +14,7 @@ export default function ProjectListFilters({
     isFilterModalOpen
 }) {
 
-    // const [isFiltersVisible, setIsFiltersVisible] = useState(false);
     const [isMounted, setIsMounted] = useState(false);
-
-    // const openMobileFilters = () => setIsFiltersVisible(true);
-    // const closeMobileFilters = () => setIsFiltersVisible(false);
-
-    // useEffect(() => {
-    //     if(isFiltersVisible) document.body.classList.add('body-no-scroll');
-    //     else document.body.classList.remove('body-no-scroll');
-
-    //     return (()=> {
-    //         document.body.classList.remove('body-no-scroll');
-    //     })
-    // }, [isFiltersVisible])
 
     useEffect(() => {
         setIsMounted(true);
@@ -55,18 +42,17 @@ export default function ProjectListFilters({
                     onClick={closeFilterModal}
                 />
                 <div className={`filter-buttons-inner-container`}>
-                    {listFilters.map((filterText, i) => (
+                    {listFilters.map(({ key, text }, i) => (
                         <div 
                             className={`list-filter-button fade-up__scoped`}
                             style={{ transitionDelay: `${500 + i * 50}ms` }}
-                            key={filterText + i + 'project-list-filters'}
+                            key={key + i + 'project-list-filters'}
                         >
                             <FilterButton
-                                className={`${activeFilterTag === filterText ? 'is-active' : ''}`}
-                            
-                                onClick={() => filterProjects(filterText)}
+                                className={`${activeFilterTag.key === key ? 'is-active' : ''}`}                          
+                                onClick={() => filterProjects({ key,  text })}
                             >
-                                {filterText}
+                                {text}
                             </FilterButton>
                         </div>
                     

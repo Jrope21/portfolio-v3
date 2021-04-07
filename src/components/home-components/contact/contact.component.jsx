@@ -52,13 +52,13 @@ const Contact = React.forwardRef(({ sectionRef, moduleData }) => {
             data-sal="mount"
             ref={sectionRef}
             className={`contact__module`}
+            id="contact"
         >
             <div className="titles-container">
                 <NumberedSectionTitle
                     className="section-titles fade-up__mount"
                     title={numbered_section_details.title} 
                     sectionNumber={numbered_section_details.section_number} 
-                    sectionName="contact"
                 />
                 <SplitTextCta 
                     className="fade-up__mount"
@@ -171,10 +171,5 @@ const Contact = React.forwardRef(({ sectionRef, moduleData }) => {
         </section>
     )
 });
-
-// title,
-// description,
-// flagText,
-// buttonText
 
 export default Contact;

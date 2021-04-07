@@ -33,6 +33,13 @@ module.exports = {
         path: `${__dirname}/content/archive-page`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `navigation`,
+        path: `${__dirname}/content/navigation`,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-transformer-json`,
     `gatsby-plugin-sharp`,

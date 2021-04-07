@@ -23,7 +23,20 @@ const ProjectsLayoutFragment = `
                     featured_list
                     full_list
                     priority_list
-                    filter_tags
+                    filter_tags {
+                        all
+                        front_end
+                        back_end
+                        nodejs
+                        html5
+                        scss
+                        javascript
+                        uiux_design
+                        php
+                        kentico
+                        react
+                        gatsby
+                    }
                 }
                 url
                 url_path
@@ -34,3 +47,12 @@ const ProjectsLayoutFragment = `
 `
 
 module.exports = ProjectsLayoutFragment
+
+// "All": "All",         
+// "Front End": "Front End",
+// "Back End": "Back End",
+// "Node Js": "Node Js", 
+// "HTML5": "HTML5",
+// "SCSS": "SCSS", 
+// "JavaScript": "JavaScript",
+// "UI/UX Design": "UI/UX Design"

@@ -1,7 +1,10 @@
 
 const ProjectListFragment = `
     project_list {
-        table_filters
+        table_filters {
+            key
+            text
+        }
         table_titles
     }
 `
