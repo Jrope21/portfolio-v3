@@ -169,7 +169,7 @@
         }
     }
 
-    .text-displacement-year-container {
+    .year-text-wrapper {
         margin-left: 7.5%;
 
         @media (min-width: breakpoint(xs)) {
@@ -177,11 +177,30 @@
         }
     }
 
-    .text-displacement-year-text {
+    .year-text {
+        display: block;
+        font-size: px-to-rem(22px);
+        font-weight: 800;
+        font-family: $font_header_alt;
+        // margin-top: 10px;
+        // margin-bottom: 3px;
 
-        // ALERT -- using max-width NOT min-width here
-        @media (max-width: breakpoint(xs)) {
+         @media (min-width: breakpoint(xs)) {
             font-size: px-to-rem(25px);
         }
+
+        @media (min-width: breakpoint(sm)) {
+            font-size: px-to-rem(28px);
+        }
+        @media (min-width: breakpoint(md)) {
+            font-size: px-to-rem(34px);
+        }
+    
+        @media (min-width: breakpoint(xl)) {
+            font-size: px-to-rem(40px);
+            // margin-bottom: 1px;
+        }
+
+       
     }   
 }

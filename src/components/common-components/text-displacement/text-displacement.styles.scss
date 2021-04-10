@@ -1,24 +1,10 @@
 
 .text-displacement__module {
     position: relative;
-    // top: 30%;
     font-family: $font_header_alt;
-    // margin-bottom: 6px;
-    // margin-top: -30%;
-    
     font-weight: 800;
     overflow: hidden;
-    // margin
     transform: translateY(-30%);
-    // top: -30%;
-
-
-    // @media (min-width: breakpoint(sm)) {
-    //     margin-left: 60px;
-    //     margin-bottom: 8px;
-    // }
-
-   
 
     .inner-text-container {
         display: block;
@@ -26,20 +12,11 @@
         font-size: px-to-rem(30px);
 
         @media (min-width: breakpoint(md)) {
-            // margin-left: 80px;
             font-size: px-to-rem(35px);
         }
     
         @media (min-width: breakpoint(xl)) {
             font-size: px-to-rem(42px);
         }
-
-        // @media (min-width: breakpoint(md)) {
-        //     transform: translateY(17px);
-        // }
-
-        // @media (min-width: breakpoint(xl)) {
-        //     transform: translateY(18px);
-        // }
     }
 }

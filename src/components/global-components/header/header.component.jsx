@@ -1,37 +1,18 @@
 import React, { useEffect, useState, useContext } from 'react'
 import './header.styles.scss'
 
-import classNames from 'classnames';
-import { graphql, Link, useStaticQuery } from "gatsby"
+import { Link } from "gatsby"
 
 import { useScrollPosition } from "@hooks/useScrollPosition"
 import { useIsMounted } from '@hooks/useIsMounted'
 import { useIsBodyScrollable } from '@hooks/useIsBodyScrollable'
 
 import { GlobalContext } from '@global-components/global.context'
-import { menuItems } from '@config'
+import useNavigationItems from '../../../hooks/useNavigationItems';
 
 export default function Header({ currentPath = '/' }) {
 
-    const { allNavigationJson } = useStaticQuery(graphql`
-        query MyQuery {
-            allNavigationJson {
-                nodes {
-                    links {
-                        name
-                        path
-                        children {
-                            name
-                            path
-                        }
-                    }          
-                }
-            }
-        }
-    `)
-
-    const navItems = allNavigationJson.nodes[0].links
-    console.log('nav items', navItems);
+    const [navItems, setNavItems] = useNavigationItems();
 
     const [ globalContextData ] = useContext(GlobalContext)
     const { activeMenuItem } = globalContextData;
@@ -72,18 +53,20 @@ export default function Header({ currentPath = '/' }) {
 
     if(currentPath) return (
         <header 
-            className={classNames('header__module', {
-                'mobile-menu-swapping': isMobileMenuBtnSwapping,
-                'mobile-nav-fixed': isMobileNavFixed,
-                'mobile-nav-open': isMobileNavOpen
-            })}
+            className={`
+                header__module 
+                ${isMobileMenuBtnSwapping ? 'mobile-menu-swapping' : ''}
+                ${isMobileNavFixed ? 'mobile-nav-fixed' : ''}
+                ${isMobileNavOpen ? 'mobile-nav-open' : ''}
+            `}
         >
             <nav>
                 <button 
-                    className={classNames(`mobile-menu-btn`, `stationary`, {
-                        'Projects': isProjectPage,
-                        'Home': !isProjectPage
-                    })}
+                    className={`
+                        mobile-menu-btn
+                        stationary
+                        ${isProjectPage ? 'Projects' : 'Home'}
+                    `}
                     onClick={openNav}
                 >
                     <div className="inner-wrapper">
@@ -100,10 +83,12 @@ export default function Header({ currentPath = '/' }) {
 
                 <div className="mobile-menu-btn-scrollable-wrapper">
                     <button 
-                        className={classNames(`mobile-menu-btn`, `scrollable`, {
-                            'Projects': isProjectPage,
-                            [activeMenuItem]: !isProjectPage
-                        })}
+                        className={`
+                            mobile-menu-btn
+                            scrollable
+                            ${isProjectPage ? 'Projects' : ''}
+                            ${!isProjectPage ? activeMenuItem.name : ''}
+                        `}
                         onClick={openNav}
                     >
                         <div className="inner-wrapper">
@@ -112,7 +97,7 @@ export default function Header({ currentPath = '/' }) {
                             <span 
                                 className={`mobile-menu-breadcrumb`}
                             >
-                                {isProjectPage ? 'Projects' : activeMenuItem}
+                                {isProjectPage ? 'Projects' : activeMenuItem.name}
                             </span>
                         </div>
                         
@@ -126,11 +111,11 @@ export default function Header({ currentPath = '/' }) {
                         {navItems.map(({ name, path, children }, i) => (
                             <li 
                                 key={name + 'nav-link stationary'}
-                                className={classNames({
-                                    'active-stationary': !isProjectPage && name === 'Home' && currentPath === '/',
-                                    'active-stationary active': isProjectPage && name === 'Projects',
-                                    'active': !isProjectPage && activeMenuItem === name
-                                })}
+                                className={`
+                                    ${!isProjectPage && name === 'Home' && currentPath === '/' ? 'active-stationary' : ''}
+                                    ${isProjectPage && name === 'Projects' ? 'active-stationary active' : ''}
+                                    ${!isProjectPage && activeMenuItem.name === name ? 'active' : ''}
+                                `}
                             >
 
                                 <div className={`nav-item-outer-wrapper`}>
@@ -153,11 +138,11 @@ export default function Header({ currentPath = '/' }) {
                         {navItems.map(({ name, path, children }, i) => (
                             <li 
                                 key={name + i + 'nav-link'}
-                                className={classNames({
-                                    'active-stationary': !isProjectPage && name === 'Home' && currentPath === '/',
-                                    'active-stationary active': isProjectPage && name === 'Projects',
-                                    'active': (!isProjectPage && activeMenuItem === name && activeMenuItem !== 'Home' ) || (activeMenuItem === 'Home' && name === 'Experience'),
-                                })}
+                                className={`
+                                    ${!isProjectPage && name === 'Home' && currentPath === '/' ? 'active-stationary' : ''}
+                                    ${isProjectPage && name === 'Projects' ? 'active-stationary active' : ''}
+                                    ${!isProjectPage && activeMenuItem.name === name ? 'active' : ''}
+                                `}
                             >
                                 <div className={`nav-item-outer-wrapper`}>
                                     <Link 

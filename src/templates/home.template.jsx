@@ -8,6 +8,7 @@ import Contact from "@home-components/contact/contact.component"
 
 import { useScrollPosition } from "@hooks/useScrollPosition"
 import { GlobalContext } from '@global-components/global.context'
+import useNavigationItems from "../hooks/useNavigationItems"
 
 const sectionNavNamesInOrder = [
   'Home',
@@ -32,7 +33,7 @@ export default function HomeTemplate({
     statement_and_skills: StatementAndSkillsModuleData
   } = pageData;
 
-  console.log(pageData, featuredProjects);
+  const [navItems, setNavItems] = useNavigationItems();
 
   const heroAnimationDelay = 1100;
 
@@ -40,7 +41,6 @@ export default function HomeTemplate({
 
   const [globalContextData, setGlobalContextData] = useContext(GlobalContext);
 
-  // const [allViewedSections, setAllViewedSections] = useState({})
   const [isMounted, setIsMounted] = useState(false);
   const [isHeroAnimationsDone, setIsHeroAnimitionsDone] = useState(false);
 
@@ -59,19 +59,17 @@ export default function HomeTemplate({
   useScrollPosition(({ prevPos, currPos }) => {
 
     const currentScrollY = Math.abs(currPos.y);
-    // const updatedViewedSections = allViewedSections;
     
     // set to >= 1, so the menu won't change to "Home"
-    for(let i = sectionNavNamesInOrder.length - 1; i >= 0; i--) {
+    for(let i = navItems.length - 1; i >= 0; i--) {
       const elementScrollY = sectionRefs.current[i].current.offsetTop;
 
       if(elementScrollY < currentScrollY + 200) {
         setGlobalContextData({
           ...globalContextData,
-          activeMenuItem: sectionNavNamesInOrder[i]
+          activeMenuItem: navItems[i]
         })
-        // updatedViewedSections[sectionNavNamesInOrder[i]] = true;
-        // setAllViewedSections(updatedViewedSections);
+
         break;
       }
     }
@@ -92,7 +90,6 @@ export default function HomeTemplate({
       <div className="container">
         <IndustryExperience 
           moduleData={experienceModuleData}
-          // activateAnimations={allViewedSections['Experience'] ? true : false}
           activateAnimations={isHeroAnimationsDone ? true : false}
           sectionRef={sectionRefs.current[1]} 
         />

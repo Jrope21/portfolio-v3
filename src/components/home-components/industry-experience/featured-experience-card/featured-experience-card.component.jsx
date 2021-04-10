@@ -30,11 +30,14 @@ export default function FeaturedExperienceCard({
                     style={{ transitionDelay: `250ms` }} 
                     className="fade-up__scoped"
                 >
-                    <TextDisplacement 
+                    <div className="year-text">
+                    {startYear} &nbsp;{endYear}
+                    </div>
+                    {/* <TextDisplacement 
                         text={`${startYear} &nbsp;${endYear}`}
                         textClassName=""
                         containerClassName="job-dates-container"
-                    />
+                    /> */}
                 </div>
                
             </div>

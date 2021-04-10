@@ -2,7 +2,6 @@ import React from 'react'
 import './jr-button.styles.scss'
 
 import { Link } from 'gatsby'
-import classNames from 'classnames'
 
 import JrPointer from '@common-components/icons/jr-pointer/jr-pointer.component'
 
@@ -17,11 +16,12 @@ export default function JrButton({
 
     if (urlPath && children) return (
         <Link 
-            className={classNames(`jr-button__module`, {
-                [className]: className,
-                [btnStyle]: btnStyle,
-                'hover:bg-change hover:_bg-accent': btnStyle === 'large' 
-            })}
+            className={`
+                jr-button__module 
+                ${className ? className : ''} 
+                ${btnStyle ? btnStyle : ''}
+                ${btnStyle === 'large' ? 'hover:bg-change hover:_bg-accent' : ''}
+            `}
             to={urlPath}
             {...otherProps}
         >
@@ -40,10 +40,11 @@ export default function JrButton({
 
     if(children) return (
         <button 
-            className={classNames(`jr-button__module hoverable`, {
-                [className]: className,
-                [btnStyle]: btnStyle,
-            })}
+            className={`
+                jr-button__module hoverable
+                ${className ? className : ''} 
+                ${btnStyle ? btnStyle : ''}
+            `}
             {...otherProps}
         >
             <span className="text">

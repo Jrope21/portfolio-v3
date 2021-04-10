@@ -54,9 +54,15 @@ $popup_animation_time: .45s;
             background: transparent;
             margin-right: 180px;
             margin-left: 70px;
-            width: auto;
-            margin-top: -170px;
+            // width: auto;
+            margin-top: -140px;
+            width: 100%;
+           
             max-width: 750px;
+        }
+
+        @media (min-width: breakpoint(xl)) {
+            margin-top: -170px;
         }
 
 

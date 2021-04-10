@@ -52,9 +52,11 @@ $page_container_max_width: 1650px;
 // ********************************************************
 
 
-$font_fallbacks: -apple-system,BlinkMacSystemFont,Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+$font_fallbacks: -apple-system,BlinkMacSystemFont,'Roboto',Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
 $font_body: 'SF Pro Display'; // this is the body font
 $font_header_alt: 'SF Pro Text', $font_fallbacks;
+// $font_body: 'Roboto'; // this is the body font
+// $font_header_alt: 'Roboto', $font_fallbacks;
 $font_base: $font_body, $font_fallbacks !default;
 
 

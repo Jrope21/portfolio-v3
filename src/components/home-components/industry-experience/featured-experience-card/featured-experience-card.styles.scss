@@ -52,17 +52,32 @@
         margin-bottom: 6px;
     }
 
-    .job-dates-container {
+    .year-text {
+        display: block;
+        font-size: px-to-rem(25px);
+        font-weight: 800;
+        font-family: $font_header_alt;
         margin-top: 10px;
-        margin-bottom: -4px;
+        margin-bottom: 3px;
 
         @media (min-width: breakpoint(sm)) {
             margin-left: 60px;
         }
-
         @media (min-width: breakpoint(md)) {
+            font-size: px-to-rem(30px);
             margin-left: 80px;
         }
+    
+        @media (min-width: breakpoint(xl)) {
+            font-size: px-to-rem(38px);
+            margin-bottom: 1px;
+        }
+
+
+    }
+
+    .job-dates-container {
+
 
     }
 

@@ -31,8 +31,13 @@
     }
 
     @media (min-width: breakpoint(lg)) {
-        padding-left: 125px;
+        // padding-left: 125px;
+        padding-left: 140px;
         max-width: 1280px;
+    }
+
+    @media (min-width: breakpoint(xl)) {
+        padding-left: 150px;
     }
 
     @media (min-width: breakpoint(xxl)) {
@@ -44,6 +49,8 @@
 .content-page-container {
     margin-left: auto;
     margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
 
     @media (min-width: breakpoint(xs)) {
         padding-left: 20px;
@@ -60,9 +67,14 @@
     }
 
     @media (min-width: breakpoint(lg)) {
-        padding-left: 125px;
+        // padding-left: 125px;
+        padding-left: 140px;
         padding-right: 125px;
         max-width: 1300px;
+    }
+
+    @media (min-width: breakpoint(xl)) {
+        padding-left: 150px;
     }
 
     &.container-vertical-spacer {

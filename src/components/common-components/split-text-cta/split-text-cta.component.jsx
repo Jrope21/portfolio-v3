@@ -47,13 +47,11 @@ export default function TextTitleCta({
                         <p className="sub-title">{description}</p>
                     </div>
                 }
-                
-                {/* {!deactivateLink &&  */}
-                    <JrPointer
-                        className="featured-title-pointer"
-                        size={isProjectLink ? 'medium' : 'standard'}
-                    />
-                {/* } */}
+            
+                <JrPointer
+                    className="featured-title-pointer"
+                    size={isProjectLink ? 'medium' : 'standard'}
+                />
             </div>
 
             <span className="bottom large-text-title">{title.slice(numberOfTitleLettersOnTop)}</span>

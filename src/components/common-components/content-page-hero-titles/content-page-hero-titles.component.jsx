@@ -32,13 +32,14 @@ export default function PageHeroTitles({ title, subTitle, linkText, href, year }
 
                {year ? 
                     <div 
-                        className="text-displacement-year-container fade-up__mount"
+                        className="year-text-wrapper fade-up__mount"
                         style={{ transitionDelay: `200ms` }}
                     >
-                        <TextDisplacement
+                        <div className="year-text">{year}</div>
+                        {/* <TextDisplacement
                             text={year}
                             textClassName="text-displacement-year-text"
-                        />
+                        /> */}
                     </div>
                 : null}
 
