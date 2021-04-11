@@ -7,14 +7,24 @@
 // ********************************************************
 
 
+html {
+    // setting these values on body & html 
+    // prevent the gatsby link from scrolling to top on navigation
+    // => required this for page transitions
+    // overflow: auto;
+    // height: 100%
+}
+
 body {
     @include webFont;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    // overflow-x: hidden;
     color: color(secondary);
     background-color: color(page_background);
+    overflow: auto;
+    height: 100%
 }
 
 a {

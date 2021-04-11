@@ -61,7 +61,7 @@ export default function HomeTemplate({
     const currentScrollY = Math.abs(currPos.y);
     
     // set to >= 1, so the menu won't change to "Home"
-    for(let i = navItems.length - 1; i >= 0; i--) {
+    for(let i = navItems.length - 1; i >= 1; i--) {
       const elementScrollY = sectionRefs.current[i].current.offsetTop;
 
       if(elementScrollY < currentScrollY + 200) {

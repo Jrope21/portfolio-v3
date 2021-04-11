@@ -35,7 +35,6 @@ $popup_animation_time: .45s;
         transition: $popup_animation_time $custom_easing transform;
         padding-top: 40px;
         background-color: color(page_background);
-        // transition-delay: 700ms;
 
         &.disable-page-animation {
             transition: unset;
@@ -54,7 +53,6 @@ $popup_animation_time: .45s;
             background: transparent;
             margin-right: 180px;
             margin-left: 70px;
-            // width: auto;
             margin-top: -140px;
             width: 100%;
            

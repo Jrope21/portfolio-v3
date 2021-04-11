@@ -16,3 +16,17 @@ if (typeof window !== 'undefined') {
     // Makes scroll behavior of internal links smooth
     require('smooth-scroll')('a[href*="#"]');
 }
+
+// turning off scroll position 
+// => allowing "PageTransition" component to control this
+
+// TODO -- maybe maintain saved scroll positions after animations?? 
+// => after hitting the "back" button user should end up at previous location??
+export const shouldUpdateScroll = () => false;
+
+// export const shouldUpdateScroll = ({
+//     routerProps: { location },
+// }) => {
+//     if(location.hash) return true;
+//     return false;
+// }

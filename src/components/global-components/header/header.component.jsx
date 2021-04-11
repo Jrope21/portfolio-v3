@@ -19,6 +19,7 @@ export default function Header({ currentPath = '/' }) {
 
     const [isMounted] = useIsMounted();
     const [isBodyScrollable, setIsBodyScrollable] = useIsBodyScrollable(true);
+    // const [scrollPosition] = useScrollPosition();
 
     const [isMobileNavFixed, setIsMobileNavFixed] = useState(false);
     const [isMobileMenuBtnSwapping, setIsMobileMenuBtnSwapping] = useState(false);
@@ -32,10 +33,19 @@ export default function Header({ currentPath = '/' }) {
     useScrollPosition(({ prevPos, currPos }) => { // setup fixed nav swap
         const changeScrollAt = 450;
         const currentScrollY = Math.abs(currPos.y);
-        
+                
         if(currentScrollY > changeScrollAt && !isMobileNavFixed) setIsMobileNavFixed(true);
         if(currentScrollY < changeScrollAt) setIsMobileNavFixed(false)
     }, [])
+    // useEffect(() => {
+    //     const changeScrollAt = 450;
+    //     const currentScrollY = Math.abs(scrollPosition);
+
+    //     console.log('scroll position', scrollPosition);
+        
+    //     if(currentScrollY > changeScrollAt && !isMobileNavFixed) setIsMobileNavFixed(true);
+    //     if(currentScrollY < changeScrollAt) setIsMobileNavFixed(false)
+    // }, [scrollPosition])
 
     useEffect(() => { // no body scroll when mobile nav is open
         setIsBodyScrollable(!isMobileNavOpen);

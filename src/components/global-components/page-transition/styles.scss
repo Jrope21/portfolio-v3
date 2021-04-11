@@ -1,0 +1,9 @@
+
+.page-transition__module {
+    opacity: 1;
+    transition: opacity 450ms $custom_easing, transform 450ms $custom_easing;
+    
+    &.hide {
+        opacity: 0;
+    }  
+}
