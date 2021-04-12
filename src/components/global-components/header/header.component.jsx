@@ -132,6 +132,7 @@ export default function Header({ currentPath = '/' }) {
 
                                     <Link 
                                         to={path === '/' ? '/#' : path}
+                                        // to={path === '/' ? '/' : '/'}
                                         onClick={closeNav}
                                     >
                                         {name}

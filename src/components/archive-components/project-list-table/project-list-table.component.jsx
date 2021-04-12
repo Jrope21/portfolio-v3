@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import './project-list-table.styles.scss'
 
 import ExternalLinkIcon from '@common-components/icons/external-link-icon/external-link-icon.component'
@@ -6,25 +6,16 @@ import JrPointer from '@common-components/icons/jr-pointer/jr-pointer.component'
 import GithubIcon from '@images/socials/github_icon_alt.svg';
 
 import JrLink from '../../common-components/jr-link/jr-link.component'
-// import { useIsMounted } from '../../../hooks/useIsMounted';
 
 export default function ProjectListTable({ 
     tableTitles = [], 
     projects = [], 
     activateMountAnimations = false
 }) {
-
-    // const [isMounted] = useIsMounted();
-    // const [isMounted, setIsMounted] = useState(false);
-
-    // useEffect(() => {
-    //     setIsMounted(true);
-    // }, [])
     
     if(projects.length) return (
         <div 
             className={`project-list-table__module fade-up__mount ${activateMountAnimations ? 'activate-animations__mount' : ''}`}
-            // style={{ transitionDelay: '800ms' }}
             style={{ transitionDelay: '800ms' }}
         >
 

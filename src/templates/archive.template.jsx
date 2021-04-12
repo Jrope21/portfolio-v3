@@ -17,7 +17,7 @@ export default function ArchiveTemplate({
 
     const [isMounted] = useIsMounted();
     // useEffect(() => {
-    //     window.scrollTo(0, 0);
+    //     console.log('mounting')
     // }, [])
 
     return (

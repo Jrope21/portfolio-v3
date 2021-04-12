@@ -10,14 +10,6 @@ import { useScrollPosition } from "@hooks/useScrollPosition"
 import { GlobalContext } from '@global-components/global.context'
 import useNavigationItems from "../hooks/useNavigationItems"
 
-const sectionNavNamesInOrder = [
-  'Home',
-  'Experience',
-  'Projects',
-  'About',
-  'Contact'
-]
-
 export default function HomeTemplate({
   pageContext: {
     pageData = {},
@@ -33,7 +25,7 @@ export default function HomeTemplate({
     statement_and_skills: StatementAndSkillsModuleData
   } = pageData;
 
-  const [navItems, setNavItems] = useNavigationItems();
+  const [navItems] = useNavigationItems();
 
   const heroAnimationDelay = 1100;
 
@@ -55,10 +47,6 @@ export default function HomeTemplate({
 
       return (() => isMounted = false)
   }, [])
-
-//   useEffect(() => {
-//     window.scrollTo(0, 0);
-// }, [])
  
   useScrollPosition(({ prevPos, currPos }) => {
 

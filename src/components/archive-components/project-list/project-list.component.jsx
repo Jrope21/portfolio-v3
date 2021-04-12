@@ -10,18 +10,12 @@ export default function ProjectList({
     allProjects,
     activateMountAnimations
 }) {
-    console.log(allProjects);
-    // const [isMounted, setIsMounted] = useState(false);
     const [activeFilterTag, setActiveFilterTag] = useState({ key: 'all', text: 'All' });
 
     const [projects, setProjects] = useState(allProjects);
 
     const [isFilterModalOpen, setIsFilterModalOpen] = useState(false);
     const [isFilteringForProjects, setIsFilteringForProjects] = useState(false);
-
-    // useEffect(() => {
-    //     setIsMounted(true);
-    // }, [])
 
     useEffect(() => {
         let isUnmounted = false;

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import './project-list-filters.styles.scss'
 
 import FilterButton from '@archive-components/filter-button/filter-button.component'
@@ -15,12 +15,6 @@ export default function ProjectListFilters({
     activateMountAnimations = false
 }) {
 
-    // const [isMounted, setIsMounted] = useState(false);
-
-    // useEffect(() => {
-    //     setIsMounted(true);
-    // }, [])
-
     return (
         <div className={`project-list-filters__module ${activateMountAnimations ? 'is-mounted' : ''} `}>
             <div 
@@ -33,9 +27,6 @@ export default function ProjectListFilters({
                     Project Filters
                 </FilterButton>
             </div>
-           
-
-
 
             <div className={`filter-buttons-outer-container ${!enablePageTransitions ? 'disable-page-animation' : ''} ${isFilterModalOpen? ' is-visible activate-animations__scoped' : ''}`}>
                 <CloseButton 
