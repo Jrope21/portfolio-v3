@@ -24,7 +24,6 @@ const ProjectDetailFeaturedProjects = () => {
                 className="section-titles fade-up__mount"
                 title="Projects I've Worked On" 
                 sectionNumber={'2'} 
-                sectionName="projects"
             />
             
             <div className="projects-container">

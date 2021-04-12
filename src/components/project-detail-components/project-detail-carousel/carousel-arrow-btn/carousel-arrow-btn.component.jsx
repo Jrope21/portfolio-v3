@@ -6,7 +6,7 @@ export default function CarouselArrowBtn({ direction = 'right', hoverText = '', 
         <button 
             aria-label="a button that shows the next image in the carousel" 
             // on:click={() => viewNextSlide()} 
-            class={`carousel-arrow-btn__module ${direction}`}
+            className={`carousel-arrow-btn__module ${direction}`}
             {...otherProps}
         >
         {hoverText && 

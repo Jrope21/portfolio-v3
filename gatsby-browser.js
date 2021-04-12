@@ -17,50 +17,27 @@ if (typeof window !== 'undefined') {
     require('smooth-scroll')('a[href*="#"]');
 }
 
-// turning off scroll position 
-// => allowing "PageTransition" component to control this
-
-// const transitionDelay = 450;
-
-// TODO -- maybe maintain saved scroll positions after animations?? 
-// => after hitting the "back" button user should end up at previous location??
-// export const shouldUpdateScroll = () => {
-//     // window.setTimeout(() => window.scrollTo(0, 0), transitionDelay);
-//     return false;
-// };
+// adjusting default scroll handling (on route change
+// => this is to to allow the page transition to work properly
 
 const transitionDelay = 450;
 
-export const onRouteUpdate = ({ location, prevLocation }) => {
-    // window.body.focus();
-    console.log("new pathname", location)
-    console.log("old pathname", prevLocation ? prevLocation.pathname : null)
-  }
+export const shouldUpdateScroll = ({
+    routerProps = { location: null },
+    prevRouterProps = { location: null },
+    getSavedScrollPosition
+  }) => {
 
-  export const shouldUpdateScroll = () => false;
+    let savedPosition = null;
+    if(prevRouterProps.location) savedPosition = getSavedScrollPosition(prevRouterProps.location);
+    console.log('scroll log (on route update)', getSavedScrollPosition(routerProps.location));
 
-// export const shouldUpdateScroll = ({
-//     routerProps: { location },
-//     getSavedScrollPosition
-//   }) => {
-//     // document.body.classList.add('body-lock');
-//     // if(location === 'yooo') window.scroll(0, 0)
-//     // window.setTimeout(() => {
-//     //     // document.body.classList.remove('body-lock');
-//     //     window.scrollTo(0, 0)
-//     // }, transitionDelay);
-//     console.log('location action', location.action);
-//     // if (location.action === "PUSH") {
-//     //   window.setTimeout(() => window.scrollTo(0, 0), transitionDelay);
-//     // } else {
-//     //   const savedPosition = getSavedScrollPosition(location);
-//     //   window.setTimeout(
-//     //     () => window.scrollTo(...(savedPosition || [0, 0])),
-//     //     transitionDelay
-//     //   );
-//     // }
-//     return false;
-//   };
+    window.scroll(...(savedPosition || [0, 0]))
+    window.setTimeout(() => window.scroll(0, 0) ,transitionDelay)
+
+    return false;
+  };
+
 
 //   export const onInitialClientRender = () => {
 //     // dirty fix for missing popstate listener

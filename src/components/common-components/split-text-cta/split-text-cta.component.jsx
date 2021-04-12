@@ -39,11 +39,14 @@ export default function TextTitleCta({
                     <p className="sub-title">{description}</p>
                 :
                     <div className="year-and-text-container">
-                         <TextDisplacement 
+                        <div className="year-text">
+                            {year}
+                        </div>
+                         {/* <TextDisplacement 
                             text={year}
                             textClassName="text-displacement-year-text"
                             containerClassName="text-displacement-year-container"
-                        />
+                        /> */}
                         <p className="sub-title">{description}</p>
                     </div>
                 }

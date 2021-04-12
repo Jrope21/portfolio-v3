@@ -11,8 +11,8 @@ html {
     // setting these values on body & html 
     // prevent the gatsby link from scrolling to top on navigation
     // => required this for page transitions
-    overflow: auto;
-    height: 100%
+    // overflow: auto;
+    // height: 100%
 }
 
 body {
@@ -23,7 +23,7 @@ body {
     // overflow-x: hidden;
     color: color(secondary);
     background-color: color(page_background);
-    overflow: auto;
+    // overflow: auto;
     // height: 100%
 }
 
