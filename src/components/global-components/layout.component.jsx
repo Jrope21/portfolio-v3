@@ -7,21 +7,22 @@ import Header from "./header/header.component"
 import GlobalProvider from "./global.context"
 import Footer from "./footer/footer.component"
 import PageTransition from "./page-transition";
+import PageTransitionTest from "./page-transition-test";
 
 export default function Layout(props) {
   const { location, path, children } = props
 
-  const [isPageTransitioning, setIsPageTransitioning] = useState(false);
-  const [content, setContent] = useState(children);
+  // const [isPageTransitioning, setIsPageTransitioning] = useState(false);
+  // const [content, setContent] = useState(children);
 
-  console.log('page props', props);
-  useEffect(() => {
-    setIsPageTransitioning(true)
-    setTimeout(() => {
-      setIsPageTransitioning(false)
-      setContent(children)
-    }, 450)
-  }, [location.pathname])
+  // console.log('page props', props);
+  // useEffect(() => {
+  //   setIsPageTransitioning(true)
+  //   setTimeout(() => {
+  //     setIsPageTransitioning(false)
+  //     setContent(children)
+  //   }, 450)
+  // }, [location.pathname])
 
   return (
     <div className="page-width-container">
@@ -31,6 +32,9 @@ export default function Layout(props) {
             <PageTransition location={location}>
               {children}
             </PageTransition>
+            {/* <PageTransitionTest location={location}>
+              {children}
+            </PageTransitionTest> */}
             {/* <div className={`transition-content-wrapper ${isPageTransitioning ? 'hide' : ''}`}>
               {content}
             </div>       */}

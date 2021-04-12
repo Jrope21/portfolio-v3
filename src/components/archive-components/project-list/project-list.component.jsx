@@ -7,10 +7,11 @@ import ProjectListTable from '@archive-components/project-list-table/project-lis
 export default function ProjectList({
     tableFilters,
     tableTitles,
-    allProjects
+    allProjects,
+    activateMountAnimations
 }) {
     console.log(allProjects);
-    const [isMounted, setIsMounted] = useState(false);
+    // const [isMounted, setIsMounted] = useState(false);
     const [activeFilterTag, setActiveFilterTag] = useState({ key: 'all', text: 'All' });
 
     const [projects, setProjects] = useState(allProjects);
@@ -18,14 +19,14 @@ export default function ProjectList({
     const [isFilterModalOpen, setIsFilterModalOpen] = useState(false);
     const [isFilteringForProjects, setIsFilteringForProjects] = useState(false);
 
-    useEffect(() => {
-        setIsMounted(true);
-    }, [])
+    // useEffect(() => {
+    //     setIsMounted(true);
+    // }, [])
 
     useEffect(() => {
         let isUnmounted = false;
 
-        if (isMounted) {
+        if (activateMountAnimations) {
             setIsFilteringForProjects(true);
             console.log(allProjects)
             setTimeout(() => {
@@ -49,7 +50,7 @@ export default function ProjectList({
 
     return (
         <section 
-            className={`project-list__module ${isMounted ? 'activate-animations__mount' : ''}`}
+            className={`project-list__module ${activateMountAnimations ? 'activate-animations__mount' : ''}`}
         > 
 
             <div className="list-filters-container">
@@ -65,6 +66,7 @@ export default function ProjectList({
                     openFilterModal={openFilterModal}
                     closeFilterModal={closeFilterModal}
                     isFilterModalOpen={isFilterModalOpen}
+                    activateMountAnimations={activateMountAnimations}
                 />     
             </div>
 
@@ -96,6 +98,7 @@ export default function ProjectList({
                 tableTitles={tableTitles}
                 projects={projects}
                 activeFilterTag={activeFilterTag}
+                activateMountAnimations={activateMountAnimations}
             />
             
         </section>

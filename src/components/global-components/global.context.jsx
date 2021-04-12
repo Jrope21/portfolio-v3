@@ -2,6 +2,7 @@ import React, { createContext, useState } from "react"
 
 const INITIAL_STATE = {
   activeMenuItem: "Home",
+  isPageTransitioning: false,
 }
 
 export const GlobalContext = createContext(INITIAL_STATE)

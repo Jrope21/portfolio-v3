@@ -6,21 +6,25 @@ import JrPointer from '@common-components/icons/jr-pointer/jr-pointer.component'
 import GithubIcon from '@images/socials/github_icon_alt.svg';
 
 import JrLink from '../../common-components/jr-link/jr-link.component'
+// import { useIsMounted } from '../../../hooks/useIsMounted';
 
 export default function ProjectListTable({ 
     tableTitles = [], 
     projects = [], 
+    activateMountAnimations = false
 }) {
 
-    const [isMounted, setIsMounted] = useState(false);
+    // const [isMounted] = useIsMounted();
+    // const [isMounted, setIsMounted] = useState(false);
 
-    useEffect(() => {
-        setIsMounted(true);
-    }, [])
+    // useEffect(() => {
+    //     setIsMounted(true);
+    // }, [])
     
     if(projects.length) return (
         <div 
-            className={`project-list-table__module fade-up__mount ${isMounted ? 'activate-animations__mount' : ''}`}
+            className={`project-list-table__module fade-up__mount ${activateMountAnimations ? 'activate-animations__mount' : ''}`}
+            // style={{ transitionDelay: '800ms' }}
             style={{ transitionDelay: '800ms' }}
         >
 

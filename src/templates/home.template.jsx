@@ -55,6 +55,10 @@ export default function HomeTemplate({
 
       return (() => isMounted = false)
   }, [])
+
+//   useEffect(() => {
+//     window.scrollTo(0, 0);
+// }, [])
  
   useScrollPosition(({ prevPos, currPos }) => {
 

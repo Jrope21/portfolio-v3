@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import ArchiveHero from '@archive-components/archive-hero/archive-hero.component'
 import ProjectList from '@archive-components/project-list/project-list.component'
+
+import { useIsMounted } from '@hooks/useIsMounted';
 
 export default function ArchiveTemplate({
     pageContext: {
@@ -12,6 +14,11 @@ export default function ArchiveTemplate({
 }) {
 
     const { hero, project_list } = pageData; 
+
+    const [isMounted] = useIsMounted();
+    // useEffect(() => {
+    //     window.scrollTo(0, 0);
+    // }, [])
 
     return (
         <main className="archive__template content-page-container container-vertical-spacer">
@@ -24,6 +31,7 @@ export default function ArchiveTemplate({
                 tableFilters={project_list.table_filters}
                 tableTitles={project_list.table_titles}
                 allProjects={projects}
+                activateMountAnimations={isMounted}
             />
         </main>
     )

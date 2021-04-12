@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import ProjectDetailCarousel from '@project-detail-components/project-detail-carousel/project-detail-carousel.component'
 import ProjectText from '@project-detail-components/project-text/project-text.component'
@@ -10,6 +10,10 @@ export default function ProjectDetailTemplate({
         pageData = {}
     } = {pageData: {}}
 }) {
+
+    // useEffect(() => {
+    //     window.scrollTo(0, 0);
+    // }, [])
 
     return (
         <main className="project-detail__template content-page-container container-vertical-spacer">

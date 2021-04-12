@@ -11,17 +11,18 @@ export default function ProjectListFilters({
     activeFilterTag,
     openFilterModal,
     closeFilterModal,
-    isFilterModalOpen
+    isFilterModalOpen,
+    activateMountAnimations = false
 }) {
 
-    const [isMounted, setIsMounted] = useState(false);
+    // const [isMounted, setIsMounted] = useState(false);
 
-    useEffect(() => {
-        setIsMounted(true);
-    }, [])
+    // useEffect(() => {
+    //     setIsMounted(true);
+    // }, [])
 
     return (
-        <div className={`project-list-filters__module ${isMounted ? 'is-mounted' : ''} `}>
+        <div className={`project-list-filters__module ${activateMountAnimations ? 'is-mounted' : ''} `}>
             <div 
                 className="mobile-toggle-btn fade-up__mount"
                 style={{ transitionDelay: `500ms` }}
