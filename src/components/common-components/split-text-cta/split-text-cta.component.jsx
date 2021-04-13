@@ -4,7 +4,6 @@ import './split-text-cta.styles.scss'
 import { Link } from 'gatsby'
 
 import JrPointer from '@common-components/icons/jr-pointer/jr-pointer.component'
-import TextDisplacement from '@common-components/text-displacement/text-displacement.component'
 
 export default function TextTitleCta({
     title = '',
@@ -42,11 +41,6 @@ export default function TextTitleCta({
                         <div className="year-text">
                             {year}
                         </div>
-                         {/* <TextDisplacement 
-                            text={year}
-                            textClassName="text-displacement-year-text"
-                            containerClassName="text-displacement-year-container"
-                        /> */}
                         <p className="sub-title">{description}</p>
                     </div>
                 }

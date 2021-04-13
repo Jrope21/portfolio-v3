@@ -49,7 +49,10 @@ export default function ProjectList({
 
             <div className="list-filters-container">
                 <div className="design-element-line-container">
-                    <span className="design-element-line" />
+                    <span 
+                        className="design-element-line"
+                        style={{ transitionDelay: '450ms' }}
+                    />
                 </div>
 
                 <ProjectListFilters 

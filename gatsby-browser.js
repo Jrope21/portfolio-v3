@@ -18,20 +18,19 @@ if (typeof window !== 'undefined') {
     require('smooth-scroll')('a[href*="#"]');
 }
 
-// adjusting default scroll handling 
-// => this is to to allow the page transition to work properly
-
-const transitionDelay = 450;
+const transitionDelay = 650;
 
 // This controls the scroll logic for links that have a hash
 // => Gatsby doesn't fire "shouldUpdateScroll" for hashed links :(
 export const onRouteUpdate = ({ location, prevLocation }) => {
     if(!location.hash) return null;
+
     const elementId = location.hash.substring(1); // location.hash without '#'
     
     // wait for page animation & scroll to target (hashed) element
     window.setTimeout(() => {
-        scrollToElementWhenLoaded({
+        if(location.hash === '#top') return window.scroll(0, 0);
+        else scrollToElementWhenLoaded({
             elementId: elementId,
             interval: 25,
             maxWaitTime: 150

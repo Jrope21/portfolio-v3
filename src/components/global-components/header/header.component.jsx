@@ -7,19 +7,22 @@ import { useScrollPosition } from "@hooks/useScrollPosition"
 import { useIsMounted } from '@hooks/useIsMounted'
 import { useIsBodyScrollable } from '@hooks/useIsBodyScrollable'
 
-import { GlobalContext } from '@global-components/global.context'
-import useNavigationItems from '../../../hooks/useNavigationItems';
+import useNavigationItems from '@hooks/useNavigationItems';
+import { NavigationContext } from '@context/navigation'
+import { PageTransitionContext } from '@context/page-transition'
 
 export default function Header({ currentPath = '/' }) {
 
     const [navItems, setNavItems] = useNavigationItems();
 
-    const [ globalContextData ] = useContext(GlobalContext)
-    const { activeMenuItem } = globalContextData;
+    const [navigationContext] = useContext(NavigationContext);
+    const [pageTransitionContext] = useContext(PageTransitionContext);
+
+    const { activeMenuItem } = navigationContext;
+    const { isPageTransitioning } = pageTransitionContext;
 
     const [isMounted] = useIsMounted();
     const [isBodyScrollable, setIsBodyScrollable] = useIsBodyScrollable(true);
-    // const [scrollPosition] = useScrollPosition();
 
     const [isMobileNavFixed, setIsMobileNavFixed] = useState(false);
     const [isMobileMenuBtnSwapping, setIsMobileMenuBtnSwapping] = useState(false);
@@ -37,15 +40,6 @@ export default function Header({ currentPath = '/' }) {
         if(currentScrollY > changeScrollAt && !isMobileNavFixed) setIsMobileNavFixed(true);
         if(currentScrollY < changeScrollAt) setIsMobileNavFixed(false)
     }, [])
-    // useEffect(() => {
-    //     const changeScrollAt = 450;
-    //     const currentScrollY = Math.abs(scrollPosition);
-
-    //     console.log('scroll position', scrollPosition);
-        
-    //     if(currentScrollY > changeScrollAt && !isMobileNavFixed) setIsMobileNavFixed(true);
-    //     if(currentScrollY < changeScrollAt) setIsMobileNavFixed(false)
-    // }, [scrollPosition])
 
     useEffect(() => { // no body scroll when mobile nav is open
         setIsBodyScrollable(!isMobileNavOpen);
@@ -59,7 +53,6 @@ export default function Header({ currentPath = '/' }) {
             }, 250)
         }
     }, [isMobileNavFixed])
-    
 
     if(currentPath) return (
         <header 
@@ -68,6 +61,7 @@ export default function Header({ currentPath = '/' }) {
                 ${isMobileMenuBtnSwapping ? 'mobile-menu-swapping' : ''}
                 ${isMobileNavFixed ? 'mobile-nav-fixed' : ''}
                 ${isMobileNavOpen ? 'mobile-nav-open' : ''}
+                ${isPageTransitioning ? 'menu-hidden' : ''}
             `}
         >
             <nav>
@@ -131,7 +125,7 @@ export default function Header({ currentPath = '/' }) {
                                 <div className={`nav-item-outer-wrapper`}>
 
                                     <Link 
-                                        to={path === '/' ? '/#' : path}
+                                        to={path === '/' ? '/#top' : path}
                                         // to={path === '/' ? '/' : '/'}
                                         onClick={closeNav}
                                     >
@@ -157,7 +151,7 @@ export default function Header({ currentPath = '/' }) {
                             >
                                 <div className={`nav-item-outer-wrapper`}>
                                     <Link 
-                                        to={path === '/' ? '/#' : path}
+                                        to={path === '/' ? '/#top' : path}
                                         onClick={closeNav}
                                     >
                                         <span className="number">{`0${i}.`}</span>

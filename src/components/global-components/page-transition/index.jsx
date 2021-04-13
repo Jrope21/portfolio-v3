@@ -1,50 +1,54 @@
-import React, { useEffect, useState } from "react"
+import React, { useContext, useEffect, useState } from "react"
+import { PageTransitionContext } from "@context/page-transition";
+// import { GlobalContext } from "../global.context";
 import './styles.scss'
 
 export default function PageTransition({ location, children, ...otherProps }) {
 
-    const [isPageTransitioning, setIsPageTransitioning] = useState(false);
+    const [pageTransitionContext, setPageTransitionContext] = useContext(PageTransitionContext);
+    const { isPageTransitioning } = pageTransitionContext;
+
     const [isFirstLoad, setIsFirstLoad] = useState(true);
     const [content, setContent] = useState(children);
-    const [previousChildren, setPreviousChildren] = useState(children);
-    // console.log('location from page transition', location)
     
 
     useEffect(() => {
         let isMounted = true;
         let isFirstMount = isFirstLoad;
         setIsFirstLoad(false);
-      let currentLocation = location;
+        
+        if (!isFirstMount) {
+            setPageTransitionContext({
+                ...pageTransitionContext,
+                isPageTransitioning: true,
+            })
+        }
 
-    //   let isUrlHashed = location.hash;
-        if (!isFirstMount) setIsPageTransitioning(true)
-      
-        if (!isFirstMount) setTimeout(() => {
-
-        // if(currentLocation.pathname !== location.pathname) {
-            if(isMounted) setIsPageTransitioning(false)
-            // console.log('timeout has ran');
+        if (!isFirstMount) setTimeout(() => { // swap content when animation hides view
             if(isMounted) setContent(children)
-            // if(isMounted) window.scrollTo(0, 0);
-        // }
+        }, 650)
+        
+        if (!isFirstMount) setTimeout(() => { // kill animation after content swap / load bar is complete
+            if(isMounted) {
+                setPageTransitionContext({
+                    ...pageTransitionContext,
+                    isPageTransitioning: false,
+                })
+            } 
+        }, 700)
+      
 
-      }, 450)
-
-      return () => {
-        //   setContent(children)
-        isMounted = false;
-      }
+        return () => {
+            isMounted = false;
+        }
     }, [location.pathname])
 
     return (
-        <div className={`page-transition__module ${isPageTransitioning ? 'hide' : ''}`} {...otherProps}>
-            {content}
-            {/* {children} */}
-            {/* {isPageTransitioning ?
-                previousChildren
-            :
-                children
-            } */}
-        </div>   
+        <div>  
+            <div className={`page-load-bar ${isPageTransitioning ? 'is-loading' : ''}`} aria-hidden="true"/>
+            <div className={`page-transition__module ${isPageTransitioning ? 'hide' : ''}`} {...otherProps}>
+                {content} {console.log('transition context', pageTransitionContext)}
+            </div>   
+        </div>
     )
 }

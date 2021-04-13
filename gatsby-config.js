@@ -88,6 +88,7 @@ module.exports = {
           "@templates": 'src/templates',
           "@config": 'src/components/_config.js',
           "@hooks": "src/hooks",
+          "@context": "src/context",
           "@styles": "src/styles",
           "@images": "src/images",
         },

@@ -1,55 +1,29 @@
 
-import React, { useContext, useEffect, useState } from "react"
+import React from "react"
 import '../../styles/global.scss';
 
-
 import Header from "./header/header.component"
-import GlobalProvider from "./global.context"
 import Footer from "./footer/footer.component"
 import PageTransition from "./page-transition";
-import PageTransitionTest from "./page-transition-test";
 
-export default function Layout(props) {
-  const { location, path, children } = props
+import PageTransitionProvider from "@context/page-transition";
+import NavigationProvider from "@context/navigation";
 
-  // const [isPageTransitioning, setIsPageTransitioning] = useState(false);
-  // const [content, setContent] = useState(children);
-
-  // console.log('page props', props);
-  // useEffect(() => {
-  //   setIsPageTransitioning(true)
-  //   setTimeout(() => {
-  //     setIsPageTransitioning(false)
-  //     setContent(children)
-  //   }, 450)
-  // }, [location.pathname])
+export default function Layout({ location, path, children }) {
 
   return (
     <div className="page-width-container">
       <div className="page-content-container">
-        <GlobalProvider>
-          <Header currentPath={path} />
-            <PageTransition location={location}>
-              {children}
-            </PageTransition>
-            {/* <PageTransitionTest location={location}>
-              {children}
-            </PageTransitionTest> */}
-            {/* <div className={`transition-content-wrapper ${isPageTransitioning ? 'hide' : ''}`}>
-              {content}
-            </div>       */}
-          <Footer />
-        </GlobalProvider>
+        <PageTransitionProvider>
+          <NavigationProvider>   
+              <Header currentPath={path} />
+                <PageTransition location={location}>
+                  {children}
+                </PageTransition>
+              <Footer />
+          </NavigationProvider>
+        </PageTransitionProvider>
       </div>
     </div>
   )
 }
-
-// TODO -- add page transition 
-
-// 1 => determine page has changed
-// 2 => fade out content
-// 3 => transition out navigation
-// 4 => insert custom load bar
-// 6 => place content (intro animations handled by template)
-// 7 => transition in navigation`

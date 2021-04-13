@@ -5,6 +5,7 @@
     padding-top: 25px;
     padding-right: 3px;
     overflow: hidden;
+    z-index: 1;
 
     @media (min-width: breakpoint(sm)) {
         padding-top: 75px;

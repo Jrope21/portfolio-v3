@@ -242,7 +242,6 @@
 
     .project-description {
         position: relative;
-        // z-index: 1;
         background-color: color(page_background);
         padding: 10px 0;
         margin: 0;
@@ -253,6 +252,7 @@
             flex: 1;
             max-width: 535px;
             padding-right: 10px;
+            background-color: transparent;
         }
 
         @media (min-width: breakpoint(md)) {
@@ -270,7 +270,6 @@
 
         @media (min-width: breakpoint(xxl)) {
             font-size: px-to-rem(20px);
-            // max-width: 700px;
         }
     }
 }

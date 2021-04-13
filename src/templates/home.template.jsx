@@ -7,8 +7,8 @@ import StatementAndSkills from "@home-components/statement-and-skills/statement-
 import Contact from "@home-components/contact/contact.component"
 
 import { useScrollPosition } from "@hooks/useScrollPosition"
-import { GlobalContext } from '@global-components/global.context'
-import useNavigationItems from "../hooks/useNavigationItems"
+import useNavigationItems from "@hooks/useNavigationItems"
+import { NavigationContext } from "@context/navigation"
 
 export default function HomeTemplate({
   pageContext: {
@@ -31,7 +31,7 @@ export default function HomeTemplate({
 
   const sectionRefs = useRef([0,1,2,3,4].map(() => createRef()));
 
-  const [globalContextData, setGlobalContextData] = useContext(GlobalContext);
+  const [navigationContext, setNavigationContext] = useContext(NavigationContext);
 
   const [isMounted, setIsMounted] = useState(false);
   const [isHeroAnimationsDone, setIsHeroAnimitionsDone] = useState(false);
@@ -48,19 +48,25 @@ export default function HomeTemplate({
       return (() => isMounted = false)
   }, [])
  
+  let activeMenuItemName = "Home"; // placed outside of "useScrollPosition" to maintain value on reuse
+
   useScrollPosition(({ prevPos, currPos }) => {
 
     const currentScrollY = Math.abs(currPos.y);
-    
+
     // set to >= 1, so the menu won't change to "Home"
     for(let i = navItems.length - 1; i >= 1; i--) {
       const elementScrollY = sectionRefs.current[i].current.offsetTop;
 
       if(elementScrollY < currentScrollY + 200) {
-        setGlobalContextData({
-          ...globalContextData,
-          activeMenuItem: navItems[i]
-        })
+        if(activeMenuItemName !== navItems[i].name) {
+          activeMenuItemName = navItems[i].name;
+          
+          setNavigationContext({
+            ...navigationContext,
+            activeMenuItem: navItems[i]
+          })
+        } 
 
         break;
       }
