@@ -5,10 +5,6 @@ import GatsbyImage from "gatsby-image"
 
 import SocialIcons from '@common-components/social-icons/social-icons.component';
 
-// import HeroImageMobile from '@images/home/portfolio_hero_mobile.jpg'
-// import HeroImageTablet from '@images/home/portfolio_hero_tablet.jpg'
-// import HeroImageDesktop from '@images/home/portfolio_hero_desktop.jpg'
-
 const Hero = React.forwardRef(({ sectionRef, activateAnimations = false, moduleData }) => {
 
     const {

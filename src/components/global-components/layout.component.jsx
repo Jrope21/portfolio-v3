@@ -8,12 +8,14 @@ import PageTransition from "./page-transition";
 
 import PageTransitionProvider from "@context/page-transition";
 import NavigationProvider from "@context/navigation";
+import IntroAnimation from "./intro-animation";
 
 export default function Layout({ location, path, children }) {
 
   return (
     <div className="page-width-container">
       <div className="page-content-container">
+        <IntroAnimation />
         <PageTransitionProvider>
           <NavigationProvider>   
               <Header currentPath={path} />
