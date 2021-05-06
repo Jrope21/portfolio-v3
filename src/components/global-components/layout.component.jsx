@@ -15,7 +15,7 @@ export default function Layout({ location, path, children }) {
   return (
     <div className="page-width-container">
       <div className="page-content-container">
-        <IntroAnimation />
+        {/* <IntroAnimation /> */}
         <PageTransitionProvider>
           <NavigationProvider>   
               <Header currentPath={path} />
